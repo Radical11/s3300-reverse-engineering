@@ -1,0 +1,12 @@
+{
+  "observed_rows": 0,
+  "groups": [],
+  "comparisons": [],
+  "hardware_measurements_present": false,
+  "limitations": [
+    "Rows require real evidence; this script does not instrument the camera.",
+    "A timing summary does not prove image integrity, battery savings or long-term reliability.",
+    "Condition identifiers must be documented; matching text does not independently verify matched conditions.",
+    "20 observations is a preliminary sampling floor, not a statistical guarantee."
+  ]
+}

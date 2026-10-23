@@ -1,0 +1,4710 @@
+{
+  "method": "Source-bound decoded strings, aligned words, bounded MIPS LUI+ADDIU/ORI scans and static windows",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "decoded_manifest_sha256": "21fd4133ece4b1319fb7ca4c6ce37b541283f9ca86ad8e8880b3d5123bc9dd29",
+  "independent_decode_comparisons": [
+    {
+      "virtual_start": 2148562560,
+      "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d",
+      "size": 2630016,
+      "independent_bytes_match": true
+    },
+    {
+      "virtual_start": 2151192704,
+      "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68",
+      "size": 3094784,
+      "independent_bytes_match": true
+    },
+    {
+      "virtual_start": 2154287616,
+      "sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "size": 1601792,
+      "independent_bytes_match": true
+    },
+    {
+      "virtual_start": 2155889408,
+      "sha256": "fc743a0a8c150c958cd807c9ad3452f01680e39eab77de1d5badeb5314c7c6e5",
+      "size": 624000,
+      "independent_bytes_match": true
+    }
+  ],
+  "landmarks": [
+    {
+      "text": "Main Image IPU RAW-YUV",
+      "virtual_address": 2148245553,
+      "region_offset": 759985,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "unpacked_file_backed",
+        "carrier_offset": 1059432,
+        "size": 1075312,
+        "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+      },
+      "references": [],
+      "pointer_words": []
+    },
+    {
+      "text": "Main Image Pre-YUV Manipulation",
+      "virtual_address": 2148245633,
+      "region_offset": 760065,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "unpacked_file_backed",
+        "carrier_offset": 1059432,
+        "size": 1075312,
+        "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+      },
+      "references": [],
+      "pointer_words": []
+    },
+    {
+      "text": "Main Image Compression",
+      "virtual_address": 2148245669,
+      "region_offset": 760101,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "unpacked_file_backed",
+        "carrier_offset": 1059432,
+        "size": 1075312,
+        "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+      },
+      "references": [],
+      "pointer_words": []
+    },
+    {
+      "text": "Start CPU load checker with 'cpu' monitor command.",
+      "virtual_address": 2148336076,
+      "region_offset": 850508,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "unpacked_file_backed",
+        "carrier_offset": 1059432,
+        "size": 1075312,
+        "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+      },
+      "references": [
+        {
+          "target": 2148336076,
+          "lui_address": 2148302980,
+          "low_address": 2148302992,
+          "instructions_hex": [
+            "3c05800d",
+            "24a501cc"
+          ],
+          "span_instructions": 3,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "unpacked_file_backed",
+            "carrier_offset": 1059432,
+            "size": 1075312,
+            "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2148302856,
+            "stack_allocation": 2104,
+            "distance_to_reference": 124,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-800c8084.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2148302732,
+              "kind": "jal",
+              "target": 2148278924,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148302756,
+              "kind": "j",
+              "target": 2148323688,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148302824,
+              "kind": "j",
+              "target": 2147781104,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148302832,
+              "kind": "jal",
+              "target": 2147778656,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148302848,
+              "kind": "j",
+              "target": 2147781104,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148302920,
+              "kind": "jal",
+              "target": 2148465712,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148302968,
+              "kind": "jal",
+              "target": 2148182952,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148302988,
+              "kind": "jal",
+              "target": 2148182952,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148303044,
+              "kind": "jal",
+              "target": 2148329600,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148303132,
+              "kind": "jal",
+              "target": 2148329600,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148303156,
+              "kind": "jal",
+              "target": 2148182952,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148303180,
+              "kind": "jal",
+              "target": 2148182952,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2148303236,
+              "kind": "jal",
+              "target": 2148182952,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "** Invalid image processing mode for IPP Gamma update",
+      "virtual_address": 2149923464,
+      "region_offset": 1360904,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149923464,
+          "lui_address": 2149573496,
+          "low_address": 2149573504,
+          "instructions_hex": [
+            "3c038025",
+            "24643a88"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149573456,
+            "stack_allocation": 24,
+            "distance_to_reference": 40,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-801fe378.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149573288,
+              "kind": "jal",
+              "target": 2149572684,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573316,
+              "kind": "jal",
+              "target": 2149572588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573332,
+              "kind": "jal",
+              "target": 2149572684,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573364,
+              "kind": "jal",
+              "target": 2149572588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573448,
+              "kind": "j",
+              "target": 2149572588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573500,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573532,
+              "kind": "jal",
+              "target": 2148185940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573624,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573656,
+              "kind": "jal",
+              "target": 2148185940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573816,
+              "kind": "jal",
+              "target": 2149573568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573872,
+              "kind": "jal",
+              "target": 2149573676,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "** Invalid still mode for IPP Gamma update",
+      "virtual_address": 2149923568,
+      "region_offset": 1361008,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149923568,
+          "lui_address": 2149573620,
+          "low_address": 2149573628,
+          "instructions_hex": [
+            "3c088025",
+            "25043af0"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149573576,
+            "stack_allocation": 24,
+            "distance_to_reference": 44,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-801fe3f4.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149573364,
+              "kind": "jal",
+              "target": 2149572588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573448,
+              "kind": "j",
+              "target": 2149572588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573500,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573532,
+              "kind": "jal",
+              "target": 2148185940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573624,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573656,
+              "kind": "jal",
+              "target": 2148185940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573816,
+              "kind": "jal",
+              "target": 2149573568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573872,
+              "kind": "jal",
+              "target": 2149573676,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573936,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573952,
+              "kind": "jal",
+              "target": 2149267860,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573968,
+              "kind": "jal",
+              "target": 2149267860,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149573996,
+              "kind": "jal",
+              "target": 2148465236,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "DirectConvertRawToYuvEx: no all required input params are valid (%p %p %p %p)",
+      "virtual_address": 2149925104,
+      "region_offset": 1362544,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149925104,
+          "lui_address": 2149603740,
+          "low_address": 2149603748,
+          "instructions_hex": [
+            "3c068025",
+            "24c440f0"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149603620,
+            "stack_allocation": 200,
+            "distance_to_reference": 120,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8020599c.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149603488,
+              "kind": "jal",
+              "target": 2149119716,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149603500,
+              "kind": "jal",
+              "target": 2149114692,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149603568,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149603588,
+              "kind": "jal",
+              "target": 2149602844,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149603772,
+              "kind": "jal",
+              "target": 2148318516,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149603844,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149603936,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Unsupported Gamma resource version",
+      "virtual_address": 2149933740,
+      "region_offset": 1371180,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149933740,
+          "lui_address": 2149694904,
+          "low_address": 2149694912,
+          "instructions_hex": [
+            "3c038025",
+            "246462ac"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149694780,
+            "stack_allocation": 80,
+            "distance_to_reference": 124,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8021bdb8.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149694848,
+              "kind": "jal",
+              "target": 2149694608,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149694908,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149695048,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149695088,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "A:\\GAMMALUT",
+      "virtual_address": 2149933848,
+      "region_offset": 1371288,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149933848,
+          "lui_address": 2149697604,
+          "low_address": 2149697628,
+          "instructions_hex": [
+            "3c068025",
+            "24c66318"
+          ],
+          "span_instructions": 6,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149697448,
+            "stack_allocation": 96,
+            "distance_to_reference": 156,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8021c844.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149697352,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697540,
+              "kind": "jal",
+              "target": 2149694780,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697588,
+              "kind": "jal",
+              "target": 2147533568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697636,
+              "kind": "jal",
+              "target": 2148478256,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697680,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697712,
+              "kind": "jal",
+              "target": 2149776324,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697744,
+              "kind": "jal",
+              "target": 2149694780,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697792,
+              "kind": "jal",
+              "target": 2149776148,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697824,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697840,
+              "kind": "jal",
+              "target": 2148465236,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697880,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697924,
+              "kind": "jal",
+              "target": 2149697448,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697972,
+              "kind": "jal",
+              "target": 2149796384,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "LoadGammaResource: Failed getting resource file size.",
+      "virtual_address": 2149933860,
+      "region_offset": 1371300,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149933860,
+          "lui_address": 2149697808,
+          "low_address": 2149697816,
+          "instructions_hex": [
+            "3c0a8025",
+            "25446324"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149697448,
+            "stack_allocation": 96,
+            "distance_to_reference": 360,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8021c910.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149697588,
+              "kind": "jal",
+              "target": 2147533568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697636,
+              "kind": "jal",
+              "target": 2148478256,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697680,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697712,
+              "kind": "jal",
+              "target": 2149776324,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697744,
+              "kind": "jal",
+              "target": 2149694780,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697792,
+              "kind": "jal",
+              "target": 2149776148,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697824,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697840,
+              "kind": "jal",
+              "target": 2148465236,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697880,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697924,
+              "kind": "jal",
+              "target": 2149697448,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697972,
+              "kind": "jal",
+              "target": 2149796384,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698012,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698036,
+              "kind": "jal",
+              "target": 2148465236,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698056,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698132,
+              "kind": "jal",
+              "target": 2148715600,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698152,
+              "kind": "jal",
+              "target": 2148715600,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698172,
+              "kind": "jal",
+              "target": 2148715600,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "LoadGammaResource: Failed reading resource file.",
+      "virtual_address": 2149933916,
+      "region_offset": 1371356,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149933916,
+          "lui_address": 2149697868,
+          "low_address": 2149697872,
+          "instructions_hex": [
+            "3c0d8025",
+            "25a4635c"
+          ],
+          "span_instructions": 1,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149697448,
+            "stack_allocation": 96,
+            "distance_to_reference": 420,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8021c94c.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149697636,
+              "kind": "jal",
+              "target": 2148478256,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697680,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697712,
+              "kind": "jal",
+              "target": 2149776324,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697744,
+              "kind": "jal",
+              "target": 2149694780,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697792,
+              "kind": "jal",
+              "target": 2149776148,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697824,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697840,
+              "kind": "jal",
+              "target": 2148465236,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697880,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697924,
+              "kind": "jal",
+              "target": 2149697448,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149697972,
+              "kind": "jal",
+              "target": 2149796384,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698012,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698036,
+              "kind": "jal",
+              "target": 2148465236,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698056,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698132,
+              "kind": "jal",
+              "target": 2148715600,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698152,
+              "kind": "jal",
+              "target": 2148715600,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698172,
+              "kind": "jal",
+              "target": 2148715600,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698208,
+              "kind": "jal",
+              "target": 2148715980,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "A:\\LCLUT",
+      "virtual_address": 2149933980,
+      "region_offset": 1371420,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149933980,
+          "lui_address": 2149698612,
+          "low_address": 2149698632,
+          "instructions_hex": [
+            "3c068025",
+            "24c6639c"
+          ],
+          "span_instructions": 5,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149698540,
+            "stack_allocation": 104,
+            "distance_to_reference": 72,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8021cc34.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149698364,
+              "kind": "jal",
+              "target": 2149698200,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698372,
+              "kind": "jal",
+              "target": 2149698108,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698392,
+              "kind": "jal",
+              "target": 2149537300,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698600,
+              "kind": "jal",
+              "target": 2147533568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698644,
+              "kind": "jal",
+              "target": 2148478256,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698692,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698732,
+              "kind": "jal",
+              "target": 2149776324,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698772,
+              "kind": "jal",
+              "target": 2149698456,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698816,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698896,
+              "kind": "jal",
+              "target": 2148465236,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149698980,
+              "kind": "jal",
+              "target": 2149776148,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "ButtonsEvent",
+      "virtual_address": 2149937536,
+      "region_offset": 1374976,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149937536,
+          "lui_address": 2149729196,
+          "low_address": 2149729208,
+          "instructions_hex": [
+            "3c088025",
+            "25057180"
+          ],
+          "span_instructions": 3,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149729108,
+            "stack_allocation": 40,
+            "distance_to_reference": 88,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-802243ac.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149729028,
+              "kind": "j",
+              "target": 2148325688,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729084,
+              "kind": "jal",
+              "target": 2148274196,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729092,
+              "kind": "jal",
+              "target": 2149728588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729204,
+              "kind": "jal",
+              "target": 2148299636,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729260,
+              "kind": "jal",
+              "target": 2148278924,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729296,
+              "kind": "jal",
+              "target": 2148323476,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "ButtonsServer",
+      "virtual_address": 2149937552,
+      "region_offset": 1374992,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149937552,
+          "lui_address": 2149729212,
+          "low_address": 2149729228,
+          "instructions_hex": [
+            "3c048025",
+            "24847190"
+          ],
+          "span_instructions": 4,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149729108,
+            "stack_allocation": 40,
+            "distance_to_reference": 104,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-802243bc.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149729028,
+              "kind": "j",
+              "target": 2148325688,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729084,
+              "kind": "jal",
+              "target": 2148274196,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729092,
+              "kind": "jal",
+              "target": 2149728588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729204,
+              "kind": "jal",
+              "target": 2148299636,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729260,
+              "kind": "jal",
+              "target": 2148278924,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729296,
+              "kind": "jal",
+              "target": 2148323476,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "ButtonsTrig",
+      "virtual_address": 2149937568,
+      "region_offset": 1375008,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149937568,
+          "lui_address": 2149729268,
+          "low_address": 2149729276,
+          "instructions_hex": [
+            "3c068025",
+            "24c671a0"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149729108,
+            "stack_allocation": 40,
+            "distance_to_reference": 160,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-802243f4.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149729028,
+              "kind": "j",
+              "target": 2148325688,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729084,
+              "kind": "jal",
+              "target": 2148274196,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729092,
+              "kind": "jal",
+              "target": 2149728588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729204,
+              "kind": "jal",
+              "target": 2148299636,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729260,
+              "kind": "jal",
+              "target": 2148278924,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729296,
+              "kind": "jal",
+              "target": 2148323476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149729612,
+              "kind": "j",
+              "target": 2147642216,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "A:\\GAMMADDE1.BIN",
+      "virtual_address": 2149938644,
+      "region_offset": 1376084,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149938644,
+          "lui_address": 2149754280,
+          "low_address": 2149754292,
+          "instructions_hex": [
+            "3c098025",
+            "252275d4"
+          ],
+          "span_instructions": 3,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149754276,
+            "stack_allocation": 80,
+            "distance_to_reference": 4,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8022a5a8.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149754124,
+              "kind": "jal",
+              "target": 2149753644,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754408,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754456,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754476,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754536,
+              "kind": "jal",
+              "target": 2147533568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754600,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Load DLCD gamma from HceGetResourceTable is wrong!!!",
+      "virtual_address": 2149938676,
+      "region_offset": 1376116,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149938676,
+          "lui_address": 2149754592,
+          "low_address": 2149754604,
+          "instructions_hex": [
+            "3c108025",
+            "260575f4"
+          ],
+          "span_instructions": 3,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149754276,
+            "stack_allocation": 80,
+            "distance_to_reference": 316,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8022a6e0.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149754408,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754456,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754476,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754536,
+              "kind": "jal",
+              "target": 2147533568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754600,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754664,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754696,
+              "kind": "jal",
+              "target": 2149776324,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754760,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754800,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754828,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754848,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754904,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754920,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754936,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Load DLCD gamma from file is wrong!!!",
+      "virtual_address": 2149938732,
+      "region_offset": 1376172,
+      "categories": [
+        "processing_resources"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149938732,
+          "lui_address": 2149754820,
+          "low_address": 2149754832,
+          "instructions_hex": [
+            "3c138025",
+            "2665762c"
+          ],
+          "span_instructions": 3,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149754276,
+            "stack_allocation": 80,
+            "distance_to_reference": 544,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8022a7c4.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149754600,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754664,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754696,
+              "kind": "jal",
+              "target": 2149776324,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754760,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754800,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754828,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754848,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754904,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754920,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149754936,
+              "kind": "jal",
+              "target": 2147821252,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149755100,
+              "kind": "jal",
+              "target": 2147617680,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149755132,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149755164,
+              "kind": "jal",
+              "target": 2149776324,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149755196,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "StillOnSetCaptureSequence",
+      "virtual_address": 2149944224,
+      "region_offset": 1381664,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149944224,
+          "lui_address": 2149817652,
+          "low_address": 2149817660,
+          "instructions_hex": [
+            "3c048026",
+            "24848ba0"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149817640,
+            "stack_allocation": 32,
+            "distance_to_reference": 12,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80239d34.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149817424,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817492,
+              "kind": "jal",
+              "target": 2147829300,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817504,
+              "kind": "jal",
+              "target": 2147829500,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817532,
+              "kind": "jal",
+              "target": 2147829300,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817544,
+              "kind": "jal",
+              "target": 2147829500,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817552,
+              "kind": "jal",
+              "target": 2147829300,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817564,
+              "kind": "jal",
+              "target": 2147829500,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817668,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817724,
+              "kind": "jal",
+              "target": 2150639508,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817756,
+              "kind": "j",
+              "target": 2150643232,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817796,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817808,
+              "kind": "jal",
+              "target": 2149586544,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817820,
+              "kind": "jal",
+              "target": 2149657488,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817828,
+              "kind": "jal",
+              "target": 2150677144,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817860,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817872,
+              "kind": "jal",
+              "target": 2149657488,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817928,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817944,
+              "kind": "jal",
+              "target": 2150811272,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149817956,
+              "kind": "jal",
+              "target": 2149814608,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149818016,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149818032,
+              "kind": "jal",
+              "target": 2150660404,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "AeSetCaptureExpLimit %d %d %d %d",
+      "virtual_address": 2149944476,
+      "region_offset": 1381916,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2149944476,
+          "lui_address": 2149819076,
+          "low_address": 2149819092,
+          "instructions_hex": [
+            "3c038026",
+            "24648c9c"
+          ],
+          "span_instructions": 4,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2149818944,
+            "stack_allocation": 48,
+            "distance_to_reference": 132,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8023a2c4.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2149818840,
+              "kind": "jal",
+              "target": 2149630932,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149818856,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149818900,
+              "kind": "jal",
+              "target": 2149630944,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149818916,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819004,
+              "kind": "jal",
+              "target": 2149630776,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819024,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819068,
+              "kind": "jal",
+              "target": 2149630820,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819096,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819144,
+              "kind": "jal",
+              "target": 2149630908,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819172,
+              "kind": "jal",
+              "target": 2149630968,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819192,
+              "kind": "j",
+              "target": 2149630896,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819220,
+              "kind": "jal",
+              "target": 2149630920,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819236,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819272,
+              "kind": "jal",
+              "target": 2149677012,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819304,
+              "kind": "jal",
+              "target": 2149721276,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819316,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819380,
+              "kind": "jal",
+              "target": 2148389748,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819400,
+              "kind": "jal",
+              "target": 2149723144,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819440,
+              "kind": "jal",
+              "target": 2150687228,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2149819448,
+              "kind": "jal",
+              "target": 2150687244,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Capture time %u us. Please wait while frames are being stored to file!",
+      "virtual_address": 2150299900,
+      "region_offset": 1737340,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2150299900,
+          "lui_address": 2150141488,
+          "low_address": 2150141492,
+          "instructions_hex": [
+            "3c0d802b",
+            "25a4f8fc"
+          ],
+          "span_instructions": 1,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2150139952,
+            "stack_allocation": 864,
+            "distance_to_reference": 1536,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80288e30.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2150141352,
+              "kind": "jal",
+              "target": 2149301840,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141392,
+              "kind": "jal",
+              "target": 2149296840,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141436,
+              "kind": "jal",
+              "target": 2148328792,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141480,
+              "kind": "jal",
+              "target": 2148470352,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141496,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141536,
+              "kind": "jal",
+              "target": 2149491820,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141564,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141588,
+              "kind": "jal",
+              "target": 2149684588,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141596,
+              "kind": "jal",
+              "target": 2149679684,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141628,
+              "kind": "jal",
+              "target": 2149465032,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141648,
+              "kind": "jal",
+              "target": 2148023940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141680,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141692,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141700,
+              "kind": "jal",
+              "target": 2149299776,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141708,
+              "kind": "jal",
+              "target": 2149302956,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141736,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141776,
+              "kind": "jal",
+              "target": 2147618452,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141820,
+              "kind": "jal",
+              "target": 2150290112,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150141844,
+              "kind": "jal",
+              "target": 2149537584,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "<scale from raw to 422>-%uX%u ->%uX%u start",
+      "virtual_address": 2150889048,
+      "region_offset": 2326488,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2150889048,
+          "lui_address": 2150660860,
+          "low_address": 2150660864,
+          "instructions_hex": [
+            "3c0f8034",
+            "25e5f658"
+          ],
+          "span_instructions": 1,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2150660468,
+            "stack_allocation": 128,
+            "distance_to_reference": 392,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80307afc.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2150660696,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660724,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660744,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660792,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660836,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660876,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660884,
+              "kind": "jal",
+              "target": 2150643232,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660960,
+              "kind": "jal",
+              "target": 2150651020,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660976,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661008,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661032,
+              "kind": "jal",
+              "target": 2150676836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661108,
+              "kind": "jal",
+              "target": 2150676836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661140,
+              "kind": "jal",
+              "target": 2148478256,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661152,
+              "kind": "jal",
+              "target": 2148477372,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661172,
+              "kind": "jal",
+              "target": 2151636932,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661192,
+              "kind": "jal",
+              "target": 2155522760,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661216,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        },
+        {
+          "target": 2150889048,
+          "lui_address": 2150662536,
+          "low_address": 2150662544,
+          "instructions_hex": [
+            "3c198034",
+            "2725f658"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2150662156,
+            "stack_allocation": 80,
+            "distance_to_reference": 380,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80308188.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2150662316,
+              "kind": "jal",
+              "target": 2149725652,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662408,
+              "kind": "jal",
+              "target": 2148633632,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662472,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662500,
+              "kind": "jal",
+              "target": 2148635248,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662516,
+              "kind": "jal",
+              "target": 2148635248,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662556,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662564,
+              "kind": "jal",
+              "target": 2150643232,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662644,
+              "kind": "jal",
+              "target": 2150651020,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662660,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662688,
+              "kind": "jal",
+              "target": 2148634176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662748,
+              "kind": "jal",
+              "target": 2148477372,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662760,
+              "kind": "jal",
+              "target": 2155522760,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662784,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662804,
+              "kind": "jal",
+              "target": 2155522760,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662820,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662848,
+              "kind": "jal",
+              "target": 2148185940,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "<scale from raw to 422>-end",
+      "virtual_address": 2150889092,
+      "region_offset": 2326532,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2150889092,
+          "lui_address": 2150660968,
+          "low_address": 2150660980,
+          "instructions_hex": [
+            "3c058034",
+            "24a5f684"
+          ],
+          "span_instructions": 3,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2150660468,
+            "stack_allocation": 128,
+            "distance_to_reference": 500,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80307b68.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2150660724,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660744,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660792,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660836,
+              "kind": "jal",
+              "target": 2149974008,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660876,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660884,
+              "kind": "jal",
+              "target": 2150643232,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660960,
+              "kind": "jal",
+              "target": 2150651020,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150660976,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661008,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661032,
+              "kind": "jal",
+              "target": 2150676836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661108,
+              "kind": "jal",
+              "target": 2150676836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661140,
+              "kind": "jal",
+              "target": 2148478256,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661152,
+              "kind": "jal",
+              "target": 2148477372,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661172,
+              "kind": "jal",
+              "target": 2151636932,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661192,
+              "kind": "jal",
+              "target": 2155522760,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661216,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661244,
+              "kind": "jal",
+              "target": 2148185940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150661340,
+              "kind": "jal",
+              "target": 2150676836,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        },
+        {
+          "target": 2150889092,
+          "lui_address": 2150662652,
+          "low_address": 2150662656,
+          "instructions_hex": [
+            "3c058034",
+            "24a5f684"
+          ],
+          "span_instructions": 1,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+            "packed_carrier_offset": 2229012,
+            "size": 2630016,
+            "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2150662156,
+            "stack_allocation": 80,
+            "distance_to_reference": 496,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-803081fc.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2150662408,
+              "kind": "jal",
+              "target": 2148633632,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662472,
+              "kind": "jal",
+              "target": 2147617152,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662500,
+              "kind": "jal",
+              "target": 2148635248,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662516,
+              "kind": "jal",
+              "target": 2148635248,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662556,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662564,
+              "kind": "jal",
+              "target": 2150643232,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662644,
+              "kind": "jal",
+              "target": 2150651020,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662660,
+              "kind": "jal",
+              "target": 2148168564,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662688,
+              "kind": "jal",
+              "target": 2148634176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662748,
+              "kind": "jal",
+              "target": 2148477372,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662760,
+              "kind": "jal",
+              "target": 2155522760,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662784,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662804,
+              "kind": "jal",
+              "target": 2155522760,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662820,
+              "kind": "jal",
+              "target": 2148317176,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662848,
+              "kind": "jal",
+              "target": 2148185940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2150662944,
+              "kind": "jal",
+              "target": 2150676836,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Ui/Setup/ui_SetupLib.c",
+      "virtual_address": 2151180276,
+      "region_offset": 2617716,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "references": [
+        {
+          "target": 2151180276,
+          "lui_address": 2155046760,
+          "low_address": 2155046764,
+          "instructions_hex": [
+            "3c038038",
+            "247467f4"
+          ],
+          "span_instructions": 1,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-005c2bec.bin",
+            "packed_carrier_offset": 6040556,
+            "size": 1601792,
+            "sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2155046616,
+            "stack_allocation": 48,
+            "distance_to_reference": 144,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80736768.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2155046536,
+              "kind": "jal",
+              "target": 2149610068,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046560,
+              "kind": "jal",
+              "target": 2149609740,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046588,
+              "kind": "jal",
+              "target": 2149609960,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046596,
+              "kind": "jal",
+              "target": 2149609740,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046648,
+              "kind": "jal",
+              "target": 2149609172,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046716,
+              "kind": "jal",
+              "target": 2149610068,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046736,
+              "kind": "jal",
+              "target": 2149609960,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046752,
+              "kind": "jal",
+              "target": 2149610068,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046780,
+              "kind": "jal",
+              "target": 2148419304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046808,
+              "kind": "jal",
+              "target": 2149609960,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046872,
+              "kind": "jal",
+              "target": 2149609960,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046896,
+              "kind": "jal",
+              "target": 2148419340,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046944,
+              "kind": "jal",
+              "target": 2149609740,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155046988,
+              "kind": "jal",
+              "target": 2149609740,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155047044,
+              "kind": "jal",
+              "target": 2148419304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155047076,
+              "kind": "jal",
+              "target": 2148419304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155047108,
+              "kind": "jal",
+              "target": 2148419304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155047140,
+              "kind": "jal",
+              "target": 2148419304,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Test CPU performance counters",
+      "virtual_address": 2151955336,
+      "region_offset": 762632,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [],
+      "pointer_words": [
+        {
+          "virtual_address": 2151856372,
+          "classification": "Raw aligned pointer-valued word; table/function role unverified"
+        }
+      ]
+    },
+    {
+      "text": "Start CPU performance counters",
+      "virtual_address": 2151955472,
+      "region_offset": 762768,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [],
+      "pointer_words": [
+        {
+          "virtual_address": 2151856388,
+          "classification": "Raw aligned pointer-valued word; table/function role unverified"
+        }
+      ]
+    },
+    {
+      "text": "Stop CPU performance counters",
+      "virtual_address": 2151955512,
+      "region_offset": 762808,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [],
+      "pointer_words": [
+        {
+          "virtual_address": 2151856404,
+          "classification": "Raw aligned pointer-valued word; table/function role unverified"
+        }
+      ]
+    },
+    {
+      "text": "Reset CPU performance counters",
+      "virtual_address": 2151955552,
+      "region_offset": 762848,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [],
+      "pointer_words": [
+        {
+          "virtual_address": 2151856420,
+          "classification": "Raw aligned pointer-valued word; table/function role unverified"
+        }
+      ]
+    },
+    {
+      "text": "Read CPU performance counters",
+      "virtual_address": 2151955592,
+      "region_offset": 762888,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [],
+      "pointer_words": [
+        {
+          "virtual_address": 2151856436,
+          "classification": "Raw aligned pointer-valued word; table/function role unverified"
+        }
+      ]
+    },
+    {
+      "text": "Performance counters are stopped now.",
+      "virtual_address": 2151958080,
+      "region_offset": 765376,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2151958080,
+          "lui_address": 2151681960,
+          "low_address": 2151681972,
+          "instructions_hex": [
+            "3c048044",
+            "24844640"
+          ],
+          "span_instructions": 3,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2151681940,
+            "stack_allocation": 24,
+            "distance_to_reference": 20,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80400fa8.asm",
+          "nearby_direct_transfers": []
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Performance counters will be reset now.",
+      "virtual_address": 2151958120,
+      "region_offset": 765416,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2151958120,
+          "lui_address": 2151681992,
+          "low_address": 2151682012,
+          "instructions_hex": [
+            "3c048044",
+            "24844668"
+          ],
+          "span_instructions": 5,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2151681940,
+            "stack_allocation": 24,
+            "distance_to_reference": 52,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80400fc8.asm",
+          "nearby_direct_transfers": []
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Print CPU load statistics",
+      "virtual_address": 2151960684,
+      "region_offset": 767980,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [],
+      "pointer_words": [
+        {
+          "virtual_address": 2151857064,
+          "classification": "Raw aligned pointer-valued word; table/function role unverified"
+        }
+      ]
+    },
+    {
+      "text": "CPU load checker started. Type 'cpu' again to get CPU statistics.",
+      "virtual_address": 2151967468,
+      "region_offset": 774764,
+      "categories": [
+        "profiling"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2151967468,
+          "lui_address": 2151691476,
+          "low_address": 2151691496,
+          "instructions_hex": [
+            "3c098044",
+            "25246aec"
+          ],
+          "span_instructions": 5,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2151691368,
+            "stack_allocation": 32,
+            "distance_to_reference": 108,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-804034d4.asm",
+          "nearby_direct_transfers": []
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Capture timing Start.",
+      "virtual_address": 2154204288,
+      "region_offset": 3011584,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2154204288,
+          "lui_address": 2153276172,
+          "low_address": 2153276180,
+          "instructions_hex": [
+            "3c048067",
+            "24848c80"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2153276140,
+            "stack_allocation": 32,
+            "distance_to_reference": 32,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-8058630c.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2153275932,
+              "kind": "jal",
+              "target": 2148466524,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153275960,
+              "kind": "jal",
+              "target": 2147548296,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153275976,
+              "kind": "jal",
+              "target": 2147548304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276004,
+              "kind": "jal",
+              "target": 2147548304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276012,
+              "kind": "jal",
+              "target": 2148275836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276028,
+              "kind": "jal",
+              "target": 2147548304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276036,
+              "kind": "jal",
+              "target": 2148275836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276072,
+              "kind": "jal",
+              "target": 2147548304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276080,
+              "kind": "jal",
+              "target": 2154785948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276088,
+              "kind": "jal",
+              "target": 2154785940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276120,
+              "kind": "jal",
+              "target": 2154785948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276132,
+              "kind": "j",
+              "target": 2154785940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276160,
+              "kind": "jal",
+              "target": 2148466524,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276184,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276196,
+              "kind": "jal",
+              "target": 2147548296,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276224,
+              "kind": "jal",
+              "target": 2149774396,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276248,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276256,
+              "kind": "jal",
+              "target": 2154785948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276264,
+              "kind": "jal",
+              "target": 2154785940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276312,
+              "kind": "jal",
+              "target": 2148466524,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276332,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276364,
+              "kind": "jal",
+              "target": 2148146948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276384,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276396,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276408,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276420,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276432,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "Capture timing Finish",
+      "virtual_address": 2154204332,
+      "region_offset": 3011628,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2154204332,
+          "lui_address": 2153276244,
+          "low_address": 2153276252,
+          "instructions_hex": [
+            "3c088067",
+            "25048cac"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2153276140,
+            "stack_allocation": 32,
+            "distance_to_reference": 104,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-80586354.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2153276004,
+              "kind": "jal",
+              "target": 2147548304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276012,
+              "kind": "jal",
+              "target": 2148275836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276028,
+              "kind": "jal",
+              "target": 2147548304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276036,
+              "kind": "jal",
+              "target": 2148275836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276072,
+              "kind": "jal",
+              "target": 2147548304,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276080,
+              "kind": "jal",
+              "target": 2154785948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276088,
+              "kind": "jal",
+              "target": 2154785940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276120,
+              "kind": "jal",
+              "target": 2154785948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276132,
+              "kind": "j",
+              "target": 2154785940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276160,
+              "kind": "jal",
+              "target": 2148466524,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276184,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276196,
+              "kind": "jal",
+              "target": 2147548296,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276224,
+              "kind": "jal",
+              "target": 2149774396,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276248,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276256,
+              "kind": "jal",
+              "target": 2154785948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276264,
+              "kind": "jal",
+              "target": 2154785940,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276312,
+              "kind": "jal",
+              "target": 2148466524,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276332,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276364,
+              "kind": "jal",
+              "target": 2148146948,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276384,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276396,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276408,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276420,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153276432,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "--ViewMenuHandlerISO uPicSize:%d",
+      "virtual_address": 2154222216,
+      "region_offset": 3029512,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2154222216,
+          "lui_address": 2153439768,
+          "low_address": 2153439772,
+          "instructions_hex": [
+            "3c1f8067",
+            "27e4d288"
+          ],
+          "span_instructions": 1,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2153439612,
+            "stack_allocation": 40,
+            "distance_to_reference": 156,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-805ae218.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2153439532,
+              "kind": "jal",
+              "target": 2154808292,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439656,
+              "kind": "jal",
+              "target": 2153436732,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439728,
+              "kind": "jal",
+              "target": 2155089716,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439760,
+              "kind": "jal",
+              "target": 2154897712,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439780,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439836,
+              "kind": "jal",
+              "target": 2154899856,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439856,
+              "kind": "jal",
+              "target": 2154900424,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439876,
+              "kind": "jal",
+              "target": 2154926112,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439892,
+              "kind": "jal",
+              "target": 2154907076,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439904,
+              "kind": "jal",
+              "target": 2154904764,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153439920,
+              "kind": "jal",
+              "target": 2153410672,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153440032,
+              "kind": "jal",
+              "target": 2154807424,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153440100,
+              "kind": "jal",
+              "target": 2153436732,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "---<PBMenuHandlerFilterEffect>  hMsg = %4x ",
+      "virtual_address": 2154248252,
+      "region_offset": 3055548,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2154248252,
+          "lui_address": 2153733176,
+          "low_address": 2153733184,
+          "instructions_hex": [
+            "3c048067",
+            "2484383c"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2153733164,
+            "stack_allocation": 24,
+            "distance_to_reference": 12,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-805f5c38.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2153732932,
+              "kind": "jal",
+              "target": 2153371824,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153732960,
+              "kind": "jal",
+              "target": 2149690944,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153732968,
+              "kind": "jal",
+              "target": 2153781348,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153732976,
+              "kind": "jal",
+              "target": 2153583716,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733012,
+              "kind": "jal",
+              "target": 2154806504,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733032,
+              "kind": "jal",
+              "target": 2154806504,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733100,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733108,
+              "kind": "jal",
+              "target": 2154806224,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733192,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733240,
+              "kind": "jal",
+              "target": 2153665848,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733248,
+              "kind": "jal",
+              "target": 2153666648,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733280,
+              "kind": "jal",
+              "target": 2154806504,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733312,
+              "kind": "jal",
+              "target": 2154806504,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733328,
+              "kind": "jal",
+              "target": 2154807972,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733364,
+              "kind": "jal",
+              "target": 2154807424,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733380,
+              "kind": "jal",
+              "target": 2154807424,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733472,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733492,
+              "kind": "jal",
+              "target": 2154806224,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733516,
+              "kind": "jal",
+              "target": 2154731832,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733524,
+              "kind": "jal",
+              "target": 2148275836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733532,
+              "kind": "jal",
+              "target": 2149690944,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733540,
+              "kind": "jal",
+              "target": 2153781348,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733548,
+              "kind": "jal",
+              "target": 2153599132,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153733556,
+              "kind": "jal",
+              "target": 2153599544,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "---<PBMenuHandlerSelectColor>  hMsg = %4x ",
+      "virtual_address": 2154248692,
+      "region_offset": 3055988,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2154248692,
+          "lui_address": 2153736096,
+          "low_address": 2153736104,
+          "instructions_hex": [
+            "3c048067",
+            "248439f4"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2153736084,
+            "stack_allocation": 24,
+            "distance_to_reference": 12,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-805f67a0.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2153735844,
+              "kind": "jal",
+              "target": 2153599544,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153735860,
+              "kind": "jal",
+              "target": 2153599164,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153735892,
+              "kind": "jal",
+              "target": 2154505076,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153735964,
+              "kind": "j",
+              "target": 2149690944,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153735996,
+              "kind": "j",
+              "target": 2154807972,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736004,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736076,
+              "kind": "j",
+              "target": 2149690944,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736112,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736160,
+              "kind": "jal",
+              "target": 2153665848,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736168,
+              "kind": "jal",
+              "target": 2153666648,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736200,
+              "kind": "jal",
+              "target": 2154806504,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736232,
+              "kind": "jal",
+              "target": 2154806504,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736248,
+              "kind": "jal",
+              "target": 2154807972,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736288,
+              "kind": "jal",
+              "target": 2153880568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736320,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736328,
+              "kind": "jal",
+              "target": 2154807424,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736396,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736404,
+              "kind": "jal",
+              "target": 2154806224,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736412,
+              "kind": "jal",
+              "target": 2153599132,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "---<PBMenuHandlerSelectColorSaveCnfrm>  hMsg = %4x ",
+      "virtual_address": 2154248816,
+      "region_offset": 3056112,
+      "categories": [
+        "controls_and_menu"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+        "packed_carrier_offset": 3922428,
+        "size": 3094784,
+        "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+      },
+      "references": [
+        {
+          "target": 2154248816,
+          "lui_address": 2153736480,
+          "low_address": 2153736488,
+          "instructions_hex": [
+            "3c048067",
+            "24843a70"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-003bd9fc.bin",
+            "packed_carrier_offset": 3922428,
+            "size": 3094784,
+            "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2153736468,
+            "stack_allocation": 80,
+            "distance_to_reference": 12,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-805f6920.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2153736232,
+              "kind": "jal",
+              "target": 2154806504,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736248,
+              "kind": "jal",
+              "target": 2154807972,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736288,
+              "kind": "jal",
+              "target": 2153880568,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736320,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736328,
+              "kind": "jal",
+              "target": 2154807424,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736396,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736404,
+              "kind": "jal",
+              "target": 2154806224,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736412,
+              "kind": "jal",
+              "target": 2153599132,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736512,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736560,
+              "kind": "jal",
+              "target": 2153665848,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736568,
+              "kind": "jal",
+              "target": 2153666648,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736612,
+              "kind": "jal",
+              "target": 2154807972,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736680,
+              "kind": "jal",
+              "target": 2148409612,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736700,
+              "kind": "jal",
+              "target": 2154478060,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736708,
+              "kind": "jal",
+              "target": 2154479184,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736740,
+              "kind": "jal",
+              "target": 2153597628,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736764,
+              "kind": "jal",
+              "target": 2153616964,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736772,
+              "kind": "jal",
+              "target": 2153781348,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736780,
+              "kind": "jal",
+              "target": 2153780812,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736788,
+              "kind": "jal",
+              "target": 2154808560,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736796,
+              "kind": "jal",
+              "target": 2149690944,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736812,
+              "kind": "jal",
+              "target": 2154731832,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736820,
+              "kind": "jal",
+              "target": 2148275836,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736828,
+              "kind": "jal",
+              "target": 2149690944,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736836,
+              "kind": "jal",
+              "target": 2153781348,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2153736844,
+              "kind": "jal",
+              "target": 2153780812,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    },
+    {
+      "text": "OnSetCaptureExpLimit - %d %d %d %d",
+      "virtual_address": 2154326604,
+      "region_offset": 38988,
+      "categories": [
+        "capture_pipeline"
+      ],
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-005c2bec.bin",
+        "packed_carrier_offset": 6040556,
+        "size": 1601792,
+        "sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e"
+      },
+      "references": [
+        {
+          "target": 2154326604,
+          "lui_address": 2155452144,
+          "low_address": 2155452152,
+          "instructions_hex": [
+            "3c078068",
+            "24e46a4c"
+          ],
+          "span_instructions": 2,
+          "confidence": "Static address-materialization candidate; control flow unverified",
+          "source_binding": {
+            "type": "decoded_segment",
+            "file": "derived\\v1.1-decoded\\segment-005c2bec.bin",
+            "packed_carrier_offset": 6040556,
+            "size": 1601792,
+            "sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e"
+          },
+          "candidate_preceding_prologue": {
+            "virtual_address": 2155452056,
+            "stack_allocation": 32,
+            "distance_to_reference": 88,
+            "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+          },
+          "window": "derived\\application-landmarks\\reference-807996f0.asm",
+          "nearby_direct_transfers": [
+            {
+              "instruction_address": 2155451908,
+              "kind": "jal",
+              "target": 2149729980,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155451976,
+              "kind": "jal",
+              "target": 2149730228,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452040,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452100,
+              "kind": "jal",
+              "target": 2149730228,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452180,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452204,
+              "kind": "jal",
+              "target": 2149726040,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452248,
+              "kind": "jal",
+              "target": 2148183476,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452308,
+              "kind": "jal",
+              "target": 2155438048,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452328,
+              "kind": "jal",
+              "target": 2149726140,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452368,
+              "kind": "jal",
+              "target": 2149631168,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452436,
+              "kind": "jal",
+              "target": 2149631776,
+              "status": "Direct static transfer; callee role unverified"
+            },
+            {
+              "instruction_address": 2155452492,
+              "kind": "jal",
+              "target": 2155438192,
+              "status": "Direct static transfer; callee role unverified"
+            }
+          ]
+        }
+      ],
+      "pointer_words": []
+    }
+  ],
+  "windows": {
+    "reference-800c8084.asm": {
+      "start": 2148302724,
+      "end_exclusive": 2148303364,
+      "sha256": "a7e4db9a097720a0cd6a9bf113db44884237c680a06fd7ea015c0f2abe4f46f9",
+      "complete_linear_decode": true
+    },
+    "reference-801fe378.asm": {
+      "start": 2149573240,
+      "end_exclusive": 2149573880,
+      "sha256": "ed0bb7a433f31f69e811e6812d7c2e424f49d9ea2664f9e577fe119ec2675568",
+      "complete_linear_decode": true
+    },
+    "reference-801fe3f4.asm": {
+      "start": 2149573364,
+      "end_exclusive": 2149574004,
+      "sha256": "679f5af6df4eabf6aef2d01ddc6150108e1ac5fd626df59506c1ec55f90b1419",
+      "complete_linear_decode": true
+    },
+    "reference-8020599c.asm": {
+      "start": 2149603484,
+      "end_exclusive": 2149604124,
+      "sha256": "1dd3590dd301717ea83adfbb52106bddde4b21bacb0b5d27d163ff61e21440a1",
+      "complete_linear_decode": true
+    },
+    "reference-8021bdb8.asm": {
+      "start": 2149694648,
+      "end_exclusive": 2149695288,
+      "sha256": "8954d90b2e5bd52a8e3886cb5f5bc8d833369ce8f08e4f12f41eaeb616974969",
+      "complete_linear_decode": true
+    },
+    "reference-8021c844.asm": {
+      "start": 2149697348,
+      "end_exclusive": 2149697988,
+      "sha256": "688c99683767441e46b37f8902c9ebc885f477a1551cbb00b98449b084e43193",
+      "complete_linear_decode": true
+    },
+    "reference-8021c910.asm": {
+      "start": 2149697552,
+      "end_exclusive": 2149698192,
+      "sha256": "c3f00200b302c6e74af47c573168e9fc5771c5a8a1ab16548a0f40abc0f89893",
+      "complete_linear_decode": true
+    },
+    "reference-8021c94c.asm": {
+      "start": 2149697612,
+      "end_exclusive": 2149698252,
+      "sha256": "7cac54bfc8ceed1126b6f2bf9dd18da6d78ade4c38bc55e435625aab12334e10",
+      "complete_linear_decode": true
+    },
+    "reference-8021cc34.asm": {
+      "start": 2149698356,
+      "end_exclusive": 2149698996,
+      "sha256": "5b367355f5a83b165a6c9d5a787e2f57d4aac20cdf5c322d69467e08c02fa313",
+      "complete_linear_decode": true
+    },
+    "reference-802243ac.asm": {
+      "start": 2149728940,
+      "end_exclusive": 2149729580,
+      "sha256": "2bb96d91837c5f689f651aac1df4f00b0107a8b293fb967d3e0ce58c4ba843d6",
+      "complete_linear_decode": true
+    },
+    "reference-802243bc.asm": {
+      "start": 2149728956,
+      "end_exclusive": 2149729596,
+      "sha256": "3333889baaf12c950f22df9fdf7e3e30c3c4d3f654652f9017234c71b07479c5",
+      "complete_linear_decode": true
+    },
+    "reference-802243f4.asm": {
+      "start": 2149729012,
+      "end_exclusive": 2149729652,
+      "sha256": "72894e9a8eb4edc68998c12d430aff68cb153e8ff2ccbb916d133bdc839ad2f5",
+      "complete_linear_decode": true
+    },
+    "reference-8022a5a8.asm": {
+      "start": 2149754024,
+      "end_exclusive": 2149754664,
+      "sha256": "24e68987a93fbce6f2b295d8b317d10972fdf216bd64cf2a09e4b815857a925f",
+      "complete_linear_decode": true
+    },
+    "reference-8022a6e0.asm": {
+      "start": 2149754336,
+      "end_exclusive": 2149754976,
+      "sha256": "16a84ed837e2d7f427b08490e3b2ad7feaeba3eaf5aadcb92444fb717efd12c4",
+      "complete_linear_decode": true
+    },
+    "reference-8022a7c4.asm": {
+      "start": 2149754564,
+      "end_exclusive": 2149755204,
+      "sha256": "6accbff15f3613c2252b9016a6b76a1c49fbe04a93bec8ae4848519ee85e93e8",
+      "complete_linear_decode": true
+    },
+    "reference-80239d34.asm": {
+      "start": 2149817396,
+      "end_exclusive": 2149818036,
+      "sha256": "769af31df26a851fc1e7d58c8cad7f4e402bab21fd0b6fb1dc381e92b8c513d1",
+      "complete_linear_decode": true
+    },
+    "reference-8023a2c4.asm": {
+      "start": 2149818820,
+      "end_exclusive": 2149819460,
+      "sha256": "df440b7fe9be3a3beb805efb8e2923a5a87badaea2e63efe89ff5d13d917bb18",
+      "complete_linear_decode": true
+    },
+    "reference-80288e30.asm": {
+      "start": 2150141232,
+      "end_exclusive": 2150141872,
+      "sha256": "2c406b5d7ff8ca92974d8069fdcb94f2df986614acc08f527634d9b73ed69749",
+      "complete_linear_decode": true
+    },
+    "reference-80307afc.asm": {
+      "start": 2150660604,
+      "end_exclusive": 2150661244,
+      "sha256": "3c37f0d562b95809152d8352a1a658e8af52132a20b76d3fd903742facd58fd3",
+      "complete_linear_decode": true
+    },
+    "reference-80307b68.asm": {
+      "start": 2150660712,
+      "end_exclusive": 2150661352,
+      "sha256": "ebbf954a1c629412d1266b6477221c7795c1ab9e339085ae3362067945c4d216",
+      "complete_linear_decode": true
+    },
+    "reference-80308188.asm": {
+      "start": 2150662280,
+      "end_exclusive": 2150662920,
+      "sha256": "0563cfebf91004903c6f911e509a25f220569fb69761b41714c232575caf7f39",
+      "complete_linear_decode": true
+    },
+    "reference-803081fc.asm": {
+      "start": 2150662396,
+      "end_exclusive": 2150663036,
+      "sha256": "a2607c7309eadc7e5bf3347075c6a7b52a15d7e92e3da269745cbb43082105ba",
+      "complete_linear_decode": true
+    },
+    "reference-80400fa8.asm": {
+      "start": 2151681704,
+      "end_exclusive": 2151682344,
+      "sha256": "f2befb22e875dfc8c10ff617c68a1bc3ef996b565c808712fe304d9f43c85237",
+      "complete_linear_decode": true
+    },
+    "reference-80400fc8.asm": {
+      "start": 2151681736,
+      "end_exclusive": 2151682376,
+      "sha256": "090e9ee8d947a2c5d85b9c2d561f14f0d9922edd5f6a5b2602a45d3af3b96030",
+      "complete_linear_decode": true
+    },
+    "reference-804034d4.asm": {
+      "start": 2151691220,
+      "end_exclusive": 2151691860,
+      "sha256": "6dec1c2b67b90fbc412af51126e67c7a5363d3baab67a757db9b52555ce0aceb",
+      "complete_linear_decode": true
+    },
+    "reference-8058630c.asm": {
+      "start": 2153275916,
+      "end_exclusive": 2153276556,
+      "sha256": "5f80d7d8095b2b23fd24764e926e210ed3461bf5bbd9104bdbb81cdca4ad59c2",
+      "complete_linear_decode": true
+    },
+    "reference-80586354.asm": {
+      "start": 2153275988,
+      "end_exclusive": 2153276628,
+      "sha256": "1b04e977db57a818c4af8f6e720bc4acb58890cf5199e02a09d2c29d3f01c83e",
+      "complete_linear_decode": true
+    },
+    "reference-805ae218.asm": {
+      "start": 2153439512,
+      "end_exclusive": 2153440152,
+      "sha256": "4254a361dab47394dca8abf50db2eef88b800c275ce71660b6488f3c0948baf1",
+      "complete_linear_decode": true
+    },
+    "reference-805f5c38.asm": {
+      "start": 2153732920,
+      "end_exclusive": 2153733560,
+      "sha256": "79bd013df8360a1ecc27275bcdde3781dc5270b63f1f5685721e4c6f6ba4587b",
+      "complete_linear_decode": true
+    },
+    "reference-805f67a0.asm": {
+      "start": 2153735840,
+      "end_exclusive": 2153736480,
+      "sha256": "04da3e8357b635614e6804877786ebcc0501334de9a54c198a0d6be212896ee9",
+      "complete_linear_decode": true
+    },
+    "reference-805f6920.asm": {
+      "start": 2153736224,
+      "end_exclusive": 2153736864,
+      "sha256": "76a9b6064288eb0792b6a86c9ae9ede300c42b08068816d69e7a06666e27397d",
+      "complete_linear_decode": true
+    },
+    "reference-80736768.asm": {
+      "start": 2155046504,
+      "end_exclusive": 2155047144,
+      "sha256": "1eafaf3321be2a7b5ba965a16d8b9415f58e71bda1ea8aed9e75cec813d924b8",
+      "complete_linear_decode": true
+    },
+    "reference-807996f0.asm": {
+      "start": 2155451888,
+      "end_exclusive": 2155452528,
+      "sha256": "7393747552f0a9cdba5b756a5fbe0de788cfcc86a3e881f9e68926a084293e59",
+      "complete_linear_decode": true
+    }
+  },
+  "reviewed_direct_call_candidates": [
+    {
+      "instruction_address": 2148425864,
+      "target": 2149754276,
+      "analyst_label": "dlcd_gamma_loader_candidate",
+      "instruction_bytes_hex": "69a9080c",
+      "source_binding": {
+        "type": "unpacked_file_backed",
+        "carrier_offset": 1059432,
+        "size": 1075312,
+        "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+      },
+      "candidate_preceding_prologue": null,
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    },
+    {
+      "instruction_address": 2148428516,
+      "target": 2149694780,
+      "analyst_label": "gamma_resource_converter_candidate",
+      "instruction_bytes_hex": "4f6f080c",
+      "source_binding": {
+        "type": "unpacked_file_backed",
+        "carrier_offset": 1059432,
+        "size": 1075312,
+        "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+      },
+      "candidate_preceding_prologue": null,
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    },
+    {
+      "instruction_address": 2149570068,
+      "target": 2149698540,
+      "analyst_label": "lclut_resource_loader_candidate",
+      "instruction_bytes_hex": "fb72080c",
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "candidate_preceding_prologue": {
+        "virtual_address": 2149570044,
+        "stack_allocation": 40,
+        "distance_to_reference": 24,
+        "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+      },
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    },
+    {
+      "instruction_address": 2149697540,
+      "target": 2149694780,
+      "analyst_label": "gamma_resource_converter_candidate",
+      "instruction_bytes_hex": "4f6f080c",
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "candidate_preceding_prologue": {
+        "virtual_address": 2149697448,
+        "stack_allocation": 96,
+        "distance_to_reference": 92,
+        "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+      },
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    },
+    {
+      "instruction_address": 2149697744,
+      "target": 2149694780,
+      "analyst_label": "gamma_resource_converter_candidate",
+      "instruction_bytes_hex": "4f6f080c",
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "candidate_preceding_prologue": {
+        "virtual_address": 2149697448,
+        "stack_allocation": 96,
+        "distance_to_reference": 296,
+        "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+      },
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    },
+    {
+      "instruction_address": 2149697924,
+      "target": 2149697448,
+      "analyst_label": "gamma_resource_loader_candidate",
+      "instruction_bytes_hex": "ea71080c",
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "candidate_preceding_prologue": {
+        "virtual_address": 2149697888,
+        "stack_allocation": 56,
+        "distance_to_reference": 36,
+        "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+      },
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    },
+    {
+      "instruction_address": 2149796472,
+      "target": 2149698540,
+      "analyst_label": "lclut_resource_loader_candidate",
+      "instruction_bytes_hex": "fb72080c",
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "candidate_preceding_prologue": {
+        "virtual_address": 2149796392,
+        "stack_allocation": 40,
+        "distance_to_reference": 80,
+        "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+      },
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    },
+    {
+      "instruction_address": 2149830072,
+      "target": 2149573456,
+      "analyst_label": "ipp_gamma_mode_validation_candidate",
+      "instruction_bytes_hex": "d4f8070c",
+      "source_binding": {
+        "type": "decoded_segment",
+        "file": "derived\\v1.1-decoded\\segment-00220314.bin",
+        "packed_carrier_offset": 2229012,
+        "size": 2630016,
+        "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+      },
+      "candidate_preceding_prologue": {
+        "virtual_address": 2149828536,
+        "stack_allocation": 344,
+        "distance_to_reference": 1536,
+        "confidence": "Heuristic preceding stack allocation and saved-ra pattern; not a proven function boundary"
+      },
+      "confidence": "Aligned JAL encoding; needs code/data and control-flow validation"
+    }
+  ],
+  "counts": {
+    "strings": 40,
+    "materialization_candidates": 33,
+    "raw_pointer_words": 6,
+    "windows": 33
+  },
+  "limitations": [
+    "String names are diagnostics, not recovered symbols.",
+    "Mixed code/data regions can contain instruction-like data; address references require control-flow review.",
+    "Prologues are heuristic and may point into a different function; supplied listings are bounded windows only.",
+    "Indirect calls, relocations and interior/ANSI-prefixed string pointers are not exhaustively resolved.",
+    "No patch points, calling conventions, structure layouts or runtime behavior are validated.",
+    "DDE errors explicitly mention DLCD; do not assume these tables modify captured photographs.",
+    "No target execution, camera connection, memory access, patching, repacking or firmware writes."
+  ]
+}

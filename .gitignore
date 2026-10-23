@@ -4,6 +4,8 @@
 /tools/vendor/
 /samples/
 /experiments/
+/work/
+/benchmarks/private/
 /evidence/camera-samples.json
 /evidence/camera-post-copy-check.json
 /evidence/wpd-device-info*.json

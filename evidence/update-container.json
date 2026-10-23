@@ -1,0 +1,249 @@
+{
+  "method": "Offline Python descriptor parsing plus source-bound static MIPS evidence",
+  "input_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "input_size": 19005632,
+  "ranges_end_exclusive": true,
+  "descriptor": {
+    "offset": 1048576,
+    "size": 192,
+    "payload_size": 17956864,
+    "transfer_buffer_size": 131072,
+    "media_selector": 3,
+    "post_burn_action_selector": 0,
+    "led_parameters_raw": [
+      6,
+      2,
+      1
+    ],
+    "hash_flag_u16": 0,
+    "hash_flag_handle_low_byte": 0,
+    "extension_magic_u16": 21930,
+    "extension_present": true,
+    "extension_word_0x40": 0,
+    "payload_range": [
+      1048768,
+      19005632
+    ],
+    "payload_ends_at_carrier_end": true
+  },
+  "boot_header_offset": 1048768,
+  "boot_properties_raw": [
+    {
+      "name": "MainAddr",
+      "relative_offset": 0,
+      "firmware_offset": 1048768,
+      "raw_u32": 1536
+    },
+    {
+      "name": "MainSize",
+      "relative_offset": 8,
+      "firmware_offset": 1048776,
+      "raw_u32": 8192
+    },
+    {
+      "name": "AltAddr",
+      "relative_offset": 16,
+      "firmware_offset": 1048784,
+      "raw_u32": 9728
+    },
+    {
+      "name": "AltSize",
+      "relative_offset": 12,
+      "firmware_offset": 1048780,
+      "raw_u32": 1081344
+    },
+    {
+      "name": "ulResourceAFileSize",
+      "relative_offset": 516,
+      "firmware_offset": 1049284,
+      "raw_u32": 32518
+    },
+    {
+      "name": "ulResourceBFileSize",
+      "relative_offset": 520,
+      "firmware_offset": 1049288,
+      "raw_u32": 0
+    },
+    {
+      "name": "ulResourceCFileSize",
+      "relative_offset": 524,
+      "firmware_offset": 1049292,
+      "raw_u32": 0
+    },
+    {
+      "name": "ulUserAreaFileSize",
+      "relative_offset": 528,
+      "firmware_offset": 1049296,
+      "raw_u32": 0
+    },
+    {
+      "name": "ulResourceAVirtualSize",
+      "relative_offset": 532,
+      "firmware_offset": 1049300,
+      "raw_u32": 37869
+    },
+    {
+      "name": "ulResourceBVirtualSize",
+      "relative_offset": 536,
+      "firmware_offset": 1049304,
+      "raw_u32": 160
+    },
+    {
+      "name": "ulResourceCVirtualSize",
+      "relative_offset": 540,
+      "firmware_offset": 1049308,
+      "raw_u32": 1600
+    },
+    {
+      "name": "ulUserAreaVirtualSize",
+      "relative_offset": 544,
+      "firmware_offset": 1049312,
+      "raw_u32": 256
+    },
+    {
+      "name": "Code area size",
+      "relative_offset": 548,
+      "firmware_offset": 1049316,
+      "raw_u32": 2128
+    },
+    {
+      "name": "User area mode",
+      "relative_offset": 556,
+      "firmware_offset": 1049324,
+      "raw_u32": 0
+    },
+    {
+      "name": "User Area Start",
+      "relative_offset": 560,
+      "firmware_offset": 1049328,
+      "raw_u32": 4294967295
+    },
+    {
+      "name": "User Area Phys Start",
+      "relative_offset": 784,
+      "firmware_offset": 1049552,
+      "raw_u32": 2913840557
+    },
+    {
+      "name": "User Area Actual Size",
+      "relative_offset": 788,
+      "firmware_offset": 1049556,
+      "raw_u32": 2913840557
+    }
+  ],
+  "checks": {
+    "descriptor_extension_magic": true,
+    "declared_payload_exactly_fits": true,
+    "main_pointer_matches_mapped_elf": true,
+    "alt_pointer_matches_mapped_elf": true,
+    "main_extent_ends_at_alt": true
+  },
+  "integrity": {
+    "download_card_flag_branch": "0x8001983c..0x80019844",
+    "hash_flag_actual": 0,
+    "whole_carrier_trailer_md5_path_enabled": false,
+    "path_if_enabled": "MD5 of carrier bytes [0, file_size-16), compared against final 16 bytes",
+    "calculated_md5_excluding_last16": "eb24b55604c86026b2f8dddd6f255bfc",
+    "last16_hex": "00000000000000000000000000000000",
+    "last16_matches_calculated_md5": false,
+    "whole_carrier_result": "Not applicable: flag is zero; no MD5 trailer asserted",
+    "chunk_hash_gate": "Handle byte +0x1280 copied from descriptor +0x3c; actual zero",
+    "no_hash_chunk_behavior": "Card reader at 0x80019c20 rereads each chunk and compares bytes",
+    "other_integrity_or_signature_rules": "Unresolved; this parser does not prove absence"
+  },
+  "acceptance_and_restore": {
+    "analysis_scope": "Boot downloader only; null acceptance fields mean unresolved in this pass, not absence of installed-application checks",
+    "model_acceptance_field": null,
+    "version_acceptance_field": null,
+    "device_flash_layout_verified": false,
+    "installed_v1_0_backup_available": false,
+    "device_specific_calibration_backup_verified": false,
+    "restoration_tested": false,
+    "safe_to_flash": false,
+    "boot_recovery_code": "InitRecoverSection and UART/USB/card download paths exist in supplied boot executable; reachability on the camera is unverified"
+  },
+  "limitations": [
+    "Download descriptor semantics apply to the supplied boot updater, not necessarily Nikon's installed application acceptance checks.",
+    "Diagnostic property names do not establish storage units or physical flash addresses.",
+    "Random-looking 128-byte region at boot-header +0x318 is not identified as a signature or digest.",
+    "No hardware access, update execution, checksum fixing, repacking, or flashable output."
+  ],
+  "static_windows": [
+    {
+      "name": "DownloadCard",
+      "virtual_start": 2147587116,
+      "firmware_offset": 39076,
+      "size": 2036,
+      "complete_linear_decode": true,
+      "sha256": "ad7c205c728c57a9baeb82a62338aef00deac40909fab9efd255a78fcc703573",
+      "listing": "derived\\update-container-analysis\\DownloadCard.asm"
+    },
+    {
+      "name": "BurnGetHandle",
+      "virtual_start": 2147594096,
+      "firmware_offset": 46056,
+      "size": 856,
+      "complete_linear_decode": true,
+      "sha256": "681632da4f13e4ccce411f59ca8ebeea76ca3090790446e4da4e30a9b45486b8",
+      "listing": "derived\\update-container-analysis\\BurnGetHandle.asm"
+    },
+    {
+      "name": "PrintBootHeaderProperties",
+      "virtual_start": 2147590684,
+      "firmware_offset": 42644,
+      "size": 300,
+      "complete_linear_decode": true,
+      "sha256": "7c04e0840e481b572ea6a661b928a75d7f68743da5382dd478db92cb06286a88",
+      "listing": "derived\\update-container-analysis\\PrintBootHeaderProperties.asm"
+    },
+    {
+      "name": "PrintRecoverHeaderProperties",
+      "virtual_start": 2147590984,
+      "firmware_offset": 42944,
+      "size": 136,
+      "complete_linear_decode": true,
+      "sha256": "0340c9d85b9131ebea1d15f1913cdaec6b5417a21bba2daf7910359082523ceb",
+      "listing": "derived\\update-container-analysis\\PrintRecoverHeaderProperties.asm"
+    },
+    {
+      "name": "InitRecoverSection",
+      "virtual_start": 2147591120,
+      "firmware_offset": 43080,
+      "size": 244,
+      "complete_linear_decode": true,
+      "sha256": "9bd322804b0d422ee13b4ddb35477a18b5cafc36dc301aabf2159ddcaa436aec",
+      "listing": "derived\\update-container-analysis\\InitRecoverSection.asm"
+    },
+    {
+      "name": "GetSectionFromBootHeader",
+      "virtual_start": 2147591364,
+      "firmware_offset": 43324,
+      "size": 36,
+      "complete_linear_decode": true,
+      "sha256": "21030cc2229ff4e630bf92e474c3da9ba832fc8b56b596ab555a4c15ba73ea4e",
+      "listing": "derived\\update-container-analysis\\GetSectionFromBootHeader.asm"
+    },
+    {
+      "name": "BurnHashManager",
+      "virtual_start": 2147595916,
+      "firmware_offset": 47876,
+      "size": 532,
+      "complete_linear_decode": true,
+      "sha256": "26ca8225686f62b2819033fbdf5dc60995e88657b35b16f262f942303b83e963",
+      "listing": "derived\\update-container-analysis\\BurnHashManager.asm"
+    },
+    {
+      "name": "card_chunk_reader_analyst_label",
+      "virtual_start": 2147589152,
+      "firmware_offset": 41112,
+      "size": 892,
+      "complete_linear_decode": true,
+      "sha256": "da999d70b2678b800b38bc63b26f5c6c5581b241484302b8f6b18272cd9e1a34",
+      "listing": "derived\\update-container-analysis\\card_chunk_reader_analyst_label.asm"
+    }
+  ],
+  "self_test": {
+    "synthetic_parser_cases_passed": 6
+  },
+  "source_unchanged_after_analysis": true
+}

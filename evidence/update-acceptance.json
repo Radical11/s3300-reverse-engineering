@@ -1,0 +1,269 @@
+{
+  "method": "Source-bound static MIPS32 windows in independently decoded v1.1 application; no target execution",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_elf_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "additive_checksum": {
+    "offset": 44,
+    "size": 4,
+    "endianness": "little",
+    "stored": 1377959466,
+    "stored_hex": "0x5221fe2a",
+    "calculated": 1377959466,
+    "calculated_hex": "0x5221fe2a",
+    "matches": true,
+    "formula": "LE32(file[0x2c:0x30]) == sum(all other file bytes) modulo 2^32",
+    "routine": 2155046612,
+    "seek_site": 2155046716,
+    "read_site": 2155046736,
+    "accumulate_site": 2155046860,
+    "comparison_sites": [
+      2155046908,
+      2155046940,
+      2155046952
+    ],
+    "caller_sites": [
+      2153905552,
+      2153905568
+    ],
+    "status": "Static arithmetic independently matches actual baseline file"
+  },
+  "version_field": {
+    "offset": 40,
+    "size": 4,
+    "value": 65792,
+    "value_hex": "0x10100",
+    "reader_routine": 2155046464,
+    "display_extraction_sites": [
+      2153968780,
+      2153968796
+    ],
+    "display_fields": "high16 = 1; bits8..15 = 1 in this source; routine is used to display offered version",
+    "ordinary_upgrade_or_downgrade_comparison": "Not established by this bounded pass"
+  },
+  "candidate_product_marker": {
+    "offset": 48,
+    "value": 1260585286,
+    "value_hex": "0x4b230146",
+    "routine": 2155046248,
+    "compare_site": 2155046352,
+    "equals_constant": 1260585286,
+    "runtime_flag_address": 2156470769,
+    "behavior": "When file handle and flag are nonzero, returns 2 for marker equality, 1 for mismatch; otherwise 0.",
+    "caller_site": 2153910248,
+    "status": "Static marker equality gate; exact model/product semantics and v1.0 equivalence unverified"
+  },
+  "file_paths": [
+    {
+      "address": 2151180248,
+      "text": "I:\\FIRMWARE\\FIRMWARE.BIN",
+      "xref_sites": [
+        2155046256,
+        2155046472,
+        2155046620
+      ]
+    },
+    {
+      "address": 2154257712,
+      "text": "\\FIRMWARE\\FIRMWARE.BIN",
+      "xref_sites": [
+        2153905452
+      ]
+    },
+    {
+      "address": 2154271188,
+      "text": "I:\\FIRMWARE\\FULL_EN.txt",
+      "xref_sites": [
+        2154016776,
+        2154016884
+      ]
+    }
+  ],
+  "full_file_marker": {
+    "routine": 2154016708,
+    "behavior": "If the marker file exists, reads 6 ASCII bytes and compares parsed major/hex fraction to firmware u32 at 0x28; stores equality and availability flags.",
+    "flag_addresses": [
+      2154161848,
+      2154161849
+    ],
+    "limitation": "Special full-file path only; not proof of ordinary update version policy. Marker was not created."
+  },
+  "usb_vendor_operations": [
+    {
+      "opcode": "0x9002",
+      "registration_site": 2153229608,
+      "handler": 2153241348,
+      "finding": "Branches on parameter 1 or 2 and may call state-changing routine 0x8063b3bc; not a validated read-only dump operation."
+    },
+    {
+      "opcode": "0x9003",
+      "registration_site": 2153229624,
+      "handler": 2153241348,
+      "finding": "Delegated registration plus shared opcode handler; parameter path writes multiple global/state bytes."
+    },
+    {
+      "opcode": "0x9005",
+      "registration_site": 2155344900,
+      "handler": 2155352104,
+      "finding": "Default handler table points to 0x80781028, also used by standard 0x100c (SendObjectInfo); object-receive metadata path."
+    },
+    {
+      "opcode": "0x9006",
+      "registration_site": 2155344904,
+      "handler": 2155353504,
+      "finding": "Handler 0x807815a0 is also used by standard 0x100d (SendObject); USB receive and file/object mutation path, not a validated memory-read facility."
+    }
+  ],
+  "debug_leads": [
+    {
+      "label": "GetMem over USB implementation candidate",
+      "routine": 2155470388,
+      "handler_pointer": 2156500576,
+      "diagnostic_string": 2154327512,
+      "finding": "Copies address and length from shared command at 0x800e113c, constructs memory alias and reaches transfer routine 0x80796070.",
+      "missing": "Actual active transport/interface and command framing, safe address bounds, installed-v1.0 correspondence, and read-only reachability."
+    },
+    {
+      "label": "SetMem / monitor execution implementation",
+      "routine": 2155468620,
+      "handler_pointer": 2156500568,
+      "monitor_call_site": 2155469116,
+      "finding": "Side-effectful command handling exists adjacent to GetMem; do not treat the protocol generically as read-only."
+    },
+    {
+      "label": "NAND dump monitor command",
+      "registration_address": 2156495820,
+      "description_address": 2151191780,
+      "handler": 2153255104,
+      "output_path_address": 2154199308,
+      "output_path": "I:\\DumpNand.txt",
+      "finding": "Static monitor table associates NAND-to-card description with handler; bounded follow-up reaches file writes.",
+      "missing": "Verified console access, full routine behavior, exact storage geometry and complete calibration/backup coverage."
+    }
+  ],
+  "source_unchanged": true,
+  "windows": [
+    {
+      "analyst_label": "application_checksum",
+      "virtual_start": 2155046612,
+      "size": 620,
+      "analysis_elf_offset": 7560196,
+      "sha256": "2c49b7c3228fea1e260b4ca33f82a41ad45d05e2933d121e80627cd641882eb7",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\application_checksum.asm",
+      "linear_decode_bytes": 620
+    },
+    {
+      "analyst_label": "candidate_product_marker_check",
+      "virtual_start": 2155046248,
+      "size": 216,
+      "analysis_elf_offset": 7559832,
+      "sha256": "355095d2a2e5f0684fc61e608847e7339d3ad92d2c883e50108260034bc47d76",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\candidate_product_marker_check.asm",
+      "linear_decode_bytes": 216
+    },
+    {
+      "analyst_label": "update_version_reader",
+      "virtual_start": 2155046464,
+      "size": 148,
+      "analysis_elf_offset": 7560048,
+      "sha256": "23b1b74759b1d0469438d4f31a22d7957f1df003a80d7f7aa1a7a280bc0748ab",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\update_version_reader.asm",
+      "linear_decode_bytes": 148
+    },
+    {
+      "analyst_label": "full_file_marker_version_comparison",
+      "virtual_start": 2154016708,
+      "size": 548,
+      "analysis_elf_offset": 6530420,
+      "sha256": "5cdae6ba34ec0748c9ad2d18d8f6461fc730ac8062f52e5c32a591d3e9944c92",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\full_file_marker_version_comparison.asm",
+      "linear_decode_bytes": 548
+    },
+    {
+      "analyst_label": "update_menu_checksum_calls",
+      "virtual_start": 2153905256,
+      "size": 416,
+      "analysis_elf_offset": 6418968,
+      "sha256": "91b3bfaef402dd2a543e5cf735d9a50fd8aac775791cda265fdb5014786dcffe",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\update_menu_checksum_calls.asm",
+      "linear_decode_bytes": 416
+    },
+    {
+      "analyst_label": "update_menu_marker_gate",
+      "virtual_start": 2153910240,
+      "size": 68,
+      "analysis_elf_offset": 6423952,
+      "sha256": "88dba2a8debbeeeb4a6cc2fe3332751d9f3f4d138e17e00bc033343ccd055a05",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\update_menu_marker_gate.asm",
+      "linear_decode_bytes": 68
+    },
+    {
+      "analyst_label": "ptp_vendor_registration",
+      "virtual_start": 2153229572,
+      "size": 60,
+      "analysis_elf_offset": 5743284,
+      "sha256": "9995e634d9b1d6de9be0fad720055a8d4ead5c488ed88a83fbaf49083b41b6b8",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\ptp_vendor_registration.asm",
+      "linear_decode_bytes": 60
+    },
+    {
+      "analyst_label": "ptp_9002_9003_handler",
+      "virtual_start": 2153241348,
+      "size": 308,
+      "analysis_elf_offset": 5755060,
+      "sha256": "fa442a54127456e0ecb2179c11f96ae860aefd374a8c594bb4ae818d9c974e85",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\ptp_9002_9003_handler.asm",
+      "linear_decode_bytes": 308
+    },
+    {
+      "analyst_label": "ptp_9005_9006_registration",
+      "virtual_start": 2155344508,
+      "size": 528,
+      "analysis_elf_offset": 7858092,
+      "sha256": "3f261ba755c8019128328d143ca6467b47b7a8f579f2cc07e48b52c170f71cb5",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\ptp_9005_9006_registration.asm",
+      "linear_decode_bytes": 528
+    },
+    {
+      "analyst_label": "ptp_send_object_handler",
+      "virtual_start": 2155353504,
+      "size": 768,
+      "analysis_elf_offset": 7867088,
+      "sha256": "1546e178f2212614e5d316fb662cc1201eb3674b2bbd1a86779b94d25ac1ff69",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\ptp_send_object_handler.asm",
+      "linear_decode_bytes": 768
+    },
+    {
+      "analyst_label": "usb_setmem_monitor_tail",
+      "virtual_start": 2155468620,
+      "size": 612,
+      "analysis_elf_offset": 7982204,
+      "sha256": "eb7ded0751d9e6e267d3b241f1301dd6a5fe1577e9d570e1a04e1b14216ae27e",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\usb_setmem_monitor_tail.asm",
+      "linear_decode_bytes": 612
+    },
+    {
+      "analyst_label": "usb_getmem_candidate",
+      "virtual_start": 2155470388,
+      "size": 472,
+      "analysis_elf_offset": 7983972,
+      "sha256": "c5a9cd877bfb4ded4b09b6fa04475e1960031e681ebbb3b8442c3c511adeeeaf",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\usb_getmem_candidate.asm",
+      "linear_decode_bytes": 472
+    },
+    {
+      "analyst_label": "sd_test_file_predicates",
+      "virtual_start": 2155120316,
+      "size": 172,
+      "analysis_elf_offset": 7633900,
+      "sha256": "8d731f4fd983875ac6dfd9e20160bcb39f27b8f36fd364faef940f4603432104",
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\update-acceptance-analysis\\sd_test_file_predicates.asm",
+      "linear_decode_bytes": 172
+    }
+  ],
+  "limitations": [
+    "Analysis applies to supplied v1.1 update, not an observed dump of running v1.0.",
+    "Additive checksum is an integrity mechanism, not evidence that all acceptance checks or authentication are known.",
+    "No confirmed end-to-end read-only USB RAM/flash dump or restoration procedure is established.",
+    "No installable image, update bypass, marker file, camera command or hardware write was produced."
+  ]
+}

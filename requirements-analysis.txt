@@ -1,0 +1,4 @@
+# Existing versions used for the offline mapping and static disassembly pass.
+# Decoders, unit-test core and benchmark analysis use Python's standard library.
+pyelftools==0.33
+capstone==5.0.6

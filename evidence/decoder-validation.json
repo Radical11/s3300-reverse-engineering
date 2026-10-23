@@ -1,0 +1,124 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_only": true,
+  "installable": false,
+  "decoder_comparison": [
+    {
+      "virtual_start": 2148562560,
+      "size": 2630016,
+      "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d",
+      "block_count": 151,
+      "bytes_equal": true,
+      "tokens_end_markers_and_padding_equal": true
+    },
+    {
+      "virtual_start": 2151192704,
+      "size": 3094784,
+      "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68",
+      "block_count": 195,
+      "bytes_equal": true,
+      "tokens_end_markers_and_padding_equal": true
+    },
+    {
+      "virtual_start": 2154287616,
+      "size": 1601792,
+      "sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "block_count": 86,
+      "bytes_equal": true,
+      "tokens_end_markers_and_padding_equal": true
+    },
+    {
+      "virtual_start": 2155889408,
+      "size": 624000,
+      "sha256": "fc743a0a8c150c958cd807c9ad3452f01680e39eab77de1d5badeb5314c7c6e5",
+      "block_count": 31,
+      "bytes_equal": true,
+      "tokens_end_markers_and_padding_equal": true
+    }
+  ],
+  "block_count": 463,
+  "decoded_bytes": 7950592,
+  "elf_file": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\v1.1-analysis\\s3300-v1.1-analysis-only.elf",
+  "elf_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "regions": [
+    {
+      "name": ".original_80000180",
+      "virtual_start": 2147484032,
+      "permissions": 5,
+      "carrier_offset": 1058676,
+      "analysis_elf_offset": 320,
+      "size": 416,
+      "sha256": "c5e5db8cbe539d11760340faa9724eb55e2f6de1941f1ff8d6af478977c92183"
+    },
+    {
+      "name": ".original_80000600",
+      "virtual_start": 2147485184,
+      "permissions": 5,
+      "carrier_offset": 1059092,
+      "analysis_elf_offset": 736,
+      "size": 340,
+      "sha256": "481ae606901301163bbad41556a10d1ab1b463b5a0f949c142182e05256de236"
+    },
+    {
+      "name": ".original_80000780",
+      "virtual_start": 2147485568,
+      "permissions": 7,
+      "carrier_offset": 1059432,
+      "analysis_elf_offset": 1088,
+      "size": 1075312,
+      "sha256": "bd579a3afc907f8b270fc82709191e3010df5361e390ca6a350d99aaa1b769fb"
+    },
+    {
+      "name": ".decoded_80107680",
+      "virtual_start": 2148562560,
+      "permissions": 7,
+      "carrier_offset": 2229012,
+      "analysis_elf_offset": 1076400,
+      "size": 2630016,
+      "sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d"
+    },
+    {
+      "name": ".decoded_80389880",
+      "virtual_start": 2151192704,
+      "permissions": 7,
+      "carrier_offset": 3922428,
+      "analysis_elf_offset": 3706416,
+      "size": 3094784,
+      "sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68"
+    },
+    {
+      "name": ".decoded_8067d200",
+      "virtual_start": 2154287616,
+      "permissions": 5,
+      "carrier_offset": 6040556,
+      "analysis_elf_offset": 6801200,
+      "size": 1601792,
+      "sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e"
+    },
+    {
+      "name": ".decoded_80804300",
+      "virtual_start": 2155889408,
+      "permissions": 6,
+      "carrier_offset": 7034272,
+      "analysis_elf_offset": 8402992,
+      "size": 624000,
+      "sha256": "fc743a0a8c150c958cd807c9ad3452f01680e39eab77de1d5badeb5314c7c6e5"
+    },
+    {
+      "name": ".original_9fc08000",
+      "virtual_start": 2680193024,
+      "permissions": 7,
+      "carrier_offset": 2134744,
+      "analysis_elf_offset": 9026992,
+      "size": 4844,
+      "sha256": "200b37da1aa0a34a2327ec3226aa4d74ddb95bf36b2bb0be4d3652918acc24e6"
+    }
+  ],
+  "elf_parser_roundtrip_verified": true,
+  "limitations": [
+    "Synthetic application address map, not an observed RAM dump.",
+    "Holes and absent runtime memory are not synthesized or inferred as BSS.",
+    "Includes the primary application and four decoded segments; excludes the separate updater and tiny MIPS16 loader.",
+    "No update encoder, compatibility bypass, flash or recovery operation."
+  ]
+}
