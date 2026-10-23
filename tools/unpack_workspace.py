@@ -19,6 +19,7 @@ import wave
 
 from elftools.elf.elffile import ELFFile
 from resource_formats import decode_zst, encode_zst, decode_zbm, encode_zbm
+from workspace_functions import add_function_index
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_HASH = "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b"
@@ -218,7 +219,8 @@ def make_search_index(output, raw, original_elfs, analysis):
                 db.execute("INSERT INTO symbols VALUES (?,?,?,?,?,?)", (item["file"], symbol.name,
                            symbol["st_value"], symbol["st_size"], symbol["st_info"]["type"], symbol["st_info"]["bind"]))
                 symbols += 1
-    return db, {"ascii_application_strings": strings, "original_symbol_entries": symbols}
+    function_counts = add_function_index(db, output)
+    return db, {"ascii_application_strings": strings, "original_symbol_entries": symbols, **function_counts}
 
 
 def verify_partition(output):
@@ -307,6 +309,7 @@ def main():
         "- `resources/`: 368 allocated files with source-chunk verification.\n"
         "- `resource-editable/`: ZST JSON and ZBM index JSON/PGM; byte-exact roundtrips checked.\n"
         "- `research.sqlite`: application strings, symbols, resources and serialized UI string records.\n\n"
+        "It also includes compiler-provided function ranges; names and complete code semantics are not recovered.\n"
         "Use the project's query_workspace.py for read-only search/address lookup.\n"
         "Custom glyph mappings, palette and actual UI IDs are not universally recovered.\n"
         "The logical resource volume extends beyond the supplied image. No missing bytes were invented.\n"

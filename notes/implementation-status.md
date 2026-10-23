@@ -32,10 +32,17 @@ on a raw-cache hit, making it a specific candidate to profile; generated-output
 ownership prevents a naive shared-pointer cache. No runtime speed gain or
 external debug access is established.
 
-The current suite passes **73 unit tests**, including malformed-resource,
+The current suite passes **83 unit tests**, including malformed-resource,
 roundtrip, metadata, scanner and query cases. The exact source reconstruction,
 all resource roundtrips and an actual English-resource CLI export/import also
 passed. This verifies offline development tools, not hardware behaviour.
+
+An additional metadata pass recovered **5,798 function ranges** covering
+2,267,704 bytes. Those ranges are now searchable in SQLite, and the developer
+CLI can export a fully bounded MIPS32 listing for an address inside one. The
+startup presentation example resolves to 0x807417d0..0x807419e0 and decoded
+completely. These are compiler metadata boundaries, not recovered names or
+proof that a patch point is usable. Full CFI interpretation remains incomplete.
 
 ## Completed development infrastructure
 

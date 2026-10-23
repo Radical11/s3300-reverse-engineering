@@ -81,12 +81,17 @@ validation together, including reversible ZST strings and ZBM index codecs:
 python tools/unpack_workspace.py derived/another-unpacked-v1.1
 python tools/unpack_workspace.py derived/another-unpacked-v1.1 --verify
 python tools/query_workspace.py derived/another-unpacked-v1.1/research.sqlite --search 'Welcome screen'
+python tools/query_workspace.py derived/another-unpacked-v1.1/research.sqlite --address 0x80741800
+python tools/workspace_functions.py derived/another-unpacked-v1.1 --listing 0x80741800 --output derived/welcome-function.asm
 ```
 
 [Branding/startup consumers](notes/branding-customization.md) and
 [profiling/developer interfaces](notes/development-interfaces.md) document the
 new customization and efficiency leads. Recovered code/resources are vendor
 artifacts; their local extraction does not turn them into open-source software.
+The [unwind metadata map](notes/unwind-functions.md) provides 5,798 function
+ranges for address lookup and bounded disassembly; original names and complete
+function semantics are not recovered.
 
 Python uses the existing pyelftools package; Capstone 5.0.6 was installed only
 under `tools/vendor/`. `tools/rea.ps1` runs cached REA 6.4.0 with the app's

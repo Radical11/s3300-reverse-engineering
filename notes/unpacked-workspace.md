@@ -18,6 +18,7 @@ committed. No camera connection or vendor executable was used by this pass.
 | Indexed bitmap resources | 73 ZBM files; exact geometry, index export and byte-for-byte re-encoding |
 | Other image/audio containers | 155 JPEGs and 12 PGM images parsed; seven PCM WAV files parsed |
 | Search database | 26,976 printable application byte sequences, 1,924 original symbol entries, resources and UI records |
+| Compiler-provided function ranges | 5,798 nonoverlapping ranges, covering 2,267,704 bytes; source and unwind headers checked |
 
 Byte coverage is complete for the **supplied file**. The actual FAT volume
 declares a further 2,611,712 bytes beyond it. All live allocated files fit; that
@@ -40,6 +41,7 @@ python tools/unpack_workspace.py derived/another-unpacked-v1.1 --verify
 python tools/query_workspace.py derived/another-unpacked-v1.1/research.sqlite --search 'Welcome screen'
 python tools/query_workspace.py derived/another-unpacked-v1.1/research.sqlite --search GAMMALUT
 python tools/query_workspace.py derived/another-unpacked-v1.1/research.sqlite --address 0x8021c7a8
+python tools/workspace_functions.py derived/another-unpacked-v1.1 --listing 0x80741800 --output derived/welcome-function.asm
 ```
 
 The query tool opens SQLite read-only and treats searches as literal text. It
@@ -48,6 +50,20 @@ Application printable strings are byte-pattern candidates, not proof of code
 reachability. Original symbols belong to their named ELF artifact; the separate
 updater overlaps application virtual addresses and its names must not be
 assigned to application code at the same address.
+
+Fresh workspaces include a `functions` table from independently checked
+exception-metadata headers. For an older workspace without that table, run
+`python tools/workspace_functions.py derived/older-workspace` once to add it.
+The tool authenticates the analysis ELF and its actual program headers, then
+reparses the range records; it does not trust address labels from loose JSON.
+Address searches return a containing range where available. A listing request
+accepts an address inside that range and writes the complete bounded MIPS32
+decode to a new file, requiring every instruction byte to decode.
+
+No original names, C source, complete control-flow analysis or executable hooks
+are implied. Some functions have no recovered unwind metadata. The metadata's
+CFI instructions and exception semantics remain outside the parser coverage;
+see `unwind-functions.md`.
 
 The command runs the decoder, independent validator, resource extractor and
 analysis-ELF builder, retaining their logs. Those dependencies use the existing

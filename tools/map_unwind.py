@@ -129,6 +129,8 @@ def main():
     parser.add_argument("--manifest", type=Path, default=ROOT/"derived/v1.1-analysis-final/manifest.json")
     parser.add_argument("--output", type=Path, default=ROOT/"evidence/unwind-functions.json")
     args = parser.parse_args()
+    if args.output.exists():
+        raise FileExistsError("Refusing to overwrite existing unwind evidence; choose a new --output path")
     manifest = json.loads(args.manifest.read_text())
     raw = Path(manifest["elf_file"]).read_bytes()
     source = ROOT/"sources/extracted-v1.1/S3300Update/firmware/firmware.bin"
@@ -170,7 +172,8 @@ def main():
                               "Full pyelftools CallFrameInfo parsing rejects legacy/nonstandard details; only independently parsed CIE/FDE headers are compared.",
                               "Empty augmentation or zP/zPL omits R; FDE start/range use absolute 32-bit pointers. No other encoding is accepted.",
                               "No changes to target bytes, source firmware, camera state or update packages."]}
-    args.output.write_text(json.dumps(report, indent=2)+"\n")
+    with args.output.open("x", encoding="utf-8") as handle:
+        handle.write(json.dumps(report, indent=2)+"\n")
     print(json.dumps(report["counts"]))
 
 

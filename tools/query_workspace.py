@@ -14,9 +14,11 @@ def query(database, *, term=None, address=None, limit=50):
         db.row_factory = sqlite3.Row
         db.execute("PRAGMA query_only=ON")
         if address is not None:
+            has_functions = db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='functions'").fetchone()
             return {"address": hex(address),
                     "regions": [dict(r) for r in db.execute("SELECT * FROM regions WHERE virtual_start<=? AND virtual_start+size>?", (address,address))],
                     "symbols": [dict(r) for r in db.execute("SELECT * FROM symbols WHERE value=? OR (size>0 AND value<=? AND value+size>?) LIMIT ?", (address,address,address,limit))],
+                    "functions": [dict(r) for r in db.execute("SELECT * FROM functions WHERE start<=? AND end_exclusive>? LIMIT ?", (address,address,limit))] if has_functions else [],
                     "nearby_strings": [dict(r) for r in db.execute("SELECT * FROM code_strings WHERE virtual_address BETWEEN ? AND ? ORDER BY abs(virtual_address-?) LIMIT ?", (address-256,address+256,address,limit))]}
         # Escape SQL wildcard characters so queries remain literal text searches.
         pattern = "%"+term.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")+"%"
