@@ -1,0 +1,1061 @@
+{
+  "method": "Capstone 5.0.6, not REA decompilation",
+  "firmware_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "functions": [
+    {
+      "name": "main",
+      "address": "0x8009d64c",
+      "firmware_offset": "0x8dac4",
+      "symbol_size": 48,
+      "decoded_size": 48,
+      "complete_linear_decode": true,
+      "bytes_sha256": "e053ff18986ef975fe8db8c48b52cceff7de6be6eb17f061c64694a3a29f53ff",
+      "calls": [
+        {
+          "site": 2148128340,
+          "target": 2147789740,
+          "symbol": "CpuInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2148128348,
+          "target": 2147837172,
+          "symbol": "CguInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2148128356,
+          "target": 2147632424,
+          "symbol": "_tx_initialize_kernel_enter",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "Burn",
+      "address": "0x8001b300",
+      "firmware_offset": "0xb778",
+      "symbol_size": 908,
+      "decoded_size": 908,
+      "complete_linear_decode": true,
+      "bytes_sha256": "768c4c305aa6b80c89fba22c52b4ffccea136f4d36f9c292ee9f33392b3b824c",
+      "calls": [
+        {
+          "site": 2147595072,
+          "target": 2148008008,
+          "symbol": "FcuMediaInfoInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595108,
+          "target": 2148005024,
+          "symbol": "FcuSetZoneConfig",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595148,
+          "target": 2147696688,
+          "symbol": "PoolCallocEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595196,
+          "target": 2147857920,
+          "symbol": "_fx_media_open",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595216,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595236,
+          "target": 2147697412,
+          "symbol": "PoolFreeEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595300,
+          "target": 2147860080,
+          "symbol": "_fx_media_information_get",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595380,
+          "target": 2147696228,
+          "symbol": "PoolAllocEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595412,
+          "target": 2147696228,
+          "symbol": "PoolAllocEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595488,
+          "target": 2147697412,
+          "symbol": "PoolFreeEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595508,
+          "target": 2147697412,
+          "symbol": "PoolFreeEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595528,
+          "target": 2147697412,
+          "symbol": "PoolFreeEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595548,
+          "target": 2147892280,
+          "symbol": "_fx_media_close",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595568,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595588,
+          "target": 2147697412,
+          "symbol": "PoolFreeEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595596,
+          "target": 2147892280,
+          "symbol": "_fx_media_close",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595612,
+          "target": 2147594952,
+          "symbol": "BurnHashExit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595620,
+          "target": 2147620088,
+          "symbol": "OsThreadSleepMS",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595628,
+          "target": 2147625272,
+          "symbol": "_tx_queue_delete",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595636,
+          "target": 2147625272,
+          "symbol": "_tx_queue_delete",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595656,
+          "target": 2147697412,
+          "symbol": "PoolFreeEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595664,
+          "target": 2147892280,
+          "symbol": "_fx_media_close",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595700,
+          "target": 2147696228,
+          "symbol": "PoolAllocEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595736,
+          "target": 2147619228,
+          "symbol": "_tx_queue_create",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595768,
+          "target": 2147619228,
+          "symbol": "_tx_queue_create",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595816,
+          "target": 2147623912,
+          "symbol": "OsThreadCreateEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595848,
+          "target": 2147650296,
+          "symbol": "OsSysHaltEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595868,
+          "target": 2147697412,
+          "symbol": "PoolFreeEx",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595876,
+          "target": 2147892280,
+          "symbol": "_fx_media_close",
+          "kind": "jal"
+        },
+        {
+          "site": 2147595908,
+          "target": 2147650296,
+          "symbol": "OsSysHaltEx",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "BurnMain",
+      "address": "0x800109c8",
+      "firmware_offset": "0xe40",
+      "symbol_size": 376,
+      "decoded_size": 376,
+      "complete_linear_decode": true,
+      "bytes_sha256": "d743b262f3ffd03f107313a635f648103c76a3ef192a6cc1a6bbed6ecaebc327",
+      "calls": [
+        {
+          "site": 2147551700,
+          "target": 2147832880,
+          "symbol": "CguUnitSetEnabled",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551712,
+          "target": 2147832880,
+          "symbol": "CguUnitSetEnabled",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551724,
+          "target": 2147832880,
+          "symbol": "CguUnitSetEnabled",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551732,
+          "target": 2147614432,
+          "symbol": "GpioInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551740,
+          "target": 2147839080,
+          "symbol": "PowerInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551748,
+          "target": 2148019216,
+          "symbol": "RtcInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551756,
+          "target": 2148021424,
+          "symbol": "RtcUse",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551764,
+          "target": 2147667380,
+          "symbol": "UartInitFifo",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551772,
+          "target": 2147703644,
+          "symbol": "DcuInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551780,
+          "target": 2147778764,
+          "symbol": "DebugInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551792,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551800,
+          "target": 2147852724,
+          "symbol": "SmdbInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551808,
+          "target": 2147798292,
+          "symbol": "UsbInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551816,
+          "target": 2147846124,
+          "symbol": "DmaInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551832,
+          "target": 2147614624,
+          "symbol": "GpioGroupSelect",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551848,
+          "target": 2147614904,
+          "symbol": "GpioGroupConfig",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551864,
+          "target": 2147615280,
+          "symbol": "GpioGroupSet",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551872,
+          "target": 2147990680,
+          "symbol": "FcuInit",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551880,
+          "target": 2147907332,
+          "symbol": "_fx_system_initialize",
+          "kind": "jal"
+        },
+        {
+          "site": 2147551984,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "j"
+        },
+        {
+          "site": 2147552036,
+          "target": 2147587116,
+          "symbol": "DownloadCard",
+          "kind": "j"
+        },
+        {
+          "site": 2147552044,
+          "target": 2147551220,
+          "symbol": "DownloadUart",
+          "kind": "j"
+        },
+        {
+          "site": 2147552056,
+          "target": 2147597444,
+          "symbol": "DownloadUsb",
+          "kind": "j"
+        }
+      ]
+    },
+    {
+      "name": "BurnGetSectionsMap",
+      "address": "0x8001a4e8",
+      "firmware_offset": "0xa960",
+      "symbol_size": 2696,
+      "decoded_size": 2696,
+      "complete_linear_decode": true,
+      "bytes_sha256": "d93fb37d2705a9d6761082beb4bef57d160d64f4b0d0a6959b3a86bfc1e97c11",
+      "calls": [
+        {
+          "site": 2147591484,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147591500,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147591508,
+          "target": 2147590684,
+          "symbol": "PrintBootHeaderProperties",
+          "kind": "jal"
+        },
+        {
+          "site": 2147591524,
+          "target": 2147591120,
+          "symbol": "InitRecoverSection",
+          "kind": "jal"
+        },
+        {
+          "site": 2147591628,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147591752,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147591804,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592128,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592192,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592200,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592260,
+          "target": 2148020664,
+          "symbol": "RtcTimer",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592268,
+          "target": 2147620088,
+          "symbol": "OsThreadSleepMS",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592276,
+          "target": 2147659296,
+          "symbol": null,
+          "kind": "jal"
+        },
+        {
+          "site": 2147592284,
+          "target": 2148019592,
+          "symbol": "RtcGetTime",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592292,
+          "target": 2148022704,
+          "symbol": "srand",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592304,
+          "target": 2148022632,
+          "symbol": "rand",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592312,
+          "target": 2147659296,
+          "symbol": null,
+          "kind": "jal"
+        },
+        {
+          "site": 2147592376,
+          "target": 2147620088,
+          "symbol": "OsThreadSleepMS",
+          "kind": "jal"
+        },
+        {
+          "site": 2147592412,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593016,
+          "target": 2147590268,
+          "symbol": "IsSectionProtected",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593040,
+          "target": 2147590268,
+          "symbol": "IsSectionProtected",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593060,
+          "target": 2147590268,
+          "symbol": "IsSectionProtected",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593080,
+          "target": 2147590268,
+          "symbol": "IsSectionProtected",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593104,
+          "target": 2147590268,
+          "symbol": "IsSectionProtected",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593124,
+          "target": 2147590268,
+          "symbol": "IsSectionProtected",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593148,
+          "target": 2147590268,
+          "symbol": "IsSectionProtected",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593244,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593272,
+          "target": 2147590528,
+          "symbol": "UpdatePartitionInMBRTable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593288,
+          "target": 2147590528,
+          "symbol": "UpdatePartitionInMBRTable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593304,
+          "target": 2147590528,
+          "symbol": "UpdatePartitionInMBRTable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593320,
+          "target": 2147590528,
+          "symbol": "UpdatePartitionInMBRTable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593336,
+          "target": 2147590528,
+          "symbol": "UpdatePartitionInMBRTable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593352,
+          "target": 2147590528,
+          "symbol": "UpdatePartitionInMBRTable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593368,
+          "target": 2147590528,
+          "symbol": "UpdatePartitionInMBRTable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593520,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593704,
+          "target": 2147591364,
+          "symbol": "GetSectionFromBootHeader",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593720,
+          "target": 2147591364,
+          "symbol": "GetSectionFromBootHeader",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593764,
+          "target": 2147591364,
+          "symbol": "GetSectionFromBootHeader",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593804,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593812,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593832,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593856,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593936,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593960,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593968,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147593992,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147594004,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147594020,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147594040,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147594060,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147594080,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "BurnHashInit",
+      "address": "0x8001b8a0",
+      "firmware_offset": "0xbd18",
+      "symbol_size": 52,
+      "decoded_size": 52,
+      "complete_linear_decode": true,
+      "bytes_sha256": "41973671e1b0c8f9ee99c4e0b01e43534d715a083b33744b286d64605847ff2e",
+      "calls": [
+        {
+          "site": 2147596476,
+          "target": 2147653816,
+          "symbol": "_tx_queue_send",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "BurnHashUpdate",
+      "address": "0x8001b8d4",
+      "firmware_offset": "0xbd4c",
+      "symbol_size": 56,
+      "decoded_size": 56,
+      "complete_linear_decode": true,
+      "bytes_sha256": "405979339220a6d66ba8f3bc81d5ac77b440069a7b2559da2394739f7bbfa0a1",
+      "calls": [
+        {
+          "site": 2147596532,
+          "target": 2147653816,
+          "symbol": "_tx_queue_send",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "BurnHashFanalize",
+      "address": "0x8001b90c",
+      "firmware_offset": "0xbd84",
+      "symbol_size": 92,
+      "decoded_size": 92,
+      "complete_linear_decode": true,
+      "bytes_sha256": "76508546b9205fbbbeb942fd7fee9718ca5b977e2505e593e9889ac4864e3065",
+      "calls": [
+        {
+          "site": 2147596596,
+          "target": 2147653816,
+          "symbol": "_tx_queue_send",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596612,
+          "target": 2147626584,
+          "symbol": "_tx_queue_receive",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "BurnHashManager",
+      "address": "0x8001b68c",
+      "firmware_offset": "0xbb04",
+      "symbol_size": 532,
+      "decoded_size": 532,
+      "complete_linear_decode": true,
+      "bytes_sha256": "26ca8225686f62b2819033fbdf5dc60995e88657b35b16f262f942303b83e963",
+      "calls": [
+        {
+          "site": 2147596024,
+          "target": 2147626584,
+          "symbol": "_tx_queue_receive",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596080,
+          "target": 2147653816,
+          "symbol": "_tx_queue_send",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596136,
+          "target": 2147763124,
+          "symbol": "md5_init",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596152,
+          "target": 2147626584,
+          "symbol": "_tx_queue_receive",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596188,
+          "target": 2147763184,
+          "symbol": "md5_append",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596208,
+          "target": 2147763508,
+          "symbol": "md5_finish",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596224,
+          "target": 2148030528,
+          "symbol": "memcmp",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596252,
+          "target": 2147653816,
+          "symbol": "_tx_queue_send",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596280,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596292,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596332,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596368,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596376,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596396,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596416,
+          "target": 2147777624,
+          "symbol": "Printf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147596432,
+          "target": 2147653816,
+          "symbol": "_tx_queue_send",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "md5_init",
+      "address": "0x800443b4",
+      "firmware_offset": "0x3482c",
+      "symbol_size": 60,
+      "decoded_size": 60,
+      "complete_linear_decode": true,
+      "bytes_sha256": "6b480da74cbee187d05c1763b9f0fa212f83ef4af703783f1085f5217fdc582b",
+      "calls": []
+    },
+    {
+      "name": "md5_append",
+      "address": "0x800443f0",
+      "firmware_offset": "0x34868",
+      "symbol_size": 324,
+      "decoded_size": 324,
+      "complete_linear_decode": true,
+      "bytes_sha256": "659190f1bd9bf3bbe0e03706e6d4773be6fad00034112921e50d8743a2f34a67",
+      "calls": [
+        {
+          "site": 2147763320,
+          "target": 2148030680,
+          "symbol": "memcpy",
+          "kind": "jal"
+        },
+        {
+          "site": 2147763356,
+          "target": 2147760052,
+          "symbol": null,
+          "kind": "jal"
+        },
+        {
+          "site": 2147763384,
+          "target": 2147760052,
+          "symbol": null,
+          "kind": "jal"
+        },
+        {
+          "site": 2147763448,
+          "target": 2148030680,
+          "symbol": "memcpy",
+          "kind": "j"
+        }
+      ]
+    },
+    {
+      "name": "md5_finish",
+      "address": "0x80044534",
+      "firmware_offset": "0x349ac",
+      "symbol_size": 212,
+      "decoded_size": 212,
+      "complete_linear_decode": true,
+      "bytes_sha256": "7294c008f1b4e09641c4c15a30d81b182e7a6f8d69cdaee07a1aa5ca2be48b1a",
+      "calls": [
+        {
+          "site": 2147763620,
+          "target": 2147763184,
+          "symbol": "md5_append",
+          "kind": "jal"
+        },
+        {
+          "site": 2147763636,
+          "target": 2147763184,
+          "symbol": "md5_append",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "DebugConsoleMain",
+      "address": "0x800482c8",
+      "firmware_offset": "0x38740",
+      "symbol_size": 380,
+      "decoded_size": 380,
+      "complete_linear_decode": true,
+      "bytes_sha256": "a587f48365d1f6f4b8a82af6c74117e1d5a152c07f877508a1ee7991e312e27d",
+      "calls": [
+        {
+          "site": 2147779308,
+          "target": 2148031040,
+          "symbol": "memset",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779336,
+          "target": 2147777100,
+          "symbol": "Fprintf_B",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779348,
+          "target": 2147599896,
+          "symbol": "MonitorPrompt",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779356,
+          "target": 2147660104,
+          "symbol": null,
+          "kind": "jal"
+        },
+        {
+          "site": 2147779364,
+          "target": 2147776604,
+          "symbol": "DebugPollingModeEnable",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779420,
+          "target": 2147666892,
+          "symbol": "UartGetUserId",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779436,
+          "target": 2147669044,
+          "symbol": "UartReadPollingFifo",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779516,
+          "target": 2147666892,
+          "symbol": "UartGetUserId",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779532,
+          "target": 2147669276,
+          "symbol": "UartWritePollingFifo",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779560,
+          "target": 2147599904,
+          "symbol": "MonitorPreParse",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779568,
+          "target": 2148033068,
+          "symbol": "strlen",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779580,
+          "target": 2147599912,
+          "symbol": "MonitorParse",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779620,
+          "target": 2147666892,
+          "symbol": "UartGetUserId",
+          "kind": "jal"
+        },
+        {
+          "site": 2147779636,
+          "target": 2147669276,
+          "symbol": "UartWritePollingFifo",
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "MonitorPreParse",
+      "address": "0x8001c620",
+      "firmware_offset": "0xca98",
+      "symbol_size": 8,
+      "decoded_size": 8,
+      "complete_linear_decode": true,
+      "bytes_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "calls": []
+    },
+    {
+      "name": "CpuPerformanceMonitorStart",
+      "address": "0x800494ac",
+      "firmware_offset": "0x39924",
+      "symbol_size": 188,
+      "decoded_size": 188,
+      "complete_linear_decode": true,
+      "bytes_sha256": "432304e2afa73db6aae31854442b262e9791f1a303cf1959b40a227d03c7f32d",
+      "calls": [
+        {
+          "site": 2147783964,
+          "target": 2147660104,
+          "symbol": null,
+          "kind": "jal"
+        }
+      ]
+    },
+    {
+      "name": "CpuPerformanceMonitorRead",
+      "address": "0x800495b8",
+      "firmware_offset": "0x39a30",
+      "symbol_size": 92,
+      "decoded_size": 92,
+      "complete_linear_decode": true,
+      "bytes_sha256": "be70e471c222e1956fa95a1c729be12ecfe471618d33902bb48b94dd3615ca76",
+      "calls": []
+    }
+  ],
+  "limitations": [
+    "Static linear decoding only; no runtime observation.",
+    "Direct calls are identified; indirect calls remain unresolved.",
+    "Coverage is limited to the selected boot-image symbols."
+  ]
+}

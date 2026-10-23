@@ -1,0 +1,53 @@
+{
+  "firmware_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "metrics": {
+    "vendor_dde_1": {
+      "entries": 256,
+      "black_output_inputs": 1,
+      "white_output_inputs": 1,
+      "first_white_input": 255,
+      "monotonic": true,
+      "max_adjacent_step": 1,
+      "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880"
+    },
+    "vendor_dde_2": {
+      "entries": 256,
+      "black_output_inputs": 2,
+      "white_output_inputs": 28,
+      "first_white_input": 228,
+      "monotonic": true,
+      "max_adjacent_step": 3,
+      "sha256": "4dc77aba264c224b7c141cd4438b37d97998c3708ef20ad6f64a4db3088b951f"
+    },
+    "vendor_dde_3": {
+      "entries": 256,
+      "black_output_inputs": 2,
+      "white_output_inputs": 54,
+      "first_white_input": 202,
+      "monotonic": true,
+      "max_adjacent_step": 3,
+      "sha256": "898e57ee04452a663392a9051f241cdf1a779d04139d761bee94c8df4c9ebd77"
+    },
+    "vendor_dde_4": {
+      "entries": 256,
+      "black_output_inputs": 2,
+      "white_output_inputs": 70,
+      "first_white_input": 186,
+      "monotonic": true,
+      "max_adjacent_step": 3,
+      "sha256": "0edea9ede3ddad4075c24a38780dea2bd274485d16ecdacb0d4ae956ae5a856d"
+    },
+    "candidate_gentle_lift": {
+      "entries": 256,
+      "black_output_inputs": 1,
+      "white_output_inputs": 1,
+      "first_white_input": 255,
+      "monotonic": true,
+      "max_adjacent_step": 2,
+      "sha256": "ff02026b9d9ee59b9158b1080345cdf9774ec96366cc37a9809f4827de563deb"
+    }
+  },
+  "verification": "All 256 inputs checked for candidate range, endpoints and monotonicity.",
+  "interpretation": "Vendor resources numerically resemble 8-bit tone curves. Their exact consumer, input domain and active modes are unknown.",
+  "limitations": "No camera integration, image-quality evaluation, timing or power measurements. No claim of efficiency gain or improvement over Nikon's intended effect."
+}

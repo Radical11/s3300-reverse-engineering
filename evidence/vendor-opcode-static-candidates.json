@@ -1,0 +1,10 @@
+{
+  "method": "Aligned immediate-value scan in executable segments of two uncompressed ELF images; candidate references only",
+  "firmware_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "matches": [],
+  "limitations": [
+    "Excluded encoded application segments and MIPS16; not a complete search.",
+    "Matching immediates alone do not identify handlers or operation semantics.",
+    "No device operation issued."
+  ]
+}

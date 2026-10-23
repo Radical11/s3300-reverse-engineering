@@ -1,0 +1,10 @@
+# Proprietary vendor files and generated analysis stay local.
+/sources/
+/derived/
+/tools/vendor/
+/samples/
+/experiments/
+/evidence/camera-samples.json
+/evidence/camera-post-copy-check.json
+/evidence/wpd-device-info*.json
+__pycache__/

@@ -1,0 +1,69 @@
+{
+  "method": "Capstone 5.0.6 static MIPS32 little-endian windows",
+  "input_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "windows": [
+    {
+      "analyst_label": "segment_inflater_worker_candidate",
+      "virtual_start": 2148400344,
+      "virtual_start_hex": "0x800dfcd8",
+      "firmware_offset": 1974208,
+      "firmware_offset_hex": "0x1e1fc0",
+      "byte_count": 656,
+      "sha256": "144c953733dd02e9b724f3564d406848b72c6c297d266ebee550c0efc7214dd9",
+      "instruction_count": 164,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\loader-pass-2\\segment_inflater_worker_candidate.asm"
+    },
+    {
+      "analyst_label": "inflate_stream_loop_candidate",
+      "virtual_start": 2148457332,
+      "virtual_start_hex": "0x800edb74",
+      "firmware_offset": 2031196,
+      "firmware_offset_hex": "0x1efe5c",
+      "byte_count": 864,
+      "sha256": "4c5fc9137c4d98ce63c53c252c9d98d5ec39a1a59c81740729657adad365a8da",
+      "instruction_count": 216,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\loader-pass-2\\inflate_stream_loop_candidate.asm"
+    },
+    {
+      "analyst_label": "inflate_word_feed_mmio",
+      "virtual_start": 2148458704,
+      "virtual_start_hex": "0x800ee0d0",
+      "firmware_offset": 2032568,
+      "firmware_offset_hex": "0x1f03b8",
+      "byte_count": 188,
+      "sha256": "64ce7f0e918c2f8cd430215dc9c7ceca4bf356a8e56f6512b6ab52d2dcd2ace5",
+      "instruction_count": 47,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\loader-pass-2\\inflate_word_feed_mmio.asm"
+    },
+    {
+      "analyst_label": "inflate_processor_init_candidate",
+      "virtual_start": 2148459164,
+      "virtual_start_hex": "0x800ee29c",
+      "firmware_offset": 2033028,
+      "firmware_offset_hex": "0x1f0584",
+      "byte_count": 436,
+      "sha256": "c812472a651986300fb7b9f5b3bc2c5cd880e57a7a2057f0257c8ca853c74568",
+      "instruction_count": 109,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\loader-pass-2\\inflate_processor_init_candidate.asm"
+    }
+  ],
+  "observations": [
+    {
+      "window": "inflate_word_feed_mmio",
+      "instruction_address": "0x800ee150",
+      "instruction": "addiu $v1, $v1, -1"
+    },
+    {
+      "window": "inflate_word_feed_mmio",
+      "instruction_address": "0x800ee154",
+      "instruction": "sw $v0, ($a1)",
+      "context": "a1 set to 0xb9800024 by lui/ori at 0x800ee140/144; loop loads words from a2"
+    }
+  ],
+  "limitations": [
+    "No device MMIO was accessed.",
+    "No compressed output was decoded by this script.",
+    "Window labels/boundaries are analyst selections, not original symbols.",
+    "The static feed loop does not identify the entropy/table encoding."
+  ]
+}
