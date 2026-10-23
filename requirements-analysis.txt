@@ -2,3 +2,5 @@
 # Decoders, unit-test core and benchmark analysis use Python's standard library.
 pyelftools==0.33
 capstone==5.0.6
+# Used to validate existing JPEG/PGM resources in the complete workspace export.
+Pillow==12.3.0

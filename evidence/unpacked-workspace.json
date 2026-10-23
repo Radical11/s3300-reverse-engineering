@@ -1,0 +1,412 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "source_bytes": 19005632,
+  "source_version": "supplied-v1.1-update",
+  "carrier_parts": [
+    {
+      "offset": 0,
+      "end_exclusive": 512,
+      "size": 512,
+      "sha256": "7be30511f7fe14c224aae5fccc58702504a74e27e0ea738c5d19407be001f276",
+      "file": "carrier-parts/00-00000000-outer-header.bin",
+      "label": "outer-header",
+      "interpretation": "Header fields only partially understood",
+      "zero_bytes": 198,
+      "ff_bytes": 10
+    },
+    {
+      "offset": 512,
+      "end_exclusive": 806622,
+      "size": 806110,
+      "sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "file": "carrier-parts/01-00000200-elf-00000200.bin",
+      "label": "elf-00000200",
+      "interpretation": "Original ELF representation; packed segments decoded separately",
+      "zero_bytes": 199985,
+      "ff_bytes": 15818
+    },
+    {
+      "offset": 806622,
+      "end_exclusive": 1048576,
+      "size": 241954,
+      "sha256": "dae545216d68583678c9d4ca064eda49fa4c34e56e111d10b109eb6bf2b503fc",
+      "file": "carrier-parts/02-000c4ede-unclassified-gap.bin",
+      "label": "unclassified-gap",
+      "interpretation": "Preserved uninterpreted bytes; not assumed disposable",
+      "zero_bytes": 241954,
+      "ff_bytes": 0
+    },
+    {
+      "offset": 1048576,
+      "end_exclusive": 1048768,
+      "size": 192,
+      "sha256": "0b7134976375b7e6b51825f9783a0e76024c64f11b0c0f185a8c6eb3ad094c57",
+      "file": "carrier-parts/03-00100000-download-descriptor.bin",
+      "label": "download-descriptor",
+      "interpretation": "Mapped boot download descriptor",
+      "zero_bytes": 179,
+      "ff_bytes": 0
+    },
+    {
+      "offset": 1048768,
+      "end_exclusive": 1050304,
+      "size": 1536,
+      "sha256": "f26d2a0ef8c0adb4d9a0724221ec3b23856a4123536792e8a170609368908d30",
+      "file": "carrier-parts/04-001000c0-boot-properties.bin",
+      "label": "boot-properties",
+      "interpretation": "Partially mapped payload header",
+      "zero_bytes": 725,
+      "ff_bytes": 18
+    },
+    {
+      "offset": 1050304,
+      "end_exclusive": 1058136,
+      "size": 7832,
+      "sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+      "file": "carrier-parts/05-001006c0-elf-001006c0.bin",
+      "label": "elf-001006c0",
+      "interpretation": "Original ELF representation; packed segments decoded separately",
+      "zero_bytes": 1510,
+      "ff_bytes": 92
+    },
+    {
+      "offset": 1058136,
+      "end_exclusive": 1058496,
+      "size": 360,
+      "sha256": "2cde071d5b6fc3d6b7214fdcd83636c77b07732d4fcd5161b3726632b3b58dee",
+      "file": "carrier-parts/06-00102558-unclassified-gap.bin",
+      "label": "unclassified-gap",
+      "interpretation": "Preserved uninterpreted bytes; not assumed disposable",
+      "zero_bytes": 0,
+      "ff_bytes": 0
+    },
+    {
+      "offset": 1058496,
+      "end_exclusive": 2139588,
+      "size": 1081092,
+      "sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+      "file": "carrier-parts/07-001026c0-elf-001026c0.bin",
+      "label": "elf-001026c0",
+      "interpretation": "Original ELF representation; packed segments decoded separately",
+      "zero_bytes": 249059,
+      "ff_bytes": 22696
+    },
+    {
+      "offset": 2139588,
+      "end_exclusive": 2228928,
+      "size": 89340,
+      "sha256": "6ed59cc259dea4edc2f0a33f368c66fe17f0e2682a026d17e422e9be9d19549d",
+      "file": "carrier-parts/08-0020a5c4-unclassified-gap.bin",
+      "label": "unclassified-gap",
+      "interpretation": "Preserved uninterpreted bytes; not assumed disposable",
+      "zero_bytes": 88839,
+      "ff_bytes": 0
+    },
+    {
+      "offset": 2228928,
+      "end_exclusive": 3922344,
+      "size": 1693416,
+      "sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+      "file": "carrier-parts/09-002202c0-elf-002202c0.bin",
+      "label": "elf-002202c0",
+      "interpretation": "Original ELF representation; packed segments decoded separately",
+      "zero_bytes": 133944,
+      "ff_bytes": 10618
+    },
+    {
+      "offset": 3922344,
+      "end_exclusive": 6040440,
+      "size": 2118096,
+      "sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+      "file": "carrier-parts/10-003bd9a8-elf-003bd9a8.bin",
+      "label": "elf-003bd9a8",
+      "interpretation": "Original ELF representation; packed segments decoded separately",
+      "zero_bytes": 168801,
+      "ff_bytes": 12061
+    },
+    {
+      "offset": 6040440,
+      "end_exclusive": 7331996,
+      "size": 1291556,
+      "sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+      "file": "carrier-parts/11-005c2b78-elf-005c2b78.bin",
+      "label": "elf-005c2b78",
+      "interpretation": "Original ELF representation; packed segments decoded separately",
+      "zero_bytes": 100931,
+      "ff_bytes": 7970
+    },
+    {
+      "offset": 7331996,
+      "end_exclusive": 7332544,
+      "size": 548,
+      "sha256": "8f357849c063ec40b97fa195f67fede85e38c4eecd8e8be7b065995cf4b0b726",
+      "file": "carrier-parts/12-006fe09c-unclassified-gap.bin",
+      "label": "unclassified-gap",
+      "interpretation": "Preserved uninterpreted bytes; not assumed disposable",
+      "zero_bytes": 541,
+      "ff_bytes": 0
+    },
+    {
+      "offset": 7332544,
+      "end_exclusive": 19005632,
+      "size": 11673088,
+      "sha256": "2d2be228b88f6b93fcb127f2be0010ed3739700e7ef76be99b14f7b685bd7cc8",
+      "file": "carrier-parts/13-006fe2c0-resource-volume-available.bin",
+      "label": "resource-volume-available",
+      "interpretation": "Available FAT16 carrier bytes; logical volume tail is absent",
+      "zero_bytes": 5626161,
+      "ff_bytes": 143115
+    }
+  ],
+  "original_elfs": [
+    {
+      "carrier_offset": 512,
+      "size": 806110,
+      "sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "file": "elf-original/image-00000200.elf",
+      "entry": 2147549184,
+      "flags": 1879052289,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 212,
+          "p_vaddr": 2147484032,
+          "p_paddr": 2147484032,
+          "p_filesz": 416,
+          "p_memsz": 416,
+          "p_flags": 5,
+          "p_align": 1
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 632,
+          "p_vaddr": 2147549184,
+          "p_paddr": 2147549184,
+          "p_filesz": 579352,
+          "p_memsz": 579352,
+          "p_flags": 5,
+          "p_align": 8
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 579984,
+          "p_vaddr": 2148128544,
+          "p_paddr": 2148128544,
+          "p_filesz": 32,
+          "p_memsz": 32,
+          "p_flags": 4,
+          "p_align": 4
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 580016,
+          "p_vaddr": 2148128576,
+          "p_paddr": 2148128576,
+          "p_filesz": 84724,
+          "p_memsz": 156288,
+          "p_flags": 6,
+          "p_align": 16
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 664740,
+          "p_vaddr": 3217063936,
+          "p_paddr": 3217063936,
+          "p_filesz": 1704,
+          "p_memsz": 1704,
+          "p_flags": 7,
+          "p_align": 4
+        }
+      ]
+    },
+    {
+      "carrier_offset": 1050304,
+      "size": 7832,
+      "sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+      "file": "elf-original/image-001006c0.elf",
+      "entry": 2164261889,
+      "flags": 268439552,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 116,
+          "p_vaddr": 2164261888,
+          "p_paddr": 2164261888,
+          "p_filesz": 5548,
+          "p_memsz": 5548,
+          "p_flags": 5,
+          "p_align": 4
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 5664,
+          "p_vaddr": 2164267440,
+          "p_paddr": 2164267440,
+          "p_filesz": 892,
+          "p_memsz": 5512,
+          "p_flags": 6,
+          "p_align": 4
+        }
+      ]
+    },
+    {
+      "carrier_offset": 1058496,
+      "size": 1081092,
+      "sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+      "file": "elf-original/image-001026c0.elf",
+      "entry": 2147485184,
+      "flags": 1879052289,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 180,
+          "p_vaddr": 2147484032,
+          "p_paddr": 2147484032,
+          "p_filesz": 416,
+          "p_memsz": 416,
+          "p_flags": 5,
+          "p_align": 1
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 596,
+          "p_vaddr": 2147485184,
+          "p_paddr": 2147485184,
+          "p_filesz": 340,
+          "p_memsz": 340,
+          "p_flags": 5,
+          "p_align": 4
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 936,
+          "p_vaddr": 2147485568,
+          "p_paddr": 2147485568,
+          "p_filesz": 1075312,
+          "p_memsz": 1075312,
+          "p_flags": 7,
+          "p_align": 16
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 1076248,
+          "p_vaddr": 2680193024,
+          "p_paddr": 2680193024,
+          "p_filesz": 4844,
+          "p_memsz": 4844,
+          "p_flags": 7,
+          "p_align": 4
+        }
+      ]
+    },
+    {
+      "carrier_offset": 2228928,
+      "size": 1693416,
+      "sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+      "file": "elf-original/image-002202c0.elf",
+      "entry": 2147485184,
+      "flags": 1879052289,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 84,
+          "p_vaddr": 2148562560,
+          "p_paddr": 2148562560,
+          "p_filesz": 1693332,
+          "p_memsz": 2630016,
+          "p_flags": 7,
+          "p_align": 16
+        }
+      ]
+    },
+    {
+      "carrier_offset": 3922344,
+      "size": 2118096,
+      "sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+      "file": "elf-original/image-003bd9a8.elf",
+      "entry": 2147485184,
+      "flags": 1879052289,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 84,
+          "p_vaddr": 2151192704,
+          "p_paddr": 2151192704,
+          "p_filesz": 2118012,
+          "p_memsz": 3094784,
+          "p_flags": 7,
+          "p_align": 32
+        }
+      ]
+    },
+    {
+      "carrier_offset": 6040440,
+      "size": 1291556,
+      "sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+      "file": "elf-original/image-005c2b78.elf",
+      "entry": 2147485184,
+      "flags": 1879052289,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 116,
+          "p_vaddr": 2154287616,
+          "p_paddr": 2154287616,
+          "p_filesz": 993716,
+          "p_memsz": 1601792,
+          "p_flags": 5,
+          "p_align": 8
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_offset": 993832,
+          "p_vaddr": 2155889408,
+          "p_paddr": 2155889408,
+          "p_filesz": 297724,
+          "p_memsz": 624000,
+          "p_flags": 6,
+          "p_align": 16
+        }
+      ]
+    }
+  ],
+  "raw_byte_coverage": "Every byte preserved in contiguous source components; reassembly hash checked",
+  "decoded_blocks": 463,
+  "decoded_bytes": 7950592,
+  "resource_files": 368,
+  "resource_bytes": 11246707,
+  "resource_formats": {
+    "zbm_bitmaps": 73,
+    "image_files": 167,
+    "zst_tables": 33,
+    "zst_records": 98085,
+    "wav_files": 7
+  },
+  "search_index": {
+    "ascii_application_strings": 26976,
+    "original_symbol_entries": 1924
+  },
+  "duplicate_content_bytes": 84785,
+  "logical_resource_volume_complete": false,
+  "logical_resource_volume_missing_tail_bytes": 2611712,
+  "source_unchanged": true,
+  "limitations": [
+    "Byte-complete extraction does not mean every format, function or driver is understood.",
+    "Supplied update only; installed v1.0, calibration and runtime memory are not dumped.",
+    "Raw gaps/slack preserved; not proven unnecessary and not removed.",
+    "No custom code encoder, camera update package, installation or recovery path."
+  ],
+  "workspace": "derived/unpacked-v1.1",
+  "verification": {
+    "byte_exact_source_reassembly": true,
+    "bytes": 19005632,
+    "sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "installable_custom_firmware": false
+  },
+  "resource_roundtrips": {
+    "zst": 33,
+    "zbm": 73,
+    "all_byte_exact": true
+  },
+  "raw_and_projected_vendor_bytes_kept_local": true
+}

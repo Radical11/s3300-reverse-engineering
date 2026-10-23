@@ -16,6 +16,7 @@ v1.0. Recovery and version-specific installation are unfinished dependencies;
 the synthesized ELF is not a flashable update.
 
 Start with [implementation status](notes/implementation-status.md),
+[the complete unpacked workspace](notes/unpacked-workspace.md),
 [the decoder format](notes/decoder-format.md),
 [application landmarks](notes/application-landmarks.md), and
 [update integrity](notes/integrity-analysis.md), followed by the
@@ -35,6 +36,7 @@ Their earlier unknown-decoder statements are superseded by this pass.
 | `derived/v1.1-decoded/` | Four recovered application regions with per-block evidence |
 | `derived/v1.1-independent/` | Independent prefix-code/zlib outputs |
 | `derived/v1.1-analysis/` | Verified synthetic ELF and decoder-comparison manifest; analysis only |
+| `derived/unpacked-v1.1/` | Lossless carrier parts, fresh decoded files, all resources, editable format exports and SQLite search |
 | `evidence/` | Complete REA responses, diagnostics, resource provenance and function analysis |
 | `prototype/` | Host-only 256-byte tone-curve candidate, C table, CSV and checked metrics |
 | `tools/` | Reproducible mapping, resource extraction, disassembly and prototype scripts |
@@ -71,6 +73,20 @@ python tools/analyze_benchmarks.py benchmarks/measurements.csv
 Use absent paths for repeat runs. The fixed source identity deliberately binds
 these tools to the supplied v1.1 image. Do not substitute a v1.0 dump or another
 camera model. No command above installs firmware or contacts the camera.
+
+The complete workspace export runs the supported unpackers and independent
+validation together, including reversible ZST strings and ZBM index codecs:
+
+```powershell
+python tools/unpack_workspace.py derived/another-unpacked-v1.1
+python tools/unpack_workspace.py derived/another-unpacked-v1.1 --verify
+python tools/query_workspace.py derived/another-unpacked-v1.1/research.sqlite --search 'Welcome screen'
+```
+
+[Branding/startup consumers](notes/branding-customization.md) and
+[profiling/developer interfaces](notes/development-interfaces.md) document the
+new customization and efficiency leads. Recovered code/resources are vendor
+artifacts; their local extraction does not turn them into open-source software.
 
 Python uses the existing pyelftools package; Capstone 5.0.6 was installed only
 under `tools/vendor/`. `tools/rea.ps1` runs cached REA 6.4.0 with the app's
