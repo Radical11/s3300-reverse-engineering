@@ -14,6 +14,7 @@ startup time, RAM or energy.
 ELF hash and source-bound regions, and the existing extractor's resource
 hashes. It exports metadata, 30 selected branding/startup strings and their
 static references in `evidence/branding-map.json`, plus 13 bounded MIPS windows
+and one raw metadata window
 under ignored `derived/branding-analysis/`. Vendor image/audio/string bytes are
 kept in ignored local directories.
 
@@ -40,8 +41,15 @@ selection remain unresolved.
 The analyst-labelled presentation candidate at **0x807417d0** preserves the
 low byte of a0 and returns at **0x80741800..0x80741820** when it is zero. The
 enabled path can wait for a display mode transition before submitting startup
-art. An aligned word at **0x807ed9f8** equals this entry address, indicating a
-possible indirect dispatch table. Its caller contract is not yet established.
+art. The aligned word at **0x807ed9f8** belongs to inferred **exception-unwind
+metadata**, not a dispatch table. Its preceding record at **0x807ed9f0** gives
+start **0x807417d0**, range **0x210**, and a backward CIE reference to
+**0x807ed9c0**. The preceding FDE at **0x807ed9d0** gives preview entry
+**0x807415c8**, range **0x208**, and the same CIE. The CIE begins with a
+0x0c-byte record length, zero CIE ID, version 1, empty augmentation and MIPS
+return register 31. Thus these are stronger function-boundary evidence than
+the earlier prologue heuristics, but they do not identify callers or runtime
+dispatch. The power-on caller contract remains unresolved.
 
 These are candidate policy points for a later custom welcome implementation,
 not patch instructions. Blindly removing a display wait risks presenting into

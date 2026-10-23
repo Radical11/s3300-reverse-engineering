@@ -1774,6 +1774,7 @@
       "sha256": "452c20dd298bb8600b7346b730ec1c679bcd1abd2cce524252188f69052583e0",
       "source_region_sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68",
       "listing": "derived\\branding-analysis\\welcome_menu_creator.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1783,6 +1784,7 @@
       "sha256": "0f5ddf2da834462e421158fccb2e6737062c7789719d634df7f0cbcf33764c97",
       "source_region_sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68",
       "listing": "derived\\branding-analysis\\welcome_menu_event.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1792,6 +1794,7 @@
       "sha256": "8d560f0ad7eac621ab5a072e7205479c7331d21b3a26f5c25d970736a4945fbb",
       "source_region_sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68",
       "listing": "derived\\branding-analysis\\welcome_selected_image_creator.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1801,6 +1804,7 @@
       "sha256": "538be6a097b65c9ab11b06c50a0c4bd1c2979142b277fd39b8399678d001ec9c",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\startup_sound_load.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1810,6 +1814,7 @@
       "sha256": "eacd7930d5f3771452f6795615d32b5e04e6e6c9a304f36568d4cb64893a4b08",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\welcome_image_preview.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1819,7 +1824,18 @@
       "sha256": "16f0e93c49dca4994c70b2dd72a8dd88fa1fff7093ce6ea1bb266d420bd09592",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\welcome_image_present.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
+    },
+    {
+      "analyst_label": "welcome_unwind_metadata",
+      "address": 2155796928,
+      "size": 96,
+      "sha256": "f3ddbdc5347cb87db9d90bd6fb42e1de81748483e81d32430801e358a94ab2f2",
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "listing": "derived\\branding-analysis\\welcome_unwind_metadata.asm",
+      "kind": "data",
+      "complete_linear_decode": null
     },
     {
       "analyst_label": "welcome_image_callers",
@@ -1828,6 +1844,7 @@
       "sha256": "ece0b13101f5bb8364c7e07009408b2c753cef916c407d19f89fb0fcb21fab3d",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\welcome_image_callers.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1837,6 +1854,7 @@
       "sha256": "bb6282317f11261315074a1713144693190dfd382a15e3247edb78b279b78a54",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\welcome_image_second_caller.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1846,6 +1864,7 @@
       "sha256": "b8ad152013f99144426292579d4c7dd4ce3b326c7e7e17b967751a50484d0643",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\startup_sound_play_gate.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1855,6 +1874,7 @@
       "sha256": "578987b3ca3ec6de7179d1b0a15549f9d9b71cdcf0d418e36f6443fe2654c260",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\sound_option_dispatch.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1864,6 +1884,7 @@
       "sha256": "480954dc5823d0435243bc310c52fd8f311cd611f0a44eb86b5809aca4113815",
       "source_region_sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68",
       "listing": "derived\\branding-analysis\\welcome_settings_readback.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1873,6 +1894,7 @@
       "sha256": "439bf183c9867d520aa9dbf746e00927f74a715534368b035061be26c4e3c95d",
       "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
       "listing": "derived\\branding-analysis\\menu_selection_updater.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     },
     {
@@ -1882,6 +1904,7 @@
       "sha256": "fc5558404bca188268b479cdf970155054e2789060226188c73296fc45511f19",
       "source_region_sha256": "2b1582e102904d3357de8a9ce6baf069a0f72b44ba81509573e9945bd74f409d",
       "listing": "derived\\branding-analysis\\display_image_wrapper.asm",
+      "kind": "static_code_window",
       "complete_linear_decode": true
     }
   ],
@@ -2839,6 +2862,26 @@
       "address": 2155837756,
       "target": 2153891240,
       "runtime_dispatch_verified": false
+    }
+  ],
+  "reviewed_frame_descriptors": [
+    {
+      "descriptor_address": 2155796944,
+      "record_length": 28,
+      "cie_address": 2155796928,
+      "cie_sha256": "34b919cb50935aad5209dcbef1cc4850444c2ef768f09c68b7a38fa19ae95c0d",
+      "function_start": 2155091400,
+      "function_size": 520,
+      "classification": "Inferred .eh_frame FDE: backward CIE reference and absolute start/range. Not a dispatch table."
+    },
+    {
+      "descriptor_address": 2155796976,
+      "record_length": 32,
+      "cie_address": 2155796928,
+      "cie_sha256": "34b919cb50935aad5209dcbef1cc4850444c2ef768f09c68b7a38fa19ae95c0d",
+      "function_start": 2155091920,
+      "function_size": 528,
+      "classification": "Inferred .eh_frame FDE: backward CIE reference and absolute start/range. Not a dispatch table."
     }
   ],
   "observations": [

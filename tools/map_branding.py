@@ -22,6 +22,7 @@ WINDOWS = [
     ("startup_sound_load", 0x8074050c, 0x3c),
     ("welcome_image_preview", 0x807415c8, 0x208),
     ("welcome_image_present", 0x807417d0, 0x210),
+    ("welcome_unwind_metadata", 0x807ed9c0, 0x60),
     ("welcome_image_callers", 0x806a9a4c, 0x80),
     ("welcome_image_second_caller", 0x806a9ca8, 0x68),
     ("startup_sound_play_gate", 0x80740e50, 0xe4),
@@ -136,14 +137,35 @@ def main():
     for label, address, size in WINDOWS:
         body, binding = read(address, size)
         decoded = list(Cs(CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_LITTLE_ENDIAN).disasm(body, address))
-        if sum(i.size for i in decoded) != size:
+        is_metadata = label.endswith("metadata")
+        if not is_metadata and sum(i.size for i in decoded) != size:
             raise ValueError("Incomplete selected decode")
         listing = out/f"{label}.asm"
-        listing.write_text("; Analyst-selected static window, not recovered symbols. Branch delay slots matter.\n"+
-                           "\n".join(f"{i.address:08x} {i.bytes.hex()} {i.mnemonic:10} {i.op_str}" for i in decoded)+"\n")
+        if is_metadata:
+            rows = [f"{address+i:08x} {body[i:i+16].hex(' ')}" for i in range(0, len(body), 16)]
+            intro = "; Raw data window: inferred exception-unwind metadata, not code.\n"
+        else:
+            rows = [f"{i.address:08x} {i.bytes.hex()} {i.mnemonic:10} {i.op_str}" for i in decoded]
+            intro = "; Analyst-selected static window, not recovered symbols. Branch delay slots matter.\n"
+        listing.write_text(intro+"\n".join(rows)+"\n")
         listings.append({"analyst_label": label, "address": address, "size": size,
                          "sha256": sha(body), "source_region_sha256": binding["sha256"],
-                         "listing": str(listing.relative_to(ROOT)), "complete_linear_decode": True})
+                         "listing": str(listing.relative_to(ROOT)),
+                         "kind": "data" if is_metadata else "static_code_window",
+                         "complete_linear_decode": None if is_metadata else True})
+    frame_descriptors = []
+    for descriptor in (0x807ed9d0, 0x807ed9f0):
+        raw, _ = read(descriptor, 16)
+        size, cie_displacement, start, length = struct.unpack("<4I", raw)
+        cie_address = descriptor+4-cie_displacement
+        cie, _ = read(cie_address, 16)
+        if cie != bytes.fromhex("0c00000000000000010001041f0c1d00"):
+            raise ValueError("Unexpected unwind CIE")
+        read(start, length)
+        frame_descriptors.append({"descriptor_address": descriptor, "record_length": size,
+                                  "cie_address": cie_address, "cie_sha256": sha(cie),
+                                  "function_start": start, "function_size": length,
+                                  "classification": "Inferred .eh_frame FDE: backward CIE reference and absolute start/range. Not a dispatch table."})
     resource_report = json.loads((ROOT/"evidence/resource-filesystem.json").read_text())
     resources = []
     for name in ("JPG/Startup1.jpg", "Wav/Startup1.wav", "String/Res_Str_Eng_New.bst"):
@@ -183,6 +205,7 @@ def main():
     report = {"source_sha256": EXPECTED, "analysis_elf_sha256": sha(elf),
               "analysis_manifest_sha256": sha(path.read_bytes()), "resources": resources,
               "strings": strings, "static_windows": listings, "direct_and_pointer_candidates": calls,
+              "reviewed_frame_descriptors": frame_descriptors,
               "observations": [
                   {"site": "0x807417d0..0x807419dc", "finding": "Presentation candidate returns before image decode when low8(a0)==0; nonzero path passes A:\\JPG\\Startup1.jpg into 0x802219e0. Caller ABI/policy remains unresolved."},
                   {"site": "0x807415c8..0x807415f4", "finding": "Preview candidate handles a1 values 1 and 2 only; value zero returns without image presentation. Branch 1 uses Startup1.jpg; branch 2 uses B:\\IMG00000.jpg."},
