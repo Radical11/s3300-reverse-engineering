@@ -1,0 +1,62 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "resource_file_bytes": 11246707,
+  "directory_bytes": {
+    "(root)": 40775,
+    "Bmp": 390670,
+    "Font": 3770120,
+    "Icon": 84256,
+    "JPG": 3528480,
+    "seal": 2081149,
+    "String": 1304243,
+    "Wav": 47014
+  },
+  "duplicate_groups": [
+    {
+      "sha256": "222cb77b9731caebb733f352210079cb741ebb26b7081f450bf3d5f1597e231c",
+      "paths": [
+        "JPG/bg_Picture_Delete.JPG",
+        "JPG/ZBG_CFM_KL_S.JPG"
+      ],
+      "bytes_each": 17301
+    },
+    {
+      "sha256": "678e3e2657b6b33d1664cdaef3b73b9963385f1a88fe5db3bc912c3293bef031",
+      "paths": [
+        "JPG/m2_b2_12.JPG",
+        "JPG/sm1_b29.JPG",
+        "JPG/sm2_b212.JPG",
+        "JPG/sm2_b29.JPG",
+        "JPG/ZBar2_9.jpg"
+      ],
+      "bytes_each": 11471
+    },
+    {
+      "sha256": "553175ae3e996eab5c6778115a7d660eb46574ba7d613698d55a804cb03a054a",
+      "paths": [
+        "JPG/sm2_b312.JPG",
+        "JPG/sm2_b34.JPG",
+        "JPG/sm2_b35.JPG"
+      ],
+      "bytes_each": 10800
+    }
+  ],
+  "duplicate_content_bytes": 84785,
+  "resource_roundtrips": {
+    "zbm_bitmaps": 73,
+    "image_files": 167,
+    "zst_tables": 33,
+    "zst_records": 98085,
+    "wav_files": 7
+  },
+  "unittest_cases_passed": 73,
+  "full_source_roundtrip_verified": true,
+  "cli_english_export_import_verified": true,
+  "optimization_installed": false,
+  "camera_modified": false,
+  "limitations": [
+    "Duplicate bytes are not established runtime redundancy.",
+    "Resource storage totals are not CPU timing or resident RAM measurements.",
+    "Custom code and assets require verified installation and restoration before camera use."
+  ]
+}

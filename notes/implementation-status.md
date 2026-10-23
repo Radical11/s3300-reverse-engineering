@@ -1,7 +1,41 @@
 # Firmware-first implementation status
 
-23 October 2026. Research baseline: supplied Nikon S3300 v1.1 updater. Installed
+Updated 24 October 2026. Research baseline: supplied Nikon S3300 v1.1 updater. Installed
 camera: separately observed stock v1.0, left unchanged. Software-only work.
+
+## Current direction and latest checkpoint
+
+The user now prioritizes unpacking first, a custom and playful camera identity,
+less intrusive Nikon presentation, efficiency and accessible development. Keep
+committing code, tools, findings and tests in reviewable steps. Raw firmware,
+decoded vendor bytes and personal photographs remain preserved locally under
+the project's existing Git exclusions.
+
+The complete supplied carrier is now preserved in a **lossless unpacked
+workspace**. A fresh run reconstructed all 19,005,632 source bytes and repeated
+the independent 463-block decoder validation. All 368 resource files are
+source-checked; **33 string tables (98,085 records)** and **73 indexed bitmaps**
+have reversible JSON exports. An offline SQLite index provides literal searches
+and address lookup. This is the extraction milestone for the supplied update;
+unknown format semantics and absent logical-volume bytes remain explicit.
+See `unpacked-workspace.md`.
+
+Startup image/sound consumers, welcome-menu storage and presentation gates are
+mapped in `branding-customization.md`. The stock art and chime occupy only
+48,304 bytes. Give users control over presentation and make the camera feel
+custom, while separately measuring any startup-to-ready improvement. The full
+welcome-choice-to-power-on policy is not yet established.
+
+Nine profiling command records and a six-u32 CPU-counter buffer contract are
+recovered in `development-interfaces.md`. Gamma conversion still allocates work
+on a raw-cache hit, making it a specific candidate to profile; generated-output
+ownership prevents a naive shared-pointer cache. No runtime speed gain or
+external debug access is established.
+
+The current suite passes **73 unit tests**, including malformed-resource,
+roundtrip, metadata, scanner and query cases. The exact source reconstruction,
+all resource roundtrips and an actual English-resource CLI export/import also
+passed. This verifies offline development tools, not hardware behaviour.
 
 ## Completed development infrastructure
 
