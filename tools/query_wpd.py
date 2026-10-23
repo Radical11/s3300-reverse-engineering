@@ -150,6 +150,8 @@ def worker():
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--worker", action="store_true")
+    ap.add_argument("--evidence", type=Path, default=ROOT / "evidence/wpd-device-info.json",
+                    help="New evidence file; existing reports are never overwritten")
     args = ap.parse_args()
     if args.worker:
         try:
@@ -157,7 +159,7 @@ def main():
         except Exception as e:
             print(json.dumps({"status": "worker_failed", "error": str(e)}))
         return
-    evidence = ROOT / "evidence/wpd-device-info.json"
+    evidence = args.evidence
     if evidence.exists():
         raise ValueError("Evidence exists; refusing to overwrite")
     try:
