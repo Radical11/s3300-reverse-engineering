@@ -1,0 +1,68 @@
+
+7-Zip 26.00 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-02-12
+
+Scanning the drive for archives:
+1 file, 7362200 bytes (7190 KiB)
+
+Extracting archive: sources\F-S3300-V11W.exe
+--
+Path = sources\F-S3300-V11W.exe
+Type = PE
+Physical Size = 7362200
+CPU = x86
+Characteristics = Executable 32-bit NoRelocs
+Created = 2010-03-15 11:57:50
+Headers Size = 1024
+Checksum = 7410606
+Image Size = 151552
+Section Alignment = 4096
+File Alignment = 512
+Code Size = 67584
+Initialized Data Size = 72704
+Uninitialized Data Size = 0
+Linker Version = 9.0
+OS Version = 5.0
+Image Version = 0.0
+Subsystem Version = 4.0
+Subsystem = Windows GUI
+DLL Characteristics = NX-Compatible NoSEH TerminalServerAware
+Stack Reserve = 1048576
+Stack Commit = 4096
+Heap Reserve = 1048576
+Heap Commit = 4096
+Virtual Address = 0x400000
+Comment = 
+{
+
+Data Directories: 16
+{
+index=0 name=EXPORT VA=0x137E0 Size=51
+index=1 name=IMPORT VA=0x12908 Size=200
+index=2 name=RESOURCE VA=0x21000 Size=15968
+index=4 name=SECURITY VA=0x703D58 Size=6464
+index=6 name=DEBUG VA=0x122B0 Size=28
+index=12 name=IAT VA=0x12000 Size=688
+}
+}
+----
+Path = [0]
+Size = 7263064
+Packed Size = 7263064
+Virtual Size = 7263064
+Offset = 92672
+--
+Path = [0]
+Type = Rar
+Physical Size = 7263057
+Tail Size = 7
+Solid = -
+Blocks = 3
+Multivolume = -
+Volumes = 1
+
+Everything is Ok
+
+Folders: 2
+Files: 1
+Size:       19005632
+Compressed: 7362200
