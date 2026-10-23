@@ -1,0 +1,18 @@
+{
+  "method": "Primary Nikon S3300 reference-manual section retrieved by web search; separate from firmware static analysis and hardware observation",
+  "verified_date_client": "2026-10-24",
+  "source_url": "https://download.nikonimglib.com/archive2/vu9iI00riFfv01k96Qt63uLVv147/S3300RM_EU%28En%2901.pdf",
+  "section": "The Setup Menu / Welcome Screen / Reference E49",
+  "paraphrased_findings": {
+    "None": "Documented default; startup enters shooting or playback without a welcome screen.",
+    "COOLPIX": "Displays the stock welcome presentation before shooting or playback.",
+    "Select an image": "Stores a selected image for subsequent welcome display; the original photo can later be deleted. Some dimensions and small edited copies are excluded."
+  },
+  "source_access_limit": "Web search returned the relevant manual section; full PDF opening failed because its 14,040,819-byte content exceeded the web tool limit.",
+  "camera_setting_changed": false,
+  "startup_timing_measured": false,
+  "limitations": [
+    "Documentation verifies intended stock behavior, not this camera's current setting or observed timing.",
+    "It does not establish the complete decoded-code control flow or the effect of a custom firmware patch."
+  ]
+}

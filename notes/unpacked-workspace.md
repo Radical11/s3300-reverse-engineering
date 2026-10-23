@@ -105,6 +105,13 @@ The startup art and chime together occupy **48,304 bytes**, about 0.25% of the
 supplied carrier. The useful customization is control over presentation and
 identity; removing those files does not by itself explain a slow camera.
 
+Nikon's [S3300 reference manual, E49](https://download.nikonimglib.com/archive2/vu9iI00riFfv01k96Qt63uLVv147/S3300RM_EU%28En%2901.pdf)
+documents **Setup → Welcome screen → None** as a stock way to suppress the
+welcome screen, and **Select an image** as a personal-image option. That is
+documented stock behaviour, separate from our unfinished full power-on trace;
+no setting was changed and no startup improvement measured. See
+`evidence/documented-welcome-options.json` for source access and scope.
+
 A more specific processing candidate is repeated gamma conversion despite the
 existing raw-resource cache. Its 0x994-byte output and 0x4000-byte scratch
 allocation are mapped, and a consumer frees the output. A converted cache needs
