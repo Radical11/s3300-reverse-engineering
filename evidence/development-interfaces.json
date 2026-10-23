@@ -1,0 +1,391 @@
+{
+  "method": "Static table extraction and bounded disassembly, validated application v1.1",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_elf_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "command_record": {
+    "size": 16,
+    "endianness": "little",
+    "fields": [
+      "name pointer",
+      "argument-help pointer",
+      "description pointer",
+      "handler pointer"
+    ],
+    "corroboration": "Nine independently decoded records have matching ASCII identity and reviewed handler behavior."
+  },
+  "commands": [
+    {
+      "entry_address": 2151856348,
+      "record_size": 16,
+      "name": "cachecostcheck",
+      "arguments": "start/stop",
+      "description": "checks cache operations overhead time",
+      "handler": 2151682572,
+      "pointer_fields": {
+        "name": 2151955236,
+        "arguments": 2151955252,
+        "description": 2151955264
+      },
+      "static_contract": "Overhead measurement control; changes test state. No runtime timing is collected here.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2151856364,
+      "record_size": 16,
+      "name": "cpupct",
+      "arguments": "<DisableInterrupts 0/1>",
+      "description": "Test CPU performance counters",
+      "handler": 2151681124,
+      "pointer_fields": {
+        "name": 2151955304,
+        "arguments": 2151955312,
+        "description": 2151955336
+      },
+      "static_contract": "Synthetic CPU-counter stress test, may disable interrupts; excluded from initial observation protocol.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2151856380,
+      "record_size": 16,
+      "name": "cpupcs",
+      "arguments": "<CacheType 0/1/2/3 = MCPU_DCACHE/MCPU_ICACHE/SCPU_DCACHE/SCPU_ICACHE> <DisableInterrupts 0/1>",
+      "description": "Start CPU performance counters",
+      "handler": 2151681704,
+      "pointer_fields": {
+        "name": 2151955368,
+        "arguments": 2151955376,
+        "description": 2151955472
+      },
+      "static_contract": "Parses two signed integers; validates first in unsigned range 0..3; calls 0x800b1fc4(a0=cache selector,a1=interrupt flag). Underlying API treats flag==1 as interrupt-disable path.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2151856396,
+      "record_size": 16,
+      "name": "cpupcp",
+      "arguments": "",
+      "description": "Stop CPU performance counters",
+      "handler": 2151681936,
+      "pointer_fields": {
+        "name": 2151955504,
+        "arguments": 2151959088,
+        "description": 2151955512
+      },
+      "static_contract": "Calls 0x800b2080; stops counters and conditionally restores interrupt state saved by start.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2151856412,
+      "record_size": 16,
+      "name": "cpupce",
+      "arguments": "",
+      "description": "Reset CPU performance counters",
+      "handler": 2151681988,
+      "pointer_fields": {
+        "name": 2151955544,
+        "arguments": 2151959088,
+        "description": 2151955552
+      },
+      "static_contract": "Calls 0x800b20b8 to reset counter state; not a passive read.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2151856428,
+      "record_size": 16,
+      "name": "cpupcr",
+      "arguments": "",
+      "description": "Read CPU performance counters",
+      "handler": 2151682036,
+      "pointer_fields": {
+        "name": 2151955584,
+        "arguments": 2151959088,
+        "description": 2151955592
+      },
+      "static_contract": "Passes stack buffer to 0x800b20d0 then prints its six u32 fields through 0x80400b28; reading counters does not itself start/reset them.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2151857056,
+      "record_size": 16,
+      "name": "cpu",
+      "arguments": "[0/1=short/full]",
+      "description": "Print CPU load statistics",
+      "handler": 2151691368,
+      "pointer_fields": {
+        "name": 2151960660,
+        "arguments": 2151960664,
+        "description": 2151960684
+      },
+      "static_contract": "Parses optional integer 0/1; either initializes load checker through 0x800c7ec4 or requests statistics through 0x800c8008. Initialization changes monitoring state.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2156495628,
+      "record_size": 16,
+      "name": "ct",
+      "arguments": "<var 1>",
+      "description": "Capture Time",
+      "handler": 2153251944,
+      "pointer_fields": {
+        "name": 2151191400,
+        "arguments": 2151191024,
+        "description": 2151191404
+      },
+      "static_contract": "Parses count; zero/unspecified becomes 0x50. Reads an array at 0x80817388, skips indices20..29, prints remaining entries. No bounds clamp established; never invoke with an arbitrary count.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    },
+    {
+      "entry_address": 2156496156,
+      "record_size": 16,
+      "name": "ctm",
+      "arguments": "<var 1>",
+      "description": "CAP Timing Measure",
+      "handler": 2153276140,
+      "pointer_fields": {
+        "name": 2151192160,
+        "arguments": 2151191024,
+        "description": 2151192164
+      },
+      "static_contract": "Parses integer; nonzero starts timing through 0x8000fc88(0x50,1); values other than1 may execute string through0x8022f43c. Zero calls0x806f6c9c(0),then0x806f6c94.",
+      "runtime_exposure": "Unverified console/transport reachability; inventory only"
+    }
+  ],
+  "cpu_counters": {
+    "read_api": 2148212944,
+    "read_buffer_bytes": 24,
+    "fields": [
+      {
+        "offset": 0,
+        "name": "hits",
+        "mmio_address": 2961182824
+      },
+      {
+        "offset": 4,
+        "name": "misses",
+        "mmio_address": 2961182828
+      },
+      {
+        "offset": 8,
+        "name": "instructions",
+        "mmio_address": 2961182816
+      },
+      {
+        "offset": 12,
+        "name": "prefetch_hits",
+        "mmio_address": 2961182840
+      },
+      {
+        "offset": 16,
+        "name": "prefetch_misses",
+        "mmio_address": 2961182844
+      },
+      {
+        "offset": 20,
+        "name": "clocks",
+        "mmio_address": 2961182820
+      }
+    ],
+    "cache_selectors": [
+      "MCPU_DCACHE",
+      "MCPU_ICACHE",
+      "SCPU_DCACHE",
+      "SCPU_ICACHE"
+    ],
+    "initial_profile_default": "If a verified transport is later available, first preserve interrupts and use selector0/flag0. No command is issued by this tool.",
+    "constraint": "Counter registers are device MMIO. Never access them through host process memory; API inventory is not a runtime observation."
+  },
+  "gamma_efficiency_candidate": {
+    "loader": 2149697448,
+    "cache_base": 2156678892,
+    "cache_slot_count": 10,
+    "size_array_offset": 0,
+    "raw_pointer_array_offset": 40,
+    "cache_hit_converter_call": 2149697540,
+    "cache_miss_converter_call": 2149697744,
+    "converter": 2149694780,
+    "allocation_sizes": [
+      2452,
+      16384
+    ],
+    "allocation_sites": [
+      2149695048,
+      2149695088
+    ],
+    "output_pointer_write": 2149696448,
+    "reset_routine": 2149697388,
+    "finding": "The loader caches raw resource size/pointer. Every successful hit runs converter again, which allocates output plus scratch and returns a distinct output pointer. Converted output is not stored back in this raw-resource cache.",
+    "ownership_constraint": "Downstream channel-extractor0x8021c960 copies from generated result+0x194 then frees generated result at0x8021ca08. Sharing a cached converted pointer without ownership changes would create invalid frees/use-after-free.",
+    "candidate": "Measure converter frequency/cost; if worthwhile cache immutable converted data separately and preserve caller-owned results or implement explicit refcount/ownership.",
+    "measured_gain": null,
+    "safe_patch_ready": false
+  },
+  "usb_accessibility": {
+    "vendor_control_listener": 2155436256,
+    "listener_source_diagnostic": "Zcam/Zagents/Agents/Ptp/Standard/PtpStandardVendor.c",
+    "request_buffer_bytes": 8,
+    "request_type_offset": 0,
+    "request_code_offset": 1,
+    "value_offset": 2,
+    "index_offset": 4,
+    "length_offset": 6,
+    "application_gate": 2155124008,
+    "application_mode_required": 7,
+    "application_filter": 2153222716,
+    "accepted_request_code": 65,
+    "accepted_index": 4,
+    "outcome": "For mode7 only, application hook handles bRequest0x41/wIndex4 via bounded copy from global806599a0. Other modes or requests return nonzero and enter generic handling or stall paths, depending request direction.",
+    "getmem_handler": 2155470388,
+    "getmem_pointer": 2156500576,
+    "setmem_or_monitor_pointer": 2156500568,
+    "routing_api": 2155438192,
+    "routing": "Transport selector0 uses0x800db0e4 plus0x80795ce0; selector1 uses0x80796424 and device agent lookup0x8078bdac. This establishes separate transfer paths but not external host request framing for GetMem.",
+    "missing": [
+      "Generic command dispatcher identification and command-number/table-index mapping",
+      "Confirmed active interface/endpoints and enabled mode on installed v1.0",
+      "Safe bounded read-only memory/flash request protocol and backup coverage"
+    ],
+    "runtime_or_device_access_performed": false
+  },
+  "accessibility_next_steps": [
+    "Decode the command dispatcher that consumes the eight-byte handler records around80899658; enumerate IDs/directions before exposing any CLI.",
+    "Start any future developer interface with an allowlist of identity/version/status/profile-read operations and explicit typed lengths; separate memory writes, console execution and flash operations.",
+    "Use existing capture timing and counter APIs to locate actual bottlenecks before changing processing or polling.",
+    "Implement a selectable developer menu through verified command registration only after UI event ownership/persistence and recovery are understood."
+  ],
+  "windows": [
+    {
+      "label": "cpu_counter_handlers",
+      "virtual_start": 2151681704,
+      "size": 384,
+      "sha256": "e8ae79436c9aba2bfb7d214a920a16bda38d00eb4d6884f959a7bc56988aa6ae",
+      "linear_decode_bytes": 384,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\cpu_counter_handlers.asm"
+    },
+    {
+      "label": "counter_register_api",
+      "virtual_start": 2148212676,
+      "size": 360,
+      "sha256": "a775f59c12a0ed9d7e8cd1144acd49e3cf7452a320de54bfe3b2ae08eb3f1d4e",
+      "linear_decode_bytes": 360,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\counter_register_api.asm"
+    },
+    {
+      "label": "counter_formatter",
+      "virtual_start": 2151680808,
+      "size": 316,
+      "sha256": "31a4e1a36e32eca5492ce44ccd18c66ff256094f4d968ec2ad418e0b749ed785",
+      "linear_decode_bytes": 316,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\counter_formatter.asm"
+    },
+    {
+      "label": "cpu_load_handler",
+      "virtual_start": 2151691368,
+      "size": 160,
+      "sha256": "44c720fa1d2afc9f6c7fd983be5b9df81d395bb06ad1d2e6e26dd269bf2a66b4",
+      "linear_decode_bytes": 160,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\cpu_load_handler.asm"
+    },
+    {
+      "label": "capture_array_reader",
+      "virtual_start": 2153251944,
+      "size": 172,
+      "sha256": "11bf9e0578a08614906cffa4b4944ff67791d2a33fc5f7acac54935094f85684",
+      "linear_decode_bytes": 172,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\capture_array_reader.asm"
+    },
+    {
+      "label": "capture_timing_handler",
+      "virtual_start": 2153276140,
+      "size": 144,
+      "sha256": "7f05711c98fea9e1cd7b0ee2242928c9c7685b5228d82ed90843c1a84f2add07",
+      "linear_decode_bytes": 144,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\capture_timing_handler.asm"
+    },
+    {
+      "label": "gamma_cache_loader",
+      "virtual_start": 2149697448,
+      "size": 440,
+      "sha256": "ac21e050a7c320329c28f5592ce44395731ad588e1510ff0fec9802004f4b922",
+      "linear_decode_bytes": 440,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\gamma_cache_loader.asm"
+    },
+    {
+      "label": "gamma_converter_entry",
+      "virtual_start": 2149694780,
+      "size": 328,
+      "sha256": "e71243b134713da89846cedafc428a7971209a1bd156fe886b14244482830d91",
+      "linear_decode_bytes": 328,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\gamma_converter_entry.asm"
+    },
+    {
+      "label": "gamma_converter_result",
+      "virtual_start": 2149696400,
+      "size": 100,
+      "sha256": "c4902fd69d1c9a1dffd5a234d4c2c084ee88cfe7863bbbec4417cb5700865b7c",
+      "linear_decode_bytes": 100,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\gamma_converter_result.asm"
+    },
+    {
+      "label": "gamma_channel_extraction",
+      "virtual_start": 2149697888,
+      "size": 220,
+      "sha256": "93eb37b5792db9961167361dbb4596e721d950aef94dd1cb1973997f738ac9f2",
+      "linear_decode_bytes": 220,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\gamma_channel_extraction.asm"
+    },
+    {
+      "label": "gamma_cache_reset",
+      "virtual_start": 2149697388,
+      "size": 60,
+      "sha256": "3d8440cb5e7942f25b10fbae2ba6cc6b7a82acf452b4f4df04e4d138195d57ea",
+      "linear_decode_bytes": 60,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\gamma_cache_reset.asm"
+    },
+    {
+      "label": "vendor_control_listener",
+      "virtual_start": 2155436256,
+      "size": 672,
+      "sha256": "a4aca775efd77a1f8a7abffebe8c3aa9148e2350153b25e05d59942378967b0a",
+      "linear_decode_bytes": 672,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\vendor_control_listener.asm"
+    },
+    {
+      "label": "vendor_control_application_gate",
+      "virtual_start": 2155124008,
+      "size": 136,
+      "sha256": "3a430233e8aa09138e2c14665fe7d943f89d484fdadc27333326c4e5ca2435f1",
+      "linear_decode_bytes": 136,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\vendor_control_application_gate.asm"
+    },
+    {
+      "label": "vendor_control_application_filter",
+      "virtual_start": 2153222716,
+      "size": 144,
+      "sha256": "620ef721d69f8a7e2935cd974c854b21df9c924f20cbc50a59998f38750f19fb",
+      "linear_decode_bytes": 144,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\vendor_control_application_filter.asm"
+    },
+    {
+      "label": "transfer_direction_routing",
+      "virtual_start": 2155438192,
+      "size": 152,
+      "sha256": "7e9329b6a560a524c515d281fb5cdca483c8369f089a608413e6f90bcd858d44",
+      "linear_decode_bytes": 152,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\transfer_direction_routing.asm"
+    },
+    {
+      "label": "getmem_transfer_candidate",
+      "virtual_start": 2155470388,
+      "size": 472,
+      "sha256": "c5a9cd877bfb4ded4b09b6fa04475e1960031e681ebbb3b8442c3c511adeeeaf",
+      "linear_decode_bytes": 472,
+      "listing": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\development-interfaces\\getmem_transfer_candidate.asm"
+    }
+  ],
+  "source_unchanged": true,
+  "limitations": [
+    "Static v1.1 software evidence only; no installed-v1.0 RAM dump or device timing.",
+    "MMIO and command table addresses are for offline analysis, not host memory or blind camera invocation.",
+    "No firmware optimization, runtime developer access, custom menu or performance benefit has been demonstrated."
+  ]
+}
