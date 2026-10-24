@@ -1,0 +1,26 @@
+{
+  "previous_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "host_backup_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "backup_readback_verified": true,
+  "card_bytes": 19005632,
+  "card_sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
+  "card_exact_readback_verified": true,
+  "file": "FIRMWARE/FIRMWARE.BIN",
+  "staged": true,
+  "camera_flashed": false,
+  "creative_looks_integrated": false,
+  "trial": "pocket-studio",
+  "drive": "E:\\",
+  "filesystem": "FAT",
+  "package_version": "1.1 unchanged",
+  "version_bypass": false,
+  "same_version_acceptance_verified": false,
+  "restoration_verified": false,
+  "date_local": "2026-10-24",
+  "pre_staging_dcim_backup": {
+    "files": 30,
+    "bytes": 104069129,
+    "all_files_exact_copy_and_source_recheck": true,
+    "local_private_manifest": "derived/pocket-studio-preflight-photo-backup-01/manifest.json"
+  }
+}

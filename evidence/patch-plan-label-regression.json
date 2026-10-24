@@ -1,0 +1,93 @@
+{
+  "name": "known-installed-label-regression",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "patch_plan_sha256": "c3d39ba7003ee480c4fbe08ef8c25e140113911314a858c8277864bfcb2c5230",
+  "candidate_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "candidate_bytes": 19005632,
+  "carrier_changed_bytes": 1861,
+  "patches": [
+    {
+      "kind": "resource",
+      "expected_sha256": "00fc1a72e59d8bd249720c4c8b67240bec16fd9629fcfd526ebe2aa702a0f671",
+      "replacement_sha256": "cf8d6b4c819a1c0f75b9d3cbdc56ed1c7745e2171dcffc8ad8c43ded7ebc09ce",
+      "bytes": 46392,
+      "path": "String/Res_Str_Eng_New.bst"
+    },
+    {
+      "kind": "virtual",
+      "expected_sha256": "6f1c5dd59349a990aff1130e5c778f6b363cfbc8704bb704949508f21445b784",
+      "replacement_sha256": "737ef7e0738bdb88b4a822a3483b764fdeee437f6b2757e1bd334ba46490d17b",
+      "bytes": 28,
+      "address": 2151080268
+    }
+  ],
+  "packed_segment_proofs": [
+    {
+      "virtual_start": 2148562560,
+      "decoded_bytes": 2630016,
+      "block_count": 151,
+      "decoded_sha256": "c3a1733c3bbed7efedd4b2afed80fdc9f9e260a28ba42cb8190c0af48cd16787",
+      "decoded_changed_bytes": 5,
+      "full_segment_two_decoders_match": true,
+      "changed_blocks": [
+        {
+          "index": 146,
+          "payload_start": 3865380,
+          "payload_size": 12416,
+          "source_sha256": "a0f1cfcfa1a9def8e1914924479e6c7c63e8950caeeb3198093fec4e7ae495bc",
+          "candidate_sha256": "e86671db8ce80d5272544e095858194cd98f34e2e23f2a3bedd461efcb45163f",
+          "preserved_tokens": 8184,
+          "replaced_tokens": 4,
+          "replacement_literal_tokens": 16,
+          "payload_bytes": 12416,
+          "production": {
+            "decoded_bytes": 58356,
+            "literal_tokens": 3327,
+            "match_tokens": 4873,
+            "eob_bit_end": 98706,
+            "padding_bits": 622,
+            "eob_verified": true,
+            "zero_padding_verified": true
+          },
+          "independent": {
+            "end_marker_bit_position": 98706,
+            "zero_padding_bits": 622,
+            "literal_tokens": 3327,
+            "match_tokens": 4873,
+            "prefix_codes_a": 159,
+            "prefix_codes_b": 24,
+            "decoded_sha256": "5d90c68df1042c53d9f4a13ec3be1b5e415501198a6fea07bf152f5edf25850a"
+          },
+          "two_decoders_exactly_match_desired": true
+        }
+      ]
+    }
+  ],
+  "allowed_carrier_ranges": [
+    [
+      17739456,
+      17740480
+    ],
+    [
+      3865380,
+      3877796
+    ],
+    [
+      44,
+      48
+    ]
+  ],
+  "version_product_and_download_descriptor_unchanged": true,
+  "additive_checksum": 1377961026,
+  "staged": false,
+  "flashed": false,
+  "hardware_behavior_verified": false,
+  "restoration_verified": false,
+  "limitations": [
+    "Offline byte validation does not establish runtime semantics, reliability or recovery.",
+    "No candidate is automatically added to the closed staging registry."
+  ],
+  "regression_against_previously_staged_candidate_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "regression_exact_candidate_match": true,
+  "runtime_note": "The prior candidate with this exact hash has a user-reported active Welcome studio label; this rebuild performs no device write."
+}

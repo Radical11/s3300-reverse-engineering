@@ -289,7 +289,7 @@ def worker(stage, readback=False, trial="resource-label", direct_path=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", action="store_true")
-    parser.add_argument("--trial", choices=tuple(TRIALS), default="resource-label")
+    parser.add_argument("--trial", choices=("resource-label", "embedded-label"), default="resource-label")
     parser.add_argument("--existing-firmware-path", action="store_true",
                         help="Use only the fixed existing update path for the embedded-label trial")
     parser.add_argument("--verify-staged", action="store_true", help="Read back existing file without writing")

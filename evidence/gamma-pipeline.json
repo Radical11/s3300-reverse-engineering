@@ -1,0 +1,309 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated bytes, bounded static MIPS32 listings, aligned J/JAL scan, instruction-transcribed curve expansion",
+  "rea_evidence": false,
+  "target_executed": false,
+  "embedded": {
+    "address": 2150925124,
+    "bytes": 960,
+    "sha256": "0662ea81e30ccf8efafd7971bdbc47fde182fbec89c2e7682f432ad8971e44f7"
+  },
+  "filesystem": {
+    "path": "GammaLut0.bin",
+    "bytes": 960,
+    "sha256": "75a4ed4f3ca34134ae075d66f09e3dd8eb65138a416a2f09eb8640dcaa09ea57"
+  },
+  "legacy_format": {
+    "selector": 25088,
+    "size_selects_format_without_header": 960,
+    "first_section_bytes": 320,
+    "second_section_bytes": 640,
+    "first_section_expanded_samples": 1024,
+    "second_section_expanded_samples": 4096,
+    "channel_order": "Unestablished; not three RGB channel tables"
+  },
+  "expanded_curve_summaries": {
+    "embedded": {
+      "first_1024": {
+        "samples": 1024,
+        "minimum": 0,
+        "maximum": 255,
+        "decreases": 0,
+        "u32_le_sha256": "6bda1abd22d188e31607c23843dc328396ccfc7e11c4625ce29a49a2204a5c88",
+        "selected_samples": {
+          "0": 0,
+          "1": 0,
+          "3": 1,
+          "4": 1,
+          "15": 4,
+          "16": 4,
+          "63": 16,
+          "64": 16,
+          "127": 32,
+          "128": 32,
+          "255": 64,
+          "256": 64,
+          "1023": 255
+        }
+      },
+      "second_4096": {
+        "samples": 4096,
+        "minimum": 0,
+        "maximum": 4092,
+        "decreases": 0,
+        "u32_le_sha256": "03acc31aaa4dbbbf7b23b917536e9ba41008b4ec33e5ec38633d6a0dfa8339a1",
+        "selected_samples": {
+          "0": 0,
+          "1": 0,
+          "3": 4,
+          "4": 4,
+          "15": 16,
+          "16": 16,
+          "63": 64,
+          "64": 64,
+          "127": 128,
+          "128": 128,
+          "255": 256,
+          "256": 256,
+          "4095": 4092
+        }
+      }
+    },
+    "filesystem": {
+      "first_1024": {
+        "samples": 1024,
+        "minimum": 0,
+        "maximum": 255,
+        "decreases": 0,
+        "u32_le_sha256": "6bda1abd22d188e31607c23843dc328396ccfc7e11c4625ce29a49a2204a5c88",
+        "selected_samples": {
+          "0": 0,
+          "1": 0,
+          "3": 1,
+          "4": 1,
+          "15": 4,
+          "16": 4,
+          "63": 16,
+          "64": 16,
+          "127": 32,
+          "128": 32,
+          "255": 64,
+          "256": 64,
+          "1023": 255
+        }
+      },
+      "second_4096": {
+        "samples": 4096,
+        "minimum": 0,
+        "maximum": 4080,
+        "decreases": 3,
+        "u32_le_sha256": "e18cab06e770da377b121246ba56d8508fa350b0613138e77bc4920fae6b92fb",
+        "selected_samples": {
+          "0": 0,
+          "1": 0,
+          "3": 0,
+          "4": 0,
+          "15": 16,
+          "16": 16,
+          "63": 64,
+          "64": 64,
+          "127": 112,
+          "128": 128,
+          "255": 752,
+          "256": 784,
+          "4095": 4080
+        }
+      }
+    }
+  },
+  "listings": [
+    {
+      "name": "resource_dispatch",
+      "start": 2147533568,
+      "bytes": 604,
+      "sha256": "445f0378626fec05787403c87f9070ba9d962fd4b1bce0de547c6d900f91523c",
+      "path": "derived\\gamma-pipeline-map\\resource_dispatch.asm"
+    },
+    {
+      "name": "format_and_converter",
+      "start": 2149694608,
+      "bytes": 2260,
+      "sha256": "8c9a7670e75b05b308693376a5c2f0c185c174d20efda77691317c73bbf1f650",
+      "path": "derived\\gamma-pipeline-map\\format_and_converter.asm"
+    },
+    {
+      "name": "loader_and_extractor",
+      "start": 2149697448,
+      "bytes": 660,
+      "sha256": "0711bafd7031cc3bc025f2deae62128c842692772260c7a30a5c15ec51f0d877",
+      "path": "derived\\gamma-pipeline-map\\loader_and_extractor.asm"
+    },
+    {
+      "name": "ipp_command_builder",
+      "start": 2149571904,
+      "bytes": 460,
+      "sha256": "2f9ca9c81f757da3b88920b2aa557b50d010884db28b5f49f727f0b9e1158e9f",
+      "path": "derived\\gamma-pipeline-map\\ipp_command_builder.asm"
+    },
+    {
+      "name": "gamma_table_selection",
+      "start": 2149572684,
+      "bytes": 540,
+      "sha256": "7d254d06df3d7b71369faa205f791981685170bc72dd5caa5e0892c8394eec2b",
+      "path": "derived\\gamma-pipeline-map\\gamma_table_selection.asm"
+    },
+    {
+      "name": "hardware_upload",
+      "start": 2149129364,
+      "bytes": 212,
+      "sha256": "b87c695a475806e1e2b4012d2fd69f1e0267acd1363a2677d01393fbf75775c2",
+      "path": "derived\\gamma-pipeline-map\\hardware_upload.asm"
+    },
+    {
+      "name": "still_gamma_upload_call",
+      "start": 2149888144,
+      "bytes": 64,
+      "sha256": "34be585211dde28a615025c4637f1670a903e65ff0cf4fabdec8785dc8899eaa",
+      "path": "derived\\gamma-pipeline-map\\still_gamma_upload_call.asm"
+    },
+    {
+      "name": "processing_gamma_upload_call",
+      "start": 2150260212,
+      "bytes": 52,
+      "sha256": "9c1ddbc9babcbcbc95355984c17a5c80a410c0ed104adcd08522996f95d35f5c",
+      "path": "derived\\gamma-pipeline-map\\processing_gamma_upload_call.asm"
+    },
+    {
+      "name": "wrapper_caller",
+      "start": 2155443768,
+      "bytes": 188,
+      "sha256": "59d07bafaf588001c99f194f4b210974f70b215fb9708e500444ffef8d7b0ce5",
+      "path": "derived\\gamma-pipeline-map\\wrapper_caller.asm"
+    },
+    {
+      "name": "table_length",
+      "start": 2149796384,
+      "bytes": 8,
+      "sha256": "2bd1244d65513f4c8e0c2cfc1a2cff40e4632531ddfa81121d62ddf920fd10f4",
+      "path": "derived\\gamma-pipeline-map\\table_length.asm"
+    }
+  ],
+  "direct_transfer_encoding_candidates": {
+    "0x80191c94": [
+      {
+        "site": 2149573124,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149577428,
+        "instruction": "j"
+      },
+      {
+        "site": 2149577528,
+        "instruction": "jal"
+      },
+      {
+        "site": 2150874776,
+        "instruction": "jal"
+      },
+      {
+        "site": 2150882224,
+        "instruction": "jal"
+      }
+    ],
+    "0x801fdd40": [
+      {
+        "site": 2148428532,
+        "instruction": "jal"
+      },
+      {
+        "site": 2148428588,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149572236,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149572300,
+        "instruction": "jal"
+      }
+    ],
+    "0x801fde2c": [
+      {
+        "site": 2155443884,
+        "instruction": "jal"
+      }
+    ],
+    "0x801fe17c": [
+      {
+        "site": 2149888200,
+        "instruction": "jal"
+      },
+      {
+        "site": 2150260256,
+        "instruction": "jal"
+      }
+    ],
+    "0x8021bc90": [
+      {
+        "site": 2149694848,
+        "instruction": "jal"
+      }
+    ],
+    "0x8021bd3c": [
+      {
+        "site": 2148428516,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149697540,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149697744,
+        "instruction": "jal"
+      }
+    ],
+    "0x8021c7a8": [
+      {
+        "site": 2149697924,
+        "instruction": "jal"
+      }
+    ],
+    "0x8021c960": [
+      {
+        "site": 2149572068,
+        "instruction": "jal"
+      }
+    ],
+    "0x80234a20": [
+      {
+        "site": 2149571988,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149697972,
+        "instruction": "jal"
+      }
+    ]
+  },
+  "confirmed_static_contracts": [
+    "Loader 0x8021c7a8 calls converter 0x8021bd3c on both raw-cache hit and miss.",
+    "0x8021c960 copies 0x100 u32 from converted+0x194 and frees the converted allocation.",
+    "0x801fdd40 constructs command id 10 and copies the 256-word extracted table into command+0x18.",
+    "0x80191c94 sends 256 u32 to 0xb60000b8 then 128 packed pairs to 0xb6000bbc.",
+    "0x801fe17c selects a cached gamma command through 0x801fe04c and calls 0x80191c94.",
+    "0x8024b0c8 and 0x802a5e20 call the cached-table upload path; their selected table contents are not established here."
+  ],
+  "unknowns": [
+    "No observed target execution or saved-image effect from either gamma resource.",
+    "Link from resource id 0 through cached-table producers to ordinary still capture remains unestablished.",
+    "Colour domain, channel semantics, calibration assumptions, allowed slopes and downstream transfer function are unresolved.",
+    "Pure Python expansion is an instruction transcription, not independently emulated target output.",
+    "Aligned J/JAL scan can include data false positives and misses indirect calls and other instruction modes.",
+    "GammaDDE has a separate DLCD path and does not provide a confirmed shortcut to saved-photo looks."
+  ],
+  "candidate_ready": false
+}

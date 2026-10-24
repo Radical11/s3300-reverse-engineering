@@ -1,0 +1,31 @@
+{
+  "method": "Exact reconstruction from prior marker image and bounded JPEG chunks; independent of packed builder",
+  "prior_candidate_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "candidate_sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
+  "candidate_bytes": 19005632,
+  "startup_jpeg_sha256": "d003134ffe03c7f4ceb54bb58219d75c451f0bb16eebf0a4294c8d3bd22a14b4",
+  "startup_jpeg_bytes": 24210,
+  "jpeg_frame_and_marker_layout_match": true,
+  "jpeg_complete_decode": true,
+  "other_resources_unchanged_vs_marker_candidate": 367,
+  "application_and_loader_bytes_identical_to_marker_candidate": true,
+  "exact_reconstruction_matches": true,
+  "only_startup_payload_and_checksum_differ_vs_marker_candidate": true,
+  "changed_bytes_vs_marker_candidate": 23420,
+  "fat_metadata_unchanged": true,
+  "version_product_and_download_descriptor_unchanged": true,
+  "staged": false,
+  "flashed": false,
+  "startup_activation_verified": false,
+  "creative_looks_integrated": false,
+  "performance_gain_demonstrated": false,
+  "restoration_verified": false,
+  "fresh_fat_extraction": {
+    "files": 368,
+    "directories": 7,
+    "all_allocated_files_validated": true,
+    "logical_volume_complete": false
+  },
+  "second_build_sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
+  "second_build_byte_identical": true
+}

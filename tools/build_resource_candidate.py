@@ -54,7 +54,7 @@ def edit_label(body, before=ORIGINAL_TEXT, after=CANDIDATE_TEXT):
                     "byte_length": target["byte_length"], "before": before, "after": after}
 
 
-def validate_chain(data, evidence, entry):
+def validate_chain(data, evidence, entry, expected_hash=RESOURCE_HASH):
     """Bind mutable extraction metadata back to original BPB, FAT and directory."""
     base = 0x6fe2c0
     boot = data[base:base+512]
@@ -95,8 +95,8 @@ def validate_chain(data, evidence, entry):
         cluster = struct.unpack_from("<H", data, fat+2*cluster)[0]
     if remaining or cluster < 0xfff8 or len(seen) != len(entry["clusters"]):
         raise ValueError("Incomplete or overlong resource FAT chain")
-    if digest(body) != RESOURCE_HASH or entry["sha256"] != RESOURCE_HASH:
-        raise ValueError("Resource is not the expected original English table")
+    if digest(body) != expected_hash or entry["sha256"] != expected_hash:
+        raise ValueError("Resource is not the expected original resource")
     return bytes(body)
 
 

@@ -1,4 +1,4 @@
-"""Closed registry of the two exact research images; no arbitrary flash input.
+"""Closed registry of exact research images; no arbitrary flash input.
 
 Host validation and selection only. Device acceptance/recovery are not implied.
 """
@@ -18,7 +18,12 @@ TRIALS = {
         "path": "derived/embedded-label-candidate-02/NOT-INSTALLABLE-embedded-label.research.bin",
         "sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
         "installed_firmware": "COOLPIX S3300 V1.1",
-        "purpose": "Embedded and filesystem label trial, retaining v1.1; no creative-look integration"}
+        "purpose": "Embedded and filesystem label trial, retaining v1.1; no creative-look integration"},
+    "pocket-studio": {
+        "path": "derived/pocket-studio-identity-candidate-01/NOT-INSTALLABLE-patch-plan.research.bin",
+        "sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
+        "installed_firmware": "COOLPIX S3300 V1.1",
+        "purpose": "Pocket Studio startup artwork plus existing Welcome studio marker; stock shooting and sound"}
 }
 
 

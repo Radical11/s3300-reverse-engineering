@@ -1,0 +1,203 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated data and compiler-unwind-bounded MIPS32 listings; manual delay-slot-aware trace",
+  "rea_evidence": false,
+  "target_executed": false,
+  "settings_pointer_global": 2156468396,
+  "color_option_byte_offset": 26,
+  "menu_store_site": 2153433292,
+  "menu_apply_call": 2153433396,
+  "selection_dispatch": 2154902224,
+  "selected_cases": [
+    {
+      "ui_value": 2,
+      "effect_id": 4,
+      "separate_awb_mode": 12
+    },
+    {
+      "ui_value": 3,
+      "effect_id": 3,
+      "separate_awb_mode": 13
+    },
+    {
+      "ui_value": 4,
+      "effect_id": 2,
+      "separate_awb_mode": 17
+    }
+  ],
+  "effect_dispatcher": 2154480860,
+  "effect_dispatch_table": [
+    2154480992,
+    2154481808,
+    2154481788,
+    2154481760,
+    2154481732,
+    2154481696,
+    2154481656,
+    2154481616,
+    2154480992,
+    2154481584,
+    2154481516
+  ],
+  "offset_presets": [
+    {
+      "analyst_label": "cyanotype",
+      "address": 2156408096,
+      "bytes": 4,
+      "sha256": "17fa9c7f5e9039a2d46e73e17d8e094a796ee4c313199bad42db4ee1dc30d865",
+      "signed_halfword_pair": [
+        24,
+        0
+      ]
+    },
+    {
+      "analyst_label": "sepia",
+      "address": 2156408100,
+      "bytes": 4,
+      "sha256": "df21b2a053f87b88ba1704e66dbb5ddb9d72873ab590660963250a3ff70b75f1",
+      "signed_halfword_pair": [
+        -30,
+        30
+      ]
+    },
+    {
+      "analyst_label": "neutral",
+      "address": 2156408104,
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "signed_halfword_pair": [
+        0,
+        0
+      ]
+    }
+  ],
+  "active_offset_pair": 2156378340,
+  "chroma_multiplier_u16": 2156091920,
+  "matrix_adjuster": 2154479736,
+  "command_builder": {
+    "address": 2154492980,
+    "id": 15,
+    "bytes": 52,
+    "matrix_signed_halfwords": 9,
+    "first_two_offsets_bias": 128,
+    "enqueue": 2149725160
+  },
+  "listings": [
+    {
+      "fde_address": 2155811344,
+      "fde_record_size": 28,
+      "fde_sha256": "5b6397c86cac7d09cc28361722e8a6df9d807695562cd71ee7b2ee0d73705c4a",
+      "cie_address": 2155810172,
+      "start": 2153433180,
+      "end_exclusive": 2153433668,
+      "size": 488,
+      "source_region_start": 2151192704,
+      "source_region_sha256": "8efa372c3784a7ee2c98e6ac3208ee68dfd09220c1e8eba6f6a30d2d9ee17a68",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "5592eb1c14918c72c95b3614390601a7b6840b3375734fc5d812f5847c71587b",
+      "complete_linear_decode": true,
+      "path": "derived/color-options-map-01/805ac85c.asm"
+    },
+    {
+      "fde_address": 2155783032,
+      "fde_record_size": 32,
+      "fde_sha256": "5ee8df47a4357e8e73c751b50a56e32c78a1f8391dea781cf56298137256f11e",
+      "cie_address": 2155782360,
+      "start": 2154902224,
+      "end_exclusive": 2154902944,
+      "size": 720,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "426c0b813507ca13bcf89ff8bdbdd7bc90cd0df67462633f53e0fc403fd431b0",
+      "complete_linear_decode": true,
+      "path": "derived/color-options-map-01/807132d0.asm"
+    },
+    {
+      "fde_address": 2155742320,
+      "fde_record_size": 40,
+      "fde_sha256": "7fa469e259b1d49b8692fe3ed9ac5e0462c6b314e47af6a00c122a3ae170c48e",
+      "cie_address": 2155742224,
+      "start": 2154480860,
+      "end_exclusive": 2154481928,
+      "size": 1068,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "adb67a24368025a6ec81b16124cc769b4a75dfff36d68b4370e986d602e34c3e",
+      "complete_linear_decode": true,
+      "path": "derived/color-options-map-01/806ac4dc.asm"
+    },
+    {
+      "fde_address": 2155742256,
+      "fde_record_size": 32,
+      "fde_sha256": "7919fd1a4004d823d31e0031055a8f5df923db35390832c1ba6254377477eb13",
+      "cie_address": 2155742224,
+      "start": 2154479736,
+      "end_exclusive": 2154480108,
+      "size": 372,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "9a25daba47f4123e76d4dcd5c07e810bc26b08d6d1d114c29d93fbaab4305569",
+      "complete_linear_decode": true,
+      "path": "derived/color-options-map-01/806ac078.asm"
+    },
+    {
+      "fde_address": 2155743272,
+      "fde_record_size": 40,
+      "fde_sha256": "398b57e93fb8d8dd51acc3bb9bbcd8545877347d888814686735e1ac02790a2e",
+      "cie_address": 2155743140,
+      "start": 2154492980,
+      "end_exclusive": 2154493248,
+      "size": 268,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "88bce898d91e97cd5c9f1507164f99cadea3822d1261664d9aa8e7f6c130a61c",
+      "complete_linear_decode": true,
+      "path": "derived/color-options-map-01/806af434.asm"
+    },
+    {
+      "fde_address": 2155743236,
+      "fde_record_size": 36,
+      "fde_sha256": "e2958dc5f89873cb64d5748c08d041add970212b5e1c34217e2884917bae1aa6",
+      "cie_address": 2155743140,
+      "start": 2154492800,
+      "end_exclusive": 2154492980,
+      "size": 180,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "ec4b884d56e626b55abc557b65b9e7465c1d6c46be379b361c1ea6318ee8e12b",
+      "complete_linear_decode": true,
+      "path": "derived/color-options-map-01/806af380.asm"
+    },
+    {
+      "fde_address": 2155758404,
+      "fde_record_size": 36,
+      "fde_sha256": "2ba96105bad5b59f4004de35574a1fbf7f19bd5d017f246a0a9bd78cd60ed97b",
+      "cie_address": 2155758236,
+      "start": 2154638176,
+      "end_exclusive": 2154638660,
+      "size": 484,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "fa97798a9d4a14ddf084375c4b5fd65dee5cb6b7c785dcfd5787bfde05290288",
+      "complete_linear_decode": true,
+      "path": "derived/color-options-map-01/806d2b60.asm"
+    }
+  ],
+  "limitations": [
+    "UI names to serialized numeric selections need runtime confirmation; ordinals alone are not proven UI IDs.",
+    "The byte store establishes in-memory state, not nonvolatile persistence or a safe settings writer.",
+    "AWB mode and chroma effect are separate branches; AWB numbers are not creative-look IDs.",
+    "Effect IDs 2/3/4 zero chroma multiplier and select constant tint offsets; this is a tinted-monochrome lead, not full-color Amber Days.",
+    "Command 15 enqueue is traced; hardware dispatch and live-view versus saved-still context still require tracing.",
+    "Other users of shared offset constants and input/output color domain remain unresolved.",
+    "No effect preset, executable instruction or firmware candidate was changed by this mapper."
+  ],
+  "ready_for_saved_photo_patch": false
+}

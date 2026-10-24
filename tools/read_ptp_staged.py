@@ -189,7 +189,7 @@ def worker(trial="resource-label", inventory=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--worker", action="store_true")
-    parser.add_argument("--trial", choices=tuple(TRIALS), default="resource-label")
+    parser.add_argument("--trial", choices=("resource-label", "embedded-label"), default="resource-label")
     parser.add_argument("--inventory", action="store_true", help="Bounded all-object metadata inventory; no file downloads")
     parser.add_argument("--evidence", type=Path)
     args = parser.parse_args()

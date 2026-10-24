@@ -1,4 +1,4 @@
-"""Stage the exact embedded-label trial on a removable FAT card, with backup.
+"""Stage an exact registered research trial on a removable FAT card, with backup.
 
 No formatting, raw flash, version bypass, directory recursion or photo writes.
 Only the existing FIRMWARE/FIRMWARE.BIN is replaceable, after known-hash backup.
@@ -90,6 +90,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("drive", help="Explicit removable card drive, e.g. E:\\")
     parser.add_argument("output", type=Path, help="New local audit/backup directory inside derived/")
+    parser.add_argument("--trial", choices=("embedded-label", "pocket-studio"), default="embedded-label")
     args = parser.parse_args()
     root, output = Path(args.drive), args.output.resolve()
     if not output.is_relative_to((ROOT/"derived").resolve()) or output.exists():
@@ -100,9 +101,14 @@ def main():
         if removable_fat_identity(root) != identity:
             raise ValueError("Card identity changed during staging")
 
-    payload = load_trial("embedded-label")
-    result = replace_verified(root/"FIRMWARE", payload, TRIALS["embedded-label"]["sha256"], output, recheck)
-    result.update(trial="embedded-label", drive=str(root), filesystem=identity[1],
+    payload = load_trial(args.trial)
+    if args.trial == "pocket-studio":
+        from validate_startup_trial import verify
+        baseline_trial = load_trial("embedded-label")
+        filesystem = json.loads((ROOT/"evidence/resource-filesystem.json").read_text())
+        verify(baseline_trial, payload, filesystem["entries"])
+    result = replace_verified(root/"FIRMWARE", payload, TRIALS[args.trial]["sha256"], output, recheck)
+    result.update(trial=args.trial, drive=str(root), filesystem=identity[1],
                   package_version="1.1 unchanged", version_bypass=False,
                   same_version_acceptance_verified=False, restoration_verified=False)
     (output/"card-staging.json").write_text(json.dumps(result, indent=2)+"\n")

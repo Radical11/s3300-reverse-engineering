@@ -21,6 +21,13 @@ and verified on the card through a reader for the user's requested
 again. This confirms user-observed custom label activation. A reported card
 error after updating started remains unexplained; restart, capture, playback
 and persistence checks are still pending.
+The user subsequently reports normal operation. The next
+[Pocket Studio identity trial](notes/pocket-studio-trial.md) is built,
+independently checked and staged through the card reader after verified photo
+and prior-update backups. It retains the marker and replaces only the startup
+picture relative to that prior build. Artwork activation is awaiting the user's
+camera-menu test. [Original artwork](firmware/branding/README.md) is versioned;
+vendor firmware and personal photos remain local.
 This is not a
 validated release: [backup/restoration access](notes/restore-path.md) remains
 unresolved. See [the USB trial](notes/usb-flash-trial.md). The manual capture
@@ -41,6 +48,8 @@ not a camera update.
 Start with [implementation status](notes/implementation-status.md),
 [the complete unpacked workspace](notes/unpacked-workspace.md),
 [the compact creative-look C module](firmware/looks/README.md),
+[the reusable patch-plan builder](notes/patch-plans.md),
+[the existing selectable effects map](notes/color-options-map.md),
 [the decoder format](notes/decoder-format.md),
 [application landmarks](notes/application-landmarks.md), and
 [update integrity](notes/integrity-analysis.md), followed by the

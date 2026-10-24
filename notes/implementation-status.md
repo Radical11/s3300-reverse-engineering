@@ -4,6 +4,10 @@ Updated 24 October 2026. Research baseline: supplied Nikon S3300 v1.1 updater. I
 camera: observed stock v1.0 before the user-requested experimental update.
 After the first trial the user reported v1.1 without the label. After the second
 trial the user reports `Welcome studio` in the menu and a readable SD card.
+The user subsequently reports normal operation; live USB inventory confirms
+v1.1 and readable card storage. The third, [Pocket Studio identity
+trial](pocket-studio-trial.md) is now staged, retaining the marker and replacing
+startup art. Its camera-side artwork result is pending.
 
 ## Current direction and latest checkpoint
 
@@ -34,7 +38,7 @@ on a raw-cache hit, making it a specific candidate to profile; generated-output
 ownership prevents a naive shared-pointer cache. No runtime speed gain or
 external debug access is established.
 
-The current suite passes **122 tests**, including native compiled C,
+The current suite passes **139 tests**, including native compiled C,
 malformed-resource,
 roundtrip, metadata, scanner and query cases. The exact source reconstruction,
 all resource roundtrips and an actual English-resource CLI export/import also

@@ -91,3 +91,22 @@ capture/playback and settings persistence remain pending. See the
 See [candidate details](notes/resource-label-candidate.md),
 [restoration findings](notes/restore-path.md) and
 [the implementation ledger](notes/implementation-status.md).
+
+## Pocket Studio and the next processing hooks
+
+The user reports the camera is working. Live read-only USB enumeration confirms
+v1.1 and readable card storage. A reusable fixed-extent patch-plan builder now
+reproduces the working marker image exactly and independently validates complete
+affected segments, including history-sensitive continuation blocks.
+
+The next [identity trial](notes/pocket-studio-trial.md) retains that marker and
+adds original Pocket Studio startup artwork. Two builds match exactly;
+independent reconstruction and a fresh 368-file FAT extraction pass. **139 tests
+pass locally.** The trial is staged and fully read back from the removable card;
+all 30 DCIM files and the old update were backed up and verified first. Artwork
+activation and camera operation with this third trial remain pending.
+
+New [gamma-format](notes/gamma-pipeline.md) and
+[Color Options](notes/color-options-map.md) findings narrow the next saved-photo
+integration work. They are source-bound static findings, not demonstrated
+photographic or speed changes. No such processing patch was included here.
