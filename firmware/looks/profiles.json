@@ -1,0 +1,10 @@
+{
+  "input_domain": "display-referred full-range RGB8; capture-stage adapter unverified",
+  "anchors_x": [0, 16, 48, 96, 160, 224, 255],
+  "looks": [
+    {"name": "Flash Pop", "id": 1, "tone": [0, 9, 37, 103, 187, 242, 255], "gain_q8": [264, 256, 260], "offset": [2, 0, 1]},
+    {"name": "Amber Days", "id": 2, "tone": [7, 20, 52, 101, 164, 224, 249], "gain_q8": [266, 256, 238], "offset": [4, 0, -2]},
+    {"name": "Cool Night", "id": 3, "tone": [3, 13, 42, 91, 157, 223, 251], "gain_q8": [239, 252, 274], "offset": [-2, 0, 5]},
+    {"name": "Mono Grit", "id": 4, "tone": [9, 15, 37, 91, 177, 236, 249], "gain_q8": [256, 256, 256], "offset": [0, 0, 0]}
+  ]
+}

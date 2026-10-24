@@ -20,6 +20,13 @@ The first push was verified against the remote branch. GitHub Actions ran all
   additive checksum. Six bytes differ; executable images are unchanged.
 - Independent exact-byte candidate validation and 94 unit tests passed locally.
 
+Later passes add packed-block rewriting and native algorithm checks; the current
+suite passes **111 tests** locally. The [creative-look C module](firmware/looks/README.md)
+implements Original plus four looks using 2,560 table bytes and no heap/frame
+allocation. It compiled with MSVC and matched independent references, including
+full-resolution host runs on an original photo copy. It is not camera-integrated;
+no Nikon performance or battery improvement is claimed.
+
 ## Experimental installation request
 
 The user has now explicitly requested a flash attempt and GitHub progress

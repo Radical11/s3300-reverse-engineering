@@ -34,6 +34,7 @@ not a camera update.
 
 Start with [implementation status](notes/implementation-status.md),
 [the complete unpacked workspace](notes/unpacked-workspace.md),
+[the compact creative-look C module](firmware/looks/README.md),
 [the decoder format](notes/decoder-format.md),
 [application landmarks](notes/application-landmarks.md), and
 [update integrity](notes/integrity-analysis.md), followed by the

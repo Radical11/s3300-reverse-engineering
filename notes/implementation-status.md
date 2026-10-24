@@ -33,7 +33,8 @@ on a raw-cache hit, making it a specific candidate to profile; generated-output
 ownership prevents a naive shared-pointer cache. No runtime speed gain or
 external debug access is established.
 
-The current suite passes **106 unit tests**, including malformed-resource,
+The current suite passes **111 tests**, including native compiled C,
+malformed-resource,
 roundtrip, metadata, scanner and query cases. The exact source reconstruction,
 all resource roundtrips and an actual English-resource CLI export/import also
 passed. This verifies offline development tools, not hardware behaviour.
@@ -120,7 +121,7 @@ executed. See `update-acceptance.md` for source-bound locations.
 | Decoder and restoration | Decoder implemented and independently cross-checked; restoration unfinished | Installed v1.0/calibration backup coverage, real write ranges, acceptance rules and accessible recovery route |
 | Stock timing + optimization | Measurement tooling ready; no camera timings or optimization | Matched real stage measurements and the largest confirmed bottleneck |
 | One selectable look | Image-stage/resource leads recovered; no camera hook | Confirm saved-photo processing domain, format and safe control integration |
-| Four looks, quick switching, remembered settings | Desired look names retained; not on camera | Verified button/menu ownership and persistence API/format |
+| Four looks, quick switching, remembered settings | Four compact native C looks implemented and host-verified; no camera controls/integration | Verified capture-buffer domain, target ABI, button/menu ownership and persistence API/format |
 | Fast Snap | Exposure-limit handler candidates found | Verified units/ranges and measured exposure experiments |
 | Mystery roll and interval timer | Pending earlier dependencies | Session state, capture lifecycle, bounded scheduling and reliable cancel |
 | Grain/vignette/glow/double exposure | Pending profiling/buffer knowledge | Memory ownership, accelerator capabilities and acceptable measured cost |
@@ -129,6 +130,16 @@ The intended first looks remain Original, Flash Pop, Amber Days, Cool Night and
 Mono Grit. Texture stays intentional; mandatory smoothing and invented detail
 are outside the brief. Host previews may tune these looks but cannot satisfy
 the acceptance criterion that they operate while shooting on the camera.
+
+`firmware/looks/` now contains real integer-only RGB8 processing code and
+reproducible profile tables. Three colour looks use 2,304 table bytes; mono adds
+256 bytes. The row API owns no buffers and allocates no heap memory. Original
+returns without processing pixels. MSVC native tests and full-resolution JPEG
+copy checks compare the LUT against an equivalent scalar implementation and a
+Python reference. All outputs agree. Host kernel timings are recorded separately
+from camera performance in `evidence/creative-look-host-benchmark.json`. This
+module has not been cross-compiled for the camera, inserted into the carrier,
+selected by a camera menu, or measured on Nikon hardware.
 
 The minimal update package is now staged and read back through USB. The user
 reports v1.1 after the physical menu update; no remote flash command,

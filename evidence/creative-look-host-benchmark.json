@@ -1,0 +1,305 @@
+{
+  "method": "Native C LUT versus exactly equivalent native scalar profile evaluation",
+  "timing_domain": "host_only",
+  "host_platform": "Windows-11-10.0.26200-SP0",
+  "compiler": "MSVC /O2 /W4 /WX",
+  "input_sha256": "ebf3ca35ab8fc8273bd7a50a7b439613e05eb1d705efb9f29341b53588742607",
+  "profiles_sha256": "ca5e23405ee07a03cdec77a752fd1542c783ceee6970acb7d09c3a97401ef28e",
+  "c_source_sha256": "a280d823bcc1341c19d76cdce7e41c018600c19c8b14109ac613fa2442579547",
+  "host_library_sha256": "b7aafce1ee76591d09dbb6e412df6b49ff531d08efe0403975d943833fe8f41a",
+  "lookup_table_bytes": 2560,
+  "kernel_heap_allocations": 0,
+  "kernel_full_frame_working_buffer_bytes": 0,
+  "measurements": [
+    {
+      "look": "Flash Pop",
+      "size": [
+        4608,
+        3456
+      ],
+      "pixels": 15925248,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "54512782953487a323079d6060ac640b8ea456338fea29a52b467b0b432ec361",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            15.0353,
+            15.4349,
+            15.5378,
+            17.4648,
+            14.8096
+          ],
+          "median_ms": 15.4349,
+          "max_ms": 17.4648
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            247.0283,
+            237.0096,
+            278.13,
+            251.6076,
+            243.3258
+          ],
+          "median_ms": 247.0283,
+          "max_ms": 278.13
+        }
+      },
+      "host_reference_to_lut_median_ratio": 16.004528697950747
+    },
+    {
+      "look": "Amber Days",
+      "size": [
+        4608,
+        3456
+      ],
+      "pixels": 15925248,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "f45d404bfaa923c4f9df5aff567a21fddaa049b40ccca89ea61e6cd09f071660",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            15.0573,
+            14.885,
+            14.7837,
+            15.0654,
+            15.3876
+          ],
+          "median_ms": 15.0573,
+          "max_ms": 15.3876
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            229.5426,
+            240.0412,
+            229.8222,
+            232.8196,
+            238.0171
+          ],
+          "median_ms": 232.8196,
+          "max_ms": 240.0412
+        }
+      },
+      "host_reference_to_lut_median_ratio": 15.462240906404203
+    },
+    {
+      "look": "Cool Night",
+      "size": [
+        4608,
+        3456
+      ],
+      "pixels": 15925248,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "e65f50afac9bc0235afdd3777a496ef6835eca1c36f2664cab7cb86745639e45",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            16.6843,
+            15.3167,
+            15.1954,
+            15.2615,
+            15.6735
+          ],
+          "median_ms": 15.3167,
+          "max_ms": 16.6843
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            242.5557,
+            248.0484,
+            258.1683,
+            256.7139,
+            258.2845
+          ],
+          "median_ms": 256.7139,
+          "max_ms": 258.2845
+        }
+      },
+      "host_reference_to_lut_median_ratio": 16.760392251594666
+    },
+    {
+      "look": "Mono Grit",
+      "size": [
+        4608,
+        3456
+      ],
+      "pixels": 15925248,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "1f1186a0fd01c42a11c8486e8c02668e8069e94de26b5893102850f072ac9356",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            23.1664,
+            22.2899,
+            22.894,
+            22.368,
+            23.0508
+          ],
+          "median_ms": 22.894,
+          "max_ms": 23.1664
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            128.5539,
+            122.3219,
+            113.5375,
+            113.5462,
+            115.4369
+          ],
+          "median_ms": 115.4369,
+          "max_ms": 128.5539
+        }
+      },
+      "host_reference_to_lut_median_ratio": 5.042233773040971
+    },
+    {
+      "look": "Flash Pop",
+      "size": [
+        3264,
+        2448
+      ],
+      "pixels": 7990272,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "798da98b12fff03103993aec3053fdb632791d0e9cbac132775b08142c2d7ff8",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            8.7291,
+            8.2318,
+            8.4871,
+            8.271,
+            7.9341
+          ],
+          "median_ms": 8.271,
+          "max_ms": 8.7291
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            131.5202,
+            129.8672,
+            128.4374,
+            129.2779,
+            128.2608
+          ],
+          "median_ms": 129.2779,
+          "max_ms": 131.5202
+        }
+      },
+      "host_reference_to_lut_median_ratio": 15.630262362471282
+    },
+    {
+      "look": "Amber Days",
+      "size": [
+        3264,
+        2448
+      ],
+      "pixels": 7990272,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "11d91060aece79891f9d2783458fb5ec7652f081d5dc6c7d4fa04db038641fe1",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            8.0125,
+            8.2646,
+            9.5318,
+            8.299,
+            8.3427
+          ],
+          "median_ms": 8.299,
+          "max_ms": 9.5318
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            131.1267,
+            127.8755,
+            128.4466,
+            128.821,
+            126.7068
+          ],
+          "median_ms": 128.4466,
+          "max_ms": 131.1267
+        }
+      },
+      "host_reference_to_lut_median_ratio": 15.477358717917822
+    },
+    {
+      "look": "Cool Night",
+      "size": [
+        3264,
+        2448
+      ],
+      "pixels": 7990272,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "339432ad34edb36a558813787b85a5c3f0b3930efb04f6ac9775c97fbcdd59bc",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            7.5814,
+            8.3444,
+            8.4954,
+            8.6585,
+            8.1653
+          ],
+          "median_ms": 8.3444,
+          "max_ms": 8.6585
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            129.9029,
+            130.841,
+            130.407,
+            130.3903,
+            128.2262
+          ],
+          "median_ms": 130.3903,
+          "max_ms": 130.841
+        }
+      },
+      "host_reference_to_lut_median_ratio": 15.626084559704712
+    },
+    {
+      "look": "Mono Grit",
+      "size": [
+        3264,
+        2448
+      ],
+      "pixels": 7990272,
+      "outputs_exact_by_sha256": true,
+      "output_sha256": "0a6b7e211bf65e831456eb332b76876eb7a41c39a9f7b636fb184ced3f6da5cc",
+      "timings": {
+        "lut": {
+          "milliseconds": [
+            11.5585,
+            11.3863,
+            11.3125,
+            11.3483,
+            11.5131
+          ],
+          "median_ms": 11.3863,
+          "max_ms": 11.5585
+        },
+        "scalar_reference": {
+          "milliseconds": [
+            58.6295,
+            54.6986,
+            55.3555,
+            57.2679,
+            57.5075
+          ],
+          "median_ms": 57.2679,
+          "max_ms": 58.6295
+        }
+      },
+      "host_reference_to_lut_median_ratio": 5.029544276894162
+    }
+  ],
+  "camera_integrated": false,
+  "camera_speedup_measured": false,
+  "limitations": [
+    "RGB8 developed-JPEG domain; capture buffer format/stage is not verified.",
+    "8 MP input is host-resized, not an on-camera 8 MP capture measurement.",
+    "Only kernel execution is timed; caller buffer preparation, JPEG decode, hashing and I/O are excluded.",
+    "Scalar profile evaluation is our reference, not Nikon's stock processing algorithm.",
+    "No autofocus, shutter, startup, write latency, battery improvement or overall camera speed is measured."
+  ],
+  "source_unchanged": true
+}
