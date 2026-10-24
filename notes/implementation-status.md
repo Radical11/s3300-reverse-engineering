@@ -2,7 +2,7 @@
 
 Updated 24 October 2026. Research baseline: supplied Nikon S3300 v1.1 updater. Installed
 camera: observed stock v1.0 before the user-requested experimental update.
-The user now reports updating to v1.1; completion is awaiting observation.
+The user now reports v1.1, but no `Welcome studio` label.
 
 ## Current direction and latest checkpoint
 
@@ -33,7 +33,7 @@ on a raw-cache hit, making it a specific candidate to profile; generated-output
 ownership prevents a naive shared-pointer cache. No runtime speed gain or
 external debug access is established.
 
-The current suite includes **99 unit tests**, including malformed-resource,
+The current suite passes **106 unit tests**, including malformed-resource,
 roundtrip, metadata, scanner and query cases. The exact source reconstruction,
 all resource roundtrips and an actual English-resource CLI export/import also
 passed. This verifies offline development tools, not hardware behaviour.
@@ -56,8 +56,12 @@ same hash. See `resource-label-candidate.md`.
 This candidate is now staged on the card, with all 19,005,632 bytes read back
 over standard PTP and matched exactly. Standard WPD writes worked; its metadata
 and resource-read path refused the binary. No card reader or driver replacement
-was needed. The user reports the update is in progress, but completion and
-`Welcome studio` have not been observed. See `usb-flash-trial.md`.
+was needed. The user now reports v1.1, but `Welcome studio` is absent. An exact
+English-table copy and a differing gamma table were found in the packed
+application. A token-preserving block rewriter now builds an offline candidate
+for both English copies. The full affected 151-block segment passes production
+and independent-zlib decoding with only five intended decoded data bytes
+changed. See `usb-flash-trial.md` and `embedded-resources.md`.
 
 The NAND dump lead was traced
 further: its fixed loop omits placeholders on read failures, so its output is
@@ -127,7 +131,7 @@ are outside the brief. Host previews may tune these looks but cannot satisfy
 the acceptance criterion that they operate while shooting on the camera.
 
 The minimal update package is now staged and read back through USB. The user
-reports an update in progress through the physical menu; no remote flash command,
+reports v1.1 after the physical menu update; no remote flash command,
 version bypass, arbitrary vendor command or hardware modification was performed.
 The official v1.1 package is not a backup of installed v1.0 or device calibration.
 Software restoration remains unverified; this experimental trial does not close

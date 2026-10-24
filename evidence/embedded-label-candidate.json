@@ -1,0 +1,80 @@
+{
+  "purpose": "Offline embedded-and-filesystem label rewrite; no upload or version bypass",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "candidate_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "candidate_bytes": 19005632,
+  "filesystem_label_offset": 17740344,
+  "embedded_label_va": 2151080268,
+  "decoded_changed_bytes": 5,
+  "decoded_changed_virtual_addresses": [
+    2151080287,
+    2151080289,
+    2151080291,
+    2151080293,
+    2151080295
+  ],
+  "carrier_changed_bytes": 1861,
+  "allowed_changed_carrier_ranges": [
+    [
+      44,
+      48
+    ],
+    [
+      17740344,
+      17740372
+    ],
+    [
+      3865380,
+      3877796
+    ]
+  ],
+  "changed_blocks": [
+    {
+      "index": 146,
+      "virtual_start": 2151028936,
+      "payload_start": 3865380,
+      "payload_size": 12416,
+      "source_payload_sha256": "a0f1cfcfa1a9def8e1914924479e6c7c63e8950caeeb3198093fec4e7ae495bc",
+      "candidate_payload_sha256": "e86671db8ce80d5272544e095858194cd98f34e2e23f2a3bedd461efcb45163f",
+      "preserved_tokens": 8184,
+      "replaced_tokens": 4,
+      "replacement_literal_tokens": 16,
+      "payload_bytes": 12416,
+      "production": {
+        "decoded_bytes": 58356,
+        "literal_tokens": 3327,
+        "match_tokens": 4873,
+        "eob_bit_end": 98706,
+        "padding_bits": 622,
+        "eob_verified": true,
+        "zero_padding_verified": true
+      },
+      "independent": {
+        "end_marker_bit_position": 98706,
+        "zero_padding_bits": 622,
+        "literal_tokens": 3327,
+        "match_tokens": 4873,
+        "prefix_codes_a": 159,
+        "prefix_codes_b": 24,
+        "decoded_sha256": "5d90c68df1042c53d9f4a13ec3be1b5e415501198a6fea07bf152f5edf25850a"
+      },
+      "two_decoders_exactly_match_desired": true
+    }
+  ],
+  "all_original_block_extents_and_tables_preserved": true,
+  "full_segment_production_and_independent_zlib_match": true,
+  "verified_decoded_segment_bytes": 2630016,
+  "verified_block_count": 151,
+  "version_unchanged_0x28": 65792,
+  "checksum": 1377961026,
+  "hardware_label_activation_verified": false,
+  "same_version_installation_verified": false,
+  "restoration_verified": false,
+  "staged": false,
+  "flashed": false,
+  "limitations": [
+    "Installed camera now reports v1.1; repeat-update policy is unresolved.",
+    "Source-bound static dispatcher suggests this embedded copy matters; runtime UI selection remains unverified.",
+    "No performance improvement or creative feature is implemented by this label marker."
+  ]
+}

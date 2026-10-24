@@ -25,9 +25,9 @@ The first push was verified against the remote branch. GitHub Actions ran all
 The user has now explicitly requested a flash attempt and GitHub progress
 pushes. This authorizes preparing the experimental trial; it does not change
 the existing evidence about the candidate. Device acceptance, full backup and
-restoration remain unverified. The experimental file is now on the card and
-verified by full USB readback. The user reports the v1.1 update is in progress;
-completion and the modified menu label have not yet been confirmed.
+restoration remain unverified. The experimental file was staged on the card and
+verified by full USB readback. The user now reports firmware **1.1**, but the
+`Welcome studio` label is absent. Custom resource activation is not confirmed.
 
 The initial Explorer check missed the storage. Direct Windows WPD enumeration
 found the roughly 2 GB card, reporting read/write access. Standard WPD object
@@ -47,7 +47,7 @@ A local package is prepared at `derived/experimental-flash-trial-01/` with
 again, and file readback matched SHA-256
 `c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312`.
 The separate USB readback now establishes card staging; it does not establish
-successful firmware installation.
+successful custom resource activation. The user subsequently reported v1.1.
 
 Nikon's [official S3300 update guide](https://nikonimglib.com/europe/Firmware/S3300/v1.1/En/ecpx_win_en.html)
 documents staging a `firmware/firmware.bin` folder at the memory-card root with
@@ -60,10 +60,16 @@ operated by the user; no remote flash command was sent.
 
 ## Next evidence to record
 
-Record the completion message, post-update version and English `Welcome studio`
-label, then ordinary startup, menu use, playback and capture. The user has
-reported that updating to v1.1 has started. Do not infer completion or custom
-resource activation from the version number, file copy or checksum alone.
+The missing label prompted a new [embedded-resource pass](notes/embedded-resources.md).
+The application contains a complete copy of the English table, and its static
+dispatcher returns that pointer. The embedded gamma table also differs from its
+filesystem counterpart. This suggests the first trial changed a fallback copy.
+
+Packed-block rewriting is now implemented and dual-decoder checked. A second,
+**offline-only** candidate edits both English copies while preserving all
+framing extents; its full affected 151-block segment differs in only five
+decoded data bytes. Same-version updating and runtime activation remain
+unverified. No second upload or flash was attempted.
 
 See [candidate details](notes/resource-label-candidate.md),
 [restoration findings](notes/restore-path.md) and

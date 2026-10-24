@@ -1,8 +1,10 @@
 # USB staging and first experimental update
 
 24 October 2026. User-authorized experimental trial. Last observed device
-identity before updating: `COOLPIX S3300 V1.0`. The user has subsequently reported
-"updating it to 1.1". Completion and the custom label are not yet confirmed.
+identity before updating: `COOLPIX S3300 V1.0`. The user subsequently reported
+`COOLPIX S3300 Ver. 1.1` but no `Welcome studio` label. Thus the version transition
+is reported complete; custom resource activation is not confirmed. See the
+follow-up in [embedded resources](embedded-resources.md).
 
 ## What actually worked
 
@@ -47,11 +49,10 @@ the time of those probes, before the user operated the update menu.
 
 ## Current physical step
 
-The user reports updating to v1.1 after being directed to the camera menu.
-While updating, leave power, battery, card and controls untouched. After the
-completion message, verify the reported version and the English Setup label
-`Welcome studio`. Version 1.1 alone cannot establish custom resource activation.
-Then check ordinary startup, menus, photo playback and one saved photograph.
+The user now reports v1.1 and ordinary menu access, but the intended English
+label is absent. Version 1.1 alone cannot establish custom resource activation.
+Playback and saved-photo testing remain unobserved. During any future update,
+leave power, battery, card and controls untouched until completion.
 
 The candidate only changes the English `Welcome screen` label and the additive
 checksum (six changed bytes). It has no new shooting mode or speed optimization.

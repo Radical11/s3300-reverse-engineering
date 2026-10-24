@@ -11,8 +11,11 @@ The first [resource-only research candidate](notes/resource-label-candidate.md)
 has been built and independently checked offline. It changes one English menu
 label and the additive checksum, preserving executable bytes. At the user's
 explicit request, the experimental file was staged on the card through USB and
-verified by full byte-for-byte readback. The user reports the v1.1 update is in
-progress; completion and the modified label remain unconfirmed. This is not a
+verified by full byte-for-byte readback. The user now reports firmware v1.1, but
+the modified label is absent. A new [embedded-resource pass](notes/embedded-resources.md)
+found another English table inside the packed application and implemented a
+dual-decoder-checked rewrite of that copy. The second candidate stays offline.
+This is not a
 validated release: [backup/restoration access](notes/restore-path.md) remains
 unresolved. See [the USB trial](notes/usb-flash-trial.md). The manual capture
 benchmark is deferred at the user's request.
