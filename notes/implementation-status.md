@@ -32,7 +32,7 @@ on a raw-cache hit, making it a specific candidate to profile; generated-output
 ownership prevents a naive shared-pointer cache. No runtime speed gain or
 external debug access is established.
 
-The current suite passes **83 unit tests**, including malformed-resource,
+The current suite passes **94 unit tests**, including malformed-resource,
 roundtrip, metadata, scanner and query cases. The exact source reconstruction,
 all resource roundtrips and an actual English-resource CLI export/import also
 passed. This verifies offline development tools, not hardware behaviour.
@@ -43,6 +43,21 @@ CLI can export a fully bounded MIPS32 listing for an address inside one. The
 startup presentation example resolves to 0x807417d0..0x807419e0 and decoded
 completely. These are compiler metadata boundaries, not recovered names or
 proof that a patch point is usable. Full CFI interpretation remains incomplete.
+
+The user has deferred the manual shooting comparison in favour of firmware
+development. A minimal **offline resource-only candidate** now changes the
+English label `Welcome screen` to `Welcome studio`, preserving its length.
+Only six source bytes differ including the additive checksum; all six original
+ELF files and 367 other resources are unchanged. Fresh FAT extraction and a
+separately implemented exact-byte validator passed, and two builds produced the
+same hash. See `resource-label-candidate.md`.
+
+This candidate has not been uploaded or installed. The NAND dump lead was traced
+further: its fixed loop omits placeholders on read failures, so its output is
+not a verified complete backup. Installed-v1.0/calibration coverage, complete
+acceptance, actual write ranges and restoration remain unresolved. The earlier
+decoder-only gap has advanced to controlled file construction, while camera
+installation remains an unfinished engineering dependency. See `restore-path.md`.
 
 ## Completed development infrastructure
 

@@ -1,0 +1,209 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_elf_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Source-bound MIPS listings, verified monitor record and FDE boundary; no device access",
+  "nand_dump_command": {
+    "entry_address": 2156495820,
+    "record_size": 16,
+    "name": "Nanddn",
+    "arguments": "<var 1> <var 2>",
+    "description": "Dump NandData to Card",
+    "handler": 2153255104,
+    "pointer_fields": {
+      "name": 2151191772,
+      "arguments": 2151190868,
+      "description": 2151191780
+    }
+  },
+  "nand_dump_contract": {
+    "reviewed_instruction_assertions": 10,
+    "first_sector": 0,
+    "last_sector_inclusive": 65535,
+    "requested_sectors": 65536,
+    "data_bytes_per_success": 512,
+    "extra_bytes_per_success": 16,
+    "nominal_data_bytes_if_all_reads_and_writes_succeed": 33554432,
+    "nominal_total_bytes_if_all_reads_and_writes_succeed": 34603008,
+    "read_failure_behavior": "Prints error and increments sector without writing a placeholder (0x80581878..0x805818ac)",
+    "write_error_handling": "No checked write result before subsequent extra-data write or next iteration in reviewed path",
+    "geometry_behavior": "Queries geometry into stack buffer at 0x80581724 but loop bound remains literal0xffff",
+    "parsed_arguments_define_range": false,
+    "is_complete_restorable_backup_proven": false
+  },
+  "dump_path": {
+    "string_address": 2154199308,
+    "text": "I:\\DumpNand.txt",
+    "load_site": 2153256752,
+    "open_sites": [
+      2153256760,
+      2153256780
+    ]
+  },
+  "media_route": {
+    "handle_lookup": "0x800e4194(1) ->0x800e41d4 ->0x800e3274(1)",
+    "read_dispatch": "0x800e408c(a1=1,a2=0) ->0x800e415c ->0x800e4188 ->0x800e2d4c ->0x800e2800",
+    "scope_limit": "Exact installed flash geometry, spare/OOB semantics, ECC state and bad-block handling remain unresolved"
+  },
+  "usb_getmem": {
+    "table_address": 2156500576,
+    "handler": 2155470388,
+    "neighbor_mutating_handler_address": 2156500568,
+    "neighbor_mutating_handler": 2155468620,
+    "table_flag_meaning": "Unknown; zero is not asserted as permission or transfer-size metadata",
+    "command_state": 2148405564,
+    "reviewed_modes": {
+      "1": "Memory alias formed from command address OR0x20000000, length at command+0x10, then transfer0x80796070",
+      "16": "Allocates and reads file data before transfer; not arbitrary flash dump proof",
+      "2..8": "Delegates to0x8079d9b0; full semantics unresolved"
+    },
+    "external_command_number_and_transport": null,
+    "installed_v1_0_presence_verified": false,
+    "safe_flash_readback_via_usb_established": false
+  },
+  "switch_tables": [
+    {
+      "address": 2148446828,
+      "sha256": "79a5ed3575120582b01e1fb7abfe19cc7158b75bff7d1f5abbd496d1a90c1f75",
+      "entries": [
+        2148417884,
+        2148417884,
+        2148417876,
+        2148417864,
+        2148417856,
+        2148417812,
+        2148417812,
+        2148417812,
+        2148417812
+      ]
+    },
+    {
+      "address": 2148446864,
+      "sha256": "0da24627ca44bcc907be8d5da4cbe1eff85f7f5eccd4ae6f9fced95785afa330",
+      "entries": [
+        2148417928,
+        2148417916,
+        2148417904,
+        2148417892,
+        2148417768
+      ]
+    },
+    {
+      "address": 2148446884,
+      "sha256": "285f0f42fb7bfeab7189b3b4ce774e3d0e200994541f67c25ba7b329c5faf461",
+      "entries": [
+        2148417996,
+        2148418004,
+        2148418012,
+        2148418020,
+        2148418028,
+        2148418036,
+        2148418044,
+        2148418052,
+        2148417988
+      ]
+    },
+    {
+      "address": 2154327988,
+      "sha256": "abe9198f3d0b79deeaee026e8e20a47711bf0a829a923306f95a76f7ef6f21f1",
+      "entries": [
+        2155470480,
+        2155470520,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470712
+      ]
+    }
+  ],
+  "static_windows": [
+    {
+      "label": "nand_dump_monitor_fde_function",
+      "address": 2153255104,
+      "size": 2132,
+      "sha256": "7aa7610977c6fd9bd5d9cb70aa2fc69ce0a12c189c638368e49f2974af94b54b",
+      "listing": "derived\\restore-path\\nand_dump_monitor_fde_function.asm",
+      "complete_linear_decode": true,
+      "boundary": "FDE verified"
+    },
+    {
+      "label": "media_read_dispatch",
+      "address": 2148417676,
+      "size": 264,
+      "sha256": "beb67e9d97b60b9c35735a7118d93681970b23c3690f14f049c56fd25dc3dcd7",
+      "listing": "derived\\restore-path\\media_read_dispatch.asm",
+      "complete_linear_decode": true,
+      "boundary": "Analyst-bounded window"
+    },
+    {
+      "label": "media_handle_lookup",
+      "address": 2148417940,
+      "size": 120,
+      "sha256": "0b4ff106b42adb14cee9aaf8e5b26835581acda8cfe7d36cf567dc4683a75252",
+      "listing": "derived\\restore-path\\media_handle_lookup.asm",
+      "complete_linear_decode": true,
+      "boundary": "Analyst-bounded window"
+    },
+    {
+      "label": "media_geometry_query",
+      "address": 2148417496,
+      "size": 180,
+      "sha256": "77adeaf770807d555d3fd16c54fdfdf12d5451b48387bdd7440f9b1cbb23cf7e",
+      "listing": "derived\\restore-path\\media_geometry_query.asm",
+      "complete_linear_decode": true,
+      "boundary": "Analyst-bounded window"
+    },
+    {
+      "label": "media_operation_forwarder",
+      "address": 2148412748,
+      "size": 192,
+      "sha256": "07f406d417ced6e951d970da028991694a199e99f7d94bd912f05c7a3b3024c5",
+      "listing": "derived\\restore-path\\media_operation_forwarder.asm",
+      "complete_linear_decode": true,
+      "boundary": "Analyst-bounded window"
+    },
+    {
+      "label": "getmem_handler_static_window",
+      "address": 2155470388,
+      "size": 472,
+      "sha256": "c5a9cd877bfb4ded4b09b6fa04475e1960031e681ebbb3b8442c3c511adeeeaf",
+      "listing": "derived\\restore-path\\getmem_handler_static_window.asm",
+      "complete_linear_decode": true,
+      "boundary": "Analyst-bounded window"
+    },
+    {
+      "label": "setmem_monitor_static_window",
+      "address": 2155468620,
+      "size": 612,
+      "sha256": "eb7ded0751d9e6e267d3b241f1301dd6a5fe1577e9d570e1a04e1b14216ae27e",
+      "listing": "derived\\restore-path\\setmem_monitor_static_window.asm",
+      "complete_linear_decode": true,
+      "boundary": "Analyst-bounded window"
+    }
+  ],
+  "restore_status": {
+    "installed_v1_0_dump_available": false,
+    "calibration_coverage_verified": false,
+    "physical_flash_geometry_verified": false,
+    "write_back_or_recovery_demonstrated": false,
+    "software_only_route_proven": false,
+    "physical_access_requirement_proven": false,
+    "safe_to_install": false
+  },
+  "limitations": [
+    "v1.1 static code is not a dump or runtime observation of the installed v1.0.",
+    "Nanddn writes a card file and changes display/debug state; it is not a passive external read command.",
+    "A finite fixed-range dump and RAM GetMem routine do not establish a complete flash backup or restoration path.",
+    "No USB requests, monitor commands, marker files, driver changes, writes, or recovery attempts occur."
+  ]
+}

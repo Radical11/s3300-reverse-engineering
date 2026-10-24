@@ -2,6 +2,11 @@
 
 24 October 2026. Initial readiness checks completed; capture timings pending.
 
+Update: the user prefers to continue firmware development before the manual
+capture comparison. Those shooting steps are deferred, not a required action
+for the next offline work. See `resource-label-candidate.md` for the first
+controlled research candidate and the remaining installation dependencies.
+
 ## Completed observations
 
 - Windows enumerated the Nikon S3300 as a present WPD device.

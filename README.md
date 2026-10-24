@@ -4,6 +4,13 @@ First offline investigation: 23 October 2026. The camera reports **v1.0**.
 The supplied Nikon updater contains **v1.1**; this research does not describe a
 dump of the camera's installed v1.0 firmware.
 
+The first [resource-only research candidate](notes/resource-label-candidate.md)
+has been built and independently checked offline. It changes one English menu
+label and the additive checksum, preserving executable bytes. It is marked
+**not installable** while [backup/restoration access](notes/restore-path.md) and
+complete acceptance remain unresolved. The manual capture benchmark is deferred
+at the user's request while this firmware-development work continues.
+
 The camera itself is the product: faster shooting and expressive retro looks.
 The firmware-development work now includes a **working application decoder**:
 all 463 packed blocks decode into 7,950,592 bytes, independently checked through
