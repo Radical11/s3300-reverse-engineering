@@ -11,13 +11,16 @@ The first [resource-only research candidate](notes/resource-label-candidate.md)
 has been built and independently checked offline. It changes one English menu
 label and the additive checksum, preserving executable bytes. At the user's
 explicit request, the experimental file was staged on the card through USB and
-verified by full byte-for-byte readback. The user now reports firmware v1.1, but
-the modified label is absent. A new [embedded-resource pass](notes/embedded-resources.md)
+verified by full byte-for-byte readback. The first trial reached v1.1 without
+the modified label. A new [embedded-resource pass](notes/embedded-resources.md)
 found another English table inside the packed application and implemented a
 dual-decoder-checked rewrite of that copy. The second candidate is now backed up
 and verified on the card through a reader for the user's requested
-[same-version trial](notes/reflash-card-trial.md); camera-menu acceptance and
-activation remain unverified.
+[same-version trial](notes/reflash-card-trial.md). The user subsequently reported
+**`Welcome studio` in the camera menu**, followed by the SD card being readable
+again. This confirms user-observed custom label activation. A reported card
+error after updating started remains unexplained; restart, capture, playback
+and persistence checks are still pending.
 This is not a
 validated release: [backup/restoration access](notes/restore-path.md) remains
 unresolved. See [the USB trial](notes/usb-flash-trial.md). The manual capture

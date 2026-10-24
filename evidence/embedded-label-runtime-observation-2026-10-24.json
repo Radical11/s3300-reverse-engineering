@@ -1,0 +1,24 @@
+{
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Calcutta",
+  "trial": "embedded-label",
+  "staged_candidate_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "observation_source": "user reports in the camera research chat",
+  "observations_in_report_order": [
+    {"report": "the card cannot be used", "timing_clarification": "After updating started"},
+    {"report": "it says welcome studio inside the menu though"},
+    {"report": "and the sd card is also being read now"}
+  ],
+  "custom_menu_label_active_user_reported": true,
+  "sd_card_readable_user_reported": true,
+  "update_completion_screen_observed_by_lab": false,
+  "post_trial_version_rechecked": false,
+  "cold_restart_test_recorded": false,
+  "capture_and_playback_test_recorded": false,
+  "settings_persistence_test_recorded": false,
+  "card_error_cause": "unresolved",
+  "restoration_verified": false,
+  "creative_looks_integrated": false,
+  "camera_performance_improvement_demonstrated": false,
+  "scope": "User-observed custom resource activation; not a general reliability or recovery validation."
+}

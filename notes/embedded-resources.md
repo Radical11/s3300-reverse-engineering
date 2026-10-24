@@ -66,9 +66,12 @@ a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4
 
 The later [reflash request](reflash-card-trial.md) reproduced this candidate and
 staged it through a card reader, with a verified backup and final readback.
-Version 1.1 is retained, and the camera now reports 1.1. Same-version acceptance
-and completed second flashing remain unverified. No version bypass or marker
-activation was introduced. Recovery remains unverified.
+Version 1.1 is retained. After a reported card error once updating started, the
+user confirmed `Welcome studio` in the menu and the SD card being readable
+again. This establishes user-observed activation of the custom resource; the
+update-completion screen, cold restart and capture/playback checks remain
+unrecorded. No version bypass or product-marker activation was introduced.
+The card error's cause and recovery remain unverified.
 
 Reproduce into a fresh local directory:
 

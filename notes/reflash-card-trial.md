@@ -83,3 +83,27 @@ marker, download descriptor or checksum is rejected. The full suite passes
 documents a card-reader staging route and camera-menu confirmation. Its supported
 version transition is 1.0 → 1.1; it does not validate this experimental same-version
 trial or the modified image.
+
+## Subsequent camera observations
+
+The user first reported “the card cannot be used” and clarified that this
+appeared **after updating started**. The update-completion screen and exact
+intervening steps were not reported. Subsequent messages were:
+
+- “it says welcome studio inside the menu though”
+- “and the sd card is also being read now”
+
+These direct user observations establish that the custom English menu marker
+is active and that the camera can currently read the card. They support
+installation of the embedded-label change, but do not establish every updater
+write, the origin of the temporary card error, or general firmware reliability.
+No formatting, filesystem repair or additional flash was performed by the lab
+in response to the error. No recovery procedure was exercised or validated.
+
+Before another firmware change, record a normal power-off/restart, label
+persistence, several captures, playback of the new photos and settings
+persistence. The error should remain in the trial history even if those checks
+pass. Creative looks and performance changes are not part of this image.
+
+Structured record:
+`evidence/embedded-label-runtime-observation-2026-10-24.json`.

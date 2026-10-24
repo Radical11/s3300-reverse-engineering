@@ -2,7 +2,8 @@
 
 Updated 24 October 2026. Research baseline: supplied Nikon S3300 v1.1 updater. Installed
 camera: observed stock v1.0 before the user-requested experimental update.
-The user now reports v1.1, but no `Welcome studio` label.
+After the first trial the user reported v1.1 without the label. After the second
+trial the user reports `Welcome studio` in the menu and a readable SD card.
 
 ## Current direction and latest checkpoint
 
@@ -63,7 +64,10 @@ application. A token-preserving block rewriter now builds an offline candidate
 for both English copies. The full affected 151-block segment passes production
 and independent-zlib decoding with only five intended decoded data bytes
 changed. The corrected candidate has now been backed up and verified on the
-card through a reader; physical same-version acceptance remains pending. See
+card through a reader. The user then reported a card error after updating
+started, followed by the `Welcome studio` menu label and the card being readable
+again. This is user-observed resource activation; update completion was not
+independently observed, and restart/capture/playback checks remain pending. See
 `usb-flash-trial.md`, `embedded-resources.md` and `reflash-card-trial.md`.
 
 The NAND dump lead was traced

@@ -80,8 +80,13 @@ The user's latest [reflash request](notes/reflash-card-trial.md) reached verifie
 **card-reader staging on E:** after USB replacement failed. The old update was
 backed up and the corrected image read back exactly from FIRMWARE/FIRMWARE.BIN.
 Its SHA-256 is `a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4`.
-Version remains 1.1. The user is at the physical camera-menu step; same-version
-acceptance, completed second flash and runtime label activation are unverified.
+Version remains 1.1. After starting the camera update, the user reported a card
+error, then confirmed **`Welcome studio` inside the menu** and that the **SD card
+is being read again**. The custom label is therefore active according to the
+user's direct observation. The update-completion screen was not reported, and
+the cause of the temporary card error is unresolved. Cold restart, photo
+capture/playback and settings persistence remain pending. See the
+[runtime observation record](evidence/embedded-label-runtime-observation-2026-10-24.json).
 
 See [candidate details](notes/resource-label-candidate.md),
 [restoration findings](notes/restore-path.md) and
