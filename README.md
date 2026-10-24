@@ -7,6 +7,15 @@ dump of the camera's installed v1.0 firmware.
 [Private GitHub repository](https://github.com/Radical11/s3300-firmware-lab) ·
 [Progress log](PROGRESS.md) · [Offline test workflow](.github/workflows/tests.yml)
 
+Start development through the [reusable workspace guide](notes/developer-workspace.md).
+`python s3300.py init` extracts once or verifies and reuses the existing baseline;
+`python s3300.py doctor` checks it without re-extracting. The same CLI provides
+search, address lookup, bounded listings and offline patch-plan builds.
+`python s3300.py limits` opens the evidence-linked
+[hardware/limits catalog](notes/hardware-and-limits.md), including unresolved
+CPU, RAM, sensor, buffer and recovery contracts. Original project code and
+documentation are [MIT licensed](LICENSE); see [third-party boundaries](THIRD_PARTY.md).
+
 The first [resource-only research candidate](notes/resource-label-candidate.md)
 has been built and independently checked offline. It changes one English menu
 label and the additive checksum, preserving executable bytes. At the user's
@@ -25,8 +34,8 @@ The user subsequently reports normal operation. The next
 [Pocket Studio identity trial](notes/pocket-studio-trial.md) is built,
 independently checked and staged through the card reader after verified photo
 and prior-update backups. It retains the marker and replaces only the startup
-picture relative to that prior build. Artwork activation is awaiting the user's
-camera-menu test. [Original artwork](firmware/branding/README.md) is versioned;
+picture relative to that prior build. The user now confirms update completion
+and changed artwork. [Original artwork](firmware/branding/README.md) is versioned;
 vendor firmware and personal photos remain local.
 This is not a
 validated release: [backup/restoration access](notes/restore-path.md) remains

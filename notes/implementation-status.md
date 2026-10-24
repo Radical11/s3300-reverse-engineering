@@ -7,7 +7,8 @@ trial the user reports `Welcome studio` in the menu and a readable SD card.
 The user subsequently reports normal operation; live USB inventory confirms
 v1.1 and readable card storage. The third, [Pocket Studio identity
 trial](pocket-studio-trial.md) is now staged, retaining the marker and replacing
-startup art. Its camera-side artwork result is pending.
+startup art. The user now confirms update completion and changed artwork;
+repeated restart/capture/playback checks are not separately recorded.
 
 ## Current direction and latest checkpoint
 

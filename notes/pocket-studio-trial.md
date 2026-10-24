@@ -49,8 +49,15 @@ calibration backup.
 `evidence/pocket-studio-card-staging-2026-10-24.json` records successful staging.
 The user was given the normal camera-menu update flow and asked to select the
 existing COOLPIX welcome option to test preview/startup. No remote flash
-command was sent. Completion, artwork activation and post-update operation
-remain pending until reported by the user.
+command was sent. The user initially reported completion with unchanged art,
+then explicitly corrected the result: **“update completed and the artwork also
+changed.”** Update completion and custom artwork activation are now
+user-observed. Preview versus actual power-on location was not specified;
+repeated restarts, capture and playback checks remain separate pending checks.
+See `evidence/pocket-studio-runtime-observation-2026-10-24.json`.
+
+GitHub Actions also passed the 139-test suite on Windows and Ubuntu for commit
+`e1dca57`: [verified run](https://github.com/Radical11/s3300-firmware-lab/actions/runs/40074786898).
 
 ## Reproduce locally
 

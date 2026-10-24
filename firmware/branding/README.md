@@ -13,5 +13,6 @@ It is baseline 640×480 RGB JPEG, 4:2:2, with no padding or trailing payload.
 ![Pocket Studio startup art](pocket-studio.jpg)
 
 This is a startup image, not a shooting filter, UI theme or performance change.
+The user confirms the update completed and the artwork changed on the camera.
 The firmware candidate is kept local; the art and its source are shareable.
 See [trial notes](../../notes/pocket-studio-trial.md).

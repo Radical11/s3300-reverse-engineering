@@ -104,7 +104,9 @@ adds original Pocket Studio startup artwork. Two builds match exactly;
 independent reconstruction and a fresh 368-file FAT extraction pass. **139 tests
 pass locally.** The trial is staged and fully read back from the removable card;
 all 30 DCIM files and the old update were backed up and verified first. Artwork
-activation and camera operation with this third trial remain pending.
+activation is now **confirmed by the user**, who reports the update completed
+and the artwork changed. Repeated restart/capture/playback checks remain pending.
+The 139-test suite also [passed on Windows and Ubuntu](https://github.com/Radical11/s3300-firmware-lab/actions/runs/40074786898).
 
 New [gamma-format](notes/gamma-pipeline.md) and
 [Color Options](notes/color-options-map.md) findings narrow the next saved-photo

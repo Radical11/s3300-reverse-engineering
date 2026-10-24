@@ -1,8 +1,11 @@
 # Original startup artwork
 
 24 October 2026. The custom English menu label is user-observed on the camera.
-That establishes the earlier label trial only. The startup artwork below is an
-offline candidate and has not been staged or demonstrated on the camera.
+That establishes the earlier label trial. The startup artwork below was
+subsequently combined with that marker, staged and tested: the user confirms
+update completion and changed artwork. See `pocket-studio-trial.md` and the
+separate runtime-observation record. The original asset-build manifests retain
+their offline status as historical records of when they were created.
 
 `tools/map_startup_assets.py` authenticates the v1.1 carrier and analysis ELF,
 reconstructs the allocated FAT files, checks whole-file embedded copies, and
