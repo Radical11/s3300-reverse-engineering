@@ -74,6 +74,10 @@ image. A fresh FAT extraction validates all 368 allocated files; the original
 logical-volume-tail limitation remains. Version/product/download descriptor
 are unchanged. See `evidence/amber-mono-independent-validation.json`.
 
+The committed suite ran **144 tests successfully on both Ubuntu and Windows**
+for commit `af890ed` in [GitHub Actions run 40075879144](https://github.com/Radical11/s3300-firmware-lab/actions/runs/40075879144).
+These are host development checks, separate from the pending camera result.
+
 ```powershell
 python tools/build_amber_trial.py derived/new-amber-build
 python tools/validate_amber_trial.py derived/new-amber-build/NOT-INSTALLABLE-patch-plan.research.bin --evidence evidence/new-amber-validation.json
