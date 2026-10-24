@@ -1,0 +1,48 @@
+{
+  "method": "Independent unique raw byte-pattern reconstruction and direct ELF program-header parsing",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "candidate_sha256": "c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312",
+  "candidate_bytes": 19005632,
+  "label_storage_offset": 17740344,
+  "changed_byte_offsets": [
+    44,
+    17740363,
+    17740365,
+    17740367,
+    17740369,
+    17740371
+  ],
+  "changed_byte_count": 6,
+  "candidate_exactly_matches_independent_reconstruction": true,
+  "checksum_matches": true,
+  "stored_checksum": 1377959490,
+  "elf_checks": [
+    {
+      "elf_carrier_offset": 512,
+      "program_headers_and_segments_unchanged": true
+    },
+    {
+      "elf_carrier_offset": 1050304,
+      "program_headers_and_segments_unchanged": true
+    },
+    {
+      "elf_carrier_offset": 1058496,
+      "program_headers_and_segments_unchanged": true
+    },
+    {
+      "elf_carrier_offset": 2228928,
+      "program_headers_and_segments_unchanged": true
+    },
+    {
+      "elf_carrier_offset": 3922344,
+      "program_headers_and_segments_unchanged": true
+    },
+    {
+      "elf_carrier_offset": 6040440,
+      "program_headers_and_segments_unchanged": true
+    }
+  ],
+  "installable": false,
+  "hardware_acceptance_verified": false,
+  "restoration_verified": false
+}

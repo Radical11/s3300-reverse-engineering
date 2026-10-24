@@ -1,0 +1,116 @@
+{
+  "purpose": "Minimal offline label-change/repacking experiment",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "candidate_sha256": "c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312",
+  "candidate_bytes": 19005632,
+  "resource_path": "String/Res_Str_Eng_New.bst",
+  "source_resource_sha256": "00fc1a72e59d8bd249720c4c8b67240bec16fd9629fcfd526ebe2aa702a0f671",
+  "candidate_resource_sha256": "cf8d6b4c819a1c0f75b9d3cbdc56ed1c7745e2171dcffc8ad8c43ded7ebc09ce",
+  "label": {
+    "ordinal": 521,
+    "record_offset": 13174,
+    "byte_length": 28,
+    "before": "Welcome screen",
+    "after": "Welcome studio"
+  },
+  "changed_byte_count": 6,
+  "changes": [
+    {
+      "offset": 44,
+      "before_u8": 42,
+      "after_u8": 66
+    },
+    {
+      "offset": 17740363,
+      "before_u8": 99,
+      "after_u8": 116
+    },
+    {
+      "offset": 17740365,
+      "before_u8": 114,
+      "after_u8": 117
+    },
+    {
+      "offset": 17740367,
+      "before_u8": 101,
+      "after_u8": 100
+    },
+    {
+      "offset": 17740369,
+      "before_u8": 101,
+      "after_u8": 105
+    },
+    {
+      "offset": 17740371,
+      "before_u8": 110,
+      "after_u8": 111
+    }
+  ],
+  "additive_checksum": {
+    "offset": 44,
+    "stored": 1377959490,
+    "calculated": 1377959490,
+    "matches": true
+  },
+  "stock_resource_reinsertion_byte_exact": true,
+  "original_elfs": [
+    {
+      "carrier_offset": 512,
+      "size": 806110,
+      "sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "unchanged": true
+    },
+    {
+      "carrier_offset": 1050304,
+      "size": 7832,
+      "sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+      "unchanged": true
+    },
+    {
+      "carrier_offset": 1058496,
+      "size": 1081092,
+      "sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+      "unchanged": true
+    },
+    {
+      "carrier_offset": 2228928,
+      "size": 1693416,
+      "sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+      "unchanged": true
+    },
+    {
+      "carrier_offset": 3922344,
+      "size": 2118096,
+      "sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+      "unchanged": true
+    },
+    {
+      "carrier_offset": 6040440,
+      "size": 1291556,
+      "sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+      "unchanged": true
+    }
+  ],
+  "all_six_original_elfs_unchanged": true,
+  "fat_directory_allocation_and_file_length_unchanged": true,
+  "version_and_product_marker_unchanged": true,
+  "installable": false,
+  "device_acceptance_verified": false,
+  "recovery_verified": false,
+  "limitations": [
+    "Candidate is a host-validated research file, not approved for installation.",
+    "Runtime label selection/rendering, complete acceptance rules and installed-v1.0 compatibility remain unverified.",
+    "No executable optimization, on-camera custom feature, camera upload or flash operation occurs."
+  ],
+  "fresh_fat_extraction_passed": true,
+  "candidate_file_count": 368,
+  "unchanged_resource_files": 367,
+  "exactly_one_expected_resource_changed": true,
+  "source_unchanged": true,
+  "candidate_file": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\label-test-candidate-01\\NOT-INSTALLABLE-label-test.research.bin",
+  "two_separate_builds_identical": true,
+  "unit_tests_passed": 94,
+  "independent_validation_evidence": "evidence/label-test-independent-validation.json",
+  "camera_uploaded": false,
+  "camera_flashed": false
+}
