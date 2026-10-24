@@ -1,0 +1,100 @@
+{
+  "method": "Read-only standard PTP over existing WPD MTP extension interface",
+  "calls": [
+    {
+      "opcode": "0x1004",
+      "params": [],
+      "maximum_bytes": 1024,
+      "announced_bytes": 8,
+      "response": "0x2001",
+      "received_bytes": 8
+    },
+    {
+      "opcode": "0x1007",
+      "params": [
+        65537,
+        0,
+        4294967295
+      ],
+      "maximum_bytes": 1024,
+      "announced_bytes": 12,
+      "response": "0x2001",
+      "received_bytes": 12
+    },
+    {
+      "opcode": "0x1008",
+      "params": [
+        2
+      ],
+      "maximum_bytes": 4096,
+      "announced_bytes": 66,
+      "response": "0x2001",
+      "received_bytes": 66
+    },
+    {
+      "opcode": "0x1008",
+      "params": [
+        34
+      ],
+      "maximum_bytes": 4096,
+      "announced_bytes": 74,
+      "response": "0x2001",
+      "received_bytes": 74
+    },
+    {
+      "opcode": "0x1007",
+      "params": [
+        65537,
+        0,
+        34
+      ],
+      "maximum_bytes": 1024,
+      "announced_bytes": 8,
+      "response": "0x2001",
+      "received_bytes": 8
+    },
+    {
+      "opcode": "0x1008",
+      "params": [
+        35
+      ],
+      "maximum_bytes": 4096,
+      "announced_bytes": 114,
+      "response": "0x2001",
+      "received_bytes": 114
+    },
+    {
+      "opcode": "0x1009",
+      "params": [
+        35
+      ],
+      "maximum_bytes": 19005632,
+      "announced_bytes": 19005632,
+      "response": "0x2001",
+      "received_bytes": 19005632
+    }
+  ],
+  "camera_flashed": false,
+  "writes": [],
+  "staged_and_readback_verified": true,
+  "file_info": {
+    "storage": 65537,
+    "format": 12288,
+    "size": 19005632,
+    "parent": 34,
+    "filename": "FIRMWARE.BIN"
+  },
+  "readback_bytes": 19005632,
+  "readback_sha256": "c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312",
+  "status": "staged_not_flashed",
+  "progress": [
+    "Standard PTP read 0x1004",
+    "Standard PTP read 0x1007",
+    "Standard PTP read 0x1008",
+    "Standard PTP read 0x1008",
+    "Standard PTP read 0x1007",
+    "Standard PTP read 0x1008",
+    "Standard PTP read 0x1009"
+  ],
+  "worker_exit_code": 0
+}

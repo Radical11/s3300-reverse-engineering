@@ -1,0 +1,42 @@
+{
+  "mode": "read-only verification",
+  "camera_flashed": false,
+  "file_creation_attempted": false,
+  "folder_creation_attempted": false,
+  "staged_and_readback_verified": false,
+  "raw_vendor_commands": [],
+  "format_or_delete_operations": [],
+  "events": [
+    "Opening matched S3300 with read-only WPD access",
+    "Card root enumerated; 2 objects",
+    "Enumerating firmware folder for committed file",
+    "Closing WPD connection"
+  ],
+  "installed_firmware": "COOLPIX S3300 V1.0",
+  "storage": [
+    {
+      "id": "s10001",
+      "name": "S3300",
+      "type": "{99ED0160-17FF-4C44-9D98-1D7A6F941921}",
+      "access": 0,
+      "capacity": 2002452480,
+      "free": 1878491136
+    }
+  ],
+  "card_root": [
+    {
+      "id": "o2",
+      "name": "DCIM",
+      "type": "{27E2E392-A111-48E0-AB0C-E17705A05F85}"
+    },
+    {
+      "id": "o22",
+      "name": "FIRMWARE",
+      "type": "{27E2E392-A111-48E0-AB0C-E17705A05F85}"
+    }
+  ],
+  "status": "stopped",
+  "error": "(-2147024846, 'The request is not supported.', (None, None, None, 0, None))",
+  "hresult": "0x80070032",
+  "worker_exit_code": 0
+}

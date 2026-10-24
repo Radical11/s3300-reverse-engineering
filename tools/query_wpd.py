@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.dont_write_bytecode = True
 
 
-def worker():
+def worker(storage=False):
     sys.path.insert(0, str(ROOT / "tools/vendor"))
     from comtypes import GUID
     from comtypes.client import CreateObject, GetModule
@@ -50,6 +50,7 @@ def worker():
               "match": "USB VID04b0 PID032a", "devices": [],
               "allowed_sendcommand_ids": [11, 18],
               "raw_ptp_commands_sent": [], "driver_changes": False,
+              "storage_enumeration_requested": storage,
               "sources": [
                   "https://learn.microsoft.com/en-us/windows/win32/api/portabledeviceapi/nf-portabledeviceapi-iportabledevice-open",
                   "https://learn.microsoft.com/en-us/windows/win32/wpd_sdk/wpd-command-mtp-ext-get-supported-vendor-opcodes",
@@ -100,6 +101,54 @@ def worker():
                 item["identity_properties"] = identity
             except Exception as e:
                 item["identity_properties"] = err(e)
+            if storage:
+                progress("Enumerating at most 16 direct DEVICE children read-only")
+                content = device.Content()
+                enumerator = content.EnumObjects(0, "DEVICE", None)
+                children = []
+                item["storage_children"] = children
+                free = ct.windll.ole32.CoTaskMemFree
+                free.argtypes = [ct.c_void_p]
+                free.restype = None
+                for _ in range(16):
+                    identifiers = (ct.c_void_p * 1)()
+                    fetched = ct.c_ulong()
+                    enumerator._IEnumPortableDeviceObjectIDs__com_Next(
+                        1, ct.cast(identifiers, ct.POINTER(ct.c_wchar_p)), ct.pointer(fetched))
+                    if fetched.value == 0:
+                        item["storage_child_enumeration_complete"] = True
+                        break
+                    if fetched.value != 1 or not identifiers[0]:
+                        raise ValueError("Unexpected bounded WPD enumeration result")
+                    try:
+                        object_id = ct.wstring_at(identifiers[0])
+                    finally:
+                        free(identifiers[0])
+                    child = {"object_id": object_id}
+                    children.append(child)
+                    try:
+                        values = content.Properties().GetValues(object_id, None)
+                        try:
+                            child["name"] = values.GetStringValue(key("{EF6B490D-5CD8-437A-AFFC-DA8B60EE4A3C}", 4))
+                        except Exception as e:
+                            child["name"] = err(e)
+                        storage_guid = "{01A3057A-74D6-4E80-BEA7-DC4C212CE50A}"
+                        for name, pid in (("storage_type_raw", 2), ("access_capability_raw", 11)):
+                            try:
+                                child[name] = values.GetUnsignedIntegerValue(key(storage_guid, pid))
+                            except Exception as e:
+                                child[name] = err(e)
+                        for name, pid in (("capacity_bytes", 4), ("free_bytes", 5)):
+                            try:
+                                child[name] = int(values.GetUnsignedLargeIntegerValue(key(storage_guid, pid)))
+                            except Exception as e:
+                                child[name] = err(e)
+                    except Exception as e:
+                        child["property_error"] = err(e)
+                else:
+                    item["storage_child_enumeration_complete"] = False
+                    item["storage_child_limit_reached"] = 16
+                continue
             item["introspection"] = []
             for command_id in (11, 18):
                 assert command_id in (11, 18)
@@ -150,12 +199,13 @@ def worker():
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--worker", action="store_true")
+    ap.add_argument("--storage", action="store_true", help="Read direct DEVICE child/storage metadata only")
     ap.add_argument("--evidence", type=Path, default=ROOT / "evidence/wpd-device-info.json",
                     help="New evidence file; existing reports are never overwritten")
     args = ap.parse_args()
     if args.worker:
         try:
-            print(json.dumps(worker()))
+            print(json.dumps(worker(storage=args.storage)))
         except Exception as e:
             print(json.dumps({"status": "worker_failed", "error": str(e)}))
         return
@@ -163,7 +213,10 @@ def main():
     if evidence.exists():
         raise ValueError("Evidence exists; refusing to overwrite")
     try:
-        run = subprocess.run([sys.executable, "-B", str(Path(__file__).resolve()), "--worker"],
+        arguments = [sys.executable, "-B", str(Path(__file__).resolve()), "--worker"]
+        if args.storage:
+            arguments.append("--storage")
+        run = subprocess.run(arguments,
                              capture_output=True, text=True, timeout=40)
         result = json.loads(run.stdout)
         result["worker_exit_code"] = run.returncode

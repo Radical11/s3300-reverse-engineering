@@ -25,35 +25,45 @@ The first push was verified against the remote branch. GitHub Actions ran all
 The user has now explicitly requested a flash attempt and GitHub progress
 pushes. This authorizes preparing the experimental trial; it does not change
 the existing evidence about the candidate. Device acceptance, full backup and
-restoration remain unverified. No candidate has been uploaded or flashed.
+restoration remain unverified. The experimental file is now on the card and
+verified by full USB readback. The user reports the v1.1 update is in progress;
+completion and the modified menu label have not yet been confirmed.
 
-The camera was initially absent and subsequently appeared as an S3300 WPD
-device over USB. The read-only Explorer namespace check exposed no child
-storage folders, and the only mounted filesystem drives were the computer's
-fixed C: and D: volumes. No writable card root has been established through
-this connection. A card reader is the documented staging route. Normal camera
-firmware confirmation also requires someone to operate its physical controls.
+The initial Explorer check missed the storage. Direct Windows WPD enumeration
+found the roughly 2 GB card, reporting read/write access. Standard WPD object
+creation made the root `FIRMWARE` folder and committed `FIRMWARE.BIN`, without
+overwriting files or altering photographs. Windows then refused metadata and
+resource-stream reads for the binary with HRESULT `0x80070032`.
+
+A read-only fallback through the existing WPD driver succeeded using standard
+PTP GetStorageIDs, GetObjectHandles, GetObjectInfo and GetObject. It verified the
+root folder, filename, parent and size, then downloaded all **19,005,632 bytes**.
+Both exact-byte comparison and SHA-256 matched the independently checked local
+candidate. See [USB transfer findings](notes/usb-flash-trial.md) and
+[complete readback evidence](evidence/wpd-ptp-readback-2026-10-24.json).
 
 A local package is prepared at `derived/experimental-flash-trial-01/` with
 `firmware/firmware.bin` and a trial manifest. The independent validator passed
 again, and file readback matched SHA-256
 `c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312`.
-This is a prepared local package, not evidence of card staging or installation.
+The separate USB readback now establishes card staging; it does not establish
+successful firmware installation.
 
 Nikon's [official S3300 update guide](https://nikonimglib.com/europe/Firmware/S3300/v1.1/En/ecpx_win_en.html)
 documents staging a `firmware/firmware.bin` folder at the memory-card root with
 a card reader, followed by the camera's Setup → Firmware version update flow.
 That guide covers Nikon's stock updater; it does not validate our altered file.
-No card formatting, card writes, driver changes or unknown vendor commands
-have been performed. The raw package stays local and is not pushed to GitHub.
+No formatting, photo deletion, driver changes or unknown vendor commands were
+performed. The only card writes were the new update folder and file. Raw vendor
+firmware stays local and is not pushed to GitHub. Physical camera controls are
+operated by the user; no remote flash command was sent.
 
 ## Next evidence to record
 
-Record the actual card/connection, staged-file hash and observed camera update
-dialog before describing the candidate as accepted. If an experimental update
-is completed, verify the reported version and intended label, then ordinary
-startup, menu use, playback and capture. Do not infer successful installation
-from a file copy or a checksum alone.
+Record the completion message, post-update version and English `Welcome studio`
+label, then ordinary startup, menu use, playback and capture. The user has
+reported that updating to v1.1 has started. Do not infer completion or custom
+resource activation from the version number, file copy or checksum alone.
 
 See [candidate details](notes/resource-label-candidate.md),
 [restoration findings](notes/restore-path.md) and

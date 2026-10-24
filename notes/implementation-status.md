@@ -1,7 +1,8 @@
 # Firmware-first implementation status
 
 Updated 24 October 2026. Research baseline: supplied Nikon S3300 v1.1 updater. Installed
-camera: separately observed stock v1.0, left unchanged. Software-only work.
+camera: observed stock v1.0 before the user-requested experimental update.
+The user now reports updating to v1.1; completion is awaiting observation.
 
 ## Current direction and latest checkpoint
 
@@ -32,7 +33,7 @@ on a raw-cache hit, making it a specific candidate to profile; generated-output
 ownership prevents a naive shared-pointer cache. No runtime speed gain or
 external debug access is established.
 
-The current suite passes **94 unit tests**, including malformed-resource,
+The current suite includes **99 unit tests**, including malformed-resource,
 roundtrip, metadata, scanner and query cases. The exact source reconstruction,
 all resource roundtrips and an actual English-resource CLI export/import also
 passed. This verifies offline development tools, not hardware behaviour.
@@ -52,7 +53,13 @@ ELF files and 367 other resources are unchanged. Fresh FAT extraction and a
 separately implemented exact-byte validator passed, and two builds produced the
 same hash. See `resource-label-candidate.md`.
 
-This candidate has not been uploaded or installed. The NAND dump lead was traced
+This candidate is now staged on the card, with all 19,005,632 bytes read back
+over standard PTP and matched exactly. Standard WPD writes worked; its metadata
+and resource-read path refused the binary. No card reader or driver replacement
+was needed. The user reports the update is in progress, but completion and
+`Welcome studio` have not been observed. See `usb-flash-trial.md`.
+
+The NAND dump lead was traced
 further: its fixed loop omits placeholders on read failures, so its output is
 not a verified complete backup. Installed-v1.0/calibration coverage, complete
 acceptance, actual write ranges and restoration remain unresolved. The earlier
@@ -119,8 +126,9 @@ Mono Grit. Texture stays intentional; mandatory smoothing and invented detail
 are outside the brief. Host previews may tune these looks but cannot satisfy
 the acceptance criterion that they operate while shooting on the camera.
 
-No update package, version bypass, arbitrary vendor command, target execution,
-camera flash write or hardware intervention was performed. The official v1.1
-package is not a backup of installed v1.0 or device calibration. Physical work
-is not yet shown to be required; if software recovery proves inaccessible, that
-dependency must be established and recorded before installation.
+The minimal update package is now staged and read back through USB. The user
+reports an update in progress through the physical menu; no remote flash command,
+version bypass, arbitrary vendor command or hardware modification was performed.
+The official v1.1 package is not a backup of installed v1.0 or device calibration.
+Software restoration remains unverified; this experimental trial does not close
+that dependency or establish a recovery procedure.

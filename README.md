@@ -9,10 +9,13 @@ dump of the camera's installed v1.0 firmware.
 
 The first [resource-only research candidate](notes/resource-label-candidate.md)
 has been built and independently checked offline. It changes one English menu
-label and the additive checksum, preserving executable bytes. It is marked
-**not installable** while [backup/restoration access](notes/restore-path.md) and
-complete acceptance remain unresolved. The manual capture benchmark is deferred
-at the user's request while this firmware-development work continues.
+label and the additive checksum, preserving executable bytes. At the user's
+explicit request, the experimental file was staged on the card through USB and
+verified by full byte-for-byte readback. The user reports the v1.1 update is in
+progress; completion and the modified label remain unconfirmed. This is not a
+validated release: [backup/restoration access](notes/restore-path.md) remains
+unresolved. See [the USB trial](notes/usb-flash-trial.md). The manual capture
+benchmark is deferred at the user's request.
 
 The camera itself is the product: faster shooting and expressive retro looks.
 The firmware-development work now includes a **working application decoder**:
@@ -21,9 +24,10 @@ a separate prefix-code implementation and native zlib. Both implementations
 agree byte-for-byte, including token counts, end markers and padding boundaries.
 An analysis-only ELF retains the application virtual addresses for static work.
 
-**No custom feature or speed improvement is installed.** The camera remains on
-v1.0. Recovery and version-specific installation are unfinished dependencies;
-the synthesized ELF is not a flashable update.
+**No speed improvement or creative shooting mode has been demonstrated.** The
+minimal menu-label experiment is the first installation trial. Recovery and
+post-update behaviour remain unfinished work; the synthesized analysis ELF is
+not a camera update.
 
 Start with [implementation status](notes/implementation-status.md),
 [the complete unpacked workspace](notes/unpacked-workspace.md),

@@ -1,8 +1,9 @@
 # First minimal firmware research candidate
 
 24 October 2026. User priority: develop firmware before further manual capture
-benchmarks. The 16 MP/8 MP shooting comparison can wait. No camera upload or
-flash has occurred.
+benchmarks. The 16 MP/8 MP shooting comparison can wait. The later
+[USB trial](usb-flash-trial.md) staged this file and verified a full readback;
+the user reports updating to v1.1. Completion and label activation are pending.
 
 ## Concrete candidate
 
@@ -70,8 +71,9 @@ write ranges and restoration are not verified. The existing NAND-dump command
 has a fixed range and skips failed sectors without placeholders, so it cannot
 yet be treated as a complete restorable backup. See `restore-path.md`.
 
-The next firmware work is to establish a usable backup/restoration path and
-complete the acceptance trace, then install one minimal candidate and verify
-startup, menu display and ordinary capture before adding larger changes. The
-manual shooting baseline has been deferred; foundational file validation and
-recovery work remain prerequisites for an installable release.
+The user explicitly requested an experimental flash despite these unresolved
+recovery questions. The file is now verified on the card through USB, and the
+user reports that updating has started. Record completion, version, modified
+label, startup, menu display and ordinary capture before adding larger changes.
+The manual shooting baseline is deferred. Foundational file validation and
+recovery work remain prerequisites for a validated release.
