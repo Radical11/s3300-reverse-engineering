@@ -4,6 +4,7 @@ First offline investigation: 23 October 2026. The camera reports **v1.0**.
 The supplied Nikon updater contains **v1.1**; this research does not describe a
 dump of the camera's installed v1.0 firmware.
 
+[Private GitHub repository](https://github.com/Radical11/s3300-firmware-lab) ·
 [Progress log](PROGRESS.md) · [Offline test workflow](.github/workflows/tests.yml)
 
 The first [resource-only research candidate](notes/resource-label-candidate.md)

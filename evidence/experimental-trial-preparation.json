@@ -1,0 +1,43 @@
+{
+  "phase": "local experimental staging package only",
+  "user_requested_flash_trial": true,
+  "file": "firmware/firmware.bin",
+  "size": 19005632,
+  "sha256": "c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312",
+  "independent_byte_validation_passed": true,
+  "local_file_readback_verified": true,
+  "device_acceptance_verified": false,
+  "restoration_verified": false,
+  "copied_to_card": false,
+  "camera_uploaded": false,
+  "camera_flashed": false,
+  "source_unchanged": true,
+  "vendor_update_guide": "https://nikonimglib.com/europe/Firmware/S3300/v1.1/En/ecpx_win_en.html",
+  "limitations": [
+    "The folder layout follows the stock update route; Nikon's guide does not validate the modified file.",
+    "User authorization does not establish acceptance, backup coverage or recoverability.",
+    "Physical card staging and the camera's update confirmation have not occurred."
+  ],
+  "repository": {
+    "url": "https://github.com/Radical11/s3300-firmware-lab",
+    "private": true,
+    "initial_push_verified_head": "36960d18b1ac1c17b9a35117831dddfe050b3240",
+    "verified_actions_run": "https://github.com/Radical11/s3300-firmware-lab/actions/runs/40059969811",
+    "unit_tests_passed_per_platform": 94,
+    "platforms": [
+      "windows-latest",
+      "ubuntu-latest"
+    ]
+  },
+  "connection_observations": {
+    "camera_initially_absent": true,
+    "camera_subsequently_present_over_usb": true,
+    "explorer_child_storage_folders": 0,
+    "mounted_filesystem_drive_types": {
+      "C:": "fixed",
+      "D:": "fixed"
+    },
+    "writable_card_root_established": false
+  },
+  "local_package": "derived/experimental-flash-trial-01"
+}
