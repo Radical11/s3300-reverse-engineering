@@ -64,9 +64,11 @@ SHA-256:
 a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4
 ```
 
-This is **offline only**, with version 1.1 retained. The camera now reports 1.1;
-same-version update policy is unresolved. No version bypass, marker activation,
-second upload or second flash was attempted. Recovery remains unverified.
+The later [reflash request](reflash-card-trial.md) reproduced this candidate and
+staged it through a card reader, with a verified backup and final readback.
+Version 1.1 is retained, and the camera now reports 1.1. Same-version acceptance
+and completed second flashing remain unverified. No version bypass or marker
+activation was introduced. Recovery remains unverified.
 
 Reproduce into a fresh local directory:
 

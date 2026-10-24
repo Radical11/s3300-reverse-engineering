@@ -9,4 +9,5 @@
 /evidence/camera-samples.json
 /evidence/camera-post-copy-check.json
 /evidence/wpd-device-info*.json
+/evidence/ptp-reflash-all-objects*.json
 __pycache__/

@@ -21,7 +21,7 @@ The first push was verified against the remote branch. GitHub Actions ran all
 - Independent exact-byte candidate validation and 94 unit tests passed locally.
 
 Later passes add packed-block rewriting and native algorithm checks; the current
-suite passes **111 tests** locally. The [creative-look C module](firmware/looks/README.md)
+suite passes **122 tests** locally. The [creative-look C module](firmware/looks/README.md)
 implements Original plus four looks using 2,560 table bytes and no heap/frame
 allocation. It compiled with MSVC and matched independent references, including
 full-resolution host runs on an original photo copy. It is not camera-integrated;
@@ -72,11 +72,16 @@ The application contains a complete copy of the English table, and its static
 dispatcher returns that pointer. The embedded gamma table also differs from its
 filesystem counterpart. This suggests the first trial changed a fallback copy.
 
-Packed-block rewriting is now implemented and dual-decoder checked. A second,
-**offline-only** candidate edits both English copies while preserving all
-framing extents; its full affected 151-block segment differs in only five
-decoded data bytes. Same-version updating and runtime activation remain
-unverified. No second upload or flash was attempted.
+Packed-block rewriting is now implemented and dual-decoder checked. A second
+candidate edits both English copies while preserving all framing extents; its
+full affected 151-block segment differs in only five decoded data bytes.
+
+The user's latest [reflash request](notes/reflash-card-trial.md) reached verified
+**card-reader staging on E:** after USB replacement failed. The old update was
+backed up and the corrected image read back exactly from FIRMWARE/FIRMWARE.BIN.
+Its SHA-256 is `a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4`.
+Version remains 1.1. The user is at the physical camera-menu step; same-version
+acceptance, completed second flash and runtime label activation are unverified.
 
 See [candidate details](notes/resource-label-candidate.md),
 [restoration findings](notes/restore-path.md) and

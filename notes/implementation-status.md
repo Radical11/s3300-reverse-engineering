@@ -33,7 +33,7 @@ on a raw-cache hit, making it a specific candidate to profile; generated-output
 ownership prevents a naive shared-pointer cache. No runtime speed gain or
 external debug access is established.
 
-The current suite passes **111 tests**, including native compiled C,
+The current suite passes **122 tests**, including native compiled C,
 malformed-resource,
 roundtrip, metadata, scanner and query cases. The exact source reconstruction,
 all resource roundtrips and an actual English-resource CLI export/import also
@@ -62,7 +62,9 @@ English-table copy and a differing gamma table were found in the packed
 application. A token-preserving block rewriter now builds an offline candidate
 for both English copies. The full affected 151-block segment passes production
 and independent-zlib decoding with only five intended decoded data bytes
-changed. See `usb-flash-trial.md` and `embedded-resources.md`.
+changed. The corrected candidate has now been backed up and verified on the
+card through a reader; physical same-version acceptance remains pending. See
+`usb-flash-trial.md`, `embedded-resources.md` and `reflash-card-trial.md`.
 
 The NAND dump lead was traced
 further: its fixed loop omits placeholders on read failures, so its output is

@@ -1,0 +1,43 @@
+{
+  "mode": "stage",
+  "camera_flashed": false,
+  "trial": "embedded-label",
+  "creative_looks_integrated": false,
+  "existing_firmware_path_requested": true,
+  "file_creation_attempted": true,
+  "folder_creation_attempted": false,
+  "staged_and_readback_verified": false,
+  "raw_vendor_commands": [],
+  "format_or_delete_operations": [],
+  "events": [
+    "Opening matched S3300 with read/write WPD access",
+    "Card root enumerated; 1 objects",
+    "Using fixed existing update path through standard WPD file transfer",
+    "Requesting standard WPD creation of firmware.bin",
+    "Closing WPD connection"
+  ],
+  "installed_firmware": "COOLPIX S3300 V1.1",
+  "last_wpd_operation": "EnumObjects.Next s10001",
+  "storage": [
+    {
+      "id": "s10001",
+      "name": "S3300",
+      "type": "{99ED0160-17FF-4C44-9D98-1D7A6F941921}",
+      "access": 0,
+      "capacity": 2002452480,
+      "free": 1878491136
+    }
+  ],
+  "card_root": [
+    {
+      "id": "o2",
+      "name": "DCIM",
+      "type": "{27E2E392-A111-48E0-AB0C-E17705A05F85}"
+    }
+  ],
+  "target_path": "\\FIRMWARE\\FIRMWARE.BIN",
+  "status": "stopped",
+  "error": "(-2147024865, 'A device attached to the system is not functioning.', (None, None, None, 0, None))",
+  "hresult": "0x8007001f",
+  "worker_exit_code": 0
+}

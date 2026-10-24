@@ -11,6 +11,7 @@ from pathlib import Path
 import struct
 import subprocess
 import sys
+from flash_trial_payloads import TRIALS
 
 ROOT = Path(__file__).resolve().parents[1]
 MTP = "{4D545058-1A2E-4106-A357-771E0819FC56}"
@@ -41,16 +42,18 @@ def object_info(data):
             "filename": data[53:end-2].decode("utf-16-le")}
 
 
-def worker():
-    from stage_wpd_trial import verified_payload, EXPECTED
-    payload = verified_payload()
+def worker(trial="resource-label", inventory=False):
+    from stage_wpd_trial import verified_payload
+    payload = verified_payload(trial)
+    expected = TRIALS[trial]["sha256"]
     sys.path.insert(0, str(ROOT/"tools/vendor"))
     from comtypes import GUID
     from comtypes.client import CreateObject, GetModule
     api = GetModule("PortableDeviceApi.dll")
     types = GetModule("PortableDeviceTypes.dll")
     report = {"method": "Read-only standard PTP over existing WPD MTP extension interface",
-              "calls": [], "camera_flashed": False, "writes": [],
+              "calls": [], "camera_flashed": False, "writes": [], "trial": trial,
+              "inventory_only": inventory,
               "staged_and_readback_verified": False}
 
     def key(guid, pid):
@@ -142,24 +145,38 @@ def worker():
         stores = array32(read(0x1004, [], 1024))
         if len(stores) != 1:
             raise ValueError("Expected one PTP storage")
+        if inventory:
+            handles = array32(read(0x1007, [stores[0], 0, 0], 1024))
+            report["objects"] = [{"handle": handle, **object_info(read(0x1008, [handle], 4096))}
+                                  for handle in handles]
+            report["status"] = "read_only_inventory_complete"
+            return report
         roots = array32(read(0x1007, [stores[0], 0, 0xffffffff], 1024))
         folders = []
+        direct_files = []
         for handle in roots:
             info = object_info(read(0x1008, [handle], 4096))
             if info["filename"].casefold() == "firmware" and info["format"] == 0x3001:
                 folders.append(handle)
-        if len(folders) != 1:
-            raise ValueError("Expected one FIRMWARE folder")
-        files = array32(read(0x1007, [stores[0], 0, folders[0]], 1024))
+            if info["filename"].replace("/", "\\").lstrip("\\").casefold() == "firmware\\firmware.bin":
+                direct_files.append(handle)
+        if len(direct_files) == 1 and not folders:
+            files = direct_files
+            report["resolved_target_path"] = "\\FIRMWARE\\FIRMWARE.BIN"
+        elif len(folders) == 1 and not direct_files:
+            files = array32(read(0x1007, [stores[0], 0, folders[0]], 1024))
+        else:
+            raise ValueError("Expected one unambiguous FIRMWARE folder or fixed-path file")
         if len(files) != 1:
             raise ValueError("Expected one staged object")
         info = object_info(read(0x1008, files, 4096))
         report["file_info"] = info
-        if info["filename"].casefold() != "firmware.bin" or info["size"] != len(payload):
+        permitted_name = "firmware\\firmware.bin" if direct_files else "firmware.bin"
+        if info["filename"].replace("/", "\\").lstrip("\\").casefold() != permitted_name or info["size"] != len(payload):
             raise ValueError("Staged filename/size does not match candidate")
         data = read(0x1009, files, len(payload))
         report.update(readback_bytes=len(data), readback_sha256=hashlib.sha256(data).hexdigest())
-        if data != payload or report["readback_sha256"] != EXPECTED:
+        if data != payload or report["readback_sha256"] != expected:
             raise ValueError("PTP readback differs from candidate")
         report.update(status="staged_not_flashed", staged_and_readback_verified=True)
     except Exception as error:
@@ -172,15 +189,20 @@ def worker():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--worker", action="store_true")
+    parser.add_argument("--trial", choices=tuple(TRIALS), default="resource-label")
+    parser.add_argument("--inventory", action="store_true", help="Bounded all-object metadata inventory; no file downloads")
     parser.add_argument("--evidence", type=Path)
     args = parser.parse_args()
     if args.worker:
-        print(json.dumps(worker()))
+        print(json.dumps(worker(args.trial, args.inventory)))
         return
     if not args.evidence or args.evidence.exists():
         raise ValueError("Supply a new --evidence path")
     try:
-        run = subprocess.run([sys.executable, "-B", str(Path(__file__).resolve()), "--worker"],
+        command = [sys.executable, "-B", str(Path(__file__).resolve()), "--worker", "--trial", args.trial]
+        if args.inventory:
+            command.append("--inventory")
+        run = subprocess.run(command,
                              capture_output=True, text=True, timeout=120)
         report = json.loads(run.stdout)
         report["progress"] = run.stderr.splitlines()

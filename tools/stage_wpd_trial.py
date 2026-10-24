@@ -1,7 +1,9 @@
 """Inventory or stage the exact label-test file through standard Windows WPD.
 
-Default is read-only. --stage permits creating firmware/firmware.bin only,
-never overwrites an existing file, and verifies a full device readback.
+Default is read-only. --stage creates firmware/firmware.bin and refuses an
+enumerated existing file. The embedded-label existing-path experiment targets
+only the project's prior update file; its observed transfer was rejected.
+The embedded-label mode requires separate standard-PTP readback after commit.
 Does not format, delete, send raw/vendor commands, or start an update.
 """
 import argparse
@@ -11,6 +13,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+from flash_trial_payloads import TRIALS, load_trial
 
 ROOT = Path(__file__).resolve().parents[1]
 OBJECT = "{EF6B490D-5CD8-437A-AFFC-DA8B60EE4A3C}"
@@ -19,7 +22,11 @@ STORAGE = "{01A3057A-74D6-4E80-BEA7-DC4C212CE50A}"
 EXPECTED = "c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312"
 
 
-def verified_payload():
+def verified_payload(trial="resource-label"):
+    if trial == "embedded-label":
+        return load_trial(trial)
+    if trial != "resource-label":
+        raise ValueError("Unknown trial")
     from validate_resource_candidate import verify
     payload = (ROOT/"derived/experimental-flash-trial-01/firmware/firmware.bin").read_bytes()
     verify((ROOT/"sources/extracted-v1.1/S3300Update/firmware/firmware.bin").read_bytes(), payload)
@@ -28,14 +35,16 @@ def verified_payload():
     return payload
 
 
-def worker(stage, readback=False):
-    payload = verified_payload() if stage or readback else None
+def worker(stage, readback=False, trial="resource-label", direct_path=False):
+    payload = verified_payload(trial) if stage or readback else None
     sys.path.insert(0, str(ROOT/"tools/vendor"))
     from comtypes import GUID
     from comtypes.client import CreateObject, GetModule
     api = GetModule("PortableDeviceApi.dll")
     types = GetModule("PortableDeviceTypes.dll")
     report = {"mode": "stage" if stage else "read-only verification" if readback else "read-only inventory", "camera_flashed": False,
+              "trial": trial, "creative_looks_integrated": False,
+              "existing_firmware_path_requested": direct_path,
               "file_creation_attempted": False, "folder_creation_attempted": False,
               "staged_and_readback_verified": False, "raw_vendor_commands": [],
               "format_or_delete_operations": [], "events": []}
@@ -82,8 +91,8 @@ def worker(stage, readback=False):
         identity = props.GetValues("DEVICE", None)
         firmware = identity.GetStringValue(key("{26D4979A-E643-4626-9E2B-736DC0C92FDC}", 3))
         report["installed_firmware"] = firmware
-        if stage and firmware != "COOLPIX S3300 V1.0":
-            raise ValueError("Installed version differs from the reviewed V1.0 baseline")
+        if stage and firmware != TRIALS[trial]["installed_firmware"]:
+            raise ValueError("Installed version differs from the selected trial baseline")
 
         def children(parent):
             report["last_wpd_operation"] = "EnumObjects " + parent
@@ -186,7 +195,7 @@ def worker(stage, readback=False):
                 digest.update(bytes(buffer[:received.value]))
                 total += received.value
             report.update(readback_bytes=total, readback_sha256=digest.hexdigest())
-            if total != len(payload) or digest.hexdigest() != EXPECTED:
+            if total != len(payload) or digest.hexdigest() != TRIALS[trial]["sha256"]:
                 raise ValueError("Device readback does not match candidate")
             report.update(staged_and_readback_verified=True, status="staged_not_flashed")
 
@@ -209,7 +218,13 @@ def worker(stage, readback=False):
             values.SetGuidValue(key(OBJECT, 6), GUID(file_format))
             return values
 
-        if folders:
+        if direct_path:
+            # The reviewed PTP path constructor (0x80787ac4) accepts a rooted
+            # filename. Restrict this to our already-created update file.
+            folder_id = store["id"]
+            report["target_path"] = "\\FIRMWARE\\FIRMWARE.BIN"
+            event("Using fixed existing update path through standard WPD file transfer")
+        elif folders:
             folder_id = folders[0]["id"]
         else:
             values = object_values(store["id"], "firmware", FOLDER,
@@ -221,7 +236,7 @@ def worker(stage, readback=False):
                 values, ct.cast(ct.pointer(identifier), ct.POINTER(ct.c_wchar_p)))
             folder_id = take_string(identifier)
             report["folder_created"] = True
-        entries = children(folder_id)
+        entries = [] if direct_path else children(folder_id)
         if any(x["name"] is None for x in entries):
             raise ValueError("Cannot identify every existing firmware-folder entry; refusing write")
         if any(x["name"].casefold() == "firmware.bin" for x in entries):
@@ -229,6 +244,9 @@ def worker(stage, readback=False):
         values = object_values(folder_id, "firmware.bin",
                                "{0085E0A6-8D34-45D7-BC5C-447E59C73D48}",
                                "{30000000-AE6C-4804-98BA-C57B46965FE7}")
+        if direct_path:
+            values.SetStringValue(key(OBJECT, 4), "\\FIRMWARE\\FIRMWARE.BIN")
+            values.SetStringValue(key(OBJECT, 12), "\\FIRMWARE\\FIRMWARE.BIN")
         values.SetUnsignedLargeIntegerValue(key(OBJECT, 11), len(payload))
         stream, optimal, cookie = ct.POINTER(api.IStream)(), ct.c_ulong(), ct.c_void_p()
         report["file_creation_attempted"] = True
@@ -250,7 +268,11 @@ def worker(stage, readback=False):
         finally:
             if cookie.value:
                 free(cookie.value)
-        verify_readback(folder_id)
+        if trial == "embedded-label":
+            report["status"] = "file_committed_requires_ptp_readback"
+            event("Use standard PTP readback; WPD binary metadata/resource reads are known unsupported")
+        else:
+            verify_readback(folder_id)
     except Exception as error:
         report.update(status="stopped", error=str(error))
         if hasattr(error, "hresult"):
@@ -267,15 +289,20 @@ def worker(stage, readback=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", action="store_true")
+    parser.add_argument("--trial", choices=tuple(TRIALS), default="resource-label")
+    parser.add_argument("--existing-firmware-path", action="store_true",
+                        help="Use only the fixed existing update path for the embedded-label trial")
     parser.add_argument("--verify-staged", action="store_true", help="Read back existing file without writing")
     parser.add_argument("--worker", action="store_true")
     parser.add_argument("--evidence", type=Path)
     args = parser.parse_args()
     if args.stage and args.verify_staged:
         raise ValueError("Choose staging or read-only verification")
+    if args.existing_firmware_path and (not args.stage or args.trial != "embedded-label"):
+        raise ValueError("Existing-path transfer is restricted to the authorized embedded-label staging trial")
     if args.worker:
         try:
-            report = worker(args.stage, args.verify_staged)
+            report = worker(args.stage, args.verify_staged, args.trial, args.existing_firmware_path)
         except Exception as error:
             report = {"status": "worker_failed", "error": str(error),
                       "staged_and_readback_verified": False, "camera_flashed": False}
@@ -283,9 +310,11 @@ def main():
         return
     if not args.evidence or args.evidence.exists():
         raise ValueError("Supply a new --evidence path")
-    command = [sys.executable, "-B", str(Path(__file__).resolve()), "--worker"]
+    command = [sys.executable, "-B", str(Path(__file__).resolve()), "--worker", "--trial", args.trial]
     if args.stage:
         command.append("--stage")
+    if args.existing_firmware_path:
+        command.append("--existing-firmware-path")
     if args.verify_staged:
         command.append("--verify-staged")
     try:

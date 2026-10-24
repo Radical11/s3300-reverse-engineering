@@ -14,7 +14,10 @@ explicit request, the experimental file was staged on the card through USB and
 verified by full byte-for-byte readback. The user now reports firmware v1.1, but
 the modified label is absent. A new [embedded-resource pass](notes/embedded-resources.md)
 found another English table inside the packed application and implemented a
-dual-decoder-checked rewrite of that copy. The second candidate stays offline.
+dual-decoder-checked rewrite of that copy. The second candidate is now backed up
+and verified on the card through a reader for the user's requested
+[same-version trial](notes/reflash-card-trial.md); camera-menu acceptance and
+activation remain unverified.
 This is not a
 validated release: [backup/restoration access](notes/restore-path.md) remains
 unresolved. See [the USB trial](notes/usb-flash-trial.md). The manual capture

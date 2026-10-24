@@ -1,0 +1,19 @@
+{
+  "previous_sha256": "c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312",
+  "host_backup_sha256": "c34433c1849ad5e97a2115fc2a67dbecdeb94a4cbb2fdd0dd2bcd25251888312",
+  "backup_readback_verified": true,
+  "card_bytes": 19005632,
+  "card_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "card_exact_readback_verified": true,
+  "file": "FIRMWARE/FIRMWARE.BIN",
+  "staged": true,
+  "camera_flashed": false,
+  "creative_looks_integrated": false,
+  "trial": "embedded-label",
+  "drive": "E:\\",
+  "filesystem": "FAT",
+  "package_version": "1.1 unchanged",
+  "version_bypass": false,
+  "same_version_acceptance_verified": false,
+  "restoration_verified": false
+}
