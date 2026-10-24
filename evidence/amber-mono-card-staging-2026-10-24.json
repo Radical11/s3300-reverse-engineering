@@ -1,0 +1,28 @@
+{
+  "previous_sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
+  "host_backup_sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
+  "backup_readback_verified": true,
+  "card_bytes": 19005632,
+  "card_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "card_exact_readback_verified": true,
+  "file": "FIRMWARE/FIRMWARE.BIN",
+  "staged": true,
+  "camera_flashed": false,
+  "creative_looks_integrated": false,
+  "trial": "amber-mono",
+  "drive": "E:\\",
+  "filesystem": "FAT",
+  "package_version": "1.1 unchanged",
+  "version_bypass": false,
+  "same_version_acceptance_verified": false,
+  "restoration_verified": false,
+  "experimental_amber_tint_included": true,
+  "saved_photo_effect_verified": false,
+  "scope": "Existing Sepia constant-tint experiment; four-look module is not integrated",
+  "date_local": "2026-10-24",
+  "photo_backup": {
+    "verified_files": 43,
+    "verified_bytes": 149602989,
+    "private_local_manifest": "derived/amber-preflight-photo-backup-01/manifest.json"
+  }
+}

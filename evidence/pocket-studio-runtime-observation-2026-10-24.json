@@ -5,8 +5,18 @@
   "staged_candidate_sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
   "observation_source": "user reports in the camera research chat",
   "observations_in_report_order": [
-    {"report": "Update completed, artwork unchanged", "superseded_by_next_report": true},
-    {"report": "update completed and the artwork also changed", "current_result": true}
+    {
+      "report": "Update completed, artwork unchanged",
+      "superseded_by_next_report": true
+    },
+    {
+      "report": "update completed and the artwork also changed",
+      "current_result": true
+    },
+    {
+      "report": "everythings working",
+      "context": "Reply after requesting restart, capture and playback checks"
+    }
   ],
   "update_completed_user_reported": true,
   "custom_startup_artwork_active_user_reported": true,
@@ -15,5 +25,7 @@
   "creative_photo_looks_integrated": false,
   "speed_or_battery_gain_demonstrated": false,
   "restoration_verified": false,
-  "scope": "User-observed update completion and custom artwork activation for the staged identity candidate; not general reliability or recovery proof."
+  "scope": "User-observed update completion and custom artwork activation for the staged identity candidate; not general reliability or recovery proof.",
+  "requested_restart_capture_playback_checks_reported_working": true,
+  "check_detail_limit": "User reported everything working after the requested checks; exact counts and independent observation are not recorded."
 }

@@ -37,6 +37,10 @@ and prior-update backups. It retains the marker and replaces only the startup
 picture relative to that prior build. The user now confirms update completion
 and changed artwork. [Original artwork](firmware/branding/README.md) is versioned;
 vendor firmware and personal photos remain local.
+The next [Amber mono experiment](notes/amber-mono-trial.md) has now been built,
+independently decoded and staged. It changes the existing Sepia tint and English
+label while retaining Pocket Studio. Its saved-photo result is pending; it is
+not the full-colour four-look module.
 This is not a
 validated release: [backup/restoration access](notes/restore-path.md) remains
 unresolved. See [the USB trial](notes/usb-flash-trial.md). The manual capture

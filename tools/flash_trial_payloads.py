@@ -23,7 +23,12 @@ TRIALS = {
         "path": "derived/pocket-studio-identity-candidate-01/NOT-INSTALLABLE-patch-plan.research.bin",
         "sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
         "installed_firmware": "COOLPIX S3300 V1.1",
-        "purpose": "Pocket Studio startup artwork plus existing Welcome studio marker; stock shooting and sound"}
+        "purpose": "Pocket Studio startup artwork plus existing Welcome studio marker; stock shooting and sound"},
+    "amber-mono": {
+        "path": "derived/amber-mono-candidate-01/NOT-INSTALLABLE-patch-plan.research.bin",
+        "sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+        "installed_firmware": "COOLPIX S3300 V1.1",
+        "purpose": "Experimental Amber tint through existing Sepia option; Pocket Studio retained; photo effect unverified"}
 }
 
 

@@ -1,0 +1,75 @@
+{
+  "method": "Independent prefix/native-zlib full-segment decode and exact carrier reconstruction against working identity",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "candidate_bytes": 19005632,
+  "application_allowed_data_spans": [
+    {
+      "address": 2151080268,
+      "bytes": 28
+    },
+    {
+      "address": 2151081082,
+      "bytes": 10
+    },
+    {
+      "address": 2156408100,
+      "bytes": 4
+    }
+  ],
+  "independent_segment_proofs": [
+    {
+      "virtual_start": 2148562560,
+      "bytes": 2630016,
+      "blocks": 151,
+      "independent_exact_data_diff_match": true,
+      "changed_payloads_vs_identity": [
+        {
+          "block": 146,
+          "start": 3865380,
+          "bytes": 12416
+        }
+      ]
+    },
+    {
+      "virtual_start": 2155889408,
+      "bytes": 624000,
+      "blocks": 31,
+      "independent_exact_data_diff_match": true,
+      "changed_payloads_vs_identity": [
+        {
+          "block": 22,
+          "start": 7252760,
+          "bytes": 9472
+        }
+      ]
+    }
+  ],
+  "only_declared_decoded_data_changed": true,
+  "exact_carrier_reconstruction_matches": true,
+  "other_resources_unchanged_vs_identity": 367,
+  "startup_art_preserved": true,
+  "version_product_and_download_descriptor_unchanged": true,
+  "look": "Amber",
+  "treatment": "Tinted monochrome using existing Sepia effect",
+  "tint_before": [
+    -30,
+    30
+  ],
+  "tint_after": [
+    -18,
+    22
+  ],
+  "saved_photo_effect_verified": false,
+  "speed_gain_demonstrated": false,
+  "restoration_verified": false,
+  "staged": false,
+  "flashed": false,
+  "second_build_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "fresh_resource_extraction": {
+    "files": 368,
+    "directories": 7,
+    "all_allocated_regular_files_validated": true,
+    "logical_volume_complete": false
+  }
+}

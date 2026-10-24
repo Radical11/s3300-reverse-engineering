@@ -8,7 +8,11 @@ The user subsequently reports normal operation; live USB inventory confirms
 v1.1 and readable card storage. The third, [Pocket Studio identity
 trial](pocket-studio-trial.md) is now staged, retaining the marker and replacing
 startup art. The user now confirms update completion and changed artwork;
-repeated restart/capture/playback checks are not separately recorded.
+the user subsequently reports everything working after the requested checks.
+Exact counts and independent observation are not recorded. The next
+[Amber monochrome trial](amber-mono-trial.md) is staged, with saved-photo
+activation pending. It reuses the existing Sepia control and tint path, not the
+host four-look C module.
 
 ## Current direction and latest checkpoint
 

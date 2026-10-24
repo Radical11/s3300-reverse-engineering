@@ -90,7 +90,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("drive", help="Explicit removable card drive, e.g. E:\\")
     parser.add_argument("output", type=Path, help="New local audit/backup directory inside derived/")
-    parser.add_argument("--trial", choices=("embedded-label", "pocket-studio"), default="embedded-label")
+    parser.add_argument("--trial", choices=("embedded-label", "pocket-studio", "amber-mono"), default="embedded-label")
     args = parser.parse_args()
     root, output = Path(args.drive), args.output.resolve()
     if not output.is_relative_to((ROOT/"derived").resolve()) or output.exists():
@@ -111,6 +111,10 @@ def main():
     result.update(trial=args.trial, drive=str(root), filesystem=identity[1],
                   package_version="1.1 unchanged", version_bypass=False,
                   same_version_acceptance_verified=False, restoration_verified=False)
+    if args.trial == "amber-mono":
+        result.update(experimental_amber_tint_included=True, saved_photo_effect_verified=False,
+                      creative_looks_integrated=False,
+                      scope="Existing Sepia constant-tint experiment; four-look module is not integrated")
     (output/"card-staging.json").write_text(json.dumps(result, indent=2)+"\n")
     print(json.dumps(result, indent=2))
 
