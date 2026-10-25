@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "authenticated Capstone and direct Ghidra analysis plus bounded synthetic instruction execution; not REA Evidence",
+  "camera_commands_issued": false,
+  "camera_executed": false,
+  "selected_instructions_emulated": true,
+  "instruction_checks": [
+    {
+      "address": 2153229600,
+      "bytes_sha256": "3d2ffd4253c761345e49a7eca521d968281abc51815af1270127861d7e407bc6"
+    },
+    {
+      "address": 2153229608,
+      "bytes_sha256": "8f4e758aa239fd5fe9b444ae375872468715d41135330e0d59831977bce19d64"
+    },
+    {
+      "address": 2153229616,
+      "bytes_sha256": "df418bf6a29c5cbc836eef42e3742dd4fe0ceb088831b4aabc84b08eb1eb5c8d"
+    },
+    {
+      "address": 2153229624,
+      "bytes_sha256": "1834f8b5b39a48d6530bb5b9f7480b5588dab30e25cfae408d232c853d5f867c"
+    },
+    {
+      "address": 2155344192,
+      "bytes_sha256": "374dfb1812aaa045b8c6bcc058370057f0dac75471c261d2a460a6a5237d4068"
+    },
+    {
+      "address": 2155344208,
+      "bytes_sha256": "92546a61b401a18094e70b342f1414ec01afaedc520ba49ab8ee598fcfd90877"
+    },
+    {
+      "address": 2155344224,
+      "bytes_sha256": "c80c13109022af30c37c673fa79ae0da2dc1f1b657f659f777e06df32333568c"
+    },
+    {
+      "address": 2155344228,
+      "bytes_sha256": "ea55e5cb74d96a9c86d0936d586fdc01ebfea8221a83d64899d94d3ba252f74e"
+    },
+    {
+      "address": 2155344236,
+      "bytes_sha256": "b64b053df28865dba355753a9c8c2d39e5abe1c1e96f0fa1dcc48f0608d3ba48"
+    },
+    {
+      "address": 2155344900,
+      "bytes_sha256": "ba7d20bcab9fc2928bc315b4634d452b38ed6f8eb7c16599c6deb6fe80ddae89"
+    },
+    {
+      "address": 2155344904,
+      "bytes_sha256": "72dc6c48d87f6547d1942f9805fa237160080810295253061b0bac81bbe5ef24"
+    },
+    {
+      "address": 2155344944,
+      "bytes_sha256": "47fe933306447fa990dfb0571bdf19a87c775f7377aa2b2fae83097821f635c9"
+    },
+    {
+      "address": 2155344948,
+      "bytes_sha256": "37531e5aed9d97e70ae07072bda15626a5c37b5193538418645e9e0fd69205b9"
+    },
+    {
+      "address": 2155344952,
+      "bytes_sha256": "6f9277e7b8ef524608b63f8958712adde4c51750f842dc452cdf9e6d14fe9605"
+    },
+    {
+      "address": 2155323552,
+      "bytes_sha256": "029c7184e90e84d4b2e0876d4aad56c3b58b76725d8fc6ddfff488d1881a0b4c"
+    },
+    {
+      "address": 2155323564,
+      "bytes_sha256": "1625c6acc62eb849d423f78170202393df0c0ddfea2618e8eea528f60ce9a654"
+    },
+    {
+      "address": 2155323716,
+      "bytes_sha256": "0a6f052d0ad33ad34cc9883fda264a20c3d2e6d20d4f2f71ff6ac7c3c5a50ea4"
+    },
+    {
+      "address": 2155325256,
+      "bytes_sha256": "e3597804f98de82db16d8f98be94dc2cfdf7c0527e55e99e30120b802d811474"
+    },
+    {
+      "address": 2153241468,
+      "bytes_sha256": "e367482e7279079a052302e552763e3dbb2fdb10016a6d96e15bb23b0a170fdc"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2153229376,
+        "dossier_sha256": "5a40a5d504c0fe6f5203c2504dc093e2fc8a5ac0d74a91624bcd320de251f5a8",
+        "instructions_checked": 149,
+        "name": "sub_8057ac40"
+      },
+      {
+        "address": 2153241348,
+        "dossier_sha256": "5f6a734275969f17fc397a568249b96579d21f51b9174013021e7edf46e833b4",
+        "instructions_checked": 77,
+        "name": "sub_8057db04"
+      },
+      {
+        "address": 2154017724,
+        "dossier_sha256": "7880b144c7b4703e1382281bf0aa3a456a2897c57427ffe781f3efa9e1a8a68c",
+        "instructions_checked": 38,
+        "name": "sub_8063b3bc"
+      },
+      {
+        "address": 2153991192,
+        "dossier_sha256": "1f7fdffdf9d47ce5c547bb6e911256006caffcd5db8c21c672a261eb240b1690",
+        "instructions_checked": 670,
+        "name": "sub_80634c18"
+      },
+      {
+        "address": 2155322880,
+        "dossier_sha256": "d8f463551f77b976758927e000295d30fee3a12fc2acef37ef6d6e4ca225d009",
+        "instructions_checked": 749,
+        "name": "FUN_80779e00"
+      },
+      {
+        "address": 2155343952,
+        "dossier_sha256": "cb17bacaaeea41b1328e693b1dc2b70fa994ffb71bc06b42947582fbac19b172",
+        "instructions_checked": 15,
+        "name": "FUN_8077f050"
+      },
+      {
+        "address": 2155344136,
+        "dossier_sha256": "fa72a4926c779292f8c116179db3d4cfa276e53ac32d2b21f98be9ad9cfd8a4d",
+        "instructions_checked": 29,
+        "name": "FUN_8077f108"
+      },
+      {
+        "address": 2155344252,
+        "dossier_sha256": "679c98f5907528e3709034b861b9a4fc91348e05297c528ccc985012aa54797c",
+        "instructions_checked": 12,
+        "name": "FUN_8077f17c"
+      },
+      {
+        "address": 2155344388,
+        "dossier_sha256": "a417862278f02bf0cd432f271a60d71b8a56285d7ff5909333a64a8be5ccd0e7",
+        "instructions_checked": 162,
+        "name": "FUN_8077f204"
+      },
+      {
+        "address": 2155345036,
+        "dossier_sha256": "e907804859442021044a2e1d5d46505efc153d7e00fb6fc96932ddf20096f057",
+        "instructions_checked": 37,
+        "name": "FUN_8077f48c"
+      },
+      {
+        "address": 2155345284,
+        "dossier_sha256": "a1ac560d6ae09cd257fe905e8710bb11f7bc9fce71f5a2397c789e0723666fdb",
+        "instructions_checked": 28,
+        "name": "FUN_8077f584"
+      },
+      {
+        "address": 2155336264,
+        "dossier_sha256": "8e51a94e07211ecf0f8ae72713a90da6c59c37113aedfb157c557fcdee687225",
+        "instructions_checked": 10,
+        "name": "FUN_8077d248"
+      },
+      {
+        "address": 2155334828,
+        "dossier_sha256": "c96552ac43fd828bdaf73d486db69555e53b7493a3288d2dbb50d612c6b6c989",
+        "instructions_checked": 9,
+        "name": "FUN_8077ccac"
+      },
+      {
+        "address": 2155402564,
+        "dossier_sha256": "d8bdc8507ac9ffe6d04c76075b59c3897b0f3550fbfd2ddfc5cef5a376e52c59",
+        "instructions_checked": 13,
+        "name": "FUN_8078d544"
+      },
+      {
+        "address": 2155402248,
+        "dossier_sha256": "32e4b39a510b36c8fd30e02326201d4aaa724d2020a4a3f12f7ecec8a98b29c5",
+        "instructions_checked": 12,
+        "name": "FUN_8078d408"
+      }
+    ]
+  },
+  "emulation": {
+    "engine": "pinned Unicorn 2.1.4 MIPS32 little endian, synthetic 24KC CPU model",
+    "instructions_executed": 5686,
+    "scope": "native insertion/lookup on host-seeded synthetic registry; packet handler attempts separately labeled; no USB, filesystem, peripherals or camera execution",
+    "stubs": [
+      "80020980",
+      "800efc30",
+      "80778ae4",
+      "8057a944",
+      "8063b3bc"
+    ],
+    "full_initialization_attempt": {
+      "status": "failed",
+      "error": "Full-initializer execution did not return within the bounded emulator harness",
+      "underlying_error_type": "UcError",
+      "instructions_executed": 143,
+      "last_instruction_address": 2155344964,
+      "last_instruction_sha256": "1b3b80af5c93298f0918fb25df7cb185101f20206bf264d2054538f838b7807f",
+      "meaning": "full initializer is not synthetically verified; original code was not patched to bypass failure"
+    },
+    "application_registration": {
+      "status": "not-executed",
+      "basis": "static instruction assertions/direct Ghidra only"
+    },
+    "seed_origin": "host-supplied from static registration findings; not native initializer output",
+    "synthetic_conditions": {
+      "registry_pointer": 2164260864,
+      "registry_bytes": 3072
+    },
+    "seeded_records": [
+      {
+        "opcode": 4108,
+        "route": 0,
+        "disabled": 0,
+        "data_phase": 2,
+        "handler": 2155352104,
+        "slot": 0
+      },
+      {
+        "opcode": 4109,
+        "route": 0,
+        "disabled": 0,
+        "data_phase": 0,
+        "handler": 2155353504,
+        "slot": 1
+      },
+      {
+        "opcode": 36869,
+        "route": 0,
+        "disabled": 0,
+        "data_phase": 2,
+        "handler": 2155352104,
+        "slot": 2
+      },
+      {
+        "opcode": 36870,
+        "route": 0,
+        "disabled": 0,
+        "data_phase": 0,
+        "handler": 2155353504,
+        "slot": 3
+      },
+      {
+        "opcode": 36866,
+        "route": 0,
+        "disabled": 0,
+        "data_phase": 1,
+        "handler": 2153241348,
+        "slot": 4
+      },
+      {
+        "opcode": 36867,
+        "route": 1,
+        "disabled": 0,
+        "data_phase": 0,
+        "handler": 0,
+        "slot": 5
+      }
+    ],
+    "9002_handler_verification": {
+      "status": "passed",
+      "state_endpoint": "host stub; no peripheral execution"
+    },
+    "lookup_cases": [
+      {
+        "opcode": 36866,
+        "found": true
+      },
+      {
+        "opcode": 36867,
+        "found": true
+      },
+      {
+        "opcode": 36869,
+        "found": true
+      },
+      {
+        "opcode": 36870,
+        "found": true
+      },
+      {
+        "opcode": 65535,
+        "found": false
+      }
+    ],
+    "9002_handler_cases": [
+      {
+        "synthetic_state_byte": 0,
+        "parameter": 1,
+        "state_endpoint_stub_arguments": []
+      },
+      {
+        "synthetic_state_byte": 1,
+        "parameter": 1,
+        "state_endpoint_stub_arguments": [
+          0
+        ]
+      },
+      {
+        "synthetic_state_byte": 0,
+        "parameter": 2,
+        "state_endpoint_stub_arguments": [
+          1
+        ]
+      },
+      {
+        "synthetic_state_byte": 1,
+        "parameter": 2,
+        "state_endpoint_stub_arguments": []
+      },
+      {
+        "synthetic_state_byte": 0,
+        "parameter": 3,
+        "state_endpoint_stub_arguments": []
+      }
+    ],
+    "final_slot_and_full_rejection_verified": true,
+    "registration_calls": []
+  },
+  "contracts": [
+    {
+      "id": "ptp.handler_registry",
+      "status": "static-and-synthetic-verified",
+      "table_pointer": 2156498556,
+      "records": 256,
+      "record_bytes": 12,
+      "layout": {
+        "opcode_u16": 0,
+        "route_u8": 2,
+        "disabled_u8": 3,
+        "data_phase_u32": 4,
+        "handler_u32": 8
+      },
+      "lookup": 2155343952,
+      "insertion": 2155344136,
+      "initialize": 2155344388,
+      "ownership": "initializer allocates 0xc00 bytes through80020980; runtime global table; no external buffer ownership inferred",
+      "constraints": "empty opcode0 means free slot; lookup is unsigned16; insertion truncates flag bytes; higher-level registration updates existing records"
+    },
+    {
+      "id": "ptp.vendor9002",
+      "status": "state-changing-route-verified",
+      "registration": 2153229376,
+      "handler": 2153241348,
+      "route": 0,
+      "data_phase": 1,
+      "arguments": "packet opcode u16+6, first parameter u32+c; response pointera3",
+      "side_effects": "parameter1 with nonzero8065ebdd calls8063b3bc(0); parameter2 with zero byte calls8063b3bc(1)",
+      "endpoint": 2154017724,
+      "endpoint_behavior": "capture/display-related calls and sleeps, then writes8065ebdd; exact UI purpose remains inferred",
+      "return": "handler returns1, writes response length12 and code2001 even for tested no-op parameters",
+      "constraint": "advertisement/data-in phase does not establish read-only behavior; no command is allowlisted"
+    },
+    {
+      "id": "ptp.vendor9003",
+      "status": "queued-route-verified",
+      "registration": 2153229376,
+      "route": 1,
+      "local_handler": 0,
+      "dispatcher": 2155322880,
+      "event": 34816,
+      "consumer": 2153991192,
+      "behavior": "queued HCE branch recognizes9002/9003 and acknowledges through8063b85c; no arbitrary memory-read contract established",
+      "ambiguity": "8057db04 also contains a9003 branch that changes settings, but9003 is registered on route1; do not claim that local branch is active"
+    },
+    {
+      "id": "ptp.vendor_object_transfer",
+      "status": "registration-verified",
+      "operations": [
+        {
+          "opcode": 36869,
+          "same_handler_as": 4108,
+          "handler": 2155352104,
+          "data_phase": 2
+        },
+        {
+          "opcode": 36870,
+          "same_handler_as": 4109,
+          "handler": 2155353504,
+          "data_phase": 0
+        }
+      ],
+      "meaning": "shares standard object-upload handlers; no memory-address or passive diagnostic semantics established",
+      "constraint": "these entry addresses are interior labels in existing Ghidra functions; registration is verified, full handler file-write behavior is not recovered here"
+    },
+    {
+      "id": "ptp.debug_bridge_search",
+      "status": "unresolved",
+      "search_boundary": "selected registrations, local9002 handler, command dispatcher and HCE consumer; no whole-program absence claim",
+      "conclusion": "no reviewed PTP operation supplies a safe ConfigMem/GetMem bridge in this path",
+      "dependency": "existing USB mode6/debug handlers require an independently verified entry and valid memory map; normal PTP presence does not satisfy recovery"
+    }
+  ],
+  "gates": {
+    "safe_ptp_memory_backup_route": false,
+    "software_unbootable_recovery_verified": false,
+    "code_trial_allowed": false
+  },
+  "limitations": [
+    "Source firmware identity is verified; exact installed firmware bytes are not.",
+    "Synthetic conditions do not establish live configuration flags or current table contents.",
+    "No PTP operation, USB control request, mode switch, file write or firmware update is sent."
+  ],
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_ptp_vendor_contracts.py": "7069f9b8e3bce91bb9750f5849d012ad30a63e49aff931961f5c69caddd49d97",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "setup_sdk_toolchain.py": "51bb89f40c1bd00c3bd81751ef00f275ede9d16b0f4e4809e18220b29d0124b5",
+      "verify_sdk_emulation.py": "32811bd97ff608e5600d49a80b4e32d05e5cb839577debd97607ef8d19bae360",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

@@ -95,13 +95,15 @@ def main():
     parser.add_argument("output", type=Path, help="New analysis directory")
     parser.add_argument("--production", type=Path, default=Path("derived/v1.1-decoded/manifest.json"))
     parser.add_argument("--independent", type=Path, default=Path("derived/v1.1-independent/validation.json"))
+    parser.add_argument("--mapping", type=Path, default=Path(__file__).resolve().parents[1]/"derived/v1.1-mapped/map.json")
+    parser.add_argument("--source", type=Path, help="Local original v1.1 source; never trust a historical manifest path")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     production = json.loads(args.production.read_text())
     independent = json.loads(args.independent.read_text())
     comparisons = compare_decoders(production, independent)
-    mapping = json.loads((root/"derived/v1.1-mapped/map.json").read_text())
-    source = Path(mapping["input_path"])
+    mapping = json.loads(args.mapping.read_text())
+    source = args.source or root/"sources/extracted-v1.1/S3300Update/firmware/firmware.bin"
     raw = source.read_bytes()
     if digest(raw) != BASELINE or mapping["sha256"] != BASELINE:
         raise ValueError("Unsupported source")

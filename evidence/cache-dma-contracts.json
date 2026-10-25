@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "authenticated independent Capstone checks and direct Ghidra dossiers, not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "patch_constructed": false,
+  "instruction_checks": [
+    {
+      "address": 2149603116,
+      "bytes_sha256": "46cc260c77d467d6c0153bfa0095ade4df4402a342171fb32416df09ccaeba2a"
+    },
+    {
+      "address": 2149603136,
+      "bytes_sha256": "6524eaff3bc2cb08e32bce2b03b9e7c064daa9707412537656d5c8f25fe55064"
+    },
+    {
+      "address": 2149603148,
+      "bytes_sha256": "c587bfb2677525cf289f37e091996c9904229a69b4a458f07a1508ab47dec388"
+    },
+    {
+      "address": 2149603464,
+      "bytes_sha256": "63d6d26767f81c456c53357a7b3490bc38c45d43846d1467b43fbe78b0c6b38a"
+    },
+    {
+      "address": 2149603488,
+      "bytes_sha256": "d6cf3a4b8e2886e3dd93225420a4d227341f938ee0e1073cf58e8ad25fd4f726"
+    },
+    {
+      "address": 2149603500,
+      "bytes_sha256": "032b97c8476563c89ee483ea0f4b8bf84f9bbb3a8e4ba869061f05f884c5c35e"
+    },
+    {
+      "address": 2147868684,
+      "bytes_sha256": "c587bfb2677525cf289f37e091996c9904229a69b4a458f07a1508ab47dec388"
+    },
+    {
+      "address": 2147868720,
+      "bytes_sha256": "63d6d26767f81c456c53357a7b3490bc38c45d43846d1467b43fbe78b0c6b38a"
+    },
+    {
+      "address": 2147869056,
+      "bytes_sha256": "3b17b300d9d735b44ad32879074006db782d19fa47c2e706939f2aefe0edc565"
+    },
+    {
+      "address": 2147868012,
+      "bytes_sha256": "6041e6b300cc5541e9823a6e338035e657f3950b9d7f5222b2ad48c4f325c888"
+    },
+    {
+      "address": 2147867340,
+      "bytes_sha256": "63d6d26767f81c456c53357a7b3490bc38c45d43846d1467b43fbe78b0c6b38a"
+    },
+    {
+      "address": 2147867360,
+      "bytes_sha256": "7ab9b2acd2d64bcd9edb3aad9afffa2ca80a7156a7b49e06401e0e00df84e17f"
+    },
+    {
+      "address": 2148226316,
+      "bytes_sha256": "ba9b26ea1a3b6f4bf5b9818bcb79d37b29dd78aa9c1eba0dcd49c5a8b4b6dc3d"
+    },
+    {
+      "address": 2148226320,
+      "bytes_sha256": "acbbf1c71afc5cce6d1571b2ad90a96fdc1f9047eb4c211829e801452e1d3e8a"
+    },
+    {
+      "address": 2148226324,
+      "bytes_sha256": "582b77b8c04e833b8806a27d7ea6db75213c8cc832fde6a07a3043b228fb62ff"
+    },
+    {
+      "address": 2148226328,
+      "bytes_sha256": "b160fb59bbf1818f7fcf50a60008971363dab30a6f085d0fc233c00f29449d4a"
+    },
+    {
+      "address": 2148226332,
+      "bytes_sha256": "1b9754fce9fed6766510967c701e4d97f00a6915206f3b7ef0da62b9de906464"
+    },
+    {
+      "address": 2148226336,
+      "bytes_sha256": "913b9043808cca38224936f32154f2aaa10f1d68abd0ff6f0d8f85c5f23b2609"
+    },
+    {
+      "address": 2148226340,
+      "bytes_sha256": "e396234391efd159b91a6c8fefe41b3a9dd7d90878dd0a76fc964f9ea110ffcb"
+    },
+    {
+      "address": 2148226344,
+      "bytes_sha256": "40dccae1c5cb53e237ffa76e6ca3434419ac0cfbecefb4bddcd5d1669f0cce6c"
+    },
+    {
+      "address": 2148329608,
+      "bytes_sha256": "ac0882ae968f63cfa37c9cd67d8279f213a9eb7caf6091e182d29d2279da9e43"
+    },
+    {
+      "address": 2148329628,
+      "bytes_sha256": "5ae5e4fa4f42fdee853683a0f547a46cf15929e27c93d412964bbad73f3433e8"
+    },
+    {
+      "address": 2147868472,
+      "bytes_sha256": "4d2faaf33f5dd9af8467ece205044f4144985cdf29f225a0952f8db0520db042"
+    },
+    {
+      "address": 2147868476,
+      "bytes_sha256": "d39fb675721db1236ee81aa2329c6dcd009d313f0cbfd46f44658797747c37c8"
+    },
+    {
+      "address": 2147868700,
+      "bytes_sha256": "bf40dbb2f93c106eca389d44c0ea6f033d4e41d496205df27cdc43d2191b32cc"
+    },
+    {
+      "address": 2147868712,
+      "bytes_sha256": "62f4c94d79a33f7ac6507e89a4cac0009b96baf158835141ca165f7ef5141cbe"
+    },
+    {
+      "address": 2147868884,
+      "bytes_sha256": "a8e67770d47826b760c6cf0d17e239531e407c1a840f903f4617cb713812fb68"
+    },
+    {
+      "address": 2147869084,
+      "bytes_sha256": "769998de22de42e448528e422c2714af339102203388721f9faec03710c0b081"
+    },
+    {
+      "address": 2147867996,
+      "bytes_sha256": "cff6f99b5019d41d2854298a192e4d815df9bb0c957b83b2399bac13e23c8bfa"
+    },
+    {
+      "address": 2147868008,
+      "bytes_sha256": "9a044b9d35d8bfb12a7e9217ed346bc0ab65fcbd4c9390ee99e818bbbc4a4cab"
+    },
+    {
+      "address": 2147868016,
+      "bytes_sha256": "b58afe34691823435a34c78aca55f8669203e14dacaa319b4d34cfe4d9e50281"
+    },
+    {
+      "address": 2147868080,
+      "bytes_sha256": "271f0d4590251a3a66ab427dff6defb99c59ed2985a073296a22b3fa5b9b8e60"
+    },
+    {
+      "address": 2147867760,
+      "bytes_sha256": "938cfe040ce980267833ef578a7090f4012a0f9c86d56215a6f745d39f5034e3"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2148221884,
+        "dossier_sha256": "34bfe39ab0314601bfbbbe3e48664274f275226d77f63e438a0482c7c531296b",
+        "instructions_checked": 150,
+        "name": "FUN_800b43bc"
+      },
+      {
+        "address": 2148219548,
+        "dossier_sha256": "2dfed578bf5aee44bf6753fdc4addcb5c651419e1795d156a997e8dec87fa8da",
+        "instructions_checked": 151,
+        "name": "FUN_800b3a9c"
+      },
+      {
+        "address": 2148225764,
+        "dossier_sha256": "e5758e1db0ed4bcae4396ce0ce694242486cdbde8efc4acc1aab920080a6d6c6",
+        "instructions_checked": 151,
+        "name": "FUN_800b52e4"
+      },
+      {
+        "address": 2148222484,
+        "dossier_sha256": "a792d46936c243f5427ec0ecd63aea46d1c27499dcc3970957da75fdba115c9f",
+        "instructions_checked": 140,
+        "name": "FUN_800b4614"
+      },
+      {
+        "address": 2148213500,
+        "dossier_sha256": "097a099c52d2b8154da46ee6522cb71cfa98a39b1fc335a616987600766f5cc5",
+        "instructions_checked": 26,
+        "name": "FUN_800b22fc"
+      },
+      {
+        "address": 2148213604,
+        "dossier_sha256": "3f50930ea0171e247f03cf16d26f9e9fc78e6c3e4d4eca65e7755ea72a7b2e1e",
+        "instructions_checked": 41,
+        "name": "FUN_800b2364"
+      },
+      {
+        "address": 2148214124,
+        "dossier_sha256": "a5ff6674d6ec648fe5974414044ffc97288b337351695817ced24489040d0765",
+        "instructions_checked": 43,
+        "name": "FUN_800b256c"
+      },
+      {
+        "address": 2148329600,
+        "dossier_sha256": "54c3a1cc80f814ccc381d02a3de640261c05f323c91a5e7e3faac08b6f2298b3",
+        "instructions_checked": 10,
+        "name": "FUN_800ce880"
+      },
+      {
+        "address": 2149602844,
+        "dossier_sha256": "4016da9733665fef942f49d8590da81cf0ef606867597b2ce0c745650ee9ffa6",
+        "instructions_checked": 183,
+        "name": "FUN_8020561c"
+      },
+      {
+        "address": 2149119716,
+        "dossier_sha256": "db4f06e31e4caf99eb420946801e22a4177ec6c72ea60b61376f944e2e2f3f52",
+        "instructions_checked": 109,
+        "name": "FUN_8018f6e4"
+      },
+      {
+        "address": 2149153480,
+        "dossier_sha256": "72493859f2b378cb6883b65fc53229f0c9f4df611e72dfce43276e44985e1b07",
+        "instructions_checked": 102,
+        "name": "FUN_80197ac8"
+      },
+      {
+        "address": 2147868464,
+        "dossier_sha256": "d5f52c9d0df0b0b8d9f5f10d1e7e46008e2d1f8684404f837f20ce23e5876ad6",
+        "instructions_checked": 195,
+        "name": "FUN_8005df30"
+      },
+      {
+        "address": 2147867768,
+        "dossier_sha256": "3e31be16f570cc43f12da8029fc394f10d3377ed68f4f6dd0ed711b8dfb22fdc",
+        "instructions_checked": 81,
+        "name": "FUN_8005dc78"
+      },
+      {
+        "address": 2147867416,
+        "dossier_sha256": "6abd2eb826c9ca5b3230eed58a6ffc257dc22e794b60dcc89aa7c4600bd01bd4",
+        "instructions_checked": 88,
+        "name": "FUN_8005db18"
+      },
+      {
+        "address": 2147866496,
+        "dossier_sha256": "9e8bb40b523ad21735a74529e5a827a0cee00180aa743f1fede16c43669e5004",
+        "instructions_checked": 45,
+        "name": "FUN_8005d780"
+      },
+      {
+        "address": 2147866728,
+        "dossier_sha256": "d231e9e61009bfa3261d961618b5a088014eb52639fa2728f1458b6d4cc1e84a",
+        "instructions_checked": 49,
+        "name": "FUN_8005d868"
+      },
+      {
+        "address": 2147867136,
+        "dossier_sha256": "da0bf4266c3d0a0668fc80cef756822a10c9aad944c76ec0833a555ae63453ee",
+        "instructions_checked": 70,
+        "name": "FUN_8005da00"
+      },
+      {
+        "address": 2149129068,
+        "dossier_sha256": "5c36d1b9c57108d419dabbe8cc046103495a4ca70e93f698e8270a3552cc909c",
+        "instructions_checked": 74,
+        "name": "FUN_80191b6c"
+      }
+    ]
+  },
+  "explicit_sync_ehb_synci_in_selected_dossiers": [],
+  "contracts": [
+    {
+      "id": "cache.small_range_loop",
+      "status": "static-contract-verified",
+      "entries": {
+        "I-invalidate": 2148221884,
+        "D-invalidate": 2148219548,
+        "D-writeback-invalidate": 2148225764,
+        "D-writeback": 2148222484
+      },
+      "arguments": {
+        "a0": "address token",
+        "a1": "length bytes"
+      },
+      "return": "void; no cache-completion status",
+      "small_range_rule": "normalized=address&dfffffff;start=(normalized>>(exponent&31))<<(exponent&31);end=low32(normalized+length);while cursor<end:CACHE;cursor=low32(cursor+(1<<(exponent&31)))",
+      "first_test": "800b5514 branches to unsigned comparison before first CACHE; arithmetic model zero-length aligned=0 lines, unaligned=1 line; entry guards may prevent this loop being reached",
+      "geometry": "runtime exponent from EBase-selected context state; line rounding can affect bytes outside requested range",
+      "large_range": "800b256c selects tag-scan path at unsigned length>=low32(cache_capacity*10); different address filtering, not modeled by small-range helper",
+      "invalid_inputs": "I/D invalidate null address or zero length assert; D-WBINV null/zero uses whole-cache800b5028; D-writeback policy differs",
+      "small_range_examples": [
+        {
+          "address": 2147487744,
+          "length": 0,
+          "exponent": 5,
+          "arithmetic_only": {
+            "lines": [],
+            "end": 2147487744,
+            "end_wrapped": false,
+            "state": "finished"
+          }
+        },
+        {
+          "address": 2147487745,
+          "length": 0,
+          "exponent": 5,
+          "arithmetic_only": {
+            "lines": [
+              2147487744
+            ],
+            "end": 2147487745,
+            "end_wrapped": false,
+            "state": "finished"
+          }
+        },
+        {
+          "address": 2684358687,
+          "length": 2,
+          "exponent": 5,
+          "arithmetic_only": {
+            "lines": [
+              2147487744,
+              2147487776
+            ],
+            "end": 2147487777,
+            "end_wrapped": false,
+            "state": "finished"
+          }
+        },
+        {
+          "address": 3758096368,
+          "length": 536870944,
+          "exponent": 5,
+          "arithmetic_only": {
+            "lines": [],
+            "end": 16,
+            "end_wrapped": true,
+            "state": "finished"
+          }
+        }
+      ],
+      "constraints": [
+        "caller must own entire affected cache lines",
+        "32-bit end arithmetic has no overflow guard in reviewed loop",
+        "bit29 mask is not proof arbitrary address maps to DRAM",
+        "cross-core visibility and hardware ordering remain unverified"
+      ]
+    },
+    {
+      "id": "cache.context_interrupts",
+      "status": "partial",
+      "enter": 2148213500,
+      "exit": 2148213604,
+      "role": "per-EBase optional timing instrumentation and counter publication; not a lock around entire operation",
+      "interrupt_helper": 2148329600,
+      "interrupt_rule": "returns prior Status&ff00; writes(Status&ffff00ff)|argument; called around cache tag-read sequences",
+      "limits": "no global scheduler exclusion or DMA ownership transfer is proven; selected functions contain no explicit sync/ehb/synci; this does not prove absence of synchronization elsewhere"
+    },
+    {
+      "id": "capture.direct_scale_cache_handoff",
+      "status": "static-route-verified",
+      "address": 2149602844,
+      "caller": 2149603576,
+      "source": "param1 word2 address; span low32((word4>>1)*word1*2)",
+      "destination": "param4 address; span low32(even-rounded outputwidth*even-rounded outputheight*2)",
+      "sequence": [
+        "if sourcebit29 clear:D-WBINV800b52e4(source,span)",
+        "source descriptor address=source|20000000",
+        "D-invalidate800b3a9c(destination&dfffffff,outputspan)",
+        "output descriptor address=destination|20000000",
+        "create8018e1d0",
+        "run/wait wrapper8018f6e4(path,0)",
+        "destroy8018e344;return wrapperresult"
+      ],
+      "ownership": "caller-provided input/output allocations remain borrowed; descriptor construction copies address tokens, not image bytes",
+      "unknowns": [
+        "full allocation extents and cache-line sharing",
+        "runtime format/colour domain",
+        "completion success on every type-specific callback",
+        "interrupt ownership and cross-context exclusion",
+        "safe caller CPU access after completion"
+      ]
+    },
+    {
+      "id": "dma.fastcopy_handoff",
+      "status": "static-route-verified",
+      "address": 2147868464,
+      "arguments": {
+        "a0": "destination",
+        "a1": "source",
+        "a2": "length",
+        "a3/stackarg5": "scratchpad range selectors"
+      },
+      "preparation": "invalidate cached destination;writeback-invalidate cached source;ORboth with20000000;CPUcopies alignment head/tail;DMA only if alignment offsets agree",
+      "ownership": "scratchpad acquire8005d780 before descriptors;release8005d868 after synchronous submit helper8005dc78",
+      "descriptor_rule": "pairs of source/destination word addresses, masks differ at final remainder; cannot infer universal DMA address format",
+      "completion_helper": 2147867768,
+      "completion": "installs callback8005db18;wait800c1014(event808a7588,mask40000000,timeoutffffffff);callback sets event after descriptor count reaches0;helper returns1 without checking wait return",
+      "return": "uncached destination alias on aligned DMA route;fallback memcpy return otherwise",
+      "limits": "hardware-specific scratchpad/DMA route; caller overlap,lengthoverflow,foreign owners and cancellation safety are not established"
+    },
+    {
+      "id": "code.observed_cache_pair",
+      "status": "partial",
+      "address": 2147867136,
+      "sequence": "one branch D-WBINV800b52e4(bfc08000,1800) then I-invalidate800b43bc(same); scratchpad ownership acquired and released",
+      "scope": "Os/Dma/FastCopy initialization path; other branch copies preserved scratchpad bytes and skips pair",
+      "limits": "not a general code-loader publication contract; no placement/hook/execute handoff proven"
+    },
+    {
+      "id": "image.copy_cached_publication",
+      "status": "static-route-verified",
+      "address": 2149129068,
+      "branch": "when(param3&e)==0:memcpy(destination&dfffffff,source&dfffffff,width*height*2),thenD-WBINVdestination,return1",
+      "other_branch": "uncached descriptors;may invoke whole-cache800b5028 then80191a38",
+      "limits": "another path-specific example, not permission to borrow any capture buffer"
+    }
+  ],
+  "gates": {
+    "general_code_publication_verified": false,
+    "capture_buffer_ownership_verified": false,
+    "dma_public_sdk_verified": false,
+    "code_trial_allowed": false
+  },
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_cache_dma_contracts.py": "8fba087f3f3407ca9862cc6c7ce63e0e4a4a84b1d57ca0438b0714359bbdb01a",
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Calcutta",
+  "implemented": [
+    "Pinned portable Ghidra12.1.4/JDK21 with official archive hashes",
+    "Retained projects for decoded application and six executable representations",
+    "Native instruction-checked index with pseudocode, CFG/reference dossiers and retained failures",
+    "Real integer-only freestanding MIPS32r2/o32 SDK builds and 58 emulation cases",
+    "19 source/evidence-linked interface contracts",
+    "Closed-registry candidate validation and local trial packages",
+    "Append-only camera observation ledger and fail-closed readiness gates",
+    "12-chapter offline searchable development handbook",
+    "Source-only deterministic archive excluding vendor inputs and private photographs"
+  ],
+  "verification": {
+    "local_unit_tests": 226,
+    "fresh_source_workflow_checks": 11,
+    "mips_emulation_cases": 58,
+    "sdk_reproducible_sha256": "cd959a7874f698e4e357832bc5fe6e8075316e5afd8385444369e3dfe678ac57",
+    "amber_reproducible_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+    "native_application_dossiers": 15816,
+    "independently_byte_checked_instructions": 1369833,
+    "initial_decompiler_failures": 3,
+    "recovered_by_focused_retry": 1,
+    "remaining_decompiler_engine_errors": 2,
+    "linux_ci": "Existing Windows/Ubuntu workflow retained; this pass ran local Windows and fresh source-tree checks, not a new remote CI run.",
+    "fresh_environment_scope": "Fresh source tree with original firmware, using existing interpreter/dependency/compiler caches; not a clean OS installation."
+  },
+  "camera_results": {
+    "read_only_inventory": "Nikon S3300 V1.1",
+    "amber_tint_in_saved_jpeg": true,
+    "standard_colour_retained": true,
+    "restart_mode_persistence_playback_user_reported": true,
+    "english_amber_label": "failed; Sepia remains",
+    "exact_installed_image_hash": null,
+    "new_firmware_update_performed_in_this_pass": false
+  },
+  "remaining": [
+    "Exact active English label consumer",
+    "Complete saved-photo buffer ABI and cache/DMA ownership",
+    "Safe executable placement/hook and execution-context contract",
+    "Complete internal flash/calibration backup and physical write bounds",
+    "Independently reachable software recovery after application failure",
+    "Measured latency, memory headroom and energy budgets"
+  ],
+  "resource_ready": false,
+  "code_ready": false,
+  "whole_platform_complete": false,
+  "operating_boundary": "Software only; no arbitrary diagnostic commands, no executable trial without recovery proof, no automatic public release."
+}

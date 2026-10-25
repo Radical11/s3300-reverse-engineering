@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "trial": "amber-mono",
+  "check": "standard-color",
+  "outcome": "pass",
+  "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "installed_image_sha256": null,
+  "observation_source": "user-reported camera observation",
+  "notes": "25 October explicit Auto mode Color options -> Standard color -> OK repeat: user reports normal Standard preview. New twice-read/copied DSCN1188 has varied colour, unclipped Cb mean134.13 SD14.79 / Cr mean126.91 SD9.47, unlike constant Amber110/150. This supersedes the earlier intended-Standard pair failure, preserving it. No firmware cause is assigned to the earlier selection discrepancy.",
+  "recorded_at_utc": "2026-10-24T20:20:51.109794+00:00",
+  "target_firmware_execution_observed_by_tool": false,
+  "scope": "An observation does not establish the exact installed bytes or unbootable recovery",
+  "sample": {
+    "relative_path": "samples/standard-repeat-verification-2026-10-25/DSCN1188.JPG",
+    "sha256": "da7126e5d8c50ad726ed0ece80e2b8ca1688f7f4bbd82fec59d57720fb38eda9"
+  }
+}

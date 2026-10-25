@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-24",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "overall_semantics_complete": false,
+  "target_executed": false,
+  "device_commands_issued": false,
+  "rea_artifact_evidence_id": "ev_1ca5f2044796987f799ba099c30d85699321761a5984e602fb08837e39b236a7",
+  "rea_native_decompilation_available": false,
+  "provider_blocker": "Installed REA adapter still rejects Windows MIPS ELF/missing ABI metadata. Direct portable Ghidra now provides retained native analysis without altering firmware headers.",
+  "checklist": [
+    {
+      "question": "supplied-file byte coverage",
+      "status": "answered",
+      "sources": [
+        "notes/unpacked-workspace.md"
+      ]
+    },
+    {
+      "question": "static known-function/reference inventory",
+      "status": "answered_with_declared_scan_bounds",
+      "sources": [
+        "evidence/firmware-atlas.json"
+      ]
+    },
+    {
+      "question": "installed RAM and heap headroom",
+      "status": "partial",
+      "recovered": "DRAM selector and allocator query path",
+      "missing": "Live selector and allocator state",
+      "sources": [
+        "evidence/hardware-contracts.json"
+      ]
+    },
+    {
+      "question": "CPU and clock identity",
+      "status": "partial",
+      "recovered": "Clock getter and context/library identifiers",
+      "missing": "Runtime clock table and exact chip identity",
+      "sources": [
+        "evidence/hardware-contracts.json"
+      ]
+    },
+    {
+      "question": "peripheral and DMA contracts",
+      "status": "partial",
+      "recovered": "GPIO table/leaves; DMA descriptor offsets",
+      "missing": "Board wiring, field domains and coherence",
+      "sources": [
+        "evidence/hardware-contracts.json"
+      ]
+    },
+    {
+      "question": "saved-photo capture integration",
+      "status": "partial",
+      "recovered": "RAW-to-YUV descriptor copying, command15 retention and final matrix register upload; Amber saved-photo tint corroborated",
+      "missing": "Complete pixel-buffer ABI, safe module hook and execution context ownership",
+      "sources": [
+        "evidence/capture-contracts.json",
+        "evidence/matrix-application.json",
+        "evidence/amber-runtime-verification-2026-10-24.json"
+      ]
+    },
+    {
+      "question": "menus and settings persistence",
+      "status": "partial",
+      "recovered": "Staging/media route, independently modeled checksum; selected mode remembered after restart",
+      "missing": "English Amber label consumer, physical write/erase bounds, power-loss/wear policy and full arbitrary-setting ownership",
+      "sources": [
+        "evidence/state-contracts.json"
+      ]
+    },
+    {
+      "question": "debug GetMem external reachability",
+      "status": "partial",
+      "recovered": "Handler table/index, receive flag and internal arguments",
+      "missing": "Active endpoints/modes and complete state framing",
+      "sources": [
+        "evidence/state-contracts.json"
+      ]
+    },
+    {
+      "question": "complete backup and usable recovery",
+      "status": "unresolved",
+      "sources": [
+        "notes/restore-path.md",
+        "evidence/state-contracts.json"
+      ]
+    },
+    {
+      "question": "exact sensor and driver limits",
+      "status": "unresolved",
+      "sources": [
+        "evidence/hardware-contracts.json",
+        "evidence/capture-contracts.json"
+      ]
+    },
+    {
+      "question": "runtime performance/energy budgets",
+      "status": "unresolved",
+      "sources": [
+        "notes/performance-protocol.md"
+      ]
+    },
+    {
+      "question": "lens/flash/preview complete integration contracts",
+      "status": "inventory_leads",
+      "sources": [
+        "evidence/firmware-atlas.json"
+      ]
+    }
+  ],
+  "direct_ghidra_available": true,
+  "native_rea_decompilation_available": false,
+  "new_evidence": [
+    "evidence/native-analysis.json",
+    "evidence/matrix-application.json",
+    "evidence/sdk-validation.json",
+    "evidence/amber-runtime-verification-2026-10-24.json"
+  ]
+}

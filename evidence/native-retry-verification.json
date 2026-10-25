@@ -1,0 +1,23 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "address": "80248bf4",
+  "timeout_seconds": 120,
+  "direct_ghidra": true,
+  "native_rea_evidence": false,
+  "target_executed": false,
+  "original_dossier_sha256": "89be04cc47fc337184307e2ba377160298eeb55f20ac876223dcc8c08eb24ad4",
+  "retry_dossier_sha256": "1cc415053fdc62ac27f3c9699798db32663b22707a25fc5b789125c69df79c07",
+  "retry_script_sha256": "2c45b849119b4b04427b120844feb2053ff802d3d37fddd69764c3dabcbf3ea8",
+  "decompilation_completed": true,
+  "original_failure_preserved": true,
+  "remaining_initial_failures": [
+    {
+      "address": "8025b860",
+      "message": "\nLow-level Error: Backward normalization not implemented"
+    },
+    {
+      "address": "8063bae8",
+      "message": "\nLow-level Error: Bad size for array of type wchar_t"
+    }
+  ]
+}

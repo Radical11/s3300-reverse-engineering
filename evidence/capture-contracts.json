@@ -1,0 +1,877 @@
+{
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated carrier/ELF, selected exact instruction assertions, bounded MIPS32 linear listings, delay-slot-aware manual trace, address-materialization and J/JAL scans",
+  "rea_evidence": false,
+  "target_executed": false,
+  "reviewed_instruction_facts": [
+    {
+      "address": 2149603608,
+      "bytes_hex": "21608000"
+    },
+    {
+      "address": 2149603612,
+      "bytes_hex": "0100a32c"
+    },
+    {
+      "address": 2149603616,
+      "bytes_hex": "0100842c"
+    },
+    {
+      "address": 2154493140,
+      "bytes_hex": "34000224"
+    },
+    {
+      "address": 2154493148,
+      "bytes_hex": "1000a2af"
+    },
+    {
+      "address": 2154493212,
+      "bytes_hex": "fa8c080c"
+    },
+    {
+      "address": 2149569340,
+      "bytes_hex": "0c00838c"
+    },
+    {
+      "address": 2149569380,
+      "bytes_hex": "eef10808"
+    },
+    {
+      "address": 2149833496,
+      "bytes_hex": "1000043c"
+    },
+    {
+      "address": 2149797404,
+      "bytes_hex": "95be030c"
+    }
+  ],
+  "diagnostics": [
+    {
+      "address": 2149925104,
+      "text": "DirectConvertRawToYuvEx: no all required input params are valid (%p %p %p %p)\n"
+    },
+    {
+      "address": 2149236568,
+      "text": "In C13 - 420 input to JPEG is not supported in HW. So ICA conversion from 420 to 422 is required.Turn on JPEG_PATH_FLAG_LDC flag and use a NULL grid for ICA."
+    },
+    {
+      "address": 2149236804,
+      "text": "In yuv 420 - Top and Left for a small image inside the big one must be even"
+    },
+    {
+      "address": 2149237252,
+      "text": "subimage's height when input is yuv 420 or output is JPEG yuv 420 must be multiple of 16"
+    },
+    {
+      "address": 2149237408,
+      "text": "Jpeg decoding to Yuv 420 output is not supported"
+    },
+    {
+      "address": 2150890148,
+      "text": "psCapture->bUseSeperateYuvBuffer =   %d \n"
+    },
+    {
+      "address": 2150905912,
+      "text": "For DNG format YUV buffer should be separate from RAW"
+    },
+    {
+      "address": 2150897028,
+      "text": "In case of CW 90 or CW 270 rotation, THUMBNAILS_FROM_MAIN_YUV_BUFFER is not supported !!!\n"
+    },
+    {
+      "address": 2150890564,
+      "text": "Does not support!!! if to enable storing JPEG strips in parallel with compressor\n"
+    },
+    {
+      "address": 2150914240,
+      "text": "StillCaptureImageTunePreviewRunIpp\n"
+    },
+    {
+      "address": 2150914636,
+      "text": "StillCaptureImageTunePreviewRunIpu\n"
+    },
+    {
+      "address": 2150903340,
+      "text": "psSensorFrame"
+    },
+    {
+      "address": 2150903404,
+      "text": "sJpegActualSize"
+    }
+  ],
+  "diagnostic_reference_candidates": [
+    {
+      "target": 2149236568,
+      "lui_address": 2149206060,
+      "low_address": 2149206068,
+      "instructions_hex": [
+        "3c04801b",
+        "2484bf58"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2149236804,
+      "lui_address": 2149206332,
+      "low_address": 2149206340,
+      "instructions_hex": [
+        "3c04801b",
+        "2484c044"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2149237252,
+      "lui_address": 2149213768,
+      "low_address": 2149213776,
+      "instructions_hex": [
+        "3c10801b",
+        "2604c204"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2149237408,
+      "lui_address": 2149215360,
+      "low_address": 2149215368,
+      "instructions_hex": [
+        "3c1e801b",
+        "27c4c2a0"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2149925104,
+      "lui_address": 2149603740,
+      "low_address": 2149603748,
+      "instructions_hex": [
+        "3c068025",
+        "24c440f0"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150890148,
+      "lui_address": 2150667268,
+      "low_address": 2150667280,
+      "instructions_hex": [
+        "3c078034",
+        "24e4faa4"
+      ],
+      "span_instructions": 3,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150890564,
+      "lui_address": 2150668248,
+      "low_address": 2150668256,
+      "instructions_hex": [
+        "3c128034",
+        "2644fc44"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150897028,
+      "lui_address": 2150748320,
+      "low_address": 2150748328,
+      "instructions_hex": [
+        "3c118034",
+        "26241584"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150903340,
+      "lui_address": 2150815044,
+      "low_address": 2150815060,
+      "instructions_hex": [
+        "3c198034",
+        "27262e2c"
+      ],
+      "span_instructions": 4,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150903404,
+      "lui_address": 2150816720,
+      "low_address": 2150816728,
+      "instructions_hex": [
+        "3c078034",
+        "24e62e6c"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150905912,
+      "lui_address": 2150839984,
+      "low_address": 2150839992,
+      "instructions_hex": [
+        "3c088034",
+        "25043838"
+      ],
+      "span_instructions": 2,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150914240,
+      "lui_address": 2150875092,
+      "low_address": 2150875104,
+      "instructions_hex": [
+        "3c078034",
+        "24e458c0"
+      ],
+      "span_instructions": 3,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    },
+    {
+      "target": 2150914636,
+      "lui_address": 2150876756,
+      "low_address": 2150876768,
+      "instructions_hex": [
+        "3c028034",
+        "24445a4c"
+      ],
+      "span_instructions": 3,
+      "confidence": "Static address-materialization candidate; control flow unverified"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "capture.raw_to_yuv",
+      "evidence_type": "instruction-traced",
+      "entry": 2149603608,
+      "old_incomplete_candidate": 2149603620,
+      "source_window": "raw_to_yuv_wrapper",
+      "arguments": "a0/a1 are required descriptor pointers; a2 is a required options pointer whose +0xc member is also required. No original C type recovered.",
+      "descriptor_accesses": {
+        "a0": {
+          "word_offsets_copied": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24
+          ],
+          "local_destination": "sp+0x24"
+        },
+        "a1": {
+          "word_offsets_copied": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24
+          ],
+          "local_destination": "sp+0x48"
+        }
+      },
+      "options_accesses": [
+        {
+          "offset": 0,
+          "type": "u32",
+          "role": "five-way format dispatch; numeric values 0..4"
+        },
+        {
+          "offset": 4,
+          "type": "u32",
+          "role": "policy selector values 1..4 map to 0,4,5,1"
+        },
+        {
+          "offset": 8,
+          "type": "u32",
+          "role": "processing-disable choices 1,2,3"
+        },
+        {
+          "offset": 12,
+          "type": "pointer",
+          "role": "required; four u16 copied into local command payload"
+        },
+        {
+          "offset": 16,
+          "type": "u8",
+          "role": "controls processing mask bit0x10"
+        },
+        {
+          "offset": 17,
+          "type": "u8",
+          "role": "controls processing mask bit0x20"
+        },
+        {
+          "offset": 20,
+          "type": "pointer",
+          "role": "optional additional command if first word nonzero"
+        },
+        {
+          "offset": 24,
+          "type": "u32",
+          "role": "numeric context0x40/0x50/0xb0 -> indices0/1/5"
+        }
+      ],
+      "path_calls": [
+        2149114320,
+        2149563532,
+        2149566820,
+        2149133436,
+        2149133828,
+        2149124684,
+        2150676588,
+        2149119716,
+        2150676708,
+        2149114692
+      ],
+      "ownership": "Descriptors are copied by value; this does not establish retention/lifetime/cache coherence for pointers inside them. No full-frame allocation/free contract established.",
+      "unknowns": [
+        "descriptor field meanings, dimensions/stride/planes, Bayer order, bit depth, clipping, cache ownership, asynchronous completion and active ordinary-capture reachability"
+      ]
+    },
+    {
+      "id": "capture.command15_retention",
+      "evidence_type": "instruction-traced",
+      "builder": 2154492980,
+      "wrapper": 2149725160,
+      "router": 2149569316,
+      "external_command_bytes": 52,
+      "external_fields": {
+        "size": 0,
+        "command_id": 4,
+        "secondary_id": 8,
+        "context": 12,
+        "bank": 16,
+        "payload": 24
+      },
+      "payload": "Nine 16-bit matrix coefficients at+0x18..+0x28, two offset halfwords at+0x2a/+0x2c biased by128, one byte at+0x2e, signed source halfword extended to word at+0x30.",
+      "contexts_from_color_effect": {
+        "sites": [
+          2154481188,
+          2154481196
+        ],
+        "values": [
+          64,
+          176
+        ],
+        "numeric_cache_indices": [
+          0,
+          5
+        ],
+        "semantic_names": "Unestablished; cannot label still/live from these values alone"
+      },
+      "ordinary_route": {
+        "condition": "command+0xc != 0x90",
+        "callee": 2149828536,
+        "dirty_word": 2156666232,
+        "dirty_mask": 1048576,
+        "cache_pointer_base": 2156666248,
+        "slot_formula": "base + 4*(74*context_index + 37*bank + command_subindex); id15 yields command_subindex15",
+        "retained_copy": 2149797196,
+        "payload_copy": "source+0x18 -> retained+0x14; command_length-0x18 bytes, 0x1c for the reviewed command15",
+        "allocation_path": 2149133436,
+        "ownership": "This synchronous branch retains copied payload before returning; stack command does not itself become the retained buffer. Embedded pointers, replacement allocator failure and eventual hardware application need separate proof."
+      },
+      "special_route": {
+        "condition": "command+0xc == 0x90",
+        "allocator": 2147617152,
+        "copy": 2148465236,
+        "copy_bytes": "command first word",
+        "queue": 2149537300,
+        "message": 4166,
+        "ownership": "Allocated full command copy is passed as message argument; receiver/free completion not traced."
+      },
+      "hardware_apply": "Dirty state and cache retention traced; final matrix MMIO dispatch and active saved-photo context not established."
+    },
+    {
+      "id": "capture.gamma_normal_still_selector",
+      "evidence_type": "instruction-traced",
+      "classifier": 2149573568,
+      "static_input": 0,
+      "classification_result": 0,
+      "call_sites": [
+        2149888200,
+        2150260256
+      ],
+      "first_call_arguments": "a0=global[0x808c1c04], a1=0, a2=word at active s4+0x3c",
+      "second_call_arguments": "a0=0, a1=0, a2=stack+0x9c",
+      "cached_table_selector": 2149572684,
+      "cached_command_pointers": 2156666104,
+      "cached_table_offset_rule": "selected object+8==12 -> object+0x150; otherwise object+0x1b0",
+      "uploader": 2149129364,
+      "unknowns": [
+        "table producers and normal-mode active command contents",
+        "resource id0 selection",
+        "sensor/RGB/YUV domain and calibration requirements"
+      ]
+    },
+    {
+      "id": "capture.jpeg_constraints",
+      "evidence_type": "diagnostics-with-local-guards",
+      "compiled_sdk_family_diagnostic": "C13",
+      "constraints": [
+        {
+          "string": 2149236568,
+          "reference": 2149206068,
+          "guard": "input halfword+2 ==1 enters branch checking flags at+0x68 &0x40",
+          "meaning": "420 input requires the existing ICA conversion path and flag0x40; hardware JPEG does not directly accept420 per diagnostic"
+        },
+        {
+          "string": 2149236804,
+          "reference": 2149206340,
+          "guard": "branch checks odd bit via andi1",
+          "meaning": "420 crop top and left must be even per diagnostic; full operand provenance remains partial"
+        },
+        {
+          "string": 2149237252,
+          "reference": 2149213776,
+          "guard": "andi0xf, branch to diagnostic when nonzero",
+          "meaning": "subimage height multiple16 for420 input or420 output per diagnostic; full mode conditions need trace"
+        },
+        {
+          "string": 2149237408,
+          "reference": 2149215368,
+          "guard": "rejection diagnostic, incoming branch provenance unresolved",
+          "meaning": "JPEG decode to420 unsupported in this SDK path per diagnostic"
+        }
+      ],
+      "limit": "Compiled code constraints are not proof of active camera format, silicon identity, sensor model or device measurements."
+    },
+    {
+      "id": "capture.buffer_separation",
+      "evidence_type": "diagnostic-tied-to-field",
+      "field_read_site": 2150667272,
+      "field_offset": 435,
+      "field_type": "u8",
+      "field_diagnostic": 2150890148,
+      "base": "s1 in selected capture-processing function; not a stable public pointer ABI",
+      "dng_separation_diagnostic": {
+        "string": 2150905912,
+        "reference": 2150839992
+      },
+      "unknowns": [
+        "where separation is set",
+        "RAW/YUV alias lifetime",
+        "active image sizes",
+        "whether DNG path is exposed on S3300"
+      ]
+    },
+    {
+      "id": "capture.preview_separate_entries",
+      "evidence_type": "directly-bound-entry-diagnostic",
+      "ipp": {
+        "entry": 2150875088,
+        "diagnostic": 2150914240
+      },
+      "ipu": {
+        "entry": 2150876752,
+        "diagnostic": 2150914636
+      },
+      "limit": "These named tuning-preview paths must not be substituted for proof that an effect changes an ordinary saved JPEG."
+    }
+  ],
+  "direct_transfer_encoding_candidates": {
+    "0x801fd324": [
+      {
+        "site": 2148428544,
+        "instruction": "jal"
+      },
+      {
+        "site": 2148428600,
+        "instruction": "jal"
+      },
+      {
+        "site": 2148429812,
+        "instruction": "jal"
+      },
+      {
+        "site": 2148429868,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149570140,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149570208,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149570268,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149570328,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149571852,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149571868,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149571896,
+        "instruction": "j"
+      },
+      {
+        "site": 2149572260,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149572324,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149572440,
+        "instruction": "j"
+      },
+      {
+        "site": 2149700096,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149700340,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149700564,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149700636,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149701104,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149725168,
+        "instruction": "jal"
+      },
+      {
+        "site": 2155466668,
+        "instruction": "jal"
+      },
+      {
+        "site": 2155466984,
+        "instruction": "jal"
+      },
+      {
+        "site": 2155467052,
+        "instruction": "jal"
+      },
+      {
+        "site": 2155478272,
+        "instruction": "jal"
+      },
+      {
+        "site": 2155504340,
+        "instruction": "jal"
+      }
+    ],
+    "0x80205918": [],
+    "0x80234d4c": [
+      {
+        "site": 2149801300,
+        "instruction": "j"
+      },
+      {
+        "site": 2149829168,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149829764,
+        "instruction": "jal"
+      },
+      {
+        "site": 2149830432,
+        "instruction": "jal"
+      }
+    ],
+    "0x8023c7b8": [
+      {
+        "site": 2149569380,
+        "instruction": "j"
+      },
+      {
+        "site": 2149834804,
+        "instruction": "j"
+      }
+    ],
+    "0x8033bfd0": [
+      {
+        "site": 2150877384,
+        "instruction": "jal"
+      }
+    ],
+    "0x8033c650": [
+      {
+        "site": 2150877400,
+        "instruction": "jal"
+      }
+    ]
+  },
+  "limitations": [
+    "All new findings are independent offline Capstone observations/inferences, not retained native REA Evidence or target execution.",
+    "Bounded analyst windows outside compiler-unwind coverage do not prove complete function boundaries or reachable control flow.",
+    "J/JAL and LUI address scans can include data false positives and miss indirect calls, GP-relative references and other instruction modes.",
+    "No end-to-end saved-JPEG integration hook, safe frame-buffer ABI, physical sensor model, RAM budget or recovery mechanism is established.",
+    "No firmware bytes, device state or candidate were changed."
+  ],
+  "ready_for_saved_photo_patch": false,
+  "listings": [
+    {
+      "name": "raw_to_yuv_wrapper",
+      "start": 2149603608,
+      "bytes": 1156,
+      "sha256": "6db5abb3c5c95f16aee7c830a81af4e3a4ce28a6fb95bf4716cd84c62363c4f8",
+      "path": "derived/capture-contracts/raw_to_yuv_wrapper.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_queue_wrapper",
+      "start": 2149725160,
+      "bytes": 32,
+      "sha256": "5e2286f62baf98221ef2557763bd544c257283c384de694ee2082cbcd66f1ae4",
+      "path": "derived/capture-contracts/ipp_queue_wrapper.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_route_and_copy",
+      "start": 2149569316,
+      "bytes": 176,
+      "sha256": "1e177dad33de7d009ebb2c264054f328af1a656616f72df0699cbaacad74b22c",
+      "path": "derived/capture-contracts/ipp_route_and_copy.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_context_classifier",
+      "start": 2149828472,
+      "bytes": 64,
+      "sha256": "2cb509ada8e245c8caafec46bcb157fc45cc745b0ae987029aebc755ba0da05a",
+      "path": "derived/capture-contracts/ipp_context_classifier.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_dispatch_entry",
+      "start": 2149828536,
+      "bytes": 472,
+      "sha256": "fc6fc9f532eb6fcee9e0c489718ee46d731c201b220d2e92d0330c30e1001936",
+      "path": "derived/capture-contracts/ipp_dispatch_entry.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_retained_cache",
+      "start": 2149829008,
+      "bytes": 188,
+      "sha256": "4197c6e57cdc6b580e8c1f268ba305cd533d53c5e045177955acf4c045f2d648",
+      "path": "derived/capture-contracts/ipp_retained_cache.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_dispatch_15_selection",
+      "start": 2149829580,
+      "bytes": 56,
+      "sha256": "1163858e034a4eb4043968063519614400e9989a2bf03eed39b835d4e2273a39",
+      "path": "derived/capture-contracts/ipp_dispatch_15_selection.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_dispatch_15_branch",
+      "start": 2149831408,
+      "bytes": 16,
+      "sha256": "306c6395b732995d5035d850e4b9ce41c18f7b29e3123d09dc835c750297fe31",
+      "path": "derived/capture-contracts/ipp_dispatch_15_branch.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_dirty_matrix",
+      "start": 2149833484,
+      "bytes": 32,
+      "sha256": "b8234c742a759516f24fcee3476e077d1ae30e34c7178e39f46f8e3ff1af1b8d",
+      "path": "derived/capture-contracts/ipp_dirty_matrix.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_payload_copy",
+      "start": 2149797196,
+      "bytes": 224,
+      "sha256": "aa6d13b5413409fe1f262c940d2ab4cac11909a09a8e7143e6060324f1294f32",
+      "path": "derived/capture-contracts/ipp_payload_copy.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "ipp_allocate_cache",
+      "start": 2149797892,
+      "bytes": 16,
+      "sha256": "69484ad62c28806687761e2476d96ddac39012a940e036f9a21ff02d354b9a98",
+      "path": "derived/capture-contracts/ipp_allocate_cache.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "gamma_select_and_upload",
+      "start": 2149572988,
+      "bytes": 236,
+      "sha256": "853ec943eb4a92138243f1520fedd2715cdc474d5db11d77771fbbdfa5f89735",
+      "path": "derived/capture-contracts/gamma_select_and_upload.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "still_gamma_call_context",
+      "start": 2149888144,
+      "bytes": 64,
+      "sha256": "34be585211dde28a615025c4637f1670a903e65ff0cf4fabdec8785dc8899eaa",
+      "path": "derived/capture-contracts/still_gamma_call_context.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "processing_gamma_call_context",
+      "start": 2150260212,
+      "bytes": 52,
+      "sha256": "9c1ddbc9babcbcbc95355984c17a5c80a410c0ed104adcd08522996f95d35f5c",
+      "path": "derived/capture-contracts/processing_gamma_call_context.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "jpeg_input_setup",
+      "start": 2149205136,
+      "bytes": 80,
+      "sha256": "a9a9a0c0a222ecc67fbdf6dc210959cf67891c18d9dc953b53bcbbaeaa6a5f8e",
+      "path": "derived/capture-contracts/jpeg_input_setup.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "jpeg_420_conversion_guard",
+      "start": 2149206048,
+      "bytes": 36,
+      "sha256": "76cfc9513c1360376ec2c0eabefbe8ab9752857fb960c556f3c13f3b217d46da",
+      "path": "derived/capture-contracts/jpeg_420_conversion_guard.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "jpeg_crop_guard",
+      "start": 2149206316,
+      "bytes": 40,
+      "sha256": "b89bb547b130d9f6140fd87bc90cdc39e60973a295cb1e5b3a4bf069156968ed",
+      "path": "derived/capture-contracts/jpeg_crop_guard.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "jpeg_subimage_alignment_guard",
+      "start": 2149213756,
+      "bytes": 36,
+      "sha256": "aa1e660a4161cf23b105774cbf7d6e3d3e13a7dc807b5ad39788ce7518bc71dc",
+      "path": "derived/capture-contracts/jpeg_subimage_alignment_guard.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "jpeg_decode_420_rejection",
+      "start": 2149215360,
+      "bytes": 24,
+      "sha256": "daa28437fc83be345f2f8693cedbce120013b046580b82debf08d32558caf619",
+      "path": "derived/capture-contracts/jpeg_decode_420_rejection.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "capture_separate_buffer_field",
+      "start": 2150667244,
+      "bytes": 40,
+      "sha256": "2f5b3104e782f62eef13ede0e75eda14fa0e65211ee1719b2f0add354dbd5f0c",
+      "path": "derived/capture-contracts/capture_separate_buffer_field.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "capture_dng_buffer_diagnostic",
+      "start": 2150839984,
+      "bytes": 24,
+      "sha256": "83e2e699497d8e049f9fd190d3e138bc843e9305b8ba369350ed5d186ba8c2da",
+      "path": "derived/capture-contracts/capture_dng_buffer_diagnostic.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "capture_rotation_diagnostic",
+      "start": 2150748312,
+      "bytes": 28,
+      "sha256": "c038b75945b5ad3821bb06aebc69b650326d23b29204291e67dbc022c9aa95ff",
+      "path": "derived/capture-contracts/capture_rotation_diagnostic.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "preview_ipp_entry",
+      "start": 2150875088,
+      "bytes": 56,
+      "sha256": "476355516fa6622e0588eacd768752f3a80638550735b01a36e718f8914ff974",
+      "path": "derived/capture-contracts/preview_ipp_entry.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "name": "preview_ipu_entry",
+      "start": 2150876752,
+      "bytes": 40,
+      "sha256": "d4e82e46b5c69be13fe2e3beb1100951593e8f28cd70167b64c8a5bd81683e18",
+      "path": "derived/capture-contracts/preview_ipu_entry.asm",
+      "boundary_type": "analyst-window"
+    },
+    {
+      "fde_address": 2155742256,
+      "fde_record_size": 32,
+      "fde_sha256": "7919fd1a4004d823d31e0031055a8f5df923db35390832c1ba6254377477eb13",
+      "cie_address": 2155742224,
+      "start": 2154479736,
+      "end_exclusive": 2154480108,
+      "size": 372,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "9a25daba47f4123e76d4dcd5c07e810bc26b08d6d1d114c29d93fbaab4305569",
+      "complete_linear_decode": true,
+      "path": "derived/capture-contracts/806ac078.asm",
+      "boundary_type": "compiler-unwind"
+    },
+    {
+      "fde_address": 2155742320,
+      "fde_record_size": 40,
+      "fde_sha256": "7fa469e259b1d49b8692fe3ed9ac5e0462c6b314e47af6a00c122a3ae170c48e",
+      "cie_address": 2155742224,
+      "start": 2154480860,
+      "end_exclusive": 2154481928,
+      "size": 1068,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "adb67a24368025a6ec81b16124cc769b4a75dfff36d68b4370e986d602e34c3e",
+      "complete_linear_decode": true,
+      "path": "derived/capture-contracts/806ac4dc.asm",
+      "boundary_type": "compiler-unwind"
+    },
+    {
+      "fde_address": 2155743272,
+      "fde_record_size": 40,
+      "fde_sha256": "398b57e93fb8d8dd51acc3bb9bbcd8545877347d888814686735e1ac02790a2e",
+      "cie_address": 2155743140,
+      "start": 2154492980,
+      "end_exclusive": 2154493248,
+      "size": 268,
+      "source_region_start": 2154287616,
+      "source_region_sha256": "59cdac1f2664089c92ff044136be3773aa35e39509602dea379992b28cf57e8e",
+      "evidence_type": "Exception-unwind FDE header; no recovered symbol or runtime execution",
+      "function_sha256": "88bce898d91e97cd5c9f1507164f99cadea3822d1261664d9aa8e7f6c130a61c",
+      "complete_linear_decode": true,
+      "path": "derived/capture-contracts/806af434.asm",
+      "boundary_type": "compiler-unwind"
+    }
+  ]
+}

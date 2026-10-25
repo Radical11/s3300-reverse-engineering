@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated Capstone instructions corroborated by retained direct Ghidra dossiers; not native REA Evidence",
+  "target_executed": false,
+  "device_commands_issued": false,
+  "instruction_assertions": 35,
+  "native_dossiers": [
+    {
+      "entry": 2149205136,
+      "dossier_sha256": "5417e9b9c0e246643490435acdc3b5173e2c92cde4e6271469e39cc8e20a88f5",
+      "instructions_byte_compared": 320,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "801a498f",
+          "start": "801a4490"
+        }
+      ],
+      "pseudocode_sha256": "cfba170cd73f304c5e64b6e12c518f6f0a90a5d6d6009483c67cd10546b0a9ff",
+      "source_file": "derived/native-analysis-complete/application/functions/801a4490.json"
+    },
+    {
+      "entry": 2149116404,
+      "dossier_sha256": "190ca13c95a6fe87957548526988471cbc35d8ba3979c7b319cbcbe035345292",
+      "instructions_byte_compared": 51,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "8018eabf",
+          "start": "8018e9f4"
+        }
+      ],
+      "pseudocode_sha256": "1b750e79a412895e4175b0c8462b68c09dca3b530a6ead37fa30e4767ebda3df",
+      "source_file": "derived/native-analysis-complete/application/functions/8018e9f4.json"
+    },
+    {
+      "entry": 2149121908,
+      "dossier_sha256": "2543f4697af95b8b9815b97b1bdd7cbc28ed8403b89206eab792c8b9513f879c",
+      "instructions_byte_compared": 20,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "8018ffc3",
+          "start": "8018ff74"
+        }
+      ],
+      "pseudocode_sha256": "36cf0c486f5921078f53568f6749cfe5c0b88842109768bf1853df8a5cfa8296",
+      "source_file": "derived/native-analysis-complete/application/functions/8018ff74.json"
+    },
+    {
+      "entry": 2149118464,
+      "dossier_sha256": "81971d516da2f6019a009129d68b5ae822631990d032d83317d84682ab0e52f4",
+      "instructions_byte_compared": 313,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "8018f6e3",
+          "start": "8018f200"
+        }
+      ],
+      "pseudocode_sha256": "b0a3de76db7c45270e35549e3d6ff7e1289da1908d380f1fb16fbe6584545245",
+      "source_file": "derived/native-analysis-complete/application/functions/8018f200.json"
+    },
+    {
+      "entry": 2149118340,
+      "dossier_sha256": "01b05ce0af23d7e6444fa9be4abd7639dae6033940df9ec3e1c7870a2aca6b11",
+      "instructions_byte_compared": 31,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "8018f1ff",
+          "start": "8018f184"
+        }
+      ],
+      "pseudocode_sha256": "c1dd58e05372631bc440b58d1fb2917a4903b970d1f6987b79598742b4787fcd",
+      "source_file": "derived/native-analysis-complete/application/functions/8018f184.json"
+    },
+    {
+      "entry": 2149119716,
+      "dossier_sha256": "db4f06e31e4caf99eb420946801e22a4177ec6c72ea60b61376f944e2e2f3f52",
+      "instructions_byte_compared": 109,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "8018f897",
+          "start": "8018f6e4"
+        }
+      ],
+      "pseudocode_sha256": "fc842118ccbe2fae46bfaabac8a41690ccdf1a049cb56231ed6d4b3a2c7897e5",
+      "source_file": "derived/native-analysis-complete/application/functions/8018f6e4.json"
+    },
+    {
+      "entry": 2149153480,
+      "dossier_sha256": "72493859f2b378cb6883b65fc53229f0c9f4df611e72dfce43276e44985e1b07",
+      "instructions_byte_compared": 102,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "80197c5f",
+          "start": "80197ac8"
+        }
+      ],
+      "pseudocode_sha256": "d41d6b57771a71780289d28bc4de98707273a22075599e6e3d1e6306fd9e857f",
+      "source_file": "derived/native-analysis-complete/application/functions/80197ac8.json"
+    },
+    {
+      "entry": 2149153008,
+      "dossier_sha256": "98d8c00fd1953106b44d0a32156aa4c4b88c7576dddce5612b401cd457b35f04",
+      "instructions_byte_compared": 105,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "80197a93",
+          "start": "801978f0"
+        }
+      ],
+      "pseudocode_sha256": "37bfc451249060f4747d3dddc7a77e1fbdedbce86762bd0b84ecc892804b8922",
+      "source_file": "derived/native-analysis-complete/application/functions/801978f0.json"
+    },
+    {
+      "entry": 2149130196,
+      "dossier_sha256": "bebd92619612010a25c3a76fe2ac3029dc7632719025500547e5af4b742cde30",
+      "instructions_byte_compared": 55,
+      "decompilation_completed": true,
+      "ranges": [
+        {
+          "end_inclusive": "801920af",
+          "start": "80191fd4"
+        }
+      ],
+      "pseudocode_sha256": "5f2cf82efc25ff234459126c46ddf6c9b0e43fa33254b9446bb9cdad38174be1",
+      "source_file": "derived/native-analysis-complete/application/functions/80191fd4.json"
+    }
+  ],
+  "diagnostic_bindings": [
+    {
+      "address": 2149236472,
+      "text": "(psImageFrame->uiHeight != 0) && (psImageFrame->uiWidth != 0)"
+    },
+    {
+      "address": 2149236728,
+      "text": "(psImageChromaFrame->uiHeight != 0) && (psImageChromaFrame->uiWidth != 0)"
+    },
+    {
+      "address": 2149236884,
+      "text": "Image position is outside frame.\npsImageFrame->uiFrameWidth < ( psImageFrame->uiWidth + psImageFrame->uiLeft )"
+    },
+    {
+      "address": 2149187976,
+      "text": "(puiFrameWidth != NULL) && (puiFrameHeight != NULL)"
+    },
+    {
+      "address": 2149925104,
+      "text": "DirectConvertRawToYuvEx: no all required input params are valid (%p %p %p %p)\n"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "capture.shared_frame_descriptor",
+      "evidence_type": "instructions-plus-explicit-guard-diagnostics",
+      "size": 28,
+      "byte_order": "little",
+      "fields": [
+        {
+          "offset": 0,
+          "width": 4,
+          "name": "data_address",
+          "meaning": "Stored buffer/address token; not proof of CPU accessibility"
+        },
+        {
+          "offset": 4,
+          "width": 4,
+          "name": "frame_width",
+          "meaning": "Parent frame coordinate extent, not established byte pitch"
+        },
+        {
+          "offset": 8,
+          "width": 4,
+          "name": "frame_height",
+          "meaning": "Parent frame coordinate extent, not established byte pitch"
+        },
+        {
+          "offset": 12,
+          "width": 4,
+          "name": "left",
+          "meaning": "ROI coordinate inferred from checked guard diagnostics and field copies"
+        },
+        {
+          "offset": 16,
+          "width": 4,
+          "name": "top",
+          "meaning": "ROI coordinate inferred from checked guard diagnostics and field copies"
+        },
+        {
+          "offset": 20,
+          "width": 4,
+          "name": "width",
+          "meaning": "ROI coordinate inferred from checked guard diagnostics and field copies"
+        },
+        {
+          "offset": 24,
+          "width": 4,
+          "name": "height",
+          "meaning": "ROI coordinate inferred from checked guard diagnostics and field copies"
+        }
+      ],
+      "jpeg_setup_entry": 2149205136,
+      "jpeg_option_offsets": {
+        "image_descriptor": 8,
+        "chroma_descriptor": 36
+      },
+      "reviewed_guards": {
+        "width_height_nonzero": [
+          2149205336,
+          2149205344
+        ],
+        "frame_width_vs_wrapped_left_plus_width": [
+          2149205348,
+          2149205812,
+          2149205816
+        ],
+        "chroma420_even_left_top": [
+          2149206252,
+          2149206320
+        ]
+      },
+      "limits": [
+        "No physical allocation size, byte stride, pixel packing/bit depth or cache ownership is established.",
+        "Horizontal addition has no overflow check in this guard; reviewed guard does not establish vertical containment."
+      ]
+    },
+    {
+      "id": "capture.descriptor_retention",
+      "setter": 2149124684,
+      "driver_type_zero": {
+        "selector7": {
+          "destination": "driver+8",
+          "bytes_copied": 28
+        },
+        "selector9": {
+          "destination": "driver+0x28",
+          "bytes_copied": 28
+        },
+        "selector8": {
+          "destination": "driver+0x860",
+          "bytes_copied": 28,
+          "flag": "byte+0x87c=1"
+        }
+      },
+      "geometry_setter": 2149116404,
+      "fallback": "If ROI width or height is zero, both are replaced by parent frame dimensions; left/top retained",
+      "buffer_setter": 2149121908,
+      "pointer_fields": [
+        8,
+        40,
+        72
+      ],
+      "ownership": "Descriptor words are copied, including an address token. The described buffer bytes are not deep-copied by these setters; caller lifetime remains required."
+    },
+    {
+      "id": "capture.temporary_scale_buffer",
+      "prepare": 2149118464,
+      "allocator_site": 2149119196,
+      "allocator": 2147617152,
+      "requested_size": "low32(width * height * numeric_format_multiplier), with observed multiplier2 or3",
+      "descriptor_output": "allocation result at descriptor+0; dimensions copied into descriptor+4/+8 and+0x14/+0x18; left/top zeroed",
+      "overflow_or_null_protection": "No overflow check or immediate null-result branch in reviewed allocation window0x8018f4a0..0x8018f4f8",
+      "free_route": {
+        "cleanup": 2149118340,
+        "condition": "temporary_path != original_path",
+        "restore_buffers": 2149121908,
+        "delete_temporary_path": 2149114692,
+        "free_site": 2149118416,
+        "free": 2147618452,
+        "restore_geometry": 2149116404
+      },
+      "ownership": "Temporary scale buffer is internally allocated and freed by this helper lifecycle; it is not an additional user-owned frame slot."
+    },
+    {
+      "id": "capture.path_execution_completion",
+      "wrapper": 2149119716,
+      "sequence": [
+        2149118464,
+        2149152200,
+        2149153008,
+        2149153480,
+        2149118340
+      ],
+      "completion_helper": {
+        "entry": 2149153480,
+        "wait_site": 2149153640,
+        "wait": 2148274196,
+        "timeout_field": "path+0xac",
+        "completion_callback_site": 2149153664
+      },
+      "limits": "Conditional event wait and type-specific indirect callback precede cleanup; full event semantics, interrupts, callback success and cache/DMA coherence are not established."
+    },
+    {
+      "id": "capture.frame_alignment",
+      "entry": 2149130196,
+      "mode0": "round frame width up to16, height up to8",
+      "mode1": "round width and height up to16",
+      "other_modes": "diagnostic rejection",
+      "limits": "Normal nonoverflowing arithmetic only; this helper does not establish universal sensor dimensions or bytes per pixel."
+    },
+    {
+      "id": "capture.raw_to_yuv_reachability",
+      "analyst_entry": 2149603608,
+      "descriptor_setter_sites": [
+        2149604416,
+        2149604448
+      ],
+      "native_dossier_present": false,
+      "reference_scan": {
+        "target": 2149603608,
+        "direct_j_jal_encoding_candidates": [],
+        "aligned_pointer_words": [],
+        "region_count": 8,
+        "scope": "Aligned words in the eight authenticated mapped application regions only; computed/unaligned/runtime references not resolved"
+      },
+      "limits": "The wrapper has no aligned J/JAL or direct pointer references in the scanned regions. Dynamic/external/runtime reachability remains unknown; this is not a verified ordinary saved-photo hook."
+    }
+  ],
+  "unresolved": [
+    "Ordinary saved-JPEG caller and active buffer values/colour domain",
+    "CPU versus device address domains, pitch units, planar/interleaved packing, Bayer/bit depth",
+    "Caller-owned capture buffer allocation/free lifetime, aliasing and shared consumers",
+    "Cache maintenance, DMA synchronization and permitted hook execution context",
+    "Verified software recovery and safe executable placement/hook"
+  ],
+  "safe_capture_adapter_established": false,
+  "ready_for_executable_trial": false
+}

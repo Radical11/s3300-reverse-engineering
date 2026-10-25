@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "source_unchanged": true,
+  "tests": {
+    "command": "python -m unittest discover -s tests -q",
+    "passed": 274,
+    "failed": 0,
+    "host": "Windows",
+    "new_remote_linux_run": false
+  },
+  "workspace_doctor_passed": true,
+  "resource_ready": true,
+  "code_ready": false,
+  "complete": false,
+  "executable_trials_allowed": false,
+  "latest_checks": {
+    "menu-label": "pass",
+    "saved-photo-effect": "pass",
+    "standard-color": "pass",
+    "cold-restart": "pass",
+    "playback": "pass",
+    "settings-persistence": "pass"
+  },
+  "camera_observation_scope": "Menu/restart/persistence/playback user reported; three original JPEGs twice-read and independently analysed; USB configuration directly read through existing Windows stack",
+  "prior_adverse_observations_preserved": [
+    "Wrong-menu Sepia report remains in historical ledger, superseded by explicit Auto Color options Amber confirmation",
+    "First intended-Standard pair was tinted; explicit Standard -> OK repeat later passes; initial cause unproven"
+  ],
+  "runtime_evidence": "evidence/amber-auto-verification-2026-10-25.json",
+  "usb_evidence": "evidence/camera-usb-verification-2026-10-25.json",
+  "installed_image_sha256": null,
+  "new_firmware_candidate_created": false,
+  "camera_updates": false,
+  "debug_or_memory_requests_sent": false,
+  "driver_changes": false,
+  "camera_storage_writes": false,
+  "normal_rollback_tested": false,
+  "unbootable_recovery_verified": false,
+  "performance_or_energy_gain_measured": false,
+  "interface_catalog_entries": 25,
+  "inputs": {
+    "tools/read_usb_descriptors.py": "544916a8991ae7051db30f4158776b43e181722a7e391070b949bd01fd018081",
+    "tools/map_usb_mode_contracts.py": "924b4745c3c1ad14002dff5367f2a67097fa0624d268487b4103cf8c20867e3a",
+    "tools/workspace_cli.py": "094b79bfb5d7eb2f80d6165adee259ca9536ca0da297f5bb71001178c50deb7a",
+    "tools/development_platform.py": "a9e7df6eafb9a87161002a37e3dfee1d01018ccf84ede88f7797d38f596cc15f",
+    "tests/test_usb_descriptors.py": "94d54a24604bcab4e83783170d8139cb4ec967ba67a5d8dcd3119164a54e3785",
+    "tests/test_usb_mode_contracts.py": "5f3570b0d2430e894ac154acfe1ec6151eaa81b55e5466e41f32a320660ec76d",
+    "evidence/camera-usb-verification-2026-10-25.json": "8841dfaa88400d4bbbe285962f03247c7bb5d9d0a9feb5ae181550f35c754125",
+    "evidence/usb-mode-contracts.json": "86349c3f59781234409d7151f9992e827eeaf2d4de76c47e8c8bf8e7a3ea423e",
+    "evidence/amber-auto-verification-2026-10-25.json": "16415aeb93f9ec6cf46c458a0974c206666f5abcafc5244f4e18763e5dd7a524",
+    "evidence/auto-amber-chroma-2026-10-25.json": "e2b47292b1c2dc8ca92858e52d7e10bf99714ef94fccb2d915895fc2b983c925",
+    "evidence/standard-repeat-chroma-2026-10-25.json": "c90d419fc4df82de584823c67174affba84d6693afa8d7d39c7d3f9f39e33c80",
+    "firmware/sdk/interfaces.json": "b036fd2e0a894541c726e3a1ce03bbe9bfafe446160e0017077fbde93f44ce0a",
+    "hardware/s3300.json": "cdc686eeb49a114b5d0a1013d5e9965f7eff872a04ef6131007476b691c9f626"
+  },
+  "remaining_gates": [
+    "capture_buffer_abi",
+    "executable_hook_placement",
+    "complete_backup",
+    "unbootable_software_recovery"
+  ]
+}

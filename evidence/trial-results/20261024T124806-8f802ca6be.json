@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "trial": "amber-mono",
+  "check": "menu-label",
+  "outcome": "fail",
+  "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "installed_image_sha256": null,
+  "observation_source": "user-reported camera observation",
+  "notes": "After full poweroff/restart, user reports Color options still shows Sepia. Amber rename not observed.",
+  "recorded_at_utc": "2026-10-24T12:48:06.700571+00:00",
+  "target_firmware_execution_observed_by_tool": false,
+  "scope": "An observation does not establish the exact installed bytes or unbootable recovery"
+}

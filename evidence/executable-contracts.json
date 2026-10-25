@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "evidence_class": "independent checked instructions plus direct Ghidra static dossiers; not native REA Evidence",
+  "original_images": [
+    {
+      "carrier_offset": 512,
+      "entry": 2147549184,
+      "flags_hex": "0x70001001",
+      "abi_flags_record_present": false,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2147484032,
+          "p_filesz": 416,
+          "p_memsz": 416,
+          "p_flags": 5
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2147549184,
+          "p_filesz": 579352,
+          "p_memsz": 579352,
+          "p_flags": 5
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2148128544,
+          "p_filesz": 32,
+          "p_memsz": 32,
+          "p_flags": 4
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2148128576,
+          "p_filesz": 84724,
+          "p_memsz": 156288,
+          "p_flags": 6
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 3217063936,
+          "p_filesz": 1704,
+          "p_memsz": 1704,
+          "p_flags": 7
+        }
+      ]
+    },
+    {
+      "carrier_offset": 1050304,
+      "entry": 2164261889,
+      "flags_hex": "0x10001000",
+      "abi_flags_record_present": false,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2164261888,
+          "p_filesz": 5548,
+          "p_memsz": 5548,
+          "p_flags": 5
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2164267440,
+          "p_filesz": 892,
+          "p_memsz": 5512,
+          "p_flags": 6
+        }
+      ]
+    },
+    {
+      "carrier_offset": 1058496,
+      "entry": 2147485184,
+      "flags_hex": "0x70001001",
+      "abi_flags_record_present": false,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2147484032,
+          "p_filesz": 416,
+          "p_memsz": 416,
+          "p_flags": 5
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2147485184,
+          "p_filesz": 340,
+          "p_memsz": 340,
+          "p_flags": 5
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2147485568,
+          "p_filesz": 1075312,
+          "p_memsz": 1075312,
+          "p_flags": 7
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2680193024,
+          "p_filesz": 4844,
+          "p_memsz": 4844,
+          "p_flags": 7
+        }
+      ]
+    },
+    {
+      "carrier_offset": 2228928,
+      "entry": 2147485184,
+      "flags_hex": "0x70001001",
+      "abi_flags_record_present": false,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2148562560,
+          "p_filesz": 1693332,
+          "p_memsz": 2630016,
+          "p_flags": 7
+        }
+      ]
+    },
+    {
+      "carrier_offset": 3922344,
+      "entry": 2147485184,
+      "flags_hex": "0x70001001",
+      "abi_flags_record_present": false,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2151192704,
+          "p_filesz": 2118012,
+          "p_memsz": 3094784,
+          "p_flags": 7
+        }
+      ]
+    },
+    {
+      "carrier_offset": 6040440,
+      "entry": 2147485184,
+      "flags_hex": "0x70001001",
+      "abi_flags_record_present": false,
+      "segments": [
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2154287616,
+          "p_filesz": 993716,
+          "p_memsz": 1601792,
+          "p_flags": 5
+        },
+        {
+          "p_type": "PT_LOAD",
+          "p_vaddr": 2155889408,
+          "p_filesz": 297724,
+          "p_memsz": 624000,
+          "p_flags": 6
+        }
+      ]
+    }
+  ],
+  "reviewed_instruction_assertions": 34,
+  "native_dossiers": [
+    {
+      "address": 2147485184,
+      "source_file": "derived/native-analysis-complete/application/functions/80000600.json",
+      "dossier_sha256": "d56af7ef6e0ab6b4adcb4255647c515677a749d599b3fb8c22beec492b38e3e7",
+      "name_inferred": "entry",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "80000643",
+          "start": "80000600"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 17,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2147487032,
+      "source_file": "derived/native-analysis-complete/application/functions/80000d38.json",
+      "dossier_sha256": "7a43598cd9dbc71b80dc3daf1eb98291dce5c0438770169d720b7adffde1f0d6",
+      "name_inferred": "sub_80000d38",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "80000d43",
+          "start": "80000d38"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 3,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2147616616,
+      "source_file": "derived/native-analysis-complete/application/functions/80020768.json",
+      "dossier_sha256": "fcf763f70f7689e277c62a90c18abff36992829f333b5a78b3ab1ff221d09d83",
+      "name_inferred": "FUN_80020768",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "80020803",
+          "start": "80020768"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 39,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2147616772,
+      "source_file": "derived/native-analysis-complete/application/functions/80020804.json",
+      "dossier_sha256": "12200fc61853cf78f15e6070af2d58c3943fa5b97d917e66500e4e0914201816",
+      "name_inferred": "FUN_80020804",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800208d7",
+          "start": "80020804"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 53,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2147617152,
+      "source_file": "derived/native-analysis-complete/application/functions/80020980.json",
+      "dossier_sha256": "fa894e2a9bb7586f39b690a6464ed0de31311db67cb64b97b0ca673df8b9c03a",
+      "name_inferred": "FUN_80020980",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "80020b8f",
+          "start": "80020980"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 132,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148213500,
+      "source_file": "derived/native-analysis-complete/application/functions/800b22fc.json",
+      "dossier_sha256": "097a099c52d2b8154da46ee6522cb71cfa98a39b1fc335a616987600766f5cc5",
+      "name_inferred": "FUN_800b22fc",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b2363",
+          "start": "800b22fc"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 26,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148213604,
+      "source_file": "derived/native-analysis-complete/application/functions/800b2364.json",
+      "dossier_sha256": "3f50930ea0171e247f03cf16d26f9e9fc78e6c3e4d4eca65e7755ea72a7b2e1e",
+      "name_inferred": "FUN_800b2364",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b2407",
+          "start": "800b2364"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 41,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148214124,
+      "source_file": "derived/native-analysis-complete/application/functions/800b256c.json",
+      "dossier_sha256": "a5ff6674d6ec648fe5974414044ffc97288b337351695817ced24489040d0765",
+      "name_inferred": "FUN_800b256c",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b2617",
+          "start": "800b256c"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 43,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148218496,
+      "source_file": "derived/native-analysis-complete/application/functions/800b3680.json",
+      "dossier_sha256": "1d1847be367205f344c44790a796e7e8b4a84f0847c8418879904dc3f9d2b7fe",
+      "name_inferred": "FUN_800b3680",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b3867",
+          "start": "800b3680"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 122,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148219548,
+      "source_file": "derived/native-analysis-complete/application/functions/800b3a9c.json",
+      "dossier_sha256": "2dfed578bf5aee44bf6753fdc4addcb5c651419e1795d156a997e8dec87fa8da",
+      "name_inferred": "FUN_800b3a9c",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b3cf7",
+          "start": "800b3a9c"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 151,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148221884,
+      "source_file": "derived/native-analysis-complete/application/functions/800b43bc.json",
+      "dossier_sha256": "34bfe39ab0314601bfbbbe3e48664274f275226d77f63e438a0482c7c531296b",
+      "name_inferred": "FUN_800b43bc",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b4613",
+          "start": "800b43bc"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 150,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148222484,
+      "source_file": "derived/native-analysis-complete/application/functions/800b4614.json",
+      "dossier_sha256": "a792d46936c243f5427ec0ecd63aea46d1c27499dcc3970957da75fdba115c9f",
+      "name_inferred": "FUN_800b4614",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b4843",
+          "start": "800b4614"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 140,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148225764,
+      "source_file": "derived/native-analysis-complete/application/functions/800b52e4.json",
+      "dossier_sha256": "e5758e1db0ed4bcae4396ce0ce694242486cdbde8efc4acc1aab920080a6d6c6",
+      "name_inferred": "FUN_800b52e4",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800b553f",
+          "start": "800b52e4"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 151,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148329416,
+      "source_file": "derived/native-analysis-complete/application/functions/800ce7c8.json",
+      "dossier_sha256": "086e1f48f24e65c0a497bf5e9f2c8d6b766f9a40de9a189b0b25dbeb7fbd8bd9",
+      "name_inferred": "FUN_800ce7c8",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800ce87f",
+          "start": "800ce7c8"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 46,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148398160,
+      "source_file": "derived/native-analysis-complete/application/functions/800df450.json",
+      "dossier_sha256": "4ce380c6b4551631640d8e69335f03054d9c8c38edcd128a84e2861a075a32c9",
+      "name_inferred": "FUN_800df450",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800df54b",
+          "start": "800df450"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 63,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    },
+    {
+      "address": 2148465712,
+      "source_file": "derived/native-analysis-complete/application/functions/800efc30.json",
+      "dossier_sha256": "85a4f218282831c620df95a3678189a56c794edfc19ab9ca6daf51b4f9e059f1",
+      "name_inferred": "FUN_800efc30",
+      "ranges_inferred": [
+        {
+          "end_inclusive": "800efcd7",
+          "start": "800efc30"
+        }
+      ],
+      "decompilation_completed": true,
+      "instructions_byte_checked": 42,
+      "signature_warning": "Ghidra pseudocode/signatures are inference, not a proven runtime ABI"
+    }
+  ],
+  "startup": {
+    "entry": 2147485184,
+    "gp": 2148593536,
+    "initial_sp": 2157912424,
+    "continuation": 2147485376,
+    "zeroing_condition": "CP0 EBase select1 low10 bits != 1",
+    "clear_routine": 2148465712,
+    "zeroed_ranges": [
+      {
+        "start": 2156513408,
+        "end_exclusive": 2157909364,
+        "bytes": 1395956
+      },
+      {
+        "start": 2148560880,
+        "end_exclusive": 2148562440,
+        "bytes": 1560
+      }
+    ],
+    "safe_placement_in_zeroed_ranges": false
+  },
+  "rtos_reservations": {
+    "routine": 2148329416,
+    "timer_stack_bytes": 4096,
+    "context_zero": {
+      "state": 2148342484,
+      "stack_start": 2157916536,
+      "stack_end_exclusive": 2157920632
+    },
+    "context_nonzero": {
+      "state": 2148354868,
+      "stack_start": 2157912440,
+      "stack_end_exclusive": 2157916536
+    },
+    "writes": {
+      "saved_sp_state_offset": 0,
+      "stack_start_offset": 584,
+      "stack_length_offset": 588,
+      "end_passed_to_allocator_offset": 424
+    },
+    "physical_core_count_established": false
+  },
+  "allocator": {
+    "initializer": 2147616772,
+    "boot_caller": 2148398160,
+    "dram_query": 2147730348,
+    "pool_constructor": 2147616164,
+    "pool_start_formula": "input_start & 0xdfffffff",
+    "pool_length_formula": "(queried_DRAM_bytes - (input_start & 0x0fffffff) - 4) modulo2^32",
+    "subpool_initializer": 2147616616,
+    "default_subpool_bytes": 3670016,
+    "boot_override_getter": 2147487032,
+    "boot_override_bytes": 1843200,
+    "second_subpool_bytes": 1572864,
+    "second_subpool_unit_hint": 512,
+    "installed_capacity_and_free_headroom_known": false,
+    "heap_is_owned_runtime_memory": true
+  },
+  "cache_contracts": [
+    {
+      "function": 2148221884,
+      "parameters": "a0=address,a1=length; null/zero assert",
+      "operation": "cache0x10",
+      "instruction_site": 2148222384,
+      "role_inference": "I-cache invalidation path",
+      "line_exponent_field": "context+0x29c"
+    },
+    {
+      "function": 2148219548,
+      "parameters": "a0=address,a1=length; null/zero assert",
+      "operation": "cache0x11",
+      "instruction_site": 2148220052,
+      "role_inference": "D-cache invalidation path",
+      "line_exponent_field": "context+0x2a0"
+    },
+    {
+      "function": 2148225764,
+      "parameters": "a0=address,a1=length; null/zero use whole-cache fallback",
+      "operation": "cache0x15",
+      "instruction_site": 2148226332,
+      "role_inference": "D-cache writeback/invalidation candidate",
+      "line_exponent_field": "context+0x2a0"
+    },
+    {
+      "function": 2148222484,
+      "parameters": "a0=address,a1=length; complete invalid-input policy not established",
+      "operation": "cache0x19",
+      "instruction_site": 2148222968,
+      "role_inference": "D-cache writeback candidate",
+      "line_exponent_field": "context+0x2a0"
+    }
+  ],
+  "cache_limits": [
+    "Cache geometry comes from runtime CP0 Config1/context state, not supplied bytes.",
+    "Reviewed paths can switch to tag scans and invoke timing/interrupt helpers0x800b22fc/0x800b2364; not passive APIs.",
+    "No complete cross-context DMA/code-publication synchronization sequence is established."
+  ],
+  "call_and_hook_constraints": {
+    "known_application_header": "ELF32 little-endian MIPS32r2/o32,0x70001001; no floating-point ABI record",
+    "call_examples": [
+      {
+        "site": 2147485404,
+        "target": 2148328792,
+        "instruction_hex": "5639030c",
+        "delay_slot_hex": "00000000",
+        "architectural_link_address": 2147485412,
+        "synthetic_sdk_direct_jump_reachable": false
+      },
+      {
+        "site": 2147616836,
+        "target": 2147730348,
+        "instruction_hex": "ebf0000c",
+        "delay_slot_hex": "1000a0af",
+        "architectural_link_address": 2147616844,
+        "synthetic_sdk_direct_jump_reachable": false
+      },
+      {
+        "site": 2147616904,
+        "target": 2147616164,
+        "instruction_hex": "6981000c",
+        "delay_slot_hex": "1800acaf",
+        "architectural_link_address": 2147616912,
+        "synthetic_sdk_direct_jump_reachable": false
+      },
+      {
+        "site": 2148398244,
+        "target": 2147616772,
+        "instruction_hex": "0182000c",
+        "delay_slot_hex": "21200002",
+        "architectural_link_address": 2148398252,
+        "synthetic_sdk_direct_jump_reachable": false
+      }
+    ],
+    "known_first_instruction": {
+      "function_candidate": 2149603608,
+      "meaning": "move t4,a0 before pointer checks and stack allocation",
+      "interior_stack_allocation": 2149603620,
+      "native_function_entry_discovered": false,
+      "boundary_type": "reviewed instruction window; no matching native function entry"
+    },
+    "hazards": [
+      "J/JAL uses high4 bits of PC+4 and has a branch delay slot; JAL link is PC+8.",
+      "Conditional branches use signed16-word displacements; branch-likely annuls an untaken delay slot.",
+      "Preserve displaced instructions, live arguments, caller/callee-saved state, gp and stack conventions at each actual hook.",
+      "The SDK's0x10000 synthetic address cannot be reached by direct J/JAL from0x8xxxxxxx.",
+      "Tiny loader entry0x81000401 is odd and flags0x10001000 differ; instruction mode requires separate recovery.",
+      "Generated o32 integer code and emulator preservation tests do not establish an executable insertion/return/cache ABI for the camera."
+    ]
+  },
+  "unbacked_gaps": [
+    {
+      "start": 2147484448,
+      "end_exclusive": 2147485184,
+      "bytes": 736,
+      "has_source_bytes": false,
+      "safe_code_placement": false
+    },
+    {
+      "start": 2147485524,
+      "end_exclusive": 2147485568,
+      "bytes": 44,
+      "has_source_bytes": false,
+      "safe_code_placement": false
+    },
+    {
+      "start": 2148560880,
+      "end_exclusive": 2148562560,
+      "bytes": 1680,
+      "has_source_bytes": false,
+      "safe_code_placement": false
+    },
+    {
+      "start": 2151192576,
+      "end_exclusive": 2151192704,
+      "bytes": 128,
+      "has_source_bytes": false,
+      "safe_code_placement": false
+    },
+    {
+      "start": 2154287488,
+      "end_exclusive": 2154287616,
+      "bytes": 128,
+      "has_source_bytes": false,
+      "safe_code_placement": false
+    }
+  ],
+  "zero_run_scan": {
+    "minimum_bytes": 32,
+    "executable_permission_regions_only": true,
+    "count": 643,
+    "total_bytes": 193426,
+    "largest_candidates": [
+      {
+        "start": 2154164138,
+        "end_exclusive": 2154189780,
+        "bytes": 25642,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2148354862,
+        "end_exclusive": 2148375632,
+        "bytes": 20770,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2150941221,
+        "end_exclusive": 2150952608,
+        "bytes": 11387,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2147837193,
+        "end_exclusive": 2147847940,
+        "bytes": 10747,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2154296844,
+        "end_exclusive": 2154306844,
+        "bytes": 10000,
+        "safe_code_placement": false,
+        "region": ".decoded_8067d200",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2151938160,
+        "end_exclusive": 2151946160,
+        "bytes": 8000,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2151907760,
+        "end_exclusive": 2151914160,
+        "bytes": 6400,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2151915760,
+        "end_exclusive": 2151922160,
+        "bytes": 6400,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2147911188,
+        "end_exclusive": 2147915928,
+        "bytes": 4740,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2148342483,
+        "end_exclusive": 2148347064,
+        "bytes": 4581,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2154146189,
+        "end_exclusive": 2154148604,
+        "bytes": 2415,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2149366597,
+        "end_exclusive": 2149368916,
+        "bytes": 2319,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2147496478,
+        "end_exclusive": 2147498592,
+        "bytes": 2114,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2151928160,
+        "end_exclusive": 2151930160,
+        "bytes": 2000,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2147494672,
+        "end_exclusive": 2147496380,
+        "bytes": 1708,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2149233332,
+        "end_exclusive": 2149234996,
+        "bytes": 1664,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2148405478,
+        "end_exclusive": 2148407060,
+        "bytes": 1582,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2149909896,
+        "end_exclusive": 2149911336,
+        "bytes": 1440,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2148227280,
+        "end_exclusive": 2148228716,
+        "bytes": 1436,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2154142133,
+        "end_exclusive": 2154143348,
+        "bytes": 1215,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2147548960,
+        "end_exclusive": 2147549984,
+        "bytes": 1024,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2148585628,
+        "end_exclusive": 2148586652,
+        "bytes": 1024,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 1
+      },
+      {
+        "start": 2148234326,
+        "end_exclusive": 2148235348,
+        "bytes": 1022,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2680196933,
+        "end_exclusive": 2680197868,
+        "bytes": 935,
+        "safe_code_placement": false,
+        "region": ".original_9fc08000",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2149483484,
+        "end_exclusive": 2149484416,
+        "bytes": 932,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2148259792,
+        "end_exclusive": 2148260608,
+        "bytes": 816,
+        "safe_code_placement": false,
+        "region": ".original_80000780",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2150298072,
+        "end_exclusive": 2150298836,
+        "bytes": 764,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2680195832,
+        "end_exclusive": 2680196588,
+        "bytes": 756,
+        "safe_code_placement": false,
+        "region": ".original_9fc08000",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2149915508,
+        "end_exclusive": 2149916208,
+        "bytes": 700,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2151953488,
+        "end_exclusive": 2151954160,
+        "bytes": 672,
+        "safe_code_placement": false,
+        "region": ".decoded_80389880",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2151026792,
+        "end_exclusive": 2151027398,
+        "bytes": 606,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      },
+      {
+        "start": 2149911342,
+        "end_exclusive": 2149911920,
+        "bytes": 578,
+        "safe_code_placement": false,
+        "region": ".decoded_80107680",
+        "native_function_entries_inside": 0
+      }
+    ],
+    "safe_candidates_proven": 0,
+    "limit": "Zero bytes, ELF execute permission, absent entries and unmapped address gaps do not prove unused ownership or loader support."
+  },
+  "gates": {
+    "camera_code_placement_verified": false,
+    "executable_hook_abi_verified": false,
+    "complete_code_cache_publication_verified": false,
+    "software_recovery_verified": false,
+    "executable_trials_allowed": false
+  },
+  "target_executed": false,
+  "device_commands_issued": false,
+  "patch_constructed": false,
+  "source_unchanged": true,
+  "remaining": [
+    "Verified owner/lifetime/loader destination for an executable placement",
+    "Complete hook live-state and instruction-mode contract",
+    "Validated runtime cache/coherency sequence",
+    "Software recovery independent of a functioning modified application"
+  ]
+}

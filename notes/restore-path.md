@@ -1,5 +1,10 @@
 # Backup and restoration investigation
 
+Historical static-analysis record. The camera now reports v1.1, and the
+GetMem/settings traces have advanced in `state-contracts.md` and
+`development-contracts.md`. Complete backup and unbootable software recovery
+remain unverified; later UI update success does not close those gaps.
+
 24 October 2026. Source-bound v1.1 static analysis; installed camera remains
 v1.0. No debug request, monitor command, marker activation or camera write ran.
 

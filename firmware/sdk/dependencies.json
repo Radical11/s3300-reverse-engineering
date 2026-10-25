@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "scope": "Feature dependencies only. Gate results come from authenticated readiness checks; this file cannot approve camera calls or trials.",
+  "features": [
+    {
+      "id": "resource.amber-reviewed",
+      "description": "Reproduce the existing reviewed Amber parameter/label experiment and its recorded resource acceptance.",
+      "requires": ["original_source_authenticated", "saved_photo_feature"],
+      "constraint": "Applies to this closed-registry experiment; no blanket approval for arbitrary resource changes."
+    },
+    {
+      "id": "sdk.looks-standalone",
+      "description": "Compile and emulate our pure integer look module at a synthetic address.",
+      "requires": ["standalone_sdk_verified"],
+      "constraint": "No firmware insertion, Nikon API calls or camera performance claim."
+    },
+    {
+      "id": "code.saved-photo-look",
+      "description": "Run a custom selectable saved-photo look on the camera with an Original bypass.",
+      "requires": ["original_source_authenticated", "standalone_sdk_verified", "capture_buffer_abi", "executable_hook_placement", "selectable_control_lifecycle", "complete_backup", "unbootable_software_recovery"],
+      "constraint": "Source-level function addresses and synthetic emulation cannot satisfy live ownership or recovery."
+    },
+    {
+      "id": "code.measured-optimization",
+      "description": "Demonstrate a reliable speed improvement against a matched camera baseline.",
+      "requires": ["original_source_authenticated", "capture_buffer_abi", "executable_hook_placement", "matched_camera_performance", "complete_backup", "unbootable_software_recovery"],
+      "constraint": "Requires repeated measurements beyond uncertainty and preserved photo integrity."
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "evidence_class": "Direct source-authenticated Ghidra/Capstone; not REA Evidence",
+  "method": "Retained dossiers, exact original bytes, independent ZST parsing and optional bounded host emulation",
+  "native_proofs": [
+    {
+      "address": 2147533568,
+      "dossier": "derived/native-analysis-complete/application/functions/8000c300.json",
+      "dossier_sha256": "ca3cf75f95d3e06beb61e35ff846bc6236e0f251aa13bb72b245b0bf258970eb",
+      "instruction_bytes_authenticated": 604,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2149526292,
+      "dossier": "derived/native-analysis-complete/application/functions/801f2b14.json",
+      "dossier_sha256": "c955206e0cb1700308b28c8bdc7d288319909bccba6439fa78974c777a734f5e",
+      "instruction_bytes_authenticated": 324,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2150370368,
+      "dossier": "derived/native-analysis-complete/application/functions/802c0c40.json",
+      "dossier_sha256": "f1d61a3d3928c72a03eb6dc82948bb89947cc5ecd053b08070bf5def267e5584",
+      "instruction_bytes_authenticated": 24,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2150370600,
+      "dossier": "derived/native-analysis-complete/application/functions/802c0d28.json",
+      "dossier_sha256": "6ed8bf9906bd2156c9771ff92e01fff9aa6518d73bf4f751234f3cc7b007e5aa",
+      "instruction_bytes_authenticated": 1196,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2150396924,
+      "dossier": "derived/native-analysis-complete/application/functions/802c73fc.json",
+      "dossier_sha256": "ac506664af785160aa7bd99814903c73a76c8e349ec9d12cba807747841a3fed",
+      "instruction_bytes_authenticated": 228,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2153479940,
+      "dossier": "derived/native-analysis-complete/application/functions/805b7f04.json",
+      "dossier_sha256": "62f0953e9d636e40f33125658f34a5c64b656b492d15ca4aaf2cc2b621469b48",
+      "instruction_bytes_authenticated": 1272,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2153515420,
+      "dossier": "derived/native-analysis-complete/application/functions/805c099c.json",
+      "dossier_sha256": "46d80f5a66e5d0d9fb702ec3e3372da9d3a8da6b2468ea2984faacbf077bb3f9",
+      "instruction_bytes_authenticated": 808,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2153340768,
+      "dossier": "derived/native-analysis-complete/application/functions/80595f60.json",
+      "dossier_sha256": "690f5b1e7a1da023f3e205a8c23954bdc7e2e688b9209ddb1f3a8af403bea981",
+      "instruction_bytes_authenticated": 1552,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2154805120,
+      "dossier": "derived/native-analysis-complete/application/functions/806fb780.json",
+      "dossier_sha256": "ef0e104bd282293badd32a3870e7cada6b90098c48cf8b3ebd3dd2217c9800ec",
+      "instruction_bytes_authenticated": 408,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2149856952,
+      "dossier": "derived/native-analysis-complete/application/functions/802436b8.json",
+      "dossier_sha256": "5dfab6f3b153e925c520322cff5b2b0cae6a20441bb49388128dce0a97d0fea6",
+      "instruction_bytes_authenticated": 88,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2149523740,
+      "dossier": "derived/native-analysis-complete/application/functions/801f211c.json",
+      "dossier_sha256": "31c9724aad21543d4cd02e24be6eadd6e75ac9867e318fde7205d0d111c1390b",
+      "instruction_bytes_authenticated": 228,
+      "pseudocode_is_inferred": true
+    },
+    {
+      "address": 2154711028,
+      "dossier": "derived/native-analysis-complete/application/functions/806e47f4.json",
+      "dossier_sha256": "e99c4d5b152badb38eea42ecc6abfb5d44266ffdcc9dc77aed6b1303d1361480",
+      "instruction_bytes_authenticated": 156,
+      "pseudocode_is_inferred": true
+    }
+  ],
+  "reviewed_instructions_checked": 9,
+  "english_table": {
+    "address": 2151067092,
+    "bytes": 46392,
+    "sha256": "00fc1a72e59d8bd249720c4c8b67240bec16fd9629fcfd526ebe2aa702a0f671",
+    "count_including_default": 3313,
+    "first_id": 0,
+    "bits_per_code_unit": 16,
+    "maximum_record_bytes": 128
+  },
+  "color_options": {
+    "descriptor_builder": 2153479940,
+    "category": 0,
+    "submenu": 4,
+    "draw_callback": 2153515420,
+    "text_id_array": 2154145462,
+    "labels": [
+      {
+        "id": 560,
+        "ordinal": 560,
+        "record_offset": 13896,
+        "data_address": 2151080990,
+        "byte_length": 28,
+        "text_projection": "Standard color"
+      },
+      {
+        "id": 561,
+        "ordinal": 561,
+        "record_offset": 13928,
+        "data_address": 2151081022,
+        "byte_length": 22,
+        "text_projection": "Vivid color"
+      },
+      {
+        "id": 562,
+        "ordinal": 562,
+        "record_offset": 13954,
+        "data_address": 2151081048,
+        "byte_length": 30,
+        "text_projection": "Black-and-white"
+      },
+      {
+        "id": 563,
+        "ordinal": 563,
+        "record_offset": 13988,
+        "data_address": 2151081082,
+        "byte_length": 10,
+        "text_projection": "Sepia"
+      },
+      {
+        "id": 564,
+        "ordinal": 564,
+        "record_offset": 14002,
+        "data_address": 2151081096,
+        "byte_length": 18,
+        "text_projection": "Cyanotype"
+      }
+    ],
+    "lookup_helper": 2150396924,
+    "id_mapping": "pointer_table[(requested_id - header.first_id)] within header.count",
+    "draw_chain": [
+      2153515420,
+      2153512020,
+      2153340768,
+      2154805120,
+      2149856952,
+      2149523740,
+      2150396924,
+      2150395820
+    ]
+  },
+  "loader": {
+    "entry": 2149526292,
+    "embedded_dispatch": 2147533568,
+    "category": 12,
+    "state_setter": 2150370368,
+    "parser": 2150370600,
+    "returned_0x729e_used_as_nonzero_embedded_selector": true,
+    "returned_0x729e_is_not_parser_byte_limit": true,
+    "record_pointer_lifetime": "Embedded records are borrowed source pointers; allocated pointer index/header separately owned",
+    "filesystem_fallback": "Used when embedded lookup returns zero; not executed in host emulation"
+  },
+  "development_gates": {
+    "static_english_color_label_path_verified": true,
+    "runtime_amber_label_fixed": false,
+    "executable_trials_allowed": false
+  },
+  "remaining_unknowns": [
+    "Exact installed image bytes are unverified.",
+    "Full live UI route and font rasterization were not observed by this tool.",
+    "Static lookup correctness does not explain the user's retained Sepia label.",
+    "No candidate, device command or firmware update is produced."
+  ],
+  "host_emulation": {
+    "original": {
+      "engine": "Unicorn",
+      "version": "2.1.4",
+      "embedded_selector": 29342,
+      "all_record_pointers_checked": 3313,
+      "allocations": [
+        {
+          "address": 2164260864,
+          "bytes": 24
+        },
+        {
+          "address": 2164260896,
+          "bytes": 13252
+        }
+      ],
+      "instructions_executed": 119753,
+      "selected": [
+        {
+          "id": 560,
+          "data_address": 2151080990,
+          "text_projection": "Standard color"
+        },
+        {
+          "id": 561,
+          "data_address": 2151081022,
+          "text_projection": "Vivid color"
+        },
+        {
+          "id": 562,
+          "data_address": 2151081048,
+          "text_projection": "Black-and-white"
+        },
+        {
+          "id": 563,
+          "data_address": 2151081082,
+          "text_projection": "Sepia"
+        },
+        {
+          "id": 564,
+          "data_address": 2151081096,
+          "text_projection": "Cyanotype"
+        },
+        {
+          "id": 3313,
+          "rejected": true
+        },
+        {
+          "id": 4294967295,
+          "rejected": true
+        }
+      ],
+      "writes_bounded_to_synthetic_stack_and_heap": true,
+      "camera_executed": false,
+      "font_rasterizer_executed": false,
+      "scope": "Two original MIPS helpers; declared host stubs, synthetic memory only"
+    },
+    "simulated_amber_span": {
+      "engine": "Unicorn",
+      "version": "2.1.4",
+      "embedded_selector": 29342,
+      "all_record_pointers_checked": 3313,
+      "allocations": [
+        {
+          "address": 2164260864,
+          "bytes": 24
+        },
+        {
+          "address": 2164260896,
+          "bytes": 13252
+        }
+      ],
+      "instructions_executed": 119716,
+      "selected": [
+        {
+          "id": 560,
+          "data_address": 2151080990,
+          "text_projection": "Standard color"
+        },
+        {
+          "id": 561,
+          "data_address": 2151081022,
+          "text_projection": "Vivid color"
+        },
+        {
+          "id": 562,
+          "data_address": 2151081048,
+          "text_projection": "Black-and-white"
+        },
+        {
+          "id": 563,
+          "data_address": 2151081082,
+          "text_projection": "Amber"
+        },
+        {
+          "id": 564,
+          "data_address": 2151081096,
+          "text_projection": "Cyanotype"
+        },
+        {
+          "id": 3313,
+          "rejected": true
+        }
+      ],
+      "writes_bounded_to_synthetic_stack_and_heap": true,
+      "camera_executed": false,
+      "font_rasterizer_executed": false,
+      "scope": "Two original MIPS helpers; declared host stubs, synthetic memory only"
+    },
+    "nonzero_selector_one": {
+      "engine": "Unicorn",
+      "version": "2.1.4",
+      "embedded_selector": 1,
+      "all_record_pointers_checked": 3313,
+      "allocations": [
+        {
+          "address": 2164260864,
+          "bytes": 24
+        },
+        {
+          "address": 2164260896,
+          "bytes": 13252
+        }
+      ],
+      "instructions_executed": 119439,
+      "selected": [
+        {
+          "id": 563,
+          "data_address": 2151081082,
+          "text_projection": "Sepia"
+        }
+      ],
+      "writes_bounded_to_synthetic_stack_and_heap": true,
+      "camera_executed": false,
+      "font_rasterizer_executed": false,
+      "scope": "Two original MIPS helpers; declared host stubs, synthetic memory only"
+    },
+    "simulated_change_is_not_a_candidate_or_installed_image": true
+  }
+}

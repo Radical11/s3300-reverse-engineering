@@ -1,5 +1,27 @@
 # Amber: first saved-photo tint experiment
 
+## Current result — 25 October 2026
+
+Resource-ready checks now pass. The user confirms Amber in **Auto mode →
+MENU → Color options**, plus restart, remembered selection and playback.
+Fresh JPEGs corroborate the tint. An explicit **Standard color → OK** repeat
+retains normal colour in preview and the saved photo. The prior intended
+Standard pair was tinted and remains recorded; no firmware cause is assigned.
+The apparent rename failure was **Nostalgic sepia in Special effects**, a
+different entry. Its failure record is preserved and superseded. See
+`evidence/amber-auto-verification-2026-10-25.json` and
+[camera verification](camera-verification-2026-10-25.md).
+No new update was required. Code-ready and recovery remain blocked.
+
+## Earlier observation and staging history
+
+Later verification: the two new camera photos corroborate the Amber tint at
+Cb/Cr approximately 110/150 and normal Standard colour. The user confirms
+restart, remembered selection and playback, but the English label remains
+Sepia. Installation is user-reported and exact installed bytes are unknown.
+See `evidence/amber-runtime-verification-2026-10-24.json` and the append-only
+trial-results records. The original staging history below is preserved.
+
 24 October 2026. The user reports the Pocket Studio build is working after the
 requested restart/shoot/playback checks. Exact repetition counts and an
 independently observed hardware test are not recorded.

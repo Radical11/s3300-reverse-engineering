@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "windows_offline_tests": {
+    "passed": 321,
+    "failed": 0,
+    "python": "3.13.15"
+  },
+  "linux_execution_in_this_pass": false,
+  "linux_scope": "Existing CI matrix configured; not executed from this Windows session. No VM changes.",
+  "workspace_doctor_passed": true,
+  "original_source_and_decoded_outputs_unchanged": true,
+  "reports": {
+    "saved-jpeg-path": {
+      "path": "evidence/saved-jpeg-path.json",
+      "sha256": "6336d15e8e2bc3c9100ccc6440677678bf9a653d7d3da6ae8b70de447042cd49",
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "provenance_bound": true
+    },
+    "cache-dma-contracts": {
+      "path": "evidence/cache-dma-contracts.json",
+      "sha256": "9bc4ad2f8b56021427d901522ff69d98d73746d4bedeb9b1b57d210e5cf68c35",
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "provenance_bound": true
+    },
+    "reset-recovery": {
+      "path": "evidence/reset-recovery.json",
+      "sha256": "153f50816b65e1f1974a4a9cd44af5da5467a4851d4c4c930ee35669919a05ae",
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "provenance_bound": true
+    },
+    "ptp-vendor-contracts": {
+      "path": "evidence/ptp-vendor-contracts.json",
+      "sha256": "351be7e425f814d8ed8551f245bcd242a70f30c8bd5d3e03caa37a403f16dfb8",
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "provenance_bound": true
+    },
+    "usb-entry-contracts": {
+      "path": "evidence/usb-entry-contracts.json",
+      "sha256": "38df720465384adea34baf20bebc7b7ea166014b40ffaacecf97ea2a43c334c5",
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "provenance_bound": true
+    }
+  },
+  "focused_maps_repeat_and_verify_existing_passed": 5,
+  "stale_verifier_rejected_and_prior_report_preserved": true,
+  "interface_catalog_entries": 33,
+  "camera_callable_entries": 0,
+  "ptp_initializer_emulation": {
+    "status": "failed",
+    "verified_fallback_instructions": 5686,
+    "local_9002_cases": 5,
+    "full_registration_runtime_claim": false
+  },
+  "resource_ready": true,
+  "code_ready": false,
+  "executable_trials_allowed": false,
+  "camera_commands_issued": false,
+  "firmware_candidate_built": false,
+  "camera_flashed": false,
+  "calibration_written": false,
+  "global_settings_changed": false,
+  "remote_publication": false,
+  "remaining": [
+    "Active shutter route and saved-photo packing/stride/capacity/live ownership",
+    "Safe placement and complete hook/calling convention/code publication",
+    "Custom controls and persistence lifecycle",
+    "Safe installed backup coverage and reset-independent software recovery",
+    "Matched camera performance evidence"
+  ]
+}

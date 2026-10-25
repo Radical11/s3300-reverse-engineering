@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "current_workspace_tests": {
+    "run": 323,
+    "passed": 323,
+    "skipped": 0,
+    "failed": 0
+  },
+  "fresh_source_tests": {
+    "run": 323,
+    "passed": 321,
+    "failed": 0,
+    "skipped": [
+      {
+        "test": "test_label_contracts.RetainedLabelContractTests.test_static_path_stays_separate_from_camera_activation",
+        "reason": "Private native analysis deliberately absent in source archive"
+      },
+      {
+        "test": "test_label_contracts.RetainedLabelContractTests.test_real_lookup_in_emulator_selects_changed_span_and_rejects_bad_ids",
+        "reason": "Private native analysis deliberately absent in source archive"
+      }
+    ]
+  },
+  "fresh_reproduction_evidence": "evidence/code-contracts-fresh-source-validation-2026-10-25.json",
+  "fresh_reproduction_evidence_sha256": "59f1666551672971ef3603f27cd955b323ab0b2035c928f8bd3bb6b7b8a8451a",
+  "source_archives_identical": true,
+  "source_package": "derived/s3300-code-contracts-verified-2026-10-25-source.zip",
+  "source_package_sha256": "adf2fe0eb9e0c6888b3ace2145ff470de6c7e7e3258109326ae4cb9d433cbfc7",
+  "guide": "derived/development-guide-code-contracts-verified-2026-10-25/index.html",
+  "offline_guide_browser_checks": {
+    "chapters": 12,
+    "assets": 2,
+    "desktop_overflow": false,
+    "mobile_viewport": 390,
+    "mobile_overflow": false,
+    "search_and_empty_results": true
+  },
+  "resource_ready": true,
+  "code_ready": false,
+  "executable_trials_allowed": false,
+  "camera_commands_issued": false,
+  "new_trial_created": false,
+  "flashed": false,
+  "linux_executed": false,
+  "global_environment_changed": false,
+  "remote_published": false,
+  "scope": "Repeated exact existing candidates are offline reproduction artifacts. Firmware and proprietary listings remain local. This is an acceptance record for the development pass, not full platform completion."
+}

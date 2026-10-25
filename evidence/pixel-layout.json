@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated original instruction words and direct Ghidra dossiers, not REA Evidence",
+  "target_executed": false,
+  "camera_commands_issued": false,
+  "instruction_assertions": 39,
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2150738524,
+        "dossier_sha256": "a2d4c7a1c702e7b6c7e34b7bedc2db7a1a0b15b8efbdd15bdf901d27f4e68bed",
+        "instructions_checked": 2454,
+        "name": "FUN_8031aa5c"
+      },
+      {
+        "address": 2150806028,
+        "dossier_sha256": "40694e8c0a24c64736bfc871a7dbbf75b6f8581abfe716230aadb20916611fb5",
+        "instructions_checked": 344,
+        "name": "FUN_8032b20c"
+      },
+      {
+        "address": 2149205136,
+        "dossier_sha256": "5417e9b9c0e246643490435acdc3b5173e2c92cde4e6271469e39cc8e20a88f5",
+        "instructions_checked": 320,
+        "name": "FUN_801a4490"
+      },
+      {
+        "address": 2149211200,
+        "dossier_sha256": "d5de8a6882c7d78f235de1d2a3000cc64f7c558c2b45fe68ffcff33b896a742e",
+        "instructions_checked": 136,
+        "name": "FUN_801a5c40"
+      }
+    ]
+  },
+  "diagnostic": {
+    "address": 2149236568,
+    "sha256": "db761f07afa58da0a518e58c49df302b131c451c4cd5d8d1b77ff530a0fc00af",
+    "meaning": "Kind1 is named420 input; this target requires ICA420-to422 conversion flag40"
+  },
+  "contracts": [
+    {
+      "id": "jpeg.selectors_are_distinct",
+      "status": "static-contract-verified",
+      "aps_entry": 2150806028,
+      "arguments": {
+        "input_kind_u32": 4,
+        "address_layout_u32": 8
+      },
+      "options": {
+        "input_kind_u16": 2,
+        "secondary_option_u16": 4
+      },
+      "context": {
+        "input_kind_u16": 218,
+        "secondary_option_u16": 220
+      },
+      "flow": "ApsJpeg copies argument+4 low16 to options+2, and argument+8 low16 to options+4. Constructor801a4490 stores them separately.",
+      "constraint": "Address-layout selector1 is not evidence that JPEG input-kind equals1."
+    },
+    {
+      "id": "jpeg.still_image_selector_origin",
+      "status": "static-contract-verified",
+      "caller": 2150738524,
+      "calls": [
+        2150742088,
+        2150742520
+      ],
+      "input_kind": 0,
+      "address_layout_source": "Capture byte+2d4 through retained stack slots44c/414 into ApsJpeg argument+8",
+      "constraints": [
+        "These two branches explicitly pass input-kind0; do not label them420 merely from argument+8.",
+        "Live Auto-mode state and full path branch selection remain unobserved."
+      ]
+    },
+    {
+      "id": "jpeg.kind1_conversion",
+      "status": "static-guard-verified",
+      "constructor": 2149205136,
+      "input_kind": 1,
+      "required_flag": 64,
+      "chroma_alignment": "Left and top must both be even",
+      "side_effects": "Conversion path allocates and initializes ICA path through indirect factory; options/context may be adjusted.",
+      "constraints": [
+        "Known420 naming does not define component byte order, numeric range or full plane capacity.",
+        "Constructor is stateful and asserting; these are not sufficient public call guards."
+      ]
+    },
+    {
+      "id": "jpeg.dma_input_geometry",
+      "status": "static-arithmetic-verified",
+      "address": 2149211200,
+      "arguments": "a0 context,a1 DMA fields,a2 seven-u32 frame descriptor,a3 transfer-height quantity",
+      "selector": "context+da ==1 uses parent width as byte-pitch arithmetic; other kinds double it before rounding to32-bit words",
+      "horizontal_block": "Normally16; when context flags+420 bit80 set and secondary option+dc !=1,8",
+      "orientation": "Flag80 forces transfer-height quantity16; later descriptor branches differ",
+      "writes": "Rounds descriptor ROI width+14 in place; writes burst words at DMA+0c and parent-pitch words at DMA+14",
+      "constraints": [
+        "Original arithmetic wraps at32 bits without complete capacity validation.",
+        "Geometry in this internal helper is not proof of CPU-readable RAM, live ownership, range or colour domain.",
+        "Later DMA address/row descriptors and all synchronization remain outside the pure helper model."
+      ]
+    }
+  ],
+  "remaining_gates": [
+    "Resolve component order and numeric range at a selected active capture hook.",
+    "Verify live descriptor values, pitch/capacity and allocation lifetime for that hook.",
+    "Verify scheduler, cache-line and DMA ownership while preview/JPEG are active.",
+    "Establish safe executable placement, hook ABI and independent software recovery."
+  ],
+  "rgb8_adapter_verified": false,
+  "safe_capture_adapter_established": false,
+  "ready_for_executable_trial": false,
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_pixel_layout.py": "a7e8c8185ccf8aa2e2aca2b8a1fcc0dc54b5ee1c1b8caed0f32e4e7801d65c6d",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

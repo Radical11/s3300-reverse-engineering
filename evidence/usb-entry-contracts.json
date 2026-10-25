@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated independent Capstone/raw-JAL checks and direct Ghidra dossiers, not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "instruction_checks": [
+    {
+      "address": 2155289716,
+      "sha256": "734486b9894b6d6895dab167f4384766f2dc9e7e92dd139874e8300184a3e092"
+    },
+    {
+      "address": 2155464092,
+      "sha256": "734486b9894b6d6895dab167f4384766f2dc9e7e92dd139874e8300184a3e092"
+    },
+    {
+      "address": 2155396424,
+      "sha256": "734486b9894b6d6895dab167f4384766f2dc9e7e92dd139874e8300184a3e092"
+    },
+    {
+      "address": 2155396432,
+      "sha256": "fd8518e9981ff9541fa87a1dafef763478a2c5559ea66e2a3ce829d2f1b9d92d"
+    },
+    {
+      "address": 2155396436,
+      "sha256": "c8f97202258139eb4e3f0ee04e6d1fba889cc8211dce004a6433540752a6774c"
+    },
+    {
+      "address": 2155396440,
+      "sha256": "ba63bdd2b2190c08c6edb18e298a71bd3383b221d56a8d7fef3df042445590ae"
+    },
+    {
+      "address": 2155396448,
+      "sha256": "61f99eacc4fa4c42e75715c6ecec680fcd92b7d6663e28a1d563430b81199b2b"
+    },
+    {
+      "address": 2155093212,
+      "sha256": "18345393f0b7726be0b445abc48cbae4c51243e5088b3b8d6e78ee030afa2f80"
+    },
+    {
+      "address": 2155093216,
+      "sha256": "8d8f4fd05b61b7c2514b49fda132a0cc163b35cb449dfa76a035cd04568dd00a"
+    },
+    {
+      "address": 2155093220,
+      "sha256": "f4de5f62e20ff03ceb844f46b74bab6484eccae1eae70a7d3e8505a2ff429404"
+    },
+    {
+      "address": 2153300120,
+      "sha256": "c565f3d9edd369efd199e0c0129050377e67218af5ce372675267fe4f41edee5"
+    },
+    {
+      "address": 2153300124,
+      "sha256": "353d47ee6546f01524b642816d980e64f91602cef9c23c8a6301b6e387965eeb"
+    },
+    {
+      "address": 2153300128,
+      "sha256": "6583888b741294a36755fd4868b5b1a236bd22d6b6a007e57cc0093f1ba9fc75"
+    },
+    {
+      "address": 2153300232,
+      "sha256": "083cd56c4ebef9c8f80ee097e8d83169f39a4f3af3cd2f821b65fe9e984e45a0"
+    },
+    {
+      "address": 2153300236,
+      "sha256": "ce17c2c766797d735d3726ea6f522ce2c98ca13b392f58cfc675c44e56a03483"
+    },
+    {
+      "address": 2153300252,
+      "sha256": "5187319921b9b7b8972697662d37a339268a52c27c728d5889fe69dc05755ed4"
+    },
+    {
+      "address": 2154466108,
+      "sha256": "f9491f20ee02e20b040ec11317ff3eb4af21dde161bdc5d7f69c0779a578ba88"
+    },
+    {
+      "address": 2154466112,
+      "sha256": "9eac7b2ccfc14396439151c42f37627a5c7b1d37245e41dac65dd1831732161b"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2153295700,
+        "dossier_sha256": "d9cbb362a7dfc978a55b51fcdf220ed7dd382f24a5a37172d5b28be12c323898",
+        "instructions_checked": 3170,
+        "name": "sub_8058af54"
+      },
+      {
+        "address": 2153363868,
+        "dossier_sha256": "856e1ea14b142f32e9960df725e5729d86587d1e3d5b57a08cfcdbca737302aa",
+        "instructions_checked": 108,
+        "name": "sub_8059b99c"
+      },
+      {
+        "address": 2154005368,
+        "dossier_sha256": "085131589536876a6cff4ff423a92834917670deaed81b130e4dee6a198de505",
+        "instructions_checked": 638,
+        "name": "sub_80638378"
+      },
+      {
+        "address": 2154010840,
+        "dossier_sha256": "6923659a6c76acc9e77d9f96db28b89f6710ff24fe9a8ffe1a8b1e1f61381940",
+        "instructions_checked": 122,
+        "name": "sub_806398d8"
+      },
+      {
+        "address": 2154348188,
+        "dossier_sha256": "5c3c0a1cb4838d96da511464c80de83a256363dcf0dfda86c964ed5d70284ff7",
+        "instructions_checked": 2,
+        "name": "sub_8068be9c"
+      },
+      {
+        "address": 2154465196,
+        "dossier_sha256": "42ecd3f07826f8ba93065def887eeabac7490930e5a2d6ab2d3b23f8442073d4",
+        "instructions_checked": 160,
+        "name": "sub_806a87ac"
+      },
+      {
+        "address": 2154465836,
+        "dossier_sha256": "5bc6f1e54f3f8de66c236a87e5a8f2c5cfe4e9b1875c6dcef31da4593bacf14a",
+        "instructions_checked": 1499,
+        "name": "sub_806a8a2c"
+      },
+      {
+        "address": 2154794592,
+        "dossier_sha256": "cc78f15031c849066b55dac12267fb662542a47c459e4fdeeb0876ac308ec5dc",
+        "instructions_checked": 298,
+        "name": "sub_806f8e60"
+      },
+      {
+        "address": 2154796028,
+        "dossier_sha256": "e043d811e9cc938aabcf3569e4ca278689accbec85db1e13b70e852ef4ddf20b",
+        "instructions_checked": 470,
+        "name": "sub_806f93fc"
+      },
+      {
+        "address": 2155083864,
+        "dossier_sha256": "30b25c86496c14a701a0eaafac06fee8caf0e9715d3e448ed3159dc22079ad55",
+        "instructions_checked": 650,
+        "name": "sub_8073f858"
+      },
+      {
+        "address": 2155093208,
+        "dossier_sha256": "945e3e43251c5d843ddc4cf699c157c361b392446a763d265e56e658d6fded51",
+        "instructions_checked": 6,
+        "name": "sub_80741cd8"
+      },
+      {
+        "address": 2155093380,
+        "dossier_sha256": "db5cf5a809e46217390ecba3620c0b20fb6dc27534bda2ccac713fd2b6234200",
+        "instructions_checked": 31,
+        "name": "sub_80741d84"
+      },
+      {
+        "address": 2155093532,
+        "dossier_sha256": "0b890b5e490665888e9032463f15fdd0514e5ba50391da5d2a90cf4a1346a794",
+        "instructions_checked": 104,
+        "name": "sub_80741e1c"
+      },
+      {
+        "address": 2155289704,
+        "dossier_sha256": "d8e69e4f803609bc6517196e42bb1ff8d87677a7137d78c5918013938696432c",
+        "instructions_checked": 8,
+        "name": "FUN_80771c68"
+      },
+      {
+        "address": 2155291128,
+        "dossier_sha256": "a9c933f90c3d17a2177b497fe33947e5eb92ae3f77778b87895405a09053382f",
+        "instructions_checked": 130,
+        "name": "FUN_807721f8"
+      },
+      {
+        "address": 2155293692,
+        "dossier_sha256": "fa312ac78ce5c98583cc29d5fd601721b4e4ef5b41a6d4ac2f0340b5a103607a",
+        "instructions_checked": 78,
+        "name": "FUN_80772bfc"
+      },
+      {
+        "address": 2155396424,
+        "dossier_sha256": "0fc4fcdc64419ccc85b5394171fd500935796b97ab0571d93511d3bd6ca4136a",
+        "instructions_checked": 12,
+        "name": "FUN_8078bd48"
+      },
+      {
+        "address": 2155404292,
+        "dossier_sha256": "c31431b4f417baf0b8e3a12e5ddfe7a142e773a52fc2941d8c7f3a30a494283b",
+        "instructions_checked": 21,
+        "name": "FUN_8078dc04"
+      },
+      {
+        "address": 2155404428,
+        "dossier_sha256": "fa9a6a46a221fac607fc4e3f408a441155c1a42baa025fcb24e9a37e0dd7d5a1",
+        "instructions_checked": 90,
+        "name": "FUN_8078dc8c"
+      },
+      {
+        "address": 2155464080,
+        "dossier_sha256": "8703b80c7d789f0affb390f3be8e2eb8bb5162c1bb2027fcba196de7e043b4cd",
+        "instructions_checked": 8,
+        "name": "FUN_8079c590"
+      }
+    ]
+  },
+  "native_index_sha256": "c23094f400673d07980f1d26cccb85dbc56457f9aa6bdb30e3b7a155794c677b",
+  "direct_call_references": {
+    "80771c68": [
+      {
+        "site": 2153364108,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2153363868
+      },
+      {
+        "site": 2154005732,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2154005368
+      },
+      {
+        "site": 2154011252,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2154010840
+      },
+      {
+        "site": 2154011300,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2154010840
+      },
+      {
+        "site": 2154465244,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2154465196
+      },
+      {
+        "site": 2154795336,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2154794592
+      },
+      {
+        "site": 2154796656,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2154796028
+      },
+      {
+        "site": 2155085904,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2155083864
+      }
+    ],
+    "8078bd48": [
+      {
+        "site": 2155289712,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2155289704
+      },
+      {
+        "site": 2155464088,
+        "type": "UNCONDITIONAL_CALL",
+        "function": 2155464080
+      }
+    ]
+  },
+  "wrapper_calls": [
+    {
+      "site": 2153364108,
+      "function": 2153363868,
+      "mode": 5,
+      "constant_in_delay_slot": true
+    },
+    {
+      "site": 2154005732,
+      "function": 2154005368,
+      "mode": 7,
+      "constant_in_delay_slot": true
+    },
+    {
+      "site": 2154011252,
+      "function": 2154010840,
+      "mode": 7,
+      "constant_in_delay_slot": true
+    },
+    {
+      "site": 2154011300,
+      "function": 2154010840,
+      "mode": 7,
+      "constant_in_delay_slot": true
+    },
+    {
+      "site": 2154465244,
+      "function": 2154465196,
+      "mode": 0,
+      "constant_in_delay_slot": true
+    },
+    {
+      "site": 2154795336,
+      "function": 2154794592,
+      "mode": 0,
+      "constant_in_delay_slot": true
+    },
+    {
+      "site": 2154796656,
+      "function": 2154796028,
+      "mode": 0,
+      "constant_in_delay_slot": true
+    },
+    {
+      "site": 2155085904,
+      "function": 2155083864,
+      "mode": 0,
+      "constant_in_delay_slot": true
+    }
+  ],
+  "debug_mode_record": [
+    2155464080,
+    0
+  ],
+  "search_boundary": "All aligned words in eight authenticated decoded regions plus all indexed references to80771c68/8078bd48; excludes unresolved indirect transfers and other binaries",
+  "contracts": [
+    {
+      "id": "usb.entry_direct_calls",
+      "status": "static-contract-verified",
+      "wrapper": 2155289704,
+      "modes_observed": [
+        0,
+        5,
+        7
+      ],
+      "mode6_direct_calls_found": 0,
+      "limits": "No direct constant6 call in this bounded search; indirect activation is unresolved"
+    },
+    {
+      "id": "usb.entry_application_mode0",
+      "status": "partial",
+      "paths": [
+        {
+          "caller": 2154465196,
+          "role": "internal Pure HCE initialization path; eventd181 reaches this routine"
+        },
+        {
+          "caller": 2154794592,
+          "role": "startup checks runtime80819296/808921ef; mode0 branch requires low nibble8000ff8a!=8 plus other guards"
+        },
+        {
+          "caller": 2154796028,
+          "role": "internal eventd112 START_ENTER_TEST_Mode path"
+        },
+        {
+          "caller": 2155083864,
+          "role": "eventd001/12a branch uses mode0 when808921ef is zero"
+        }
+      ],
+      "predicate": {
+        "entry": 2155093208,
+        "word": 2147549066,
+        "rule": "returns(low_nibble!=8); startup808921ef=(return==0)"
+      },
+      "mode0_registration": "807721f8 stores slot0, creates UsbAgent via8078dc04;80772bfc uses8078dc8c debug-class interface descriptor with sub8068be9c returning0",
+      "limits": [
+        "Application-state and event lifecycle required",
+        "No verified ordinary menu or physical-control entry",
+        "Mode0 and mode6 are distinct descriptor compositions",
+        "Neither path establishes boot-failure recovery"
+      ]
+    },
+    {
+      "id": "usb.entry_mode_config_mutation",
+      "status": "partial",
+      "writer": 2153295700,
+      "branch": "UIDebugMsg case32/sub6 selects8000ff8a among calibration words",
+      "effect": "Reads0x400-byte C:\\ColdData.bin; changes low nibble to4/8; writes file; updates settings/checksum state",
+      "internal_entry": "806a8a2c dispatches event200 with parameter<80 to8058af54",
+      "limits": [
+        "No verified host/public route to this event",
+        "Calibration modification is stateful and not a read-only probe",
+        "No runtime file version/integrity/rollback contract"
+      ]
+    },
+    {
+      "id": "usb.entry_debug_request",
+      "status": "static-route-partial",
+      "handler": 2155464080,
+      "dispatcher_table_index": 211,
+      "record": 2156500320,
+      "receive_flag": 0,
+      "effect": "subcommand low8 passed to8078bd48; posts queue2 message100000 with mode as argument",
+      "limit": "Requires existing application debug dispatch; circular as an independent entry into debug mode"
+    }
+  ],
+  "gates": {
+    "independent_mode6_entry_verified": false,
+    "safe_mode0_activation_verified": false,
+    "software_unbootable_recovery_verified": false,
+    "executable_trial_allowed": false
+  },
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "map_usb_entry_contracts.py": "f989c2a5496513bd5189eb292e063282da0de72580377d56324ff87d9bff1386",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

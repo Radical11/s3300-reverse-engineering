@@ -4,3 +4,5 @@ pyelftools==0.33
 capstone==5.0.6
 # Used to validate existing JPEG/PGM resources in the complete workspace export.
 Pillow==12.3.0
+# Existing Windows WPD driver access, imported only by explicit camera commands.
+comtypes==1.4.17; sys_platform == 'win32'

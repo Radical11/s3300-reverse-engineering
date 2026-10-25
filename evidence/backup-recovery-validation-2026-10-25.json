@@ -1,0 +1,551 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "workspace_tests": {
+    "run": 459,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "research_maps": [
+    {
+      "topic": "saved-jpeg",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\saved-jpeg-path.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "cache-dma",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\cache-dma-contracts.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "reset-recovery",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\reset-recovery.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "ptp-vendor",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\ptp-vendor-contracts.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "usb-entry",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\usb-entry-contracts.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "shutter-route",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\shutter-route.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "shutter-input",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\shutter-input.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "pixel-layout",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\pixel-layout.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "menu-lifecycle",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\menu-lifecycle.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "update-write-scope",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\update-write-scope.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "backup-scope",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\backup-scope.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "backup-usb",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\backup-usb-contracts.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "updater-handoff",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\updater-handoff.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    },
+    {
+      "topic": "application-write-scope",
+      "output": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\backup-recovery-contracts-2026-10-25\\application-write-scope.json",
+      "verified_existing": false,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "camera_accessed": false,
+      "native_analysis_reused": true,
+      "executable_trial_allowed": false
+    }
+  ],
+  "current_index": {
+    "schema_version": 1,
+    "index_kind": "artifact-functions-v1",
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+    "database_sha256": "01f2a57d7c4b365c1a54df76c9b0058998dd3f077f2c4891e204c4367ef7c51d",
+    "counts": {
+      "images": 7,
+      "functions": 19527,
+      "edges": 65199,
+      "references_from": 708855,
+      "indirect_transfers": 9474
+    },
+    "images": [
+      {
+        "id": "application",
+        "label": "Application \u00b7 decoded analysis",
+        "input_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+        "language": "MIPS:LE:32:default",
+        "entry": 2147485184,
+        "flags": 1879052289,
+        "function_count": 15817,
+        "status": "indexed",
+        "scope": "Decoded synthetic analysis ELF; inferred functions/types, not an installable image or recovered original source. Includes one separately authenticated caller-seeded writer boundary; inferred types retain an explicit warning."
+      },
+      {
+        "id": "image-00000200",
+        "label": "Updater \u00b7 original ELF",
+        "input_sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+        "language": "MIPS:LE:32:default",
+        "entry": 2147549184,
+        "flags": 1879052289,
+        "function_count": 1526,
+        "status": "indexed",
+        "scope": "Original executable carrier; imported instruction bytes checked against this ELF only. Address collisions with other images remain separate."
+      },
+      {
+        "id": "image-001006c0",
+        "label": "Tiny loader \u00b7 MIPS16",
+        "input_sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+        "language": "MIPS:LE:32:default",
+        "entry": 2164261889,
+        "flags": 268439552,
+        "function_count": 16,
+        "status": "indexed",
+        "scope": "Original executable carrier; imported instruction bytes checked against this ELF only. Address collisions with other images remain separate. MIPS16 loader: odd ELF entry/mode retained; function addresses use Ghidra canonical entries."
+      },
+      {
+        "id": "image-001026c0",
+        "label": "Primary \u00b7 original ELF",
+        "input_sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+        "language": "MIPS:LE:32:default",
+        "entry": 2147485184,
+        "flags": 1879052289,
+        "function_count": 2168,
+        "status": "indexed",
+        "scope": "Original executable carrier; imported instruction bytes checked against this ELF only. Address collisions with other images remain separate."
+      },
+      {
+        "id": "image-002202c0",
+        "label": "Packed carrier 002202c0",
+        "input_sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+        "language": "MIPS:LE:32:default",
+        "entry": 2147485184,
+        "flags": 1879052289,
+        "function_count": 0,
+        "status": "inventory-only",
+        "scope": "Packed carrier representation; inventory only. Decoded executable functions live in the application namespace."
+      },
+      {
+        "id": "image-003bd9a8",
+        "label": "Packed carrier 003bd9a8",
+        "input_sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+        "language": "MIPS:LE:32:default",
+        "entry": 2147485184,
+        "flags": 1879052289,
+        "function_count": 0,
+        "status": "inventory-only",
+        "scope": "Packed carrier representation; inventory only. Decoded executable functions live in the application namespace."
+      },
+      {
+        "id": "image-005c2b78",
+        "label": "Packed carrier 005c2b78",
+        "input_sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+        "language": "MIPS:LE:32:default",
+        "entry": 2147485184,
+        "flags": 1879052289,
+        "function_count": 0,
+        "status": "inventory-only",
+        "scope": "Packed carrier representation; inventory only. Decoded executable functions live in the application namespace."
+      }
+    ],
+    "application_index_reused": {
+      "database_sha256": "c23094f400673d07980f1d26cccb85dbc56457f9aa6bdb30e3b7a155794c677b",
+      "manifest_sha256": "858b401349a280a62e0cbaee223a5dc118eb89eb14d51ea0a76b150548ffacae",
+      "instructions_byte_checked": 1369833,
+      "initial_decompilation_failures": 3,
+      "focused_retry_successes": 1,
+      "remaining_decompilation_failures": 2
+    },
+    "native_profile_sha256": "1d8d0d6f4e9e8d0406b4f582f3a20112a7ccc2e621ce8b4d18b5794c905922a9",
+    "separate_image_corroboration": [
+      {
+        "image": "image-00000200",
+        "input_sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+        "functions": 1526,
+        "instructions_byte_checked": 123947,
+        "decompilation_failures": 0,
+        "retry_overlays_used": 0,
+        "nondefault_reference_sites_omitted": 0,
+        "dossier_hashes_digest": "fa1fbd2dd0afc688507b4ad0b8c9e16640b10d009a2c51a7640a9e14587851ad"
+      },
+      {
+        "image": "image-001006c0",
+        "input_sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+        "functions": 16,
+        "instructions_byte_checked": 1424,
+        "decompilation_failures": 0,
+        "retry_overlays_used": 0,
+        "nondefault_reference_sites_omitted": 0,
+        "dossier_hashes_digest": "a62247858ca8a82bf0cb366586937278244b17d1a7086620f1c63a8084626711"
+      },
+      {
+        "image": "image-001026c0",
+        "input_sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+        "functions": 2168,
+        "instructions_byte_checked": 165734,
+        "decompilation_failures": 0,
+        "retry_overlays_used": 0,
+        "nondefault_reference_sites_omitted": 0,
+        "dossier_hashes_digest": "a0a2af6bc0b34dd668483bb286083f4df581470bb57b45d9b04a823c702d5352"
+      },
+      {
+        "image": "image-002202c0",
+        "input_sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+        "functions": 0,
+        "instructions_byte_checked": 0,
+        "decompilation_failures": 0,
+        "retry_overlays_used": 0,
+        "nondefault_reference_sites_omitted": 0,
+        "dossier_hashes_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "image": "image-003bd9a8",
+        "input_sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+        "functions": 0,
+        "instructions_byte_checked": 0,
+        "decompilation_failures": 0,
+        "retry_overlays_used": 0,
+        "nondefault_reference_sites_omitted": 0,
+        "dossier_hashes_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "image": "image-005c2b78",
+        "input_sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+        "functions": 0,
+        "instructions_byte_checked": 0,
+        "decompilation_failures": 0,
+        "retry_overlays_used": 0,
+        "nondefault_reference_sites_omitted": 0,
+        "dossier_hashes_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    ],
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "builder_sha256": "8a789c9e07d5cf6cb133600b961adfa18930103ce607ee18c9bd311b0eb7f36a",
+    "target_executed": false,
+    "camera_accessed": false,
+    "limitations": [
+      "Namespaces prevent address collisions; no claim that these executables are simultaneously installed at their ELF addresses.",
+      "Imported-byte equality is not proof of inferred signatures, reachable branches or runtime safety.",
+      "Packed carriers have no executable function indexing; no disassembly of compressed payloads is fabricated.",
+      "MIPS16 instruction bytes and original flags are retained without a second decoder or hardware execution."
+    ],
+    "application_writer_overlay": {
+      "image": "application",
+      "entry": 2151511004,
+      "added_functions": 1,
+      "directory": "derived/application-writer-focus-2026-10-25",
+      "dossier_sha256": "5145afdfb8df928224af773364f9853c13ab78ca974aa3a83cf7cd68b46c525b",
+      "provenance_sha256": "76d02a6df6f73fd6c57775b5cd6c80c1d668dd83c15cfa757abbf7a732300537",
+      "instructions_byte_checked": 2807,
+      "verification_report_sha256": "ea49d8ee62b4994664dc3a0692b6f049f1e6f83447fba2c9be28b2c19d898ca3",
+      "verifier_sha256": "63556c9f6b6bde21c035e26807c4ca3440c561c435078823e6a680c7155a36a2",
+      "native_tool_versions": {
+        "ghidra": "12.1.4",
+        "jdk": "21.0.9+10"
+      },
+      "exporter_hashes": {
+        "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690",
+        "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad"
+      },
+      "caller_seeded_boundary": true,
+      "authenticated_unwind_boundary": false,
+      "boundary_scope": "Caller-seeded from authenticated callback; neighboring function entry limits body, not an authenticated unwind range",
+      "inference_warning": "Type propagation algorithm not settling; inferred C pointer/integer types are incomplete",
+      "base_application_index_modified": false,
+      "target_executed": false
+    }
+  },
+  "two_index_builds_identical": true,
+  "workbench_browser": {
+    "initial": {
+      "features": 4,
+      "blocked": true,
+      "overflow": false
+    },
+    "backup_coverage": {
+      "recorded": true,
+      "components": 8,
+      "blocked": true
+    },
+    "focused_writer": {
+      "characters": 61552,
+      "warning": true
+    },
+    "hardware_search": {
+      "results": 4,
+      "text": "hardware_spec \u00c2\u00b7 manufacturer_specsensor1/2.3-inch CCD; approximately 16 million effective pixelsExact sensor part, readout modes and register contract remain unknown.Evidence: https://en.nikon.ca/p/coolpix-s3300/26311/overviewstock_limit \u00c2\u00b7 manufacturer_specstill-burstAbout 1.3 fps, up to 6 full-resolution shotsDocumented mode performance; not a measured baseline for this unit or proof of maximum sensor/ISP throughput.Evidence: https://en.nikon.ca/p/coolpix-s3300/26311/overviewstock_limit \u00c2\u00b7 manufacturer_specisoISO 80-3200; ISO 3200 limited to 4M, 2M or VGARaising a numeric limit does not establish usable sensor output or acceptable noise.Evidence: https://nij.nikon.com/products/lineup/compact/s3300/spec.htmlunknown \u00c2\u00b7 unknownraw-and-accelerator-accessUnknownNeed sensor bit depth/readout contract, ISP command ownership and active capture path. Static gamma MMIO references alone do not establish a usable hardware API.Evidence: notes/gamma-pipeline.md \u00c2\u00b7 notes/findings.md"
+    },
+    "interface_search": true,
+    "function_search": {
+      "results": 30,
+      "more": true
+    },
+    "function_detail": {
+      "characters": 1244,
+      "scope": "Exact canonical function entry within the selected executable only; static references and inferred pseudocode.",
+      "referencePanel": true
+    },
+    "namespaces": {
+      "images": 7,
+      "updater": "UartClientWrite"
+    },
+    "packed_inventory_scope": "Packed carrier representation; inventory only. Decoded executable functions live in the application namespace.",
+    "research_selection": true,
+    "mobile": {
+      "viewport": 390,
+      "scroll": 390
+    },
+    "all_requests_local": true
+  },
+  "guide_browser": {
+    "initial": {
+      "articles": 12,
+      "images": [
+        {
+          "complete": true,
+          "width": 1040
+        },
+        {
+          "complete": true,
+          "width": 1040
+        }
+      ],
+      "overflow": false
+    },
+    "search": {
+      "visible": 7,
+      "status": "7 chapters match"
+    },
+    "no_results": true,
+    "mobile": {
+      "viewport": 390,
+      "scroll": 390
+    },
+    "offline_local_assets_loaded": true
+  },
+  "backup_coverage": {
+    "schema_version": 1,
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "required_components": [
+      {
+        "id": "boot-rom-reset-chain",
+        "status": "missing-installed-acquisition",
+        "evidence": "reset-recovery.json",
+        "scope": "Reset vector/ROM fingerprint and activation path are absent from supplied carrier mappings."
+      },
+      {
+        "id": "installed-boot-header-and-sections",
+        "status": "missing-installed-acquisition",
+        "evidence": "update-write-scope.json",
+        "scope": "Current boot records, section map and recovery flags; supplied update header is not an installed snapshot."
+      },
+      {
+        "id": "installed-code-and-resource-volumes",
+        "status": "baseline-only",
+        "evidence": "firmware-atlas.json",
+        "scope": "Original update preserved; exact installed modified code/resource bytes have not been read back."
+      },
+      {
+        "id": "persistent-ui-store",
+        "status": "layout-known-not-acquired",
+        "evidence": "backup.ui_and_calibration_stores",
+        "scope": "0x1a0 serialized UI store and source/location metadata."
+      },
+      {
+        "id": "persistent-calibration-and-calibration-resources",
+        "status": "partial-layout-not-acquired",
+        "evidence": "backup.calibration_serialized_subset",
+        "scope": "Separate0x24a serialized subset plus other installed calibration resources and provenance; completeness unresolved."
+      },
+      {
+        "id": "physical-geometry-bad-block-spare-ecc",
+        "status": "missing-installed-acquisition",
+        "evidence": "update-write-scope.json",
+        "scope": "Installed geometry, mappings, bad blocks, spare/ECC representation and read failures; normalized data alone may omit restoration metadata."
+      },
+      {
+        "id": "independent-recovery-content",
+        "status": "missing-installed-acquisition",
+        "evidence": "reset-recovery.json",
+        "scope": "Installed recovery content and reset-independent entry/transport must be demonstrated."
+      },
+      {
+        "id": "user-files",
+        "status": "ordinary-object-copy-only",
+        "evidence": "ptp-vendor-contracts.json",
+        "scope": "Copied ordinary PTP/WPD files can preserve exposed media; they do not prove backup of hidden flash, settings, calibration or boot sectors."
+      }
+    ],
+    "file_snapshot_record": {
+      "schema_version": 1,
+      "date_local": "2026-10-25",
+      "timezone": "Asia/Calcutta",
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "source_hash_role": "Analysis baseline identity; installed firmware bytes not acquired",
+      "private_manifest": "samples/camera-files-backup-2026-10-25-run1/manifest.json",
+      "private_manifest_sha256": "a073f0db7a90d5705293a763c009deb324a8b6ed3365808289dc7ec841a5ad71",
+      "verified_files": 49,
+      "verified_bytes": 170787084,
+      "object_inventory_before_after_equal": true,
+      "device_reads_per_file": 2,
+      "local_hashes_rechecked": true,
+      "storage_numeric_fields": {
+        "storage_type": 4,
+        "filesystem_type": 3,
+        "access_capability": 0,
+        "capacity_bytes": 2002452480,
+        "free_bytes": 1811513344,
+        "free_images": 349,
+        "scope": "PTP exposed storage only; variable strings not validated; not flash geometry"
+      },
+      "metadata_parse_complete": false,
+      "metadata_errors": [
+        {
+          "operation": "GetStorageInfo",
+          "storage": 65537,
+          "error": "Unterminated PTP string"
+        }
+      ],
+      "raw_storage_dataset_sha256": "5aa980a1aad5ef0f750f92690161ac788aada34df0340d61e9423574a9a6098d",
+      "acquisition_tool_provenance": "Initial file snapshot predates tool-hash capture. Actual operation log is retained; later acquisitions record source hashes.",
+      "allowed_operations": [
+        "0x1001",
+        "0x1004",
+        "0x1005",
+        "0x1007",
+        "0x1008",
+        "0x1009"
+      ],
+      "device": {
+        "model": "S3300",
+        "firmware_reported": "COOLPIX S3300 V1.1"
+      },
+      "physical_driver_changed": false,
+      "camera_writes": false,
+      "vendor_operations_sent": [],
+      "installed_flash_backup": false,
+      "calibration_backup": false,
+      "unbootable_recovery_verified": false,
+      "scope": "Only files exposed by the connected normal PTP storage; no full-card sector image, hidden internal flash, settings, calibration or ROM acquired",
+      "private_photos_packaged": false
+    },
+    "private_manifest_present": true,
+    "files_verified_now": true,
+    "complete_internal_backup": false,
+    "unbootable_software_recovery": false,
+    "executable_trial_allowed": false,
+    "camera_accessed": false,
+    "current_file_verification": {
+      "verified": true,
+      "files": 49,
+      "bytes": 170787084,
+      "internal_flash_backup": false,
+      "calibration_backup": false,
+      "recovery_verified": false,
+      "camera_accessed": false
+    }
+  },
+  "interface_count": 53,
+  "hardware_entries": 50,
+  "camera_commands": "Six standard read-only PTP operations through existing WPD; USB descriptors and WPD identity/storage introspection",
+  "explicit_write_or_vendor_commands_sent": false,
+  "driver_changed": false,
+  "camera_flashed": false,
+  "installed_image_sha256": null,
+  "complete_internal_backup": false,
+  "unbootable_recovery": false,
+  "code_ready": false,
+  "complete": false,
+  "resource_ready": true,
+  "linux_execution_this_pass": false,
+  "preserved_failures": [
+    "Strict StorageInfo string parser rejected unterminated description; raw bytes retained",
+    "Earlier wrapper reported metadata partial as incomplete; corrected without hiding original report",
+    "Focused writer type propagation did not settle; caller-seeded boundary retained"
+  ],
+  "independent_review": "Corrected snapshot inventory/scope/timeout completion, dispatch opcode bypass, null buffer rejection and cleanup error preservation; regression tests included"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "source_unchanged": true,
+  "method": "Authenticated direct Ghidra/Capstone maps, independently parsed records and explicit bounded host emulator checks; not native REA Evidence",
+  "offline_tests": {
+    "command": "python -m unittest discover -s tests -q",
+    "passed": 258,
+    "failed": 0,
+    "host": "Windows",
+    "python": "3.13.15"
+  },
+  "workspace_doctor_passed": true,
+  "label_verification": {
+    "all_record_pointers_checked_per_run": 3313,
+    "host_runs": [
+      "original",
+      "simulated_amber_span",
+      "nonzero_selector_one",
+      "reviewed_candidate"
+    ],
+    "reviewed_candidate": {
+      "candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+      "exact_installed_image_identity_established": false,
+      "independently_decoded_blocks": 151,
+      "decoded_bytes": 2630016,
+      "two_decoders_agree": true,
+      "only_declared_labels_changed_in_checked_segment": true,
+      "fat_and_embedded_english_copies_equal": true,
+      "english_table_sha256": "5aefa443db2062f407c47abda5d7973a8044d585056c32c6108873df66b67a70",
+      "label_563": "Amber"
+    },
+    "font_rasterization_verified": false,
+    "camera_label_fixed": false
+  },
+  "native_dossiers_byte_checked": {
+    "labels": 12,
+    "capture": 9,
+    "executable": 16,
+    "recovery_app_plus_updater": 28
+  },
+  "interface_catalog_entries": 24,
+  "camera_os_inventory": "No present S3300 matched Windows PnP; physical reconnect request pending",
+  "camera_commands_issued": false,
+  "firmware_candidates_created": false,
+  "device_writes": false,
+  "global_configuration_changed": false,
+  "resource_ready": false,
+  "code_ready": false,
+  "executable_trials_allowed": false,
+  "linux_checks_in_this_followup": false,
+  "fresh_os_reproduction_in_this_followup": false,
+  "files": {
+    "tools/map_label_contracts.py": "41e6d48b38d3240937daddf835df69162520409c96b2e958647033cd76e2fd33",
+    "tools/map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+    "tools/map_executable_contracts.py": "e07fe2014f22fca81aea0a9eb0d1318773cc353747f4d2c04585089ba9630cf1",
+    "tools/map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+    "tests/test_label_contracts.py": "ca895d37c9282979c76e2c3ef6913c924b763a69a8b23bf42ad2acf5487320c5",
+    "tests/test_capture_buffers.py": "42229dbca730234345477caa33127a4d83a55cdbe233b2c9024af34047841cc9",
+    "tests/test_executable_contracts.py": "f347b7ca201feb3e285883959ff7398f1660d6d8e251a6b66764eaf86a19d75a",
+    "tests/test_recovery_transport.py": "49491099c3d5366bc38566e4542a72e1c70f16cd412f9e9b3beacf9d9df4b05d",
+    "firmware/sdk/interfaces.json": "0deb9010c9a653a0ef33e48deeb9785da902761fd6df9b5791d837a11374f179",
+    "hardware/s3300.json": "23b85136ab82f37d2ade90f773f1e390c84f59dd5a50eadaa7d28f37048d05b6",
+    "tools/development_platform.py": "fb16f421501f5be040e85229a1746fd2e77bbf75b7d35ff0eb8fb9ed44d11b49",
+    "evidence/label-path-verification.json": "e9d75da55cfdb059c1d57a07c462e8494f13e05ecc3474b586358116a5ae91ad",
+    "evidence/capture-buffers.json": "e7be1ca72aeb93d63db23ee451866b2659bc228312a0120f40dad54fc0642f74",
+    "evidence/executable-contracts.json": "d5b2100a5c16987e4c5c103cf2f88e325c553cf5042de914e72437dfe893f32d",
+    "evidence/recovery-transport.json": "3fb2b6e923f9bdfd43282e21e6ca981cf81cd2ae9dcffbaedfedf1c97e41bb78"
+  },
+  "remaining": [
+    "English camera label activation / exact installed bytes and live rendering",
+    "Active saved-JPEG packing, pitch, address domain, ownership and cache/DMA rules",
+    "Safe executable placement, hook ABI and complete code publication",
+    "Installed USB acceptance/endpoints and bounded readback scope",
+    "Complete backup/calibration/ECC coverage and runtime write geometry",
+    "Application-independent reset recovery",
+    "Matched performance and energy measurements; live CPU/RAM/clock/sensor facts"
+  ]
+}

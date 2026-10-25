@@ -1,5 +1,25 @@
 # Firmware-first implementation status
 
+Latest backup/recovery work is in
+[the follow-up ledger](backup-recovery-progress-2026-10-25.md): exposed files are
+preserved, settings/calibration scope and the actual application writer are
+mapped further, while complete installed acquisition and independent recovery
+remain unverified. Historical observations below retain their original scope.
+
+Current platform status is maintained by `python s3300.py readiness` and
+`evidence/development-readiness.json`. The developer handbook under
+`docs/development/` includes native Ghidra analysis, real target compilation,
+the matrix-application follow-up and the latest Amber camera checks. The
+older pass below is historical; it is not the current acceptance ledger.
+
+Latest checkpoint, 25 October 2026: **resource-ready passes; code-ready remains
+blocked**. Amber and Standard saved-photo checks are recorded separately from
+user-reported restart/playback/persistence. Our integer module is target-compiled
+and synthetically emulated, superseding the older host-only statement below.
+The new saved-JPEG, cache/DMA, reset and PTP-vendor maps add source-bound contracts.
+They establish neither a safe camera hook nor complete backup/reset recovery.
+See the handbook and `firmware/sdk/dependencies.json` for current feature gates.
+
 Updated 24 October 2026. Research baseline: supplied Nikon S3300 v1.1 updater. Installed
 camera: observed stock v1.0 before the user-requested experimental update.
 After the first trial the user reported v1.1 without the label. After the second

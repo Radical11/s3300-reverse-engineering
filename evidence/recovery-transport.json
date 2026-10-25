@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "rea_evidence": false,
+  "reviewed_windows": [
+    {
+      "label": "usb_control_loop",
+      "address": 2155403188,
+      "bytes": 172,
+      "sha256": "cd2a7102e8e8cd1a9fd71933b84d69f4efd28d779f275e43c6a21e56958209a5",
+      "boundary": "bounded analyst window; not an authenticated function boundary"
+    },
+    {
+      "label": "usb_command_queue_loop",
+      "address": 2155403360,
+      "bytes": 44,
+      "sha256": "817e1189ae566be0fa7a25c99b3fcbcf0505c2207974fabe41d2c3a96844a3b3",
+      "boundary": "bounded analyst window; not an authenticated function boundary"
+    },
+    {
+      "label": "uart_dispatch_loop",
+      "address": 2155420944,
+      "bytes": 252,
+      "sha256": "e92ba563e807c5b10692d577302023ad84735010b24c8c27b9547a0c0802ecb1",
+      "boundary": "bounded analyst window; not an authenticated function boundary"
+    },
+    {
+      "label": "getmem_handler",
+      "address": 2155470388,
+      "bytes": 472,
+      "sha256": "c5a9cd877bfb4ded4b09b6fa04475e1960031e681ebbb3b8442c3c511adeeeaf",
+      "boundary": "bounded analyst window; not an authenticated function boundary"
+    },
+    {
+      "label": "configmem_handler",
+      "address": 2155466056,
+      "bytes": 176,
+      "sha256": "eff3d0c1fa1d0ab048c9d8a4ead409ff3b72f9bf374ca0415b5c42cade05b7f0",
+      "boundary": "bounded analyst window; not an authenticated function boundary"
+    },
+    {
+      "label": "configmem_state",
+      "address": 2149596756,
+      "bytes": 160,
+      "sha256": "a5f71e2ee48f8b304308cb0e795c305568f3a970ad2f546ad906ea1c94f6a704",
+      "boundary": "bounded analyst window; not an authenticated function boundary"
+    },
+    {
+      "label": "usb_setup_receiver",
+      "address": 2155438864,
+      "bytes": 276,
+      "sha256": "d9ef263f7c5db1dbaf41d023614a7033e9aef9bc2b5323cd6faaf351e18268b3",
+      "boundary": "bounded analyst window; not an authenticated function boundary"
+    }
+  ],
+  "instruction_assertions": 13,
+  "checked_tables": {
+    "config_setmem_getmem": [
+      2155466056,
+      1,
+      2155468620,
+      0,
+      2155470388,
+      0
+    ]
+  },
+  "native_application": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2155438344,
+        "dossier_sha256": "6c13b69ecd92303a78d8ba13b3306741b37d650043716d66fa77260c8f67d9b8",
+        "instructions_checked": 130,
+        "name": "FUN_80796108"
+      },
+      {
+        "address": 2155438864,
+        "dossier_sha256": "bfe9ca3b1e11b29aeaa2549a274142c0296bffa325fd51cfa24a0d45278dc428",
+        "instructions_checked": 69,
+        "name": "FUN_80796310"
+      },
+      {
+        "address": 2155438048,
+        "dossier_sha256": "fc4bb549584e911ea0879c2b445d0a93f2040b223ec64de6af2387c32d1748f9",
+        "instructions_checked": 36,
+        "name": "FUN_80795fe0"
+      },
+      {
+        "address": 2155438192,
+        "dossier_sha256": "b855b1369c5fc39dcb15161ed296016213a4f053f0aebd79287ccb7a8d151a82",
+        "instructions_checked": 38,
+        "name": "FUN_80796070"
+      },
+      {
+        "address": 2155439140,
+        "dossier_sha256": "eaf840e01b8194d5da738892559f90808c6240a5095f5c79154022c9e2ad54ee",
+        "instructions_checked": 62,
+        "name": "FUN_80796424"
+      },
+      {
+        "address": 2155439388,
+        "dossier_sha256": "5663f42ad0a57ce790b5a26b51d513102a87d5bd42aa39ce4461da50d84204cb",
+        "instructions_checked": 89,
+        "name": "FUN_8079651c"
+      },
+      {
+        "address": 2155466056,
+        "dossier_sha256": "4993554c0be48cd4684c0ba33393601e24a567ebd21beb7a00a17105fff9433a",
+        "instructions_checked": 40,
+        "name": "FUN_8079cd48"
+      },
+      {
+        "address": 2149596756,
+        "dossier_sha256": "fec5d4f70c9850b2a04aee1f48083a755c22de82801361267250e4116e9990d7",
+        "instructions_checked": 39,
+        "name": "FUN_80203e54"
+      },
+      {
+        "address": 2155403032,
+        "dossier_sha256": "9817e0cea3ced07f5972ccfc3565ffb135e8a3956d121deeb7696b2968eff752",
+        "instructions_checked": 20,
+        "name": "FUN_8078d718"
+      },
+      {
+        "address": 2155403112,
+        "dossier_sha256": "de84f73d9c25515896654cfb3f56b9a1869133896ca20a99d7d7f40b2b9cadfe",
+        "instructions_checked": 19,
+        "name": "FUN_8078d768"
+      },
+      {
+        "address": 2155403404,
+        "dossier_sha256": "3a4032b7a721311e41941d1896d1568f15b4cf74bfc31f1ea309b19c4e48f321",
+        "instructions_checked": 45,
+        "name": "FUN_8078d88c"
+      },
+      {
+        "address": 2155412028,
+        "dossier_sha256": "66b542ae1ef36d62cd862b5ac3aba8bce98e96692dbd1285dfe8e47e360c8204",
+        "instructions_checked": 224,
+        "name": "FUN_8078fa3c"
+      },
+      {
+        "address": 2155421196,
+        "dossier_sha256": "31fc32dd56c35fdb1b79f61b695f8ba79e0ac1fe40695c71dcee7ed1002e6652",
+        "instructions_checked": 19,
+        "name": "FUN_80791e0c"
+      },
+      {
+        "address": 2155289820,
+        "dossier_sha256": "d1a9a1310e2ca7bb4f4d32e3c267c74ced9a8ee4c79bae9a43b13335f192a091",
+        "instructions_checked": 34,
+        "name": "FUN_80771cdc"
+      },
+      {
+        "address": 2151209228,
+        "dossier_sha256": "01da7b2e329e88daf97f7aaf0dfab16d90c9c776c623a72a4b8acd6436261ea3",
+        "instructions_checked": 62,
+        "name": "FUN_8038d90c"
+      },
+      {
+        "address": 2151209512,
+        "dossier_sha256": "b37cd9b036264ca081d56bca2ce4c2cf698f50d55e01f21f442039f076904625",
+        "instructions_checked": 100,
+        "name": "FUN_8038da28"
+      },
+      {
+        "address": 2155437280,
+        "dossier_sha256": "3925f8a2e611cc7bb035402099467d705d8331501c07139a8020d018c992d17c",
+        "instructions_checked": 98,
+        "name": "FUN_80795ce0"
+      },
+      {
+        "address": 2155437672,
+        "dossier_sha256": "b4c15dac920841aba379a4e9a17c31aaf0bfdf49902dd3b153d6090d11304fcf",
+        "instructions_checked": 94,
+        "name": "FUN_80795e68"
+      }
+    ]
+  },
+  "native_updater": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "e0ba840c3f28e1cf762e8f4da27796a17885f6726360972bfb229498f93fe33b",
+    "records": [
+      {
+        "address": 2147549184,
+        "dossier_sha256": "f9c142f07aef494cef2f206cf7f118cccf990de8f676684ad70f5d8c629a01ad",
+        "instructions_checked": 8,
+        "name": "entry"
+      },
+      {
+        "address": 2148128332,
+        "dossier_sha256": "eda7c13576abc5de6db898e889c96a9a30276b857d2af8150b16c16bb30ccd2c",
+        "instructions_checked": 12,
+        "name": "main"
+      },
+      {
+        "address": 2147552064,
+        "dossier_sha256": "3f6885a925bb3cc2e2685617e7d917b5737f084bb8a3067d3071f1eeb72cb0e0",
+        "instructions_checked": 31,
+        "name": "tx_application_define"
+      },
+      {
+        "address": 2147551688,
+        "dossier_sha256": "fab3833704ba11f4b60e365c31c69ce6a5bc387c39eff15a183685680d4897dc",
+        "instructions_checked": 94,
+        "name": "BurnMain"
+      },
+      {
+        "address": 2147591120,
+        "dossier_sha256": "8cc95e6c875f6818e40c951e461984e759df10b79f51401eb2f1f2861192ff4f",
+        "instructions_checked": 61,
+        "name": "InitRecoverSection"
+      },
+      {
+        "address": 2147591400,
+        "dossier_sha256": "befea9feaedc2b0987f097ab82baa17ce544adfe2fbf66e8da63988cce5dc3b1",
+        "instructions_checked": 674,
+        "name": "BurnGetSectionsMap"
+      },
+      {
+        "address": 2147594096,
+        "dossier_sha256": "ea85203ddde7424ac0dab65579e695e149acbdbe04c37b9b43df8643bc5facb5",
+        "instructions_checked": 214,
+        "name": "BurnGetHandle"
+      },
+      {
+        "address": 2147595008,
+        "dossier_sha256": "d9432aab1da26684489167a20c572e4eb0047274ee403ebd13847f04bd0e1282",
+        "instructions_checked": 227,
+        "name": "Burn"
+      },
+      {
+        "address": 2147561092,
+        "dossier_sha256": "3c702ddfda150e17ec6ba5b9bf1eaafd5de560b0ac982d3099f1232a04812ca3",
+        "instructions_checked": 2807,
+        "name": "BurnNand"
+      },
+      {
+        "address": 2147597444,
+        "dossier_sha256": "ec503d0d581d2ec43ee23d7b39a589205ccf7356c216a1eab4689199f2c188b1",
+        "instructions_checked": 253,
+        "name": "DownloadUsb"
+      }
+    ]
+  },
+  "native_index_sha256": "c23094f400673d07980f1d26cccb85dbc56457f9aa6bdb30e3b7a155794c677b",
+  "startup_callback_references": [
+    {
+      "site": 2155412872,
+      "target": "8078d7b4",
+      "type": "PARAM",
+      "function": 2155412028
+    },
+    {
+      "site": 2155403528,
+      "target": "8078d860",
+      "type": "PARAM",
+      "function": 2155403404
+    },
+    {
+      "site": 2155421224,
+      "target": "80791d10",
+      "type": "PARAM",
+      "function": 2155421196
+    }
+  ],
+  "contracts": [
+    {
+      "id": "debug.configmem_to_getmem",
+      "status": "static-route-verified",
+      "config_index": 241,
+      "config_handler": 2155466056,
+      "config_receive_flag": 1,
+      "arguments": {
+        "a0": "mode low8 from dispatcher subcommand",
+        "a1": "payload beginning with address and length LE32 words"
+      },
+      "state_setter": 2149596756,
+      "state_base": 2148405564,
+      "state_layout": {
+        "mode": 0,
+        "address": 4,
+        "length": 16
+      },
+      "getmem_index": 243,
+      "getmem_handler": 2155470388,
+      "getmem_receive_flag": 0,
+      "mode1": "address OR0x20000000; cache/memory preparation800b52e4; send80796070; status/timing updates",
+      "limits": "not a passive public read API: no verified valid address map/length cap/installed correspondence; neighboringf2 mutates memory or invokes monitor"
+    },
+    {
+      "id": "debug.usb_control_envelope",
+      "status": "partial",
+      "setup_receiver": 2155438864,
+      "setup_state": 2156692840,
+      "setup_layout": "byte3\u2192internal table index; byte2\u2192subcommand; bytes6/7\u2192LE16 transfer length",
+      "dispatcher": 2155438344,
+      "transport_selector": 1,
+      "queue": "8078d768 posts two words to UsbCamCmd808c8530;8078d718 receives;8078d860 truncates low8 and dispatches",
+      "special_index2": "control loop dispatches immediately; other indices queue",
+      "usb_transport_calls": {
+        "setup": "8038d90c with logical selector0",
+        "receive": "8038d720 selector2 normally; selector0 on length-bearing setup state",
+        "send": "8038da28 selector3 normally; selector1 for length-bearing control state"
+      },
+      "bounds": "dispatcher allocates0x2000; genericreceive defaults64bytes; setup-driven path takes received16-bit length; no complete bound/valid-index validation recovered",
+      "unknowns": [
+        "accepted bmRequestType and bRequest combinations",
+        "endpoint-address mapping from logical selectors on active configuration",
+        "state timing and queue serialisation",
+        "confirmed installed firmware interface"
+      ]
+    },
+    {
+      "id": "debug.application_startup",
+      "status": "partial",
+      "usb_start": 2155412028,
+      "event": "USB configuration status1/connect creates control/vendor thread; queue thread conditional on80898ea8 and80898ea6",
+      "uart_start": 2155289820,
+      "uart_flag": "sub80000cf4 bit4 permits80791e0c to create UartAgent80791d10",
+      "uart_transport_selector": 0,
+      "uart_framing": "80795ce0 sends even-rounded data in\u226464-byte chunks with02/wordcount, requires54ack;04terminates; receive80795e68 handles02/04/43",
+      "limits": "both debug loops live in normal application; neither proves availability after application boot failure"
+    },
+    {
+      "id": "recovery.updater_entry",
+      "status": "partial",
+      "carrier_elf_offset": 512,
+      "elf_sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "entry_chain": [
+        "entry80010000\u2192main8009d64c",
+        "ThreadX kernel\u2192tx_application_define80010b40",
+        "Burn Main thread\u2192BurnMain800109c8"
+      ],
+      "source_selection": "bfc095fc bit0x1000 forces0x1c USB, otherwise(low8>>3):3UART;1/4/6/ff card variants",
+      "recovery_section_initializer": 2147591120,
+      "initializer_role": "section size/alignment metadata; not a reset recovery entry",
+      "package_recover_flag_word": 2,
+      "package_recover_bit31_set": false,
+      "package_flag_scope": "BurnNand tests sign of payloadword+0x14; suppliedpackageword2 does not request that branch; installed recover area unknown",
+      "write_range_dependency": "BurnGetSectionsMap8001a4e8 uses live sector count+1244 and erase unit+1240; upgrade copies existing boot-header sections; bad-block/physical write map unresolved",
+      "unknowns": [
+        "reset-to-updater route independent of application",
+        "physical activation controls or software-only entry",
+        "existing recovery/calibration backup contents",
+        "actual physical erase/write ranges",
+        "tested restoration"
+      ]
+    }
+  ],
+  "gates": {
+    "host_debug_read_validated": false,
+    "complete_flash_backup_verified": false,
+    "software_unbootable_recovery_verified": false,
+    "code_trial_allowed": false
+  }
+}

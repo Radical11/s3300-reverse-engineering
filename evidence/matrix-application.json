@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Independent authenticated Capstone checks plus separately labelled direct Ghidra corroboration",
+  "rea_evidence": false,
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "reviewed_windows": [
+    {
+      "label": "scheduler_apply_gate",
+      "address": 2150534644,
+      "bytes": 112,
+      "sha256": "531243addff0389bc55758050f475b0630b9fb782a447662fe554b655ad7336a",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "scheduler_commands",
+      "address": 2150525372,
+      "bytes": 768,
+      "sha256": "7c28a12cfda3c7def23400622e95ea334f83bc783d0edff3c9e06aeb047b16a0",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "filter_group_dispatch",
+      "address": 2150453388,
+      "bytes": 820,
+      "sha256": "96cf1550569c16134b15e9facca7472cf91c9324ffb2075e7ed30b8ed6580b7b",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "filter_command_decode_dispatch",
+      "address": 2150449924,
+      "bytes": 304,
+      "sha256": "1cb883f62533e4e676fdfac7350732b635ddf93334984398a39f0ed3fd78e4df",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "factory_forward",
+      "address": 2150572492,
+      "bytes": 20,
+      "sha256": "843e8723841ce84b5ac4c7d1e50459de8c3c2960eef4262a133bd7567357d501",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "matrix_constructor",
+      "address": 2150443720,
+      "bytes": 108,
+      "sha256": "bcf43389bcac1e7a138cd1d7d8790b8b2d6234d09cced5e66614c2e332a0fb03",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "matrix_command_decode",
+      "address": 2150456692,
+      "bytes": 376,
+      "sha256": "a0e1f2af3c900332b272df285bf2bf3df63225e613492a5105677437f0668807",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "matrix_subtype15_decode",
+      "address": 2150456524,
+      "bytes": 68,
+      "sha256": "33c4ccf62cfd343565879d87340acd1f28fb927078d3419d1d49fcf27aeb137b",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "matrix_direct_upload",
+      "address": 2150444168,
+      "bytes": 376,
+      "sha256": "b98876aae4f4da3e71643496d1331cbc1e030293043e07c7504b44842dcdf724",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    },
+    {
+      "label": "matrix_write_list",
+      "address": 2150444544,
+      "bytes": 756,
+      "sha256": "e814a3a40d953eed24e838273e479aa4f77452199371653a0fb3fe8fc1519a57",
+      "boundary": "bounded analyst window; no complete-function assertion"
+    }
+  ],
+  "instruction_assertions": 13,
+  "checked_tables": {
+    "matrix_vtable": [
+      2150443828,
+      2150443868,
+      2150444168,
+      2150454668,
+      2150444544,
+      2150625800,
+      2150625792,
+      2150625776,
+      2150625784,
+      2150456692,
+      2150625768,
+      2150625760
+    ],
+    "group11_dispatch": [
+      2150453836
+    ],
+    "factory11_dispatch": [
+      2150588036
+    ]
+  },
+  "native_corroboration": {
+    "evidence_class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2147520384,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\80008f80.json",
+        "dossier_sha256": "baa1cc65446c636929991fd2cf6a7d003b3e381815aa40c8ddde703116c51bba",
+        "instruction_count_bytes_verified": 49,
+        "pseudocode_sha256": "a06b80117d59533e74cd3c80d7eb851bf3c1ca665a2bbcc0b59b23f5ef0d12df",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2147522116,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\80009644.json",
+        "dossier_sha256": "e09cce526bb49839c72e0cbdbcfe34b001a2f8f2710154ada815df335016ebde",
+        "instruction_count_bytes_verified": 194,
+        "pseudocode_sha256": "f780ba9f213c0a25e6dc7abe2d976bc599e96840a927e51202cef06c6dc29b75",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2149563532,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\801fbc8c.json",
+        "dossier_sha256": "0dd436f8dcfa486ddfd3bbec4d91b4f7fb27701c0f1434d499e654da90f45ad0",
+        "instruction_count_bytes_verified": 822,
+        "pseudocode_sha256": "60513eaeb9558cc9c590b0acce9e8a4eeb989bdc376e7fd914d318f33cbbdf60",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2149563196,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\801fbb3c.json",
+        "dossier_sha256": "e0c5103b133821b9ff92ccb123dec882cc2dc20928c20c48a25d77a234b4c5d5",
+        "instruction_count_bytes_verified": 42,
+        "pseudocode_sha256": "96cad171b18de10399883658c006a6d86fa61d4209aaf727527a62334d6b872d",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2149133828,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\80192e04.json",
+        "dossier_sha256": "6711b7fa790116e8edfc6ceb0d14b2d9a293f82eccf35c73117a85f59256440d",
+        "instruction_count_bytes_verified": 169,
+        "pseudocode_sha256": "4516f9549677660602a184a80b841d808f18ca0098ab9ba8b12cb9ac6ecbc0b8",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2150520744,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\802e57a8.json",
+        "dossier_sha256": "34e01276e4dbccc5e01fac2f0b1bf737e0fca3a4e9a2f3200cce482652f84c0d",
+        "instruction_count_bytes_verified": 123,
+        "pseudocode_sha256": "cbdae433c9bff565eaec2d569dbd28074a24efcb0602a7c1e22a5ea0e5fc1cd1",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2150525372,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\802e69bc.json",
+        "dossier_sha256": "f7b09854f2be232559889cc073e5586c7a2d5c067cfce5cc77a4916e04ffd20e",
+        "instruction_count_bytes_verified": 172,
+        "pseudocode_sha256": "8a2cafd8d804ec410a6178de1e70b3a3db44596452b05e8889f8115cd1a748ad",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2150443720,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\802d2ac8.json",
+        "dossier_sha256": "3bb667de4e33f8d1423281140eac70b48a2d015f1313548e9c7efd8723b662b1",
+        "instruction_count_bytes_verified": 27,
+        "pseudocode_sha256": "17e7ce35cf5d0f15bd315553ea3b796f9162a0825dba06ad96285c0d27e015dc",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2150456692,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\802d5d74.json",
+        "dossier_sha256": "d917aa7201849afb37b58964dae512d36bfe72472ca3602f891ba770c73b935e",
+        "instruction_count_bytes_verified": 76,
+        "pseudocode_sha256": "4b87640fdda38b152ed67a7e919fa616bfb3b48f0da2c26f7451e24f9ce847c1",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2150456524,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\802d5ccc.json",
+        "dossier_sha256": "45a2736d7c0f733ccd84259e8ba209c7ea47c856b1de8639069d4c474f4b8b94",
+        "instruction_count_bytes_verified": 17,
+        "pseudocode_sha256": "7f65ed090bb37dc0b5f8f4b80059052e1e18a76f30ec34c83bb585b478d99e0d",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2150444168,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\802d2c88.json",
+        "dossier_sha256": "4a13b2bf01ebf4ea5e1f26140463ed7f3134b9750e28792f7e32360d215efb60",
+        "instruction_count_bytes_verified": 59,
+        "pseudocode_sha256": "f7818c5eb51ddd067aa82819309796cea53f86e09c009ceea323e5ecdc86cdbd",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2150444544,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\802d2e00.json",
+        "dossier_sha256": "623b66d0962c05c73bd5a46c77652f5f91753ce181673b55a337246df62e92a3",
+        "instruction_count_bytes_verified": 131,
+        "pseudocode_sha256": "a2d22a350e761753f37806366c6ba92011b1941f0a05423dc69a4dd02a2a30d7",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      },
+      {
+        "address": 2154492980,
+        "dossier": "derived\\native-analysis-complete\\application\\functions\\806af434.json",
+        "dossier_sha256": "98b078afb452b0b06672816dde46b273829b733bfdcf7ec3d01174c83b9c008c",
+        "instruction_count_bytes_verified": 67,
+        "pseudocode_sha256": "ab480708bd407fa02d4e4a9163774b3b6b319b60a3a3a8f74542f9e08517df79",
+        "signature_status": "decompiler inference; not a verified public ABI"
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "id": "image.matrix_scheduler",
+      "status": "static-route-verified",
+      "entry": 2150525372,
+      "gate": 2150534744,
+      "gate_bit": "driver+0x324 bit1",
+      "group_count": 30,
+      "group": 11,
+      "dispatcher": 2150453388,
+      "command_slot": 15,
+      "factory_id": 11,
+      "slot_rule": "driver+0x48+12*command_id",
+      "decode_dispatch": 2150449924,
+      "factory_ctor": 2150443720,
+      "argument_warning": "dispatcher stack arg5 is factory/group ID; arg6 is command slot ID; these differ",
+      "lifecycle": "first/shared pass then per-output pass according to bitmap; group object retained through 802dde1c; slot+9 bit0 cleared after scheduling",
+      "unknowns": [
+        "active numeric context ordinary saved-still identity",
+        "asynchronous ownership/cache/DMA completion"
+      ]
+    },
+    {
+      "id": "image.matrix_decode",
+      "status": "static-contract-verified",
+      "address": 2150456692,
+      "arguments": {
+        "a0": "filter object",
+        "a1": "retained command pointer"
+      },
+      "accepted_id": 15,
+      "accepted_subtypes": [
+        0,
+        6,
+        12,
+        13,
+        15
+      ],
+      "return": {
+        "success": 0,
+        "unsupported_subtype": 6,
+        "unsupported_command": 7
+      },
+      "side_effects": "decode fields, mark object+0x30 dirty, update generation via802df29c",
+      "subtype15_decoder": 2150456524,
+      "subtype15_layout": {
+        "coefficients": "9 halfwords command+0x14 -> object+0x34",
+        "offsets": "halfwords command+0x26/+0x28 -> object+0x46/+0x48",
+        "auxiliary_word": "command+0x2c -> object+0x4c",
+        "ignored_alignment": "command+0x2a/+0x2b not read by this decoder"
+      },
+      "subtype6_difference": "coefficients <<2; offsets*8+0x800; auxiliary word0; do not apply this scaling to subtype15"
+    },
+    {
+      "id": "image.matrix_register_application",
+      "status": "static-contract-verified",
+      "direct_entry": 2150444168,
+      "queued_list_entry": 2150444544,
+      "vtable": 2150620344,
+      "dirty_field": 48,
+      "registers": [
+        "0xb60000c0",
+        "0xb60000c4",
+        "0xb60000c8",
+        "0xb60000cc",
+        "0xb60000d0",
+        "0xb60000d4",
+        "0xb60000d8",
+        "0xb60000dc",
+        "0xb60000e0",
+        "0xb60000e4",
+        "0xb60000e8",
+        "0xb60000fc"
+      ],
+      "encoding": "eleven signed halfwords sign-extended to32-bit; auxiliary word unchanged",
+      "bypass_register": 3053453548,
+      "bypass_entry": 2150494976,
+      "bypass_rule": "object+0x28 zero selects value+0x10=1; nonzero selects+0x14=0",
+      "ownership": "object-owned decoded fields; direct entry writes MMIO, queued entry appends address/value records to caller-owned list",
+      "limits": "static upload behavior verified; trigger timing, register hardware units, DMA synchronization, list submission completion not a public adapter"
+    },
+    {
+      "id": "recovery.reachability",
+      "status": "blocked",
+      "ordinary_rollback": "requires running application and menu update path",
+      "unbootable_recovery": "boot downloader and monitor implementations do not establish an externally accessible recovery route",
+      "backup": "Nanddn fixed65536-sector loop is incomplete on read errors; physical geometry/calibration/ECC/writeback remain unresolved",
+      "code_trial_allowed": false,
+      "unknowns": [
+        "actual updater physical erase/write ranges",
+        "installed boot entry and activation controls",
+        "complete calibration and settings backup scope",
+        "verified restoration without executing damaged application"
+      ]
+    }
+  ],
+  "development_gates": {
+    "static_matrix_application_route_verified": true,
+    "saved_photo_buffer_abi_verified": false,
+    "software_unbootable_recovery_verified": false,
+    "code_trial_allowed": false
+  },
+  "evidence_limits": [
+    "Native inferred parameter lists are not authoritative ABIs; independent stack/instruction tracing establishes the group/slot distinction.",
+    "No runtime sample or installed-image identity is asserted by this static artifact.",
+    "Factory15/b6000484 handles command32 and is a different filter; do not conflate it with command15.",
+    "The three indirect-dispatch entry windows were not recognized functions in the initial Ghidra inventory; their bounds remain analyst-selected."
+  ]
+}

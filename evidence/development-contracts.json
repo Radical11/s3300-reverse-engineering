@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Independent authenticated static Python/Capstone plus bounded checksum instruction model",
+  "rea_evidence": false,
+  "native_decompiler_evidence": false,
+  "target_binary_executed": false,
+  "checksum_semantics_emulated_on_synthetic_memory": true,
+  "camera_commands_issued": false,
+  "instruction_assertions": 26,
+  "reviewed_windows": [
+    {
+      "label": "settings_checksum",
+      "address": 2147520384,
+      "bytes": 196,
+      "sha256": "aa928683632beb2d1f6657fbeb9a212bbc2590e5f05672ce90adbc53a379ef77",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "settings_media_transaction",
+      "address": 2147522116,
+      "bytes": 776,
+      "sha256": "ffa0751d3dd01e53306c5bae36281232bd34b5901b4654e5467d4570ed68ffa7",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "settings_media_router",
+      "address": 2148417676,
+      "bytes": 264,
+      "sha256": "beb67e9d97b60b9c35735a7118d93681970b23c3690f14f049c56fd25dc3dcd7",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "media_device_router",
+      "address": 2148412748,
+      "bytes": 192,
+      "sha256": "07f406d417ced6e951d970da028991694a199e99f7d94bd912f05c7a3b3024c5",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "media_device1_operations",
+      "address": 2148411392,
+      "bytes": 300,
+      "sha256": "1f754ff5bdbaa6013c53aa5101df7a59a9dcc7494bccd80afe442ace99d20a32",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "dirty_mask_consumer",
+      "address": 2149563532,
+      "bytes": 3288,
+      "sha256": "a1ee9870ec4064272da39ab6a1f196138705b2d6968c633e286b329b016fcf00",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "cached_command_selection",
+      "address": 2149563196,
+      "bytes": 168,
+      "sha256": "dee72feebdffe91626e7cb4f6c07c07797f84077f7d8fb75490972175015371b",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "driver_command_retention",
+      "address": 2149133828,
+      "bytes": 676,
+      "sha256": "14cda8e8cc5c9109880a8ff4d1393f0c41b9131a99addef8c8d99d71220d8eb7",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "driver_context0_bridge",
+      "address": 2149181220,
+      "bytes": 16,
+      "sha256": "216dd7440270e01340f9e38cd99ca6b804963a6b96c93906f83af9b28ebca02f",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "hardware_command_stage",
+      "address": 2150520744,
+      "bytes": 560,
+      "sha256": "77fa219988207ab6943d74e73b4c8d58a9980f2297f62ba6736f8bc1795a8132",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    },
+    {
+      "label": "context5_caller",
+      "address": 2150271568,
+      "bytes": 176,
+      "sha256": "bdd44174466b3ae0dc3e3e45b0e5c03e9fdd52495bc5c814841561dfd090150b",
+      "boundary": "bounded analyst window; not a recovered complete function"
+    }
+  ],
+  "checked_tables": {
+    "media_device_selector": [
+      2148417884,
+      2148417884,
+      2148417876,
+      2148417864,
+      2148417856,
+      2148417812,
+      2148417812,
+      2148417812,
+      2148417812
+    ],
+    "media_operation_selector": [
+      2148417928,
+      2148417916,
+      2148417904,
+      2148417892,
+      2148417768
+    ],
+    "device1_backend_selector": [
+      2148411460,
+      2148411596,
+      2148411620,
+      2148411664,
+      2148411528
+    ]
+  },
+  "checksum_model_validation": {
+    "cases": 120,
+    "all_agree": true,
+    "scope": "Synthetic memory; exact checksum-helper instruction words; no hardware or whole-camera execution"
+  },
+  "contracts": [
+    {
+      "id": "settings.checksum",
+      "status": "static-contract-verified",
+      "address": 2147520384,
+      "arguments": {
+        "a0": "mode low8; zero calculates only, nonzero also copies",
+        "a1": "destination pointer in copy mode; ignored for calculate-only",
+        "a2": "source byte pointer",
+        "a3": "N; valid modeled domain1..1024"
+      },
+      "return": "sum(source[0:N-1]) modulo65536; source offsets0..N-2 inclusive",
+      "copy_mode": "Copies N+1 bytes, offsets0..N inclusive; excludes final two copied bytes from sum",
+      "settings_call_N": 415,
+      "settings_covered_bytes": 414,
+      "settings_checksum_offset": 415,
+      "settings_serialized_bytes": 416,
+      "settings_stored_formula": "sum(store[0:0x19e]) modulo256",
+      "unchecked_byte_offset": 414,
+      "limits": "N<=0 can underflow target loops; this host API rejects it. Overlap/null/alias behavior is not a supported public copying contract. No settings are written."
+    },
+    {
+      "id": "settings.media_route",
+      "status": "partial",
+      "address": 2147522116,
+      "router": 2148417676,
+      "selected_device": 1,
+      "operation_order": [
+        2,
+        1,
+        0
+      ],
+      "operation_to_driver_selector": {
+        "2": 8,
+        "1": 5,
+        "0": 4
+      },
+      "driver_entry": 2148411392,
+      "driver_dispatch": 2147891948,
+      "write_read_count": 2,
+      "staging_buffer_bytes": 1024,
+      "serialized_settings_bytes": 416,
+      "erase_position_rule": "operation2 divides position from global0x80003258 by1<<u16(handle+0x11c4)",
+      "inference": "selectors8/5/4 are erase-like/write-like/read-like based on position conversion, buffer direction and verification order",
+      "unknowns": [
+        "physical address and erase extent",
+        "live device geometry and flags",
+        "calibration overlap",
+        "atomicity/wear policy",
+        "recovery after power loss"
+      ]
+    },
+    {
+      "id": "image.command15_dirty_consumer",
+      "status": "partial",
+      "address": 2149563532,
+      "arguments": {
+        "a0": "driver/context pointer",
+        "a1": "pointer to two-word dirty mask",
+        "stack_arg6": "numeric context index"
+      },
+      "mask": 1048576,
+      "mask_check": 2149564764,
+      "mask_branch": 2149564780,
+      "selected_cache_subindex": 15,
+      "cache_selector": 2149563196,
+      "cache_rule": "0x808c1d88+4*(74*context_index+37*bank+subindex); context2/5 can fallback tocontext0 when its pointer is null",
+      "driver_command_receiver": 2149133828,
+      "mask_clear_sites": [
+        2149565572,
+        2149565576
+      ],
+      "context5_caller": 2150271568,
+      "context5_callsite": 2150271652,
+      "unknowns": [
+        "numeric context5 ordinary saved-still identity",
+        "current driver type",
+        "final matrix MMIO application"
+      ]
+    },
+    {
+      "id": "image.driver_command_stage",
+      "status": "partial",
+      "address": 2149133828,
+      "driver_type_field": 4,
+      "type0": "calls0x8019e724 ->0x802e57a8 with driver object field+0x880 and retained command",
+      "type5": "retains command payload in driver-owned command slots; no immediate hardware upload established",
+      "stage_entry": 2150520744,
+      "stage_slot_rule": "driver+0x48+12*command_id; command_id<37",
+      "stage_observations": [
+        "allocates/reuses a command-length-sized copy",
+        "writes status byte3 at slot+9",
+        "sets driver+0x324 bit1",
+        "sets driver+0x320 to4"
+      ],
+      "unknowns": [
+        "stage scheduler/consumer",
+        "final MMIO matrix encoding",
+        "buffer lifetime across async completion",
+        "saved JPEG runtime verification"
+      ]
+    }
+  ],
+  "artifact_profiles": [
+    {
+      "carrier_offset": 512,
+      "machine": "EM_MIPS",
+      "flags": 1879052289,
+      "entry": 2147549184,
+      "abi_flags_sections": [],
+      "type": "ET_EXEC",
+      "byte_order": "little"
+    },
+    {
+      "carrier_offset": 1050304,
+      "machine": "EM_MIPS",
+      "flags": 268439552,
+      "entry": 2164261889,
+      "abi_flags_sections": [],
+      "type": "ET_EXEC",
+      "byte_order": "little"
+    },
+    {
+      "carrier_offset": 1058496,
+      "machine": "EM_MIPS",
+      "flags": 1879052289,
+      "entry": 2147485184,
+      "abi_flags_sections": [],
+      "type": "ET_EXEC",
+      "byte_order": "little"
+    },
+    {
+      "carrier_offset": 2228928,
+      "machine": "EM_MIPS",
+      "flags": 1879052289,
+      "entry": 2147485184,
+      "abi_flags_sections": [],
+      "type": "ET_EXEC",
+      "byte_order": "little"
+    },
+    {
+      "carrier_offset": 3922344,
+      "machine": "EM_MIPS",
+      "flags": 1879052289,
+      "entry": 2147485184,
+      "abi_flags_sections": [],
+      "type": "ET_EXEC",
+      "byte_order": "little"
+    },
+    {
+      "carrier_offset": 6040440,
+      "machine": "EM_MIPS",
+      "flags": 1879052289,
+      "entry": 2147485184,
+      "abi_flags_sections": [],
+      "type": "ET_EXEC",
+      "byte_order": "little"
+    }
+  ],
+  "development_gates": {
+    "settings_checksum_model_verified": true,
+    "settings_writer_safe_public_api": false,
+    "saved_photo_buffer_abi_verified": false,
+    "executable_hook_verified": false,
+    "executable_placement_verified": false,
+    "software_unbootable_recovery_verified": false,
+    "code_trial_allowed": false,
+    "explanation": "A compiler output and valid packed patch are not proven placement, hook safety or recovery. Zero-filled gaps and unused bytes are not designated code caves."
+  },
+  "limitations": [
+    "This static pass does not prove all active saved-photo, driver, storage or boot paths.",
+    "A known menu update rollback requires a running application and is not unbootable recovery.",
+    "No arbitrary monitor, GetMem/SetMem, NAND dump or device command is invoked.",
+    "Original ELF headers/flags are retained, including absent ABI metadata; tiny loader profile is separate.",
+    "Settings checksum coverage is independent of the firmware-update additive checksum."
+  ]
+}

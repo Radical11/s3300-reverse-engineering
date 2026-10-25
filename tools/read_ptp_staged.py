@@ -42,7 +42,7 @@ def object_info(data):
             "filename": data[53:end-2].decode("utf-16-le")}
 
 
-def worker(trial="resource-label", inventory=False):
+def worker(trial="resource-label", inventory=False, jpeg_names=None, output=None):
     from stage_wpd_trial import verified_payload
     payload = verified_payload(trial)
     expected = TRIALS[trial]["sha256"]
@@ -145,11 +145,38 @@ def worker(trial="resource-label", inventory=False):
         stores = array32(read(0x1004, [], 1024))
         if len(stores) != 1:
             raise ValueError("Expected one PTP storage")
-        if inventory:
+        if inventory or jpeg_names:
             handles = array32(read(0x1007, [stores[0], 0, 0], 1024))
             report["objects"] = [{"handle": handle, **object_info(read(0x1008, [handle], 4096))}
                                   for handle in handles]
-            report["status"] = "read_only_inventory_complete"
+            if jpeg_names:
+                destination = Path(output).resolve()
+                if destination.exists() or not destination.is_relative_to((ROOT/"samples").resolve()):
+                    raise ValueError("JPEG copies require a new ignored samples/ directory")
+                names = set(jpeg_names)
+                selected = [item for item in report["objects"] if item["filename"] in names]
+                if len(names) != len(jpeg_names) or len(selected) != len(names):
+                    raise ValueError("JPEG selection is missing, duplicated or ambiguous")
+                import re
+                if any(not re.fullmatch(r"DSCN[0-9]{4}\.JPG", item["filename"], re.I)
+                       or item["format"] != 0x3801 or not 0 < item["size"] <= len(payload) for item in selected):
+                    raise ValueError("Selection is not a bounded Nikon JPEG")
+                destination.mkdir(parents=True)
+                report["copied_jpegs"] = []
+                for item in selected:
+                    data = read(0x1009, [item["handle"]], item["size"])
+                    if data != read(0x1009, [item["handle"]], item["size"]):
+                        raise ValueError("Camera JPEG changed across two readbacks")
+                    target = destination/item["filename"]
+                    with target.open("xb") as handle:
+                        handle.write(data)
+                    if target.read_bytes() != data:
+                        raise ValueError("Local photo copy differs")
+                    report["copied_jpegs"].append({"filename": item["filename"], "bytes": len(data),
+                        "sha256": hashlib.sha256(data).hexdigest(), "twice_readback_equal": True})
+                report["status"] = "read_only_jpeg_copy_complete"
+            else:
+                report["status"] = "read_only_inventory_complete"
             return report
         roots = array32(read(0x1007, [stores[0], 0, 0xffffffff], 1024))
         folders = []
@@ -191,10 +218,14 @@ def main():
     parser.add_argument("--worker", action="store_true")
     parser.add_argument("--trial", choices=("resource-label", "embedded-label"), default="resource-label")
     parser.add_argument("--inventory", action="store_true", help="Bounded all-object metadata inventory; no file downloads")
+    parser.add_argument("--copy-jpeg", action="append", dest="jpeg_names", help="Exact DSCNxxxx.JPG to copy twice-read/verified; no device writes")
+    parser.add_argument("--output", type=Path, help="New ignored samples/ destination for --copy-jpeg")
     parser.add_argument("--evidence", type=Path)
     args = parser.parse_args()
+    if args.jpeg_names and (args.inventory or not args.output):
+        raise ValueError("JPEG copy needs --output and cannot be combined with --inventory")
     if args.worker:
-        print(json.dumps(worker(args.trial, args.inventory)))
+        print(json.dumps(worker(args.trial, args.inventory, args.jpeg_names, args.output)))
         return
     if not args.evidence or args.evidence.exists():
         raise ValueError("Supply a new --evidence path")
@@ -202,6 +233,10 @@ def main():
         command = [sys.executable, "-B", str(Path(__file__).resolve()), "--worker", "--trial", args.trial]
         if args.inventory:
             command.append("--inventory")
+        if args.jpeg_names:
+            command.extend(["--output", str(args.output.resolve())])
+            for name in args.jpeg_names:
+                command.extend(["--copy-jpeg", name])
         run = subprocess.run(command,
                              capture_output=True, text=True, timeout=120)
         report = json.loads(run.stdout)

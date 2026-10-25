@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "source_hash_role": "Analysis baseline identity; installed firmware bytes not acquired",
+  "private_manifest": "samples/camera-files-backup-2026-10-25-run1/manifest.json",
+  "private_manifest_sha256": "a073f0db7a90d5705293a763c009deb324a8b6ed3365808289dc7ec841a5ad71",
+  "verified_files": 49,
+  "verified_bytes": 170787084,
+  "object_inventory_before_after_equal": true,
+  "device_reads_per_file": 2,
+  "local_hashes_rechecked": true,
+  "storage_numeric_fields": {
+    "storage_type": 4,
+    "filesystem_type": 3,
+    "access_capability": 0,
+    "capacity_bytes": 2002452480,
+    "free_bytes": 1811513344,
+    "free_images": 349,
+    "scope": "PTP exposed storage only; variable strings not validated; not flash geometry"
+  },
+  "metadata_parse_complete": false,
+  "metadata_errors": [
+    {
+      "operation": "GetStorageInfo",
+      "storage": 65537,
+      "error": "Unterminated PTP string"
+    }
+  ],
+  "raw_storage_dataset_sha256": "5aa980a1aad5ef0f750f92690161ac788aada34df0340d61e9423574a9a6098d",
+  "acquisition_tool_provenance": "Initial file snapshot predates tool-hash capture. Actual operation log is retained; later acquisitions record source hashes.",
+  "allowed_operations": [
+    "0x1001",
+    "0x1004",
+    "0x1005",
+    "0x1007",
+    "0x1008",
+    "0x1009"
+  ],
+  "device": {
+    "model": "S3300",
+    "firmware_reported": "COOLPIX S3300 V1.1"
+  },
+  "physical_driver_changed": false,
+  "camera_writes": false,
+  "vendor_operations_sent": [],
+  "installed_flash_backup": false,
+  "calibration_backup": false,
+  "unbootable_recovery_verified": false,
+  "scope": "Only files exposed by the connected normal PTP storage; no full-card sector image, hidden internal flash, settings, calibration or ROM acquired",
+  "private_photos_packaged": false
+}

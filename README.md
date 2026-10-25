@@ -1,11 +1,83 @@
 # Nikon COOLPIX S3300 firmware research
 
-First offline investigation: 23 October 2026. The camera reports **v1.0**.
-The supplied Nikon updater contains **v1.1**; this research does not describe a
-dump of the camera's installed v1.0 firmware.
+First offline investigation: 23 October 2026. The camera originally reported
+**v1.0** and now reports **v1.1** after the recorded experimental updates.
+The supplied Nikon updater contains **v1.1**; it is not a complete device-flash
+or calibration backup, and the version string cannot identify modified bytes.
 
 [Private GitHub repository](https://github.com/Radical11/s3300-firmware-lab) ·
 [Progress log](PROGRESS.md) · [Offline test workflow](.github/workflows/tests.yml)
+
+Joining the project? Start with the [team setup and contribution guide](CONTRIBUTING.md).
+
+## Development platform and current readiness
+
+Latest: [backup and recovery follow-up](notes/backup-recovery-progress-2026-10-25.md).
+The normal PTP file snapshot preserves49 files/170,787,084bytes. Installed
+flash/calibration backup and reset-independent software recovery remain blocked.
+Use `backup-status --verify-files` for current local file integrity and component
+coverage; this performs no camera access.
+
+The [developer handbook](docs/development/README.md) covers setup, architecture,
+feature lookup, resource edits, target modules, candidate checking, camera tests
+and recovery. `python s3300.py guide derived/my-guide` builds its searchable
+offline edition. `python s3300.py readiness` reports the current gates.
+
+`python s3300.py browse` opens the existing analysis to a read-only localhost
+workbench: function/pseudocode search, static callers/callees, research
+interfaces and evidence, with separate readiness gates. It verifies the retained
+native index and does not unpack, execute firmware or access the camera.
+
+Portable Ghidra 12.1.4/JDK 21 analysis now retains projects and exports native
+dossiers. The decoded application has 15,816 discovered function dossiers,
+including three initial decompiler failures, one recovered by a focused retry;
+the other two remain explicit. An index independently checked
+1,369,833 instruction byte sequences against the original analysis image.
+These inferred functions and pseudocode do not establish complete semantics.
+Use `pseudocode --address 0x80008f80` and `interface --search matrix` through
+`s3300.py` to inspect the reusable results.
+
+The [SDK](firmware/sdk/README.md) compiles real integer-only MIPS32r2/o32 code.
+Two builds match and 58 synthetic MIPS execution cases pass. Camera placement,
+hooks, full buffer ownership and unbootable software recovery remain unverified.
+**Executable trials are blocked; the platform is not code-ready.**
+
+25 October follow-up: [label selection](notes/label-contracts.md) is now traced
+through the native English loader and ID lookup, including host checks of the
+reviewed candidate. The camera now confirms Amber in Auto Color options;
+the earlier Nostalgic sepia report came from Special effects. The
+[capture-buffer map](notes/capture-buffers.md) identifies descriptor geometry
+and a temporary allocation/wait/free lifecycle;
+[executable contracts](notes/executable-contracts.md) identify startup, stack
+and allocator ownership exclusions; and the
+[transport map](notes/recovery-transport.md) connects ConfigMem state to GetMem
+and traces application USB dispatch. None establishes a safe executable trial.
+New reports and the current readiness ledger preserve the remaining
+packing/coherence and recovery gaps. Read-only camera checks subsequently
+verified the active PTP USB configuration; no update or debug command ran.
+
+The Amber parameter change is now visible in a saved photo (unclipped Cb/Cr
+approximately 110/150). Auto mode's Color options shows **Amber**. The first
+new intended-Standard pair remained tinted; an explicit Standard → OK repeat
+now retains normal colour in its saved JPEG. Restart, remembered Amber and
+playback pass by user report. **The resource-ready milestone now passes.**
+See [current runtime evidence](evidence/amber-auto-verification-2026-10-25.json)
+and the [camera verification note](notes/camera-verification-2026-10-25.md).
+No speed or battery improvement has been measured.
+
+The next [saved-JPEG](notes/saved-jpeg-path.md),
+[cache/DMA](notes/cache-dma-contracts.md),
+[reset recovery](notes/reset-recovery.md) and
+[PTP vendor](notes/ptp-vendor-contracts.md) maps recover more concrete contracts.
+They identify asynchronous buffer consumption and the absent reset/ROM inputs
+needed to assess recovery. `research-map` rechecks these focused findings using
+the retained native analysis; `readiness --json` now includes a feature
+[dependency ledger](firmware/sdk/dependencies.json). These advances preserve
+the executable recovery block.
+
+The earlier sections below retain the investigation chronology. Current native
+analysis, runtime results and matrix-application findings supersede older
+unknown/pending statements within their stated scope.
 
 Start development through the [reusable workspace guide](notes/developer-workspace.md).
 `python s3300.py init` extracts once or verifies and reuses the existing baseline;
@@ -15,6 +87,13 @@ search, address lookup, bounded listings and offline patch-plan builds.
 [hardware/limits catalog](notes/hardware-and-limits.md), including unresolved
 CPU, RAM, sensor, buffer and recovery contracts. Original project code and
 documentation are [MIT licensed](LICENSE); see [third-party boundaries](THIRD_PARTY.md).
+
+The [firmware atlas and mapping ledger](notes/firmware-atlas.md) adds complete
+listings for all 5,798 known function ranges, static call/reference candidates,
+17 subsystem inventories and deeper hardware/capture/settings contracts.
+Use `python s3300.py atlas --subsystem capture` or
+`python s3300.py atlas --address 0x80737664`. Semantic coverage and native REA
+provider limitations remain explicit; this is not a fully recovered source tree.
 
 The first [resource-only research candidate](notes/resource-label-candidate.md)
 has been built and independently checked offline. It changes one English menu
@@ -157,3 +236,10 @@ decompression semantics or establish runtime behaviour.
 The hardened build in `derived/v1.1-analysis-verified/` additionally reparses
 original vendor ELF headers directly from the source to authenticate address,
 length and permission metadata. It produces the same analysis ELF bytes.
+# Current development status
+
+Start with [the current platform status](notes/platform-status-2026-10-25.md)
+and [development guide](docs/development/README.md). Run `python s3300.py browse`
+to explore retained functions, hardware limits and interface contracts locally.
+Resource-ready passes for reviewed Amber changes; executable integration and
+reset-independent recovery remain blocked.

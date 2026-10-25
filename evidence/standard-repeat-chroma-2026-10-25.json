@@ -1,0 +1,50 @@
+{
+  "method": "Full-resolution Pillow decode, exact RGB equality and YCbCr histograms; no source writes",
+  "samples": [
+    {
+      "file": "DSCN1188.JPG",
+      "sha256": "da7126e5d8c50ad726ed0ece80e2b8ca1688f7f4bbd82fec59d57720fb38eda9",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "rgb_channels_exactly_equal": false,
+      "all_pixels": {
+        "cb": {
+          "pixels": 15925248,
+          "mean": 135.04318344053416,
+          "standard_deviation": 15.924877782389794,
+          "median": 130
+        },
+        "cr": {
+          "pixels": 15925248,
+          "mean": 126.12719268170895,
+          "standard_deviation": 10.44229743805456,
+          "median": 128
+        }
+      },
+      "unclipped_rgb_8_to_247": {
+        "cb": {
+          "pixels": 14623852,
+          "mean": 134.13138679193418,
+          "standard_deviation": 14.785810497270138,
+          "median": 130
+        },
+        "cr": {
+          "pixels": 14623852,
+          "mean": 126.91120786780391,
+          "standard_deviation": 9.46538235860741,
+          "median": 128
+        }
+      },
+      "model": "COOLPIX S3300",
+      "software": "COOLPIX S3300V1.1"
+    }
+  ],
+  "input_photographs_published": false,
+  "limitations": [
+    "Mode names are not inferred solely from filename, EXIF saturation or histogram.",
+    "Decoded RGB-to-YCbCr conversion includes JPEG conversion/rounding/clipping.",
+    "A stock tint matching constants is corroboration, not proof of every hardware call or a modified firmware result."
+  ]
+}

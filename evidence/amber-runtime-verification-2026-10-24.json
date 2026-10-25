@@ -1,0 +1,107 @@
+{
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Calcutta",
+  "trial": "amber-mono",
+  "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "exact_installed_image_sha256": null,
+  "camera_reports": "COOLPIX S3300 V1.1",
+  "user_reports_installation": true,
+  "camera_menu_language_user_reported": "English",
+  "label_activation": "fail; Sepia remains after full off/on",
+  "saved_photo_tint": "pass; unclippedCb110/Cr150 agrees with Amber offsets-18,+22",
+  "standard_color": "pass; colour variation retained",
+  "cold_restart_user_reported": true,
+  "mode_persistence_user_reported": true,
+  "saved_photo_playback_user_reported": true,
+  "samples": [
+    {
+      "file": "DSCN1184.JPG",
+      "sha256": "2113751a9fc7b82451a34a9e3e9b46745e8b294db11bc787acc74b4cc67810e1",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "rgb_channels_exactly_equal": false,
+      "all_pixels": {
+        "cb": {
+          "pixels": 15925248,
+          "mean": 130.59568340788164,
+          "standard_deviation": 14.81342831095403,
+          "median": 128
+        },
+        "cr": {
+          "pixels": 15925248,
+          "mean": 128.77262288160284,
+          "standard_deviation": 10.172891279836172,
+          "median": 128
+        }
+      },
+      "unclipped_rgb_8_to_247": {
+        "cb": {
+          "pixels": 15504608,
+          "mean": 130.34371788051655,
+          "standard_deviation": 14.583956589841234,
+          "median": 128
+        },
+        "cr": {
+          "pixels": 15504608,
+          "mean": 128.95991249827148,
+          "standard_deviation": 10.01378445982916,
+          "median": 128
+        }
+      },
+      "model": "COOLPIX S3300",
+      "software": "COOLPIX S3300V1.1"
+    },
+    {
+      "file": "DSCN1185.JPG",
+      "sha256": "49d12aca88baccb07a0e3d9691455e554ff76de6b354d7180fa06f5f2c4498f0",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "rgb_channels_exactly_equal": false,
+      "all_pixels": {
+        "cb": {
+          "pixels": 15925248,
+          "mean": 110.72216759198977,
+          "standard_deviation": 2.133525259002116,
+          "median": 110
+        },
+        "cr": {
+          "pixels": 15925248,
+          "mean": 149.57790666745032,
+          "standard_deviation": 1.7030820192432308,
+          "median": 150
+        }
+      },
+      "unclipped_rgb_8_to_247": {
+        "cb": {
+          "pixels": 12339677,
+          "mean": 110.00025721905038,
+          "standard_deviation": 0.060950323525333215,
+          "median": 110
+        },
+        "cr": {
+          "pixels": 12339677,
+          "mean": 149.99946141215852,
+          "standard_deviation": 0.07572035072878258,
+          "median": 150
+        }
+      },
+      "model": "COOLPIX S3300",
+      "software": "COOLPIX S3300V1.1"
+    }
+  ],
+  "photo_copy_method": "Standard PTP GetObject twice, exact bytes compared; local copy readback verified",
+  "camera_reads_only_in_this_pass": true,
+  "camera_updates_in_this_pass": false,
+  "normal_rollback_tested": false,
+  "unbootable_recovery_verified": false,
+  "performance_or_battery_improvement_measured": false,
+  "limitations": [
+    "Photo evidence corroborates changed tint behavior, not an exact installed image hash.",
+    "The failed English rename is unresolved; no extra firmware update was attempted.",
+    "User observations distinguish startup, persistence and playback from independently measured timing or recovery."
+  ]
+}

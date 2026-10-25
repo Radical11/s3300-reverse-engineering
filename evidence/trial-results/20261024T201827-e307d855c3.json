@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "trial": "amber-mono",
+  "check": "standard-color",
+  "outcome": "fail",
+  "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "installed_image_sha256": null,
+  "observation_source": "user-reported camera observation",
+  "notes": "Fresh intended Standard-first Auto Color options test yielded constant Amber chroma near Cb110/Cr150 in DSCN1186. Exact UI commitment for that first shot is unverified; this records failed bypass observation, not a proven firmware cause. Requested one explicit Standard -> OK -> preview -> photo repeat.",
+  "recorded_at_utc": "2026-10-24T20:18:27.628581+00:00",
+  "target_firmware_execution_observed_by_tool": false,
+  "scope": "An observation does not establish the exact installed bytes or unbootable recovery",
+  "sample": {
+    "relative_path": "samples/auto-amber-verification-2026-10-25/DSCN1186.JPG",
+    "sha256": "4275439b2659df7467864fdd6830cf2d005c42b5456ead31869723920acf12e3"
+  }
+}

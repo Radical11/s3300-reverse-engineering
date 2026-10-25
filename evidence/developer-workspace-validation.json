@@ -1,0 +1,61 @@
+{
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Calcutta",
+  "camera_accessed": false,
+  "remote_publication": false,
+  "fresh_checkout_extraction": true,
+  "no_prior_generated_directories": true,
+  "doctor": {
+    "python": "3.13.15",
+    "python_supported": true,
+    "dependencies": {
+      "pyelftools": {
+        "expected": "0.33",
+        "installed": "0.33"
+      },
+      "capstone": {
+        "expected": "5.0.6",
+        "installed": "5.0.6"
+      },
+      "Pillow": {
+        "expected": "12.3.0",
+        "installed": "12.3.0"
+      }
+    },
+    "source_present": true,
+    "workspace_present": true,
+    "workspace_verification": {
+      "carrier": {
+        "byte_exact_source_reassembly": true,
+        "bytes": 19005632,
+        "sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+        "installable_custom_firmware": false
+      },
+      "authenticated_analysis": true,
+      "decoded_bytes_compared": 7950592,
+      "resources_checked": 368,
+      "editable_roundtrips_checked": 106,
+      "search_index_counts": {
+        "regions": 8,
+        "code_strings": 26976,
+        "symbols": 1924,
+        "resources": 368,
+        "ui_strings": 98085,
+        "functions": 5798
+      },
+      "index_check_scope": "SQLite integrity, source metadata and row counts; not full row semantics",
+      "camera_runtime_validated": false
+    },
+    "ready": true,
+    "errors": [],
+    "camera_accessed": false
+  },
+  "existing_workspace_reused": true,
+  "address_lookup": true,
+  "literal_search": true,
+  "bounded_listing": true,
+  "label_candidate_regression_sha256": "a222ab366e8f328dc3a3be17b780fa42cba988d3b220487b4fb14a8016a270b4",
+  "full_segment_two_decoders_match": true,
+  "modified_baseline_fails_without_overwrite": true,
+  "offline_unit_tests": 147
+}

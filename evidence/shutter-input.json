@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated Capstone instruction checks and direct Ghidra dossiers; not REA Evidence",
+  "target_executed": false,
+  "camera_commands_issued": false,
+  "instruction_assertions": [
+    {
+      "address": 2154431172,
+      "sha256": "6158ba725229f28eaab77123f7de75921c57c0fa46432314db0cc75cbd05ebb2"
+    },
+    {
+      "address": 2154431244,
+      "sha256": "0351151747ac2c0cec5934f86f1fe32cc7e8bf823fc20db88f7b1e29bcc19bb4"
+    },
+    {
+      "address": 2154431264,
+      "sha256": "48194e5f01e21b941f9b32f60fad73bc27b32e610941de75ef3a934b14d3f831"
+    },
+    {
+      "address": 2154431268,
+      "sha256": "ddc48d690111090753e590b8ed76313f09d637ac5fb56a7fb97595e94db16e94"
+    },
+    {
+      "address": 2154431272,
+      "sha256": "1c5c030876b0f93f9fb32be8d974d0ba1c091b62e9753ddb5f682a89d69b86b6"
+    },
+    {
+      "address": 2154431276,
+      "sha256": "f077d2c802baf64bca31ccbfb4ddae5d0799def3d4b6fc5719806296f0839599"
+    },
+    {
+      "address": 2154431288,
+      "sha256": "537ace9ec25157e794a86586c85a0b58a7a6482926df47c6d927cb724f1f4fa0"
+    },
+    {
+      "address": 2154431296,
+      "sha256": "ef8738352a321209761728140a58e5cf1ff0afe7f9efaef9e5e68e81b8639973"
+    },
+    {
+      "address": 2154434744,
+      "sha256": "3fe34d1548b1e27c2e6aad429f70f60b74266d92c67189674f4d8ea414f3e6ab"
+    },
+    {
+      "address": 2154434764,
+      "sha256": "bfb779beb266ec56b29cb63a6d8897789e206bff460284c2cce8ecbb88be24af"
+    },
+    {
+      "address": 2154434780,
+      "sha256": "14eaee2e3b56c4e5c6e8edb70368ba6d6289139790ff1e6f4bc8561f53ec9aee"
+    },
+    {
+      "address": 2154434796,
+      "sha256": "2658dadbc975b3f25fb7516377909ecc5b7fe21d5c74fa421b531cf3d7d64909"
+    },
+    {
+      "address": 2154434800,
+      "sha256": "1d5c80dce5b6c504f769c3840b744b6915317644507440415e8faf4f26b93441"
+    },
+    {
+      "address": 2154434852,
+      "sha256": "3562b2813531ef4dbfc19a846d81f34dd9adf956c70f268cc14ac3185c1ebf7e"
+    },
+    {
+      "address": 2154434860,
+      "sha256": "7f25b3c2e1135cba22909e27f74467b6fcdaed7220f0670ce4d732c65b156c8c"
+    },
+    {
+      "address": 2154434916,
+      "sha256": "f0572b8cdda8a8d57a65f9954e24b43a1d0a01858eba64995869e35cb0b9f844"
+    },
+    {
+      "address": 2154434924,
+      "sha256": "131a9b53ff00e4c797c73350f359eb16732d352ad3beeca610d05b14c3a7cec3"
+    },
+    {
+      "address": 2154434960,
+      "sha256": "cc253c28e174b057867690aa38faaab44dbdf323ee797c6c119004617795c146"
+    },
+    {
+      "address": 2154434964,
+      "sha256": "3b424f39925487635234f329c5ff0fb1a315f03c16ff80561e1a8083ed9d51e3"
+    },
+    {
+      "address": 2154434968,
+      "sha256": "6a58ad04db1c23a835fbe59981a330e83f9ddcb98671a25cdebb18ae40af26ad"
+    },
+    {
+      "address": 2154435012,
+      "sha256": "84e7aa66771577f79828442f79a66d6c9d616fbced78bc4e8ab31797f5a6b661"
+    },
+    {
+      "address": 2154435224,
+      "sha256": "f96f67783018a9906aeef1ef2bcb3e7877f98bcd70a9fe51e1ed853624217d87"
+    },
+    {
+      "address": 2154435240,
+      "sha256": "19fab84d25b9540bbd4c7a0e8033e0fe2b81739f45f5b11acb8d739e45ce0490"
+    },
+    {
+      "address": 2154433620,
+      "sha256": "06681e9c105b7593e3f35f3cc7c27060d82fa5620392aa4000438dee918bb973"
+    },
+    {
+      "address": 2154433636,
+      "sha256": "ba63bdd2b2190c08c6edb18e298a71bd3383b221d56a8d7fef3df042445590ae"
+    },
+    {
+      "address": 2154432948,
+      "sha256": "42f01effa22811ed37620e2a548aa97514f127eaef2e3322548dc16c3f09ca25"
+    },
+    {
+      "address": 2154432960,
+      "sha256": "e2cbc5ea23186e58bab339ef2012701e0fc9c6aec183392a621a4b27fef7b07b"
+    },
+    {
+      "address": 2154432968,
+      "sha256": "b2a9965f72ad52fde9ba4a1ae55cef76002e2d64d1c668a24bc28d3dd185f0f0"
+    },
+    {
+      "address": 2154433152,
+      "sha256": "e16b593180286c702694d6e9c5ab0b2bf9f58c909d8ed6863682c823ab383b65"
+    },
+    {
+      "address": 2154432168,
+      "sha256": "437533ea09d8ad89bd4f8247dc6d8746a8e2013e4cbb4e43e15b0fcc6cdbdfdc"
+    },
+    {
+      "address": 2154432224,
+      "sha256": "adff9ffab1f3257f8fedb2f56517b1708961ca1ff08ca017aabca549e530a61d"
+    },
+    {
+      "address": 2154432228,
+      "sha256": "044a263b7e280545e50d5c619536b833c01d9cb7062beab45dec2b2b0a547c09"
+    },
+    {
+      "address": 2154435264,
+      "sha256": "3b30c0aa722de53d35a87bee5d9e84b000d9b7d9e739b7e21b50a38bc3724281"
+    },
+    {
+      "address": 2154435272,
+      "sha256": "f10ed0d737bf355c589c44f652a7d258ce1d04e86f0d1ba465fdb6aaebac9536"
+    },
+    {
+      "address": 2149657576,
+      "sha256": "4d0271055605c8ec7ea28468c0254dd2e50c9a90dc04d1a5dc6da22fc400adc5"
+    },
+    {
+      "address": 2149657580,
+      "sha256": "333776a0485cdd87f2ce4110eab2f4a7f759346206b89f4f02dc744ea7e4bbd7"
+    },
+    {
+      "address": 2149657584,
+      "sha256": "cdd87a8687c84de2280c78ace6f7ba9fec21e738d4edef13cb09c81b10559da3"
+    },
+    {
+      "address": 2149658000,
+      "sha256": "6d2db5c43d0450ce4d68929af76f61393e7101d3714a957c12a6b45584210445"
+    },
+    {
+      "address": 2149658004,
+      "sha256": "e477782560be283360a31fc94d3490d92e861800dbf1337d94bb62cf7cd7accd"
+    },
+    {
+      "address": 2149658400,
+      "sha256": "14b25cb73ee150d54c10787d2578b638f75504be5138efea2f5b83a5b45b594f"
+    },
+    {
+      "address": 2154471868,
+      "sha256": "9e191b8294386a4617ede60f3662f14f2d43736067bff1e58e1b55b9e62f112c"
+    },
+    {
+      "address": 2154472016,
+      "sha256": "a218724c232d6c8f8668066927dc7c897c7645ea53ea034ab16e2e62c8731606"
+    },
+    {
+      "address": 2154466016,
+      "sha256": "9385e1936e35e181302461584f5493902b6c5fb3bdfa2ffad44ecb5b5f0e2cca"
+    },
+    {
+      "address": 2155086664,
+      "sha256": "072e9967081afca975f1ec85524f9973796cf5decadbd2c2cca89873fe2af23b"
+    },
+    {
+      "address": 2155086668,
+      "sha256": "bb11bfae987096578f9fb8c57acd6021f4daeabb2012d633c990d93b07d43090"
+    },
+    {
+      "address": 2155086256,
+      "sha256": "84e54560dce31d237f177d33ff060ff9373e4db4f3846ad1f535584ca0e440f1"
+    },
+    {
+      "address": 2154853856,
+      "sha256": "8ba3dcb87c152b0876bbe7dc55b4b06d1d774d706d20b96843cfb6b25f468e87"
+    },
+    {
+      "address": 2154853860,
+      "sha256": "9eff1a87d7f0f6745f3a2f4233c8cf3c96a85837bafae25a6b01675a5c0cbd4f"
+    },
+    {
+      "address": 2154853876,
+      "sha256": "2abd44a49904eca59bf8c4f40a980b5fc3a66324cfecab7a88fa87b7b8000ce8"
+    },
+    {
+      "address": 2154853880,
+      "sha256": "8bb3ff17bc5532847eeb3888fb6c77ba626c069a33f96a0581bfd7dbae125c73"
+    },
+    {
+      "address": 2154854168,
+      "sha256": "3d7a26e3267d55c7fef3c33490d629894bdfd5f2843d272d6c9e5b8263babb39"
+    },
+    {
+      "address": 2154854172,
+      "sha256": "8a7107f043a6f5f4348b72e6cef686b1aef059ef2193e4d3bb2fa8b729f451e7"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2154431164,
+        "dossier_sha256": "eac30d1f4c29b1f85f41439d730ee56a224e7ecb5c7cdf814abb8e9389600840",
+        "instructions_checked": 174,
+        "name": "sub_806a02bc"
+      },
+      {
+        "address": 2154431860,
+        "dossier_sha256": "b2fec9e93d0b5a4b25f1049ebc6e3b6ba4864d812aac053eeb27516e54c40d15",
+        "instructions_checked": 39,
+        "name": "sub_806a0574"
+      },
+      {
+        "address": 2154434716,
+        "dossier_sha256": "0936ba0c55ba6e5d61aab2b27f164edd2513aa8fc76f48f428613cba45264422",
+        "instructions_checked": 135,
+        "name": "sub_806a109c"
+      },
+      {
+        "address": 2154433280,
+        "dossier_sha256": "4764723e00a0faaf1e77f99bb6d4cd571f459d7c58dd20b5eac168071dda1825",
+        "instructions_checked": 129,
+        "name": "sub_806a0b00"
+      },
+      {
+        "address": 2154432932,
+        "dossier_sha256": "0d1e6662acb09e08b5bc2996d1b71b018e9c792f54f747f341afc94b404efaa7",
+        "instructions_checked": 87,
+        "name": "sub_806a09a4"
+      },
+      {
+        "address": 2154432092,
+        "dossier_sha256": "f4a0bbcc13ddd69a6dbd2d65d27f22a0fd92631b95593b46498daf4bc0d9cb75",
+        "instructions_checked": 45,
+        "name": "sub_806a065c"
+      },
+      {
+        "address": 2154435256,
+        "dossier_sha256": "665e92cf686b784575c38cb48dd04dc7abcc6cd6d07b276e98c54942f390f0ac",
+        "instructions_checked": 16,
+        "name": "sub_806a12b8"
+      },
+      {
+        "address": 2154433796,
+        "dossier_sha256": "4044f32d2025c21d4cf6b1aa9232a7f88f4388110fb4ad674290bba8a24fd17e",
+        "instructions_checked": 58,
+        "name": "sub_806a0d04"
+      },
+      {
+        "address": 2154423508,
+        "dossier_sha256": "ed7351611af04deaedfd5ecfdddf1831e774ed76627e3f2545bb82ad6d11c204",
+        "instructions_checked": 219,
+        "name": "sub_8069e4d4"
+      },
+      {
+        "address": 2149657488,
+        "dossier_sha256": "08ba1ff0e26304193279655bdebe2af50bea7d15bd5e056c8c6c4b406b43db23",
+        "instructions_checked": 91,
+        "name": "FUN_80212b90"
+      },
+      {
+        "address": 2149657896,
+        "dossier_sha256": "0aec15ab419167f94b1607268d11c4760c7cd77505b4cc391175693bd6a54fb5",
+        "instructions_checked": 109,
+        "name": "FUN_80212d28"
+      },
+      {
+        "address": 2149658332,
+        "dossier_sha256": "a336f09af0aa6b1747179389abdd512914965abd7ca088384342429dff9f8de5",
+        "instructions_checked": 41,
+        "name": "FUN_80212edc"
+      },
+      {
+        "address": 2154471832,
+        "dossier_sha256": "9efd1f96be654acaf39be6625f0e9d219ed4f2e0158acc38930129ab3661b75e",
+        "instructions_checked": 81,
+        "name": "sub_806aa198"
+      },
+      {
+        "address": 2154465836,
+        "dossier_sha256": "5bc6f1e54f3f8de66c236a87e5a8f2c5cfe4e9b1875c6dcef31da4593bacf14a",
+        "instructions_checked": 1499,
+        "name": "sub_806a8a2c"
+      },
+      {
+        "address": 2155086464,
+        "dossier_sha256": "d16abfe21eedb22439321fab35f62edb750712444765454b42c4f98ac154e9ff",
+        "instructions_checked": 60,
+        "name": "sub_80740280"
+      },
+      {
+        "address": 2155083864,
+        "dossier_sha256": "30b25c86496c14a701a0eaafac06fee8caf0e9715d3e448ed3159dc22079ad55",
+        "instructions_checked": 650,
+        "name": "sub_8073f858"
+      },
+      {
+        "address": 2154853776,
+        "dossier_sha256": "58c6aa0e78469d5ff831dacc35c849b574777198ba099ba7eb2acaad9759e8f6",
+        "instructions_checked": 1494,
+        "name": "sub_80707590"
+      },
+      {
+        "address": 2153431100,
+        "dossier_sha256": "ef72a7a60944192bc7d7b29852712c4b70fabb12b61e0a7d68d05ab5af6569ec",
+        "instructions_checked": 520,
+        "name": "sub_805ac03c"
+      },
+      {
+        "address": 2154821684,
+        "dossier_sha256": "c6162e624405b1fc3f123bf97f7a167042b97be1dca8f962b32b0b4d83af34b6",
+        "instructions_checked": 2116,
+        "name": "sub_806ff834"
+      },
+      {
+        "address": 2154432052,
+        "dossier_sha256": "0739d961b634bf71f58ec7743d47fa525e910d5b53468aa591f065d1f52c755f",
+        "instructions_checked": 4,
+        "name": "sub_806a0634"
+      },
+      {
+        "address": 2154821628,
+        "dossier_sha256": "d49a248ba9f1a45054ec50dd3c086539536f69699eb7e972fe158cdc55e23942",
+        "instructions_checked": 14,
+        "name": "sub_806ff7fc"
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "id": "input.snap_scan",
+      "status": "static-contract-verified",
+      "scanner": 2154431164,
+      "sampled_registers": [
+        {
+          "address": 2952922184,
+          "expression": "(u32read==0)<<1",
+          "normalized_bit": 2
+        },
+        {
+          "address": 2952922188,
+          "expression": "u32read==0",
+          "normalized_bit": 1
+        }
+      ],
+      "side_effects": "Scanner also configures and toggles GPIO matrix lines through800a1468/800a1580 and MMIO writes for other key bits; it is not a passive getter.",
+      "limits": [
+        "Static register-zero interpretation is source-established; installed pad wiring, switch polarity and observed physical press correlation have not been measured.",
+        "No scanner or GPIO function is exposed as an SDK or invoked on the camera."
+      ]
+    },
+    {
+      "id": "input.debounce_edges",
+      "status": "static-contract-verified",
+      "entry": 2154434716,
+      "periodic_caller": 2154435256,
+      "periodic_parent": 2154423508,
+      "state": {
+        "current": 2156754004,
+        "previous": 2156754006,
+        "press_enable": 2156754008,
+        "release_enable": 2156754010,
+        "candidate": 2155971698,
+        "pending": 2155971696
+      },
+      "acceptance": "Changed state first becomes candidate. Matching state on the next pending scan accepts it; a different candidate clears pending without updating previous. Equal-to-previous clears pending.",
+      "edge_rules": {
+        "rising": "~previous & current & press_enable",
+        "falling": "~current & previous & release_enable"
+      },
+      "initialization": {
+        "entry": 2154431860,
+        "press_enable": 0,
+        "release_enable": 28672
+      },
+      "limits": [
+        "Enable masks are changed by mode lifecycle; initial masks do not enable both SNAP edge directions.",
+        "Logical scan-count behavior is established; physical sampling interval and debounce duration are not measured here.",
+        "Release/capture cancellation has additional state-specific behavior."
+      ]
+    },
+    {
+      "id": "input.snap_event_encoding",
+      "status": "static-route-verified",
+      "rising_mapper": 2154433280,
+      "falling_mapper": 2154432932,
+      "event_poster": 2154432092,
+      "category": 256,
+      "events": [
+        {
+          "bit": 2,
+          "edge": "rising",
+          "low_id": 2,
+          "combined": 258,
+          "label": "SNAP1"
+        },
+        {
+          "bit": 1,
+          "edge": "rising",
+          "low_id": 1,
+          "combined": 257,
+          "label": "SNAP2"
+        },
+        {
+          "bit": 2,
+          "edge": "falling",
+          "low_id": 18,
+          "combined": 274,
+          "label": "SNAP1 release"
+        },
+        {
+          "bit": 1,
+          "edge": "falling",
+          "low_id": 17,
+          "combined": 273,
+          "label": "SNAP2 release"
+        }
+      ],
+      "label_corroboration": "805ac03c recognizes102 with MSG_KEY_SNAP1 diagnostic;806ff834 recognizes101 with GetSNAP2 diagnostic, alongside the checked bit/event mapping.",
+      "serialization": "806a065c can defer low key IDs in32-word ring80816e08(index80816e94 wraps&1f), depending on pending-key count80816e98 and prior key8081846a; full press ID1 has a special pending-count rule.",
+      "limits": [
+        "Map covers two SNAP bits, not arbitrary key combinations or FIFO overflow safety.",
+        "Internal event IDs are not USB/PTP commands or a supported event-injection API."
+      ]
+    },
+    {
+      "id": "input.host_to_view_dispatch",
+      "status": "static-route-verified",
+      "host_send": 2149657488,
+      "host_queue": 2148576164,
+      "queue_create": 2149657896,
+      "queue_message_words": 2,
+      "receiver": 2149658332,
+      "ui_receiver": 2154471832,
+      "ui_event_processor": 2154465836,
+      "mode_dispatcher": 2155086464,
+      "message": "category100 plus low event ID; mode dispatcher combines argument words with OR",
+      "view_family": "UI mode high nibble2000 reaches8073f858; exact2050 reaches80707590,2051 reaches80704598,2060 reaches806ff834,2068 reaches80707234.",
+      "ownership": "Two scalar words are queued; no frame pointer or capture-buffer ownership is transferred by these key messages.",
+      "constraints": [
+        "Host-send readiness/filter checks can drop a message; queue overflow asserts.",
+        "Receiver has optional callback filtering; a generated event is not a proof of delivery to a selected handler.",
+        "Current808921dc and callback/mask values are runtime-only."
+      ]
+    },
+    {
+      "id": "input.capture_and_release_consumer",
+      "status": "static-route-partial",
+      "handler": 2154853776,
+      "required_view_state": 8272,
+      "full_press": "101 reaches shared preparation arm807078d8. It can set2051/focus state or take later capture branches according to view-bank and runtime flags; full press is not unconditional directJPEG capture.",
+      "half_release": "112 clears runtime UI/capture-state object(PTR808918a0)+36 and calls806ff7fc; that helper restores a temporary selection from80891812 when80891843 is set, then clears the flag.",
+      "full_release": "111 does not enter the reviewed101/112 arms in this exact2050 handler; other view states have separate dispatch.",
+      "downstream": "shutter-route report traces80706ca8 through AppSetMode and still queues into FileCompressor/JPEG.",
+      "limits": [
+        "No general cancel-capture command or safe live state transition is established.",
+        "Physical key-to-live Auto branch remains unobserved; other focus/capture/sequence states are not all recovered here."
+      ]
+    }
+  ],
+  "remaining_gates": [
+    "Installed key wiring/polarity and live scanner/mask/state correlation",
+    "Complete mode-dependent focus/capture/release/cancellation ownership",
+    "Chosen hook frame domain/stride/capacity/live cache ownership",
+    "Complete backup and independent software recovery"
+  ],
+  "physical_shutter_runtime_verified": false,
+  "safe_input_adapter_established": false,
+  "ready_for_executable_trial": false,
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "map_shutter_input.py": "885e99c63587d134401c580b9f6915b1dd4b4251147957a331f6d99a54a4d266",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

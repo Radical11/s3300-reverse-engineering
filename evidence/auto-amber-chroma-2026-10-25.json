@@ -1,0 +1,89 @@
+{
+  "method": "Full-resolution Pillow decode, exact RGB equality and YCbCr histograms; no source writes",
+  "samples": [
+    {
+      "file": "DSCN1186.JPG",
+      "sha256": "4275439b2659df7467864fdd6830cf2d005c42b5456ead31869723920acf12e3",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "rgb_channels_exactly_equal": false,
+      "all_pixels": {
+        "cb": {
+          "pixels": 15925248,
+          "mean": 111.4445176615146,
+          "standard_deviation": 3.150019278404676,
+          "median": 110
+        },
+        "cr": {
+          "pixels": 15925248,
+          "mean": 148.94425587595245,
+          "standard_deviation": 2.8964401276656195,
+          "median": 150
+        }
+      },
+      "unclipped_rgb_8_to_247": {
+        "cb": {
+          "pixels": 10664587,
+          "mean": 109.99943270189459,
+          "standard_deviation": 0.059769869074900756,
+          "median": 110
+        },
+        "cr": {
+          "pixels": 10664587,
+          "mean": 149.99860172738053,
+          "standard_deviation": 0.06702366035850306,
+          "median": 150
+        }
+      },
+      "model": "COOLPIX S3300",
+      "software": "COOLPIX S3300V1.1"
+    },
+    {
+      "file": "DSCN1187.JPG",
+      "sha256": "e4e6ddd6e7fe8ba402d94e11c3456408e5eb6dbc7162e2148b0127a1f1254dfe",
+      "dimensions": [
+        4608,
+        3456
+      ],
+      "rgb_channels_exactly_equal": false,
+      "all_pixels": {
+        "cb": {
+          "pixels": 15925248,
+          "mean": 111.24908962171264,
+          "standard_deviation": 2.889848031490484,
+          "median": 110
+        },
+        "cr": {
+          "pixels": 15925248,
+          "mean": 148.99348054108796,
+          "standard_deviation": 2.906200057896049,
+          "median": 150
+        }
+      },
+      "unclipped_rgb_8_to_247": {
+        "cb": {
+          "pixels": 11143643,
+          "mean": 109.99996841248414,
+          "standard_deviation": 0.024281120377234018,
+          "median": 110
+        },
+        "cr": {
+          "pixels": 11143643,
+          "mean": 149.99978974559755,
+          "standard_deviation": 0.0281500540794271,
+          "median": 150
+        }
+      },
+      "model": "COOLPIX S3300",
+      "software": "COOLPIX S3300V1.1"
+    }
+  ],
+  "input_photographs_published": false,
+  "limitations": [
+    "Mode names are not inferred solely from filename, EXIF saturation or histogram.",
+    "Decoded RGB-to-YCbCr conversion includes JPEG conversion/rounding/clipping.",
+    "A stock tint matching constants is corroboration, not proof of every hardware call or a modified firmware result."
+  ]
+}

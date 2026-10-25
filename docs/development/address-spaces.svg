@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="330" viewBox="0 0 1040 330" role="img" aria-labelledby="title desc">
+<title id="title">S3300 address coordinates</title><desc id="desc">Carrier offsets, application virtual addresses and analysis-file offsets are distinct. Original updater symbols retain their own scope. Runtime-only RAM and MMIO references have no guaranteed file-backed bytes.</desc>
+<rect width="1040" height="330" rx="16" fill="#f4f7fb"/>
+<g font-family="Arial,sans-serif" font-size="16" fill="#183047">
+<text x="30" y="38" font-size="20" font-weight="bold">Never translate every address using one global base</text>
+<g stroke="#7996ad" fill="#e1edf7"><rect x="30" y="65" width="285" height="155" rx="10"/><rect x="373" y="65" width="285" height="155" rx="10"/><rect x="716" y="65" width="294" height="155" rx="10"/></g>
+<text x="48" y="95" font-weight="bold">Supplied update file</text><text x="48" y="124">Carrier offset 0x2202c0</text><text x="48" y="151">Original ELF program headers</text><text x="48" y="178">Packed bytes + resources</text><text x="48" y="202" font-size="13">Offsets are positions in this file.</text>
+<text x="391" y="95" font-weight="bold">Application coordinates</text><text x="391" y="124">Virtual address 0x80205918</text><text x="391" y="151">Mapped decoded regions</text><text x="391" y="178">Separate executable scopes</text><text x="391" y="202" font-size="13">Use region provenance to resolve bytes.</text>
+<text x="734" y="95" font-weight="bold">Host analysis file</text><text x="734" y="124">Synthetic ELF file offsets</text><text x="734" y="151">Recorded segment mappings</text><text x="734" y="178">Verified original region hashes</text><text x="734" y="202" font-size="13">This ELF is not a camera update.</text>
+<text x="30" y="266">Runtime-only: clock table 0x808a5b8c — absent contents remain unknown.</text>
+<text x="30" y="295">Mapped hardware reference: 0xb8002010 — a camera address, never a host pointer.</text>
+</g><g stroke="#607080" stroke-width="2" fill="none"><path d="M319 142H366M352 135L366 142L352 149"/><path d="M662 142H709M695 135L709 142L695 149"/></g>
+</svg>

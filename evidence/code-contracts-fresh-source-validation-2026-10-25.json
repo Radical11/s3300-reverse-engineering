@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_package": "derived/s3300-code-contracts-verified-2026-10-25-source.zip",
+  "source_package_sha256": "adf2fe0eb9e0c6888b3ace2145ff470de6c7e7e3258109326ae4cb9d433cbfc7",
+  "source_tree": "derived/code-contracts-fresh-verified-source-2026-10-25",
+  "checks": [
+    {
+      "command": [
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "passed": true,
+      "seconds": 2.75
+    },
+    {
+      "command": [
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "-r",
+        "requirements-analysis.txt"
+      ],
+      "passed": true,
+      "seconds": 1.46
+    },
+    {
+      "command": [
+        "s3300.py",
+        "init"
+      ],
+      "passed": true,
+      "seconds": 31.61
+    },
+    {
+      "command": [
+        "s3300.py",
+        "doctor"
+      ],
+      "passed": true,
+      "seconds": 1.1
+    },
+    {
+      "command": [
+        "tools/build_identity_trial.py",
+        "derived/identity-asset/Startup1.jpg",
+        "derived/pocket-studio-identity-candidate-01"
+      ],
+      "passed": true,
+      "seconds": 10.65
+    },
+    {
+      "command": [
+        "tools/build_amber_trial.py",
+        "derived/amber-reproduction"
+      ],
+      "passed": true,
+      "seconds": 12.44
+    },
+    {
+      "command": [
+        "s3300.py",
+        "validate-candidate",
+        "amber-mono",
+        "--candidate",
+        "derived/amber-reproduction/NOT-INSTALLABLE-patch-plan.research.bin"
+      ],
+      "passed": true,
+      "seconds": 6.46
+    },
+    {
+      "command": [
+        "s3300.py",
+        "sdk-build",
+        "derived/sdk-reproduction"
+      ],
+      "passed": true,
+      "seconds": 1.75
+    },
+    {
+      "command": [
+        "s3300.py",
+        "guide",
+        "derived/guide-reproduction"
+      ],
+      "passed": true,
+      "seconds": 0.21
+    },
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "passed": true,
+      "seconds": 3.9
+    }
+  ],
+  "prior_fresh_attempts": [
+    {
+      "passed": false,
+      "reason": "Capstone absent outside original tools/vendor; documented isolated setup then passed.",
+      "log": "derived/code-contracts-fresh-source-2026-10-25/derived/reproduction-2.log"
+    },
+    {
+      "passed": false,
+      "reason": "Amber independent validator required unbuilt reviewed identity base; guide and preflight now document and verify this prerequisite.",
+      "log": "derived/code-contracts-fresh-source-2026-10-25/derived/isolated-reproduction-5.log"
+    }
+  ],
+  "linux_execution": false,
+  "isolated_python_dependencies_installed": true,
+  "global_python_changed": false,
+  "sdk_sha256": "cd959a7874f698e4e357832bc5fe6e8075316e5afd8385444369e3dfe678ac57",
+  "amber_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "identity_sha256": "8f742b9a699b276a001827721fab4bd50e578372a582acc020ba1caa6e75754c",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "firmware_candidate_scope": "Exact existing reviewed identity and Amber candidates reproduced locally; no new trial or device access",
+  "camera_accessed": false,
+  "flashed": false,
+  "scope": "Fresh source archive plus original firmware, new isolated Python3.13 environment with pinned requirements. Reused compiler/emulator cache; no new OS/VM or full Ghidra reanalysis. Focused maps separately verified using retained source-bound native databases.",
+  "current_workspace_tests": {
+    "run": 323,
+    "passed": 323,
+    "skipped": 0,
+    "failed": 0
+  },
+  "fresh_source_tests": {
+    "run": 323,
+    "passed": 321,
+    "failed": 0,
+    "skipped": [
+      {
+        "test": "test_label_contracts.RetainedLabelContractTests.test_static_path_stays_separate_from_camera_activation",
+        "reason": "Private native analysis deliberately absent in source archive"
+      },
+      {
+        "test": "test_label_contracts.RetainedLabelContractTests.test_real_lookup_in_emulator_selects_changed_span_and_rejects_bad_ids",
+        "reason": "Private native analysis deliberately absent in source archive"
+      }
+    ]
+  },
+  "native_dependent_tests_passed_in_original_workspace": true
+}

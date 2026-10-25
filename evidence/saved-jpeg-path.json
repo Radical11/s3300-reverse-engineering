@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated instruction bytes with independent Capstone and direct Ghidra dossiers; not REA Evidence",
+  "target_executed": false,
+  "camera_commands_issued": false,
+  "instruction_assertions": 34,
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2149818416,
+        "dossier_sha256": "5e8e4008e8cf3d3f241b8f5f00f1f2ede498420945706240949a527f60e6d4b5",
+        "instructions_checked": 11,
+        "name": "FUN_8023a030"
+      },
+      {
+        "address": 2149818460,
+        "dossier_sha256": "7f5d18e9f56735488fe9345c00201d871303bfa6425ee324d1a28197f0495cff",
+        "instructions_checked": 12,
+        "name": "FUN_8023a05c"
+      },
+      {
+        "address": 2149839960,
+        "dossier_sha256": "56aa8caee9454210aa8a254530940526dfb2361711adbe1d2ea70c5f57b16d7c",
+        "instructions_checked": 1036,
+        "name": "FUN_8023f458"
+      },
+      {
+        "address": 2150752352,
+        "dossier_sha256": "4e36b847955fe0d1ef95211021359b27ca3346335ccc18c81b1bdf9d9a439b4a",
+        "instructions_checked": 43,
+        "name": "FUN_8031e060"
+      },
+      {
+        "address": 2150748340,
+        "dossier_sha256": "1f986e2b7d1ee0adbd3298d291fd0ec51ee7e5dca7fc853bf5ff58f3b99a6ed6",
+        "instructions_checked": 967,
+        "name": "FUN_8031d0b4"
+      },
+      {
+        "address": 2150738524,
+        "dossier_sha256": "a2d4c7a1c702e7b6c7e34b7bedc2db7a1a0b15b8efbdd15bdf901d27f4e68bed",
+        "instructions_checked": 2454,
+        "name": "FUN_8031aa5c"
+      },
+      {
+        "address": 2150678544,
+        "dossier_sha256": "ea4c0b0fed27d7a50d1a711447512784c7c7dbe601b9eaae441df8d9ad2b74e3",
+        "instructions_checked": 186,
+        "name": "FUN_8030c010"
+      },
+      {
+        "address": 2150784796,
+        "dossier_sha256": "f398428f7e771f4ac270957a2babcddb6cdf556b0db05bf64121bb45ca45299a",
+        "instructions_checked": 40,
+        "name": "FUN_80325f1c"
+      },
+      {
+        "address": 2150806028,
+        "dossier_sha256": "40694e8c0a24c64736bfc871a7dbbf75b6f8581abfe716230aadb20916611fb5",
+        "instructions_checked": 344,
+        "name": "FUN_8032b20c"
+      },
+      {
+        "address": 2150805756,
+        "dossier_sha256": "0756c4439aa931673b599e02ee77bae7271680b061aaf8703cca48a3da228418",
+        "instructions_checked": 43,
+        "name": "FUN_8032b0fc"
+      },
+      {
+        "address": 2150805928,
+        "dossier_sha256": "77208e9803469a7704b9895713155b33ebfdedbbface392d08337a96b49ebfb2",
+        "instructions_checked": 23,
+        "name": "FUN_8032b1a8"
+      },
+      {
+        "address": 2150698032,
+        "dossier_sha256": "7f62fca88da11d106f1d89b729737ea1dcba79360c7bf616d676a11560a0d9f2",
+        "instructions_checked": 1043,
+        "name": "FUN_80310c30"
+      },
+      {
+        "address": 2150708204,
+        "dossier_sha256": "d39cdeb70c0b975ec5b98ecddce9890f33c01c637a9878a8fbe1aafec79f4daa",
+        "instructions_checked": 708,
+        "name": "FUN_803133ec"
+      },
+      {
+        "address": 2150732672,
+        "dossier_sha256": "aa7da91599bec36829db02821600faf1b8d1543c67023ee57dd5a52bd4281aaa",
+        "instructions_checked": 121,
+        "name": "FUN_80319380"
+      },
+      {
+        "address": 2150687296,
+        "dossier_sha256": "02de48e8121edb3d7dbd185a97149716b9d4bb3678f5bd8db9e87e08fc6af1d5",
+        "instructions_checked": 15,
+        "name": "FUN_8030e240"
+      },
+      {
+        "address": 2150687356,
+        "dossier_sha256": "e45229af7aef75ba201b2d723b27c455f7520fdf3c392f8cbc7e032df02fc034",
+        "instructions_checked": 22,
+        "name": "FUN_8030e27c"
+      },
+      {
+        "address": 2150687444,
+        "dossier_sha256": "69de34ceb62ca525e540183b6fb369aec3c568b42796e91435e4f5493ba47468",
+        "instructions_checked": 24,
+        "name": "FUN_8030e2d4"
+      },
+      {
+        "address": 2150689248,
+        "dossier_sha256": "ed059331c9e378884235e760ce5463ee8beca5850062fdfbff7d83183599f0e1",
+        "instructions_checked": 141,
+        "name": "FUN_8030e9e0"
+      },
+      {
+        "address": 2150687832,
+        "dossier_sha256": "c1f11d6fd2ad4602c0a3fbd91d38fa5f3b4a629d8faab20d258f71f8df70d690",
+        "instructions_checked": 38,
+        "name": "FUN_8030e458"
+      },
+      {
+        "address": 2150690168,
+        "dossier_sha256": "bd04504b21c4ae139866071040bd08157fd6ffc4176e2ed0245e3b8d61303b01",
+        "instructions_checked": 54,
+        "name": "FUN_8030ed78"
+      },
+      {
+        "address": 2150690484,
+        "dossier_sha256": "37800fc61f3c0142cbe699a2486fe73c6add16fa6e9f18b70c59341b6055b135",
+        "instructions_checked": 52,
+        "name": "FUN_8030eeb4"
+      },
+      {
+        "address": 2150690692,
+        "dossier_sha256": "f194ed257dd80a2a34b1fe8b6e27694b9ce79cbae0bdbedf59fe109d554402c1",
+        "instructions_checked": 126,
+        "name": "FUN_8030ef84"
+      },
+      {
+        "address": 2150691544,
+        "dossier_sha256": "fd68a8d8104912d100e87009441ec2e7a4f6df5a077be7824cc7a8f2318e2dc9",
+        "instructions_checked": 39,
+        "name": "FUN_8030f2d8"
+      },
+      {
+        "address": 2150809604,
+        "dossier_sha256": "7e4d16e80c9d9c144d77b48447c44b749ac25df17e3e9df286d0f65ba59b8222",
+        "instructions_checked": 108,
+        "name": "FUN_8032c004"
+      },
+      {
+        "address": 2150809200,
+        "dossier_sha256": "ea7e1896b3cd42dd6e10c1fc7385df7c0bb0e5352632c4a2ea9779c7f8058b2b",
+        "instructions_checked": 101,
+        "name": "FUN_8032be70"
+      },
+      {
+        "address": 2148103192,
+        "dossier_sha256": "d4961c87f618ebd2fb977f489e065a76ea4d52af049e411315a38a5ff0290f24",
+        "instructions_checked": 839,
+        "name": "FUN_80097418"
+      }
+    ]
+  },
+  "bounded_windows": [
+    {
+      "label": "file_compressor_pipe_loop",
+      "start": 2150752208,
+      "length": 144,
+      "sha256": "11abc05ab5f8b51cdcc2a59f96f0be886b5e809e1a97a5b323f4f8ea8275db7f",
+      "instructions": 36,
+      "boundary": "analyst-bounded original-byte window; no native function boundary claimed"
+    },
+    {
+      "label": "store_pipe_loop",
+      "start": 2150810036,
+      "length": 1060,
+      "sha256": "58f5f5847c744b621851cb255ebbfb751ce018edebfbdeb3ad667f5fcb71a849",
+      "instructions": 265,
+      "boundary": "analyst-bounded original-byte window; no native function boundary claimed"
+    },
+    {
+      "label": "segment_write_callback",
+      "start": 2150688724,
+      "length": 524,
+      "sha256": "198696de4737ccaaacac1aa697ac755c170db138eb7966998c0ae1a4b8a8185d",
+      "instructions": 131,
+      "boundary": "analyst-bounded original-byte window; no native function boundary claimed"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "saved-photo.compressor_queue",
+      "status": "static-route-verified",
+      "server_forwarder": 2149818416,
+      "pipe": 7,
+      "event": 4162,
+      "thread_create": 2150752352,
+      "thread_name": "FileCompressor",
+      "thread_window": 2150752208,
+      "receive": 2149537808,
+      "consumer": 2150748340,
+      "consumer_call_site": 2150752288,
+      "image_processor": 2150738524,
+      "limits": [
+        "Shutter event producer and complete sensor-to-pipe reachability are not established.",
+        "The recovered queue arm proves static routing, not execution on the connected camera."
+      ]
+    },
+    {
+      "id": "saved-photo.capture_descriptor",
+      "object_descriptor_offset": 84,
+      "descriptor_bytes": 28,
+      "fields": [
+        "data_address",
+        "frame_width",
+        "frame_height",
+        "left",
+        "top",
+        "width",
+        "height"
+      ],
+      "allocator": 2150678544,
+      "normal_branch": "If pointer+54 is zero, align dimensions via80190204, allocate low32(width*height*2), store pointer+54; optional percentage/HDR branches change extent and origin.",
+      "image_processor": 2150738524,
+      "jpeg_arguments_descriptor_offset": 12,
+      "release": 2150784796,
+      "ownership": "Capture object owns or borrows image according to mode. Release may free pointer+54 or use another pool route, then clears it. A caller cannot retain this descriptor beyond the capture lifecycle.",
+      "constraints": [
+        "No universal two-byte pixel format inferred from allocation size.",
+        "Mode-specific pool ownership, aliases, active descriptor values and byte pitch remain unresolved."
+      ]
+    },
+    {
+      "id": "saved-photo.jpeg_execution",
+      "create_go": 2150806028,
+      "finish": 2150805756,
+      "finish_destroy": 2150805928,
+      "sequence": [
+        2149114320,
+        2149152200,
+        2149153008,
+        2149153480,
+        2149203980,
+        2149114692
+      ],
+      "return": "Create/go returns path or0. Finish returns encoded byte count, invokes801a40e4 if wait fails or output count exceeds supplied capacity, optionally returns second count. Finish/destroy requires nonzero path, returns count after deleting path.",
+      "input_plan": "Selector0 rebases data by low32((top*frame_width+left)*2). Selector1 adds separate floor(low32(top*width*3)/2) and floor(low32(left*3)/2), then uses supplied chroma data or aligned frame area after rebased image.",
+      "constraints": [
+        "Arithmetic is not bounds validation; overflow and selector-specific packing must be respected.",
+        "Queue/event synchronization is essential; create/go returns before finish waits.",
+        "This does not establish CPU colour domain or permit the RGB creative-look module."
+      ]
+    },
+    {
+      "id": "saved-photo.file_assembly",
+      "exif_builders": [
+        2150698032,
+        2150708204
+      ],
+      "segment_append": 2150687444,
+      "segment_allocate": 2150687296,
+      "segment_size": 32,
+      "segment_fields": {
+        "data": 8,
+        "length": 12
+      },
+      "file_property_size": 56,
+      "list_offset": 40,
+      "store_strip": 2150732672,
+      "ownership": "Segment nodes retain data addresses, not byte copies. The asynchronous writer can unlink and free both segment data and node under flag4; producers must transfer ownership or select a different reviewed lifecycle.",
+      "limits": [
+        "Full format-dependent list content and all error/race cases are not proved."
+      ]
+    },
+    {
+      "id": "saved-photo.store_queue",
+      "server_forwarder": 2149818460,
+      "pipe": 3,
+      "thread_window": 2150810036,
+      "events": [
+        {
+          "event": 4098,
+          "handler": "8032c004",
+          "writer_flags": null,
+          "segment_data_consumed": false,
+          "meaning": "whole-file preparation/write/close route",
+          "safe_for_arbitrary_pointer": false
+        },
+        {
+          "event": 4185,
+          "handler": "8030eeb4",
+          "writer_flags": null,
+          "segment_data_consumed": false,
+          "meaning": "open shared file state; subsequent chunk events required",
+          "safe_for_arbitrary_pointer": false
+        },
+        {
+          "event": 4186,
+          "handler": "8030ef84",
+          "writer_flags": 12,
+          "segment_data_consumed": true,
+          "meaning": "write chunks, consume owned segments, seek-related flag8",
+          "safe_for_arbitrary_pointer": false
+        },
+        {
+          "event": 4187,
+          "handler": "8030ef84",
+          "writer_flags": 4,
+          "segment_data_consumed": true,
+          "meaning": "write chunks and consume owned segments",
+          "safe_for_arbitrary_pointer": false
+        },
+        {
+          "event": 4188,
+          "handler": "8030f2d8",
+          "writer_flags": null,
+          "segment_data_consumed": false,
+          "meaning": "seek shared file state",
+          "safe_for_arbitrary_pointer": false
+        },
+        {
+          "event": 4189,
+          "handler": "8030ef84",
+          "writer_flags": 4,
+          "segment_data_consumed": true,
+          "meaning": "write chunks and consume owned segments, then finish route",
+          "safe_for_arbitrary_pointer": false
+        }
+      ],
+      "whole_file_route": [
+        2150809604,
+        2150809200,
+        2150690168,
+        2150688224,
+        2150689248,
+        2150689812
+      ],
+      "chunk_route": [
+        2150690692,
+        2150689248,
+        2150688724,
+        2148103192
+      ],
+      "write_callback_window": 2150688724,
+      "write_arguments": {
+        "a0": "file object",
+        "a1": "segment+8 data pointer",
+        "a2": "segment+0xc length"
+      },
+      "write_error": "Nonzero filesystem status records failure, closes/frees file object and marks shared write state failed. Later chunks can be dropped.",
+      "limits": [
+        "Software filesystem return does not establish power-loss durability or physical media bounds.",
+        "These stateful write routines are research entries, not exposed SDK adapters."
+      ]
+    }
+  ],
+  "reachability_search": {
+    "target": 2150748340,
+    "direct_j_jal_encoding_candidates": [
+      2150752288
+    ],
+    "aligned_pointer_words": [],
+    "region_count": 8,
+    "scope": "Aligned words in the eight authenticated mapped application regions only; computed/unaligned/runtime references not resolved"
+  },
+  "remaining_gates": [
+    "Trace shutter/sensor producer through capture queue under the active Auto-mode configuration.",
+    "Recover exact packing, pixel range, active stride, allocation capacity and ownership for a selected saved-photo hook.",
+    "Prove cache/DMA ownership at that hook, including concurrency with preview and encoders.",
+    "Establish complete backup, unbootable software recovery, safe placement and hook ABI."
+  ],
+  "safe_capture_adapter_established": false,
+  "ready_for_executable_trial": false,
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "map_saved_jpeg_path.py": "c46a4ecb7c42b20ef1221d61c46e4a9ed3f28695dd5d68a40dc1e6fb4ebe4be9",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

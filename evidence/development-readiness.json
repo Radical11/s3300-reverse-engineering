@@ -1,0 +1,1087 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "resource_ready": true,
+  "backup_coverage": {
+    "schema_version": 1,
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "required_components": [
+      {
+        "id": "boot-rom-reset-chain",
+        "status": "missing-installed-acquisition",
+        "evidence": "reset-recovery.json",
+        "scope": "Reset vector/ROM fingerprint and activation path are absent from supplied carrier mappings."
+      },
+      {
+        "id": "installed-boot-header-and-sections",
+        "status": "missing-installed-acquisition",
+        "evidence": "update-write-scope.json",
+        "scope": "Current boot records, section map and recovery flags; supplied update header is not an installed snapshot."
+      },
+      {
+        "id": "installed-code-and-resource-volumes",
+        "status": "baseline-only",
+        "evidence": "firmware-atlas.json",
+        "scope": "Original update preserved; exact installed modified code/resource bytes have not been read back."
+      },
+      {
+        "id": "persistent-ui-store",
+        "status": "layout-known-not-acquired",
+        "evidence": "backup.ui_and_calibration_stores",
+        "scope": "0x1a0 serialized UI store and source/location metadata."
+      },
+      {
+        "id": "persistent-calibration-and-calibration-resources",
+        "status": "partial-layout-not-acquired",
+        "evidence": "backup.calibration_serialized_subset",
+        "scope": "Separate0x24a serialized subset plus other installed calibration resources and provenance; completeness unresolved."
+      },
+      {
+        "id": "physical-geometry-bad-block-spare-ecc",
+        "status": "missing-installed-acquisition",
+        "evidence": "update-write-scope.json",
+        "scope": "Installed geometry, mappings, bad blocks, spare/ECC representation and read failures; normalized data alone may omit restoration metadata."
+      },
+      {
+        "id": "independent-recovery-content",
+        "status": "missing-installed-acquisition",
+        "evidence": "reset-recovery.json",
+        "scope": "Installed recovery content and reset-independent entry/transport must be demonstrated."
+      },
+      {
+        "id": "user-files",
+        "status": "ordinary-object-copy-only",
+        "evidence": "ptp-vendor-contracts.json",
+        "scope": "Copied ordinary PTP/WPD files can preserve exposed media; they do not prove backup of hidden flash, settings, calibration or boot sectors."
+      }
+    ],
+    "file_snapshot_record": {
+      "schema_version": 1,
+      "date_local": "2026-10-25",
+      "timezone": "Asia/Calcutta",
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "source_hash_role": "Analysis baseline identity; installed firmware bytes not acquired",
+      "private_manifest": "samples/camera-files-backup-2026-10-25-run1/manifest.json",
+      "private_manifest_sha256": "a073f0db7a90d5705293a763c009deb324a8b6ed3365808289dc7ec841a5ad71",
+      "verified_files": 49,
+      "verified_bytes": 170787084,
+      "object_inventory_before_after_equal": true,
+      "device_reads_per_file": 2,
+      "local_hashes_rechecked": true,
+      "storage_numeric_fields": {
+        "storage_type": 4,
+        "filesystem_type": 3,
+        "access_capability": 0,
+        "capacity_bytes": 2002452480,
+        "free_bytes": 1811513344,
+        "free_images": 349,
+        "scope": "PTP exposed storage only; variable strings not validated; not flash geometry"
+      },
+      "metadata_parse_complete": false,
+      "metadata_errors": [
+        {
+          "operation": "GetStorageInfo",
+          "storage": 65537,
+          "error": "Unterminated PTP string"
+        }
+      ],
+      "raw_storage_dataset_sha256": "5aa980a1aad5ef0f750f92690161ac788aada34df0340d61e9423574a9a6098d",
+      "acquisition_tool_provenance": "Initial file snapshot predates tool-hash capture. Actual operation log is retained; later acquisitions record source hashes.",
+      "allowed_operations": [
+        "0x1001",
+        "0x1004",
+        "0x1005",
+        "0x1007",
+        "0x1008",
+        "0x1009"
+      ],
+      "device": {
+        "model": "S3300",
+        "firmware_reported": "COOLPIX S3300 V1.1"
+      },
+      "physical_driver_changed": false,
+      "camera_writes": false,
+      "vendor_operations_sent": [],
+      "installed_flash_backup": false,
+      "calibration_backup": false,
+      "unbootable_recovery_verified": false,
+      "scope": "Only files exposed by the connected normal PTP storage; no full-card sector image, hidden internal flash, settings, calibration or ROM acquired",
+      "private_photos_packaged": false
+    },
+    "private_manifest_present": true,
+    "files_verified_now": false,
+    "complete_internal_backup": false,
+    "unbootable_software_recovery": false,
+    "executable_trial_allowed": false,
+    "camera_accessed": false
+  },
+  "code_ready": false,
+  "complete": false,
+  "gates": {
+    "original_source_authenticated": {
+      "passed": true,
+      "evidence": "original SHA-256"
+    },
+    "saved_photo_feature": {
+      "passed": true,
+      "checks": {
+        "menu-label": "pass",
+        "saved-photo-effect": "pass",
+        "standard-color": "pass",
+        "cold-restart": "pass",
+        "playback": "pass",
+        "settings-persistence": "pass"
+      }
+    },
+    "capture_buffer_abi": {
+      "passed": false,
+      "reason": "Scanner-to-still/JPEG routing and distinct layout/input-kind pitch arithmetic traced; live mode, component order/range, allocation extent and cache ownership remain unverified",
+      "evidence": "evidence/shutter-input.json; evidence/shutter-route.json; evidence/pixel-layout.json; evidence/saved-jpeg-path.json; evidence/cache-dma-contracts.json"
+    },
+    "executable_hook_placement": {
+      "passed": false,
+      "reason": "Startup/stack/heap exclusions and path-specific cache pairs recovered; no approved placement, complete hook or general code-publication sequence",
+      "evidence": "evidence/executable-contracts.json; evidence/cache-dma-contracts.json"
+    },
+    "complete_backup": {
+      "passed": false,
+      "reason": "Ordinary PTP file snapshot is separate from installed flash backup. UI/calibration layouts and bounded geometry getter recovered; no safe host memory bridge, full calibration/ECC coverage or installed geometry. Initializer fallback and updater backup paths can erase/program flash",
+      "evidence": "evidence/backup-scope.json; evidence/backup-usb-contracts.json; evidence/camera-file-backup-2026-10-25.json; evidence/update-write-scope.json"
+    },
+    "unbootable_software_recovery": {
+      "passed": false,
+      "reason": "Normal menu update enters application-resident burn code. Separate reboot helper reaches ROM bfc00664 absent from supplied mappings; reset-independent activation, backup and restore remain unverified",
+      "evidence": "evidence/updater-handoff.json; evidence/reset-recovery.json; evidence/recovery-transport.json"
+    },
+    "selectable_control_lifecycle": {
+      "passed": false,
+      "reason": "Existing five-entry menu and global dynamic-list ownership traced; cancel can stage/persist settings. Custom registration, bounds, Original bypass and persistence/error lifecycle remain unverified",
+      "evidence": "evidence/menu-lifecycle.json; evidence/state-contracts.json"
+    },
+    "matched_camera_performance": {
+      "passed": false,
+      "reason": "No repeated matched camera baseline and candidate timings establishing improvement",
+      "evidence": "notes/performance-protocol.md"
+    },
+    "standalone_sdk_verified": {
+      "passed": true,
+      "evidence": "evidence/sdk-validation.json; synthetic module only, no camera integration"
+    },
+    "static_matrix_application": {
+      "passed": true,
+      "evidence": "evidence/matrix-application.json; static register path, not a callable public ABI"
+    },
+    "static_english_label_selection": {
+      "passed": true,
+      "evidence": "evidence/label-path-verification.json; runtime confirmation is recorded separately in the trial ledger"
+    }
+  },
+  "amber_checks": {
+    "menu-label": {
+      "schema_version": 1,
+      "trial": "amber-mono",
+      "check": "menu-label",
+      "outcome": "pass",
+      "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+      "installed_image_sha256": null,
+      "observation_source": "user-reported camera observation",
+      "notes": "25 October: user explicitly selected Auto mode, MENU, Color options and confirmed fourth option Amber. Earlier Sepia observation was Special effects -> Nostalgic sepia, identified by all six labels. Welcome studio also confirmed. This supersedes the earlier menu-label failure without deleting it; exact installed bytes remain unknown.",
+      "recorded_at_utc": "2026-10-24T20:16:26.944658+00:00",
+      "target_firmware_execution_observed_by_tool": false,
+      "scope": "An observation does not establish the exact installed bytes or unbootable recovery"
+    },
+    "saved-photo-effect": {
+      "schema_version": 1,
+      "trial": "amber-mono",
+      "check": "saved-photo-effect",
+      "outcome": "pass",
+      "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+      "installed_image_sha256": null,
+      "observation_source": "user-reported camera observation",
+      "notes": "Fresh 25 October pair requested explicitly in Auto mode Color options after Amber label confirmation. Both DSCN1186 and DSCN1187 have unclipped Cb110/Cr150, corroborating Amber tint. Intended Standard first-shot bypass failed separately; image statistics and hashes in evidence/auto-amber-chroma-2026-10-25.json.",
+      "recorded_at_utc": "2026-10-24T20:18:27.507214+00:00",
+      "target_firmware_execution_observed_by_tool": false,
+      "scope": "An observation does not establish the exact installed bytes or unbootable recovery",
+      "sample": {
+        "relative_path": "samples/auto-amber-verification-2026-10-25/DSCN1187.JPG",
+        "sha256": "e4e6ddd6e7fe8ba402d94e11c3456408e5eb6dbc7162e2148b0127a1f1254dfe"
+      }
+    },
+    "standard-color": {
+      "schema_version": 1,
+      "trial": "amber-mono",
+      "check": "standard-color",
+      "outcome": "pass",
+      "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+      "installed_image_sha256": null,
+      "observation_source": "user-reported camera observation",
+      "notes": "25 October explicit Auto mode Color options -> Standard color -> OK repeat: user reports normal Standard preview. New twice-read/copied DSCN1188 has varied colour, unclipped Cb mean134.13 SD14.79 / Cr mean126.91 SD9.47, unlike constant Amber110/150. This supersedes the earlier intended-Standard pair failure, preserving it. No firmware cause is assigned to the earlier selection discrepancy.",
+      "recorded_at_utc": "2026-10-24T20:20:51.109794+00:00",
+      "target_firmware_execution_observed_by_tool": false,
+      "scope": "An observation does not establish the exact installed bytes or unbootable recovery",
+      "sample": {
+        "relative_path": "samples/standard-repeat-verification-2026-10-25/DSCN1188.JPG",
+        "sha256": "da7126e5d8c50ad726ed0ece80e2b8ca1688f7f4bbd82fec59d57720fb38eda9"
+      }
+    },
+    "cold-restart": {
+      "schema_version": 1,
+      "trial": "amber-mono",
+      "check": "cold-restart",
+      "outcome": "pass",
+      "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+      "installed_image_sha256": null,
+      "observation_source": "user-reported camera observation",
+      "notes": "25 October user replied done to explicit Auto Color options Standard/Amber photo and top ON/OFF/lens-retract/restart protocol, reporting no failed restart check.",
+      "recorded_at_utc": "2026-10-24T20:18:27.757308+00:00",
+      "target_firmware_execution_observed_by_tool": false,
+      "scope": "An observation does not establish the exact installed bytes or unbootable recovery"
+    },
+    "playback": {
+      "schema_version": 1,
+      "trial": "amber-mono",
+      "check": "playback",
+      "outcome": "pass",
+      "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+      "installed_image_sha256": null,
+      "observation_source": "user-reported camera observation",
+      "notes": "25 October user replied done to explicit new Amber photo playback check after restart, reporting no failed check.",
+      "recorded_at_utc": "2026-10-24T20:18:27.873952+00:00",
+      "target_firmware_execution_observed_by_tool": false,
+      "scope": "An observation does not establish the exact installed bytes or unbootable recovery"
+    },
+    "settings-persistence": {
+      "schema_version": 1,
+      "trial": "amber-mono",
+      "check": "settings-persistence",
+      "outcome": "pass",
+      "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+      "installed_image_sha256": null,
+      "observation_source": "user-reported camera observation",
+      "notes": "25 October user replied done to explicit check that Amber remained selected in Auto Color options after full restart, reporting no failed check.",
+      "recorded_at_utc": "2026-10-24T20:18:27.996081+00:00",
+      "target_firmware_execution_observed_by_tool": false,
+      "scope": "An observation does not establish the exact installed bytes or unbootable recovery"
+    },
+    "normal-rollback": {
+      "outcome": "unknown",
+      "notes": "No recorded observation"
+    }
+  },
+  "sdk_host_evidence": {
+    "schema_version": 1,
+    "date_local": "2026-10-24",
+    "timezone": "Asia/Calcutta",
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "artifact_relative_path": "derived/sdk-verified-v2/sdk-analysis-only.elf",
+    "artifact_sha256": "cd959a7874f698e4e357832bc5fe6e8075316e5afd8385444369e3dfe678ac57",
+    "source_hashes": {
+      "firmware/looks/looks.c": "a280d823bcc1341c19d76cdce7e41c018600c19c8b14109ac613fa2442579547",
+      "firmware/looks/looks.h": "dfe50bebcbf86f4dae0b28d900e93a06ab37f212c0fa4f44486915a082375527",
+      "firmware/looks/look_tables.h": "d6947b821d9ea101f3cb3b94edca96a0ddbd2160e788837aa414b1b83ec0a4d0",
+      "firmware/looks/profiles.json": "ca5e23405ee07a03cdec77a752fd1542c783ceee6970acb7d09c3a97401ef28e",
+      "firmware/sdk/contracts.c": "dd3a7edf6077213326c8999d82406fa30f79212bbba6e7d1feb1958bb931ad30",
+      "firmware/sdk/contracts.h": "e92077e11d1cb1ba2387ee0763c50ad3b4420933425a4ad003980e7cdf2780ed",
+      "firmware/sdk/analysis-only.ld": "f079fec17a906af5d58f16d60e84f8d08db53744b1cecaf62d2a7548c0877414"
+    },
+    "target": {
+      "elf_type": "ET_EXEC",
+      "flags_hex": "0x70001005",
+      "byte_order": "little",
+      "isa": "MIPS32r2",
+      "abi": "o32",
+      "fp_abi": "soft-float (generated SDK declaration only)",
+      "symbols": {
+        "s3300_look_row": {
+          "address": 65536,
+          "bytes": 328
+        },
+        "s3300_counter_decode": {
+          "address": 65872,
+          "bytes": 112
+        },
+        "s3300_command_context_index": {
+          "address": 65984,
+          "bytes": 48
+        },
+        "s3300_command_id_parts": {
+          "address": 66032,
+          "bytes": 132
+        },
+        "s3300_settings_checksum": {
+          "address": 66164,
+          "bytes": 76
+        }
+      },
+      "undefined_imports": [],
+      "relocations": [],
+      "executable_sections": [
+        {
+          "name": ".text",
+          "address": 65536,
+          "bytes": 704,
+          "instructions": 176,
+          "sha256": "e60d1801a8cce135397046956fcb491f3d4a28802b2932f269a5d225973c0b3b"
+        }
+      ],
+      "full_linear_decode": true,
+      "coprocessor_instructions": false,
+      "runtime_gp_dependency": false
+    },
+    "vendor_architecture_declaration": {
+      "verified": true,
+      "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+      "application_carrier_offset": 1058496,
+      "flags_hex": "0x70001001",
+      "elf_class": 32,
+      "byte_order": "little",
+      "isa_declaration": "MIPS32r2",
+      "abi_declaration": "o32",
+      "floating_point_abi": "unknown; original does not contain .MIPS.abiflags",
+      "vendor_headers_modified": false,
+      "runtime_calling_convention_fully_verified": false
+    },
+    "two_builds_byte_identical": true,
+    "objects": [
+      {
+        "name": "looks.o",
+        "sha256": "188617ee298393bb69c01d0cf1a129976429fc23779bb1f14571ba3e8aae44b2",
+        "relocations": [
+          {
+            "section": ".rel.text",
+            "count": 5
+          },
+          {
+            "section": ".rel.pdr",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "contracts.o",
+        "sha256": "55564483ad9a26d64cc79aaee53ddec2dc38b782f1783c95e42be92d81b5b504",
+        "relocations": [
+          {
+            "section": ".rel.text",
+            "count": 4
+          },
+          {
+            "section": ".rel.pdr",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "toolchain_provenance": {
+      "package": "ziglang",
+      "version": "0.13.0",
+      "host": "win32",
+      "url": "https://files.pythonhosted.org/packages/e0/0c/66f4710aedf5544e15779ff9c6e770322986e15daf9299b1a4df0be19e09/ziglang-0.13.0-py3-none-win_amd64.whl",
+      "wheel_sha256": "b64b2aa936ebbfeecfbb2611df331a5474edebe1246b98c2f56d6ae4d58b71fc",
+      "executable_sha256": "2e44af5bbf7a72ef8cbdae370284687c95d65a19affa469d2ad0364d905b8e84",
+      "all_wheel_members_verified": true,
+      "global_settings_changed": false
+    },
+    "emulator_provenance": {
+      "package": "unicorn",
+      "version": "2.1.4",
+      "host": "win32",
+      "url": "https://files.pythonhosted.org/packages/70/3d/de7be9bd1addabe6d8a1369381f8a080400c349850e978689c5e18287957/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "wheel_sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5",
+      "all_wheel_members_verified": true,
+      "global_settings_changed": false
+    },
+    "emulation": {
+      "performed": true,
+      "engine": "Unicorn",
+      "version": "2.1.4",
+      "reference_cases_passed": 58,
+      "callee_saved_registers_preserved": true,
+      "stack_pointer_preserved": true,
+      "writes_bounded_to_outputs_and_stack": true,
+      "original_bypass_verified": true,
+      "camera_executed": false,
+      "scope": "Our compiled SDK on synthetic memory only; no camera peripherals/cache/DMA/real-time model"
+    },
+    "sdk_tests_passed": 7,
+    "synthetic_link_address": "0x10000; no camera placement implied",
+    "camera_integrated": false,
+    "camera_executed": false,
+    "software_recovery_verified": false,
+    "ready_for_executable_trial": false,
+    "blocked_by": [
+      "Verified camera placement/hook and cache maintenance",
+      "Complete saved-photo buffer ABI/ownership",
+      "Demonstrated software recovery"
+    ],
+    "limitations": [
+      "Generated soft-float declaration is a choice for integer-only SDK code, not recovery of vendor floating-point ABI.",
+      "A compiler/host emulator does not model camera MMIO, caches, DMA, interrupts or real performance.",
+      "This ELF is never an update, trial registration or automatic executable patch."
+    ],
+    "previous_build_artifact_relative_path": "derived/sdk-verified-v1/sdk-analysis-only.elf",
+    "build_tools_hashes": {
+      "tools/build_sdk.py": "bc1f0358545780c90a12ed8bcc65e949368d3cd9748c60dbb504e8a7ee318f12",
+      "tools/setup_sdk_toolchain.py": "51bb89f40c1bd00c3bd81751ef00f275ede9d16b0f4e4809e18220b29d0124b5",
+      "tools/verify_sdk_emulation.py": "32811bd97ff608e5600d49a80b4e32d05e5cb839577debd97607ef8d19bae360"
+    },
+    "separate_build_runs_byte_identical": true,
+    "current_sources_match": true,
+    "recorded_artifact_present": true,
+    "recorded_artifact_hash_matches": true
+  },
+  "native_analysis": {
+    "schema_version": 1,
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+    "evidence_class": "direct Ghidra static observations; not native REA Evidence",
+    "output": "derived/native-analysis-complete",
+    "images": [
+      {
+        "image": "application",
+        "input_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+        "language": "MIPS:LE:32:default",
+        "representation": "unpacked executable/analysis image",
+        "discovered_functions": 15816,
+        "exported_functions": 15816,
+        "decompilation_failures": 3,
+        "all_discovered_functions_exported": true,
+        "source_unchanged": true,
+        "target_executed": false
+      },
+      {
+        "image": "image-00000200",
+        "input_sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+        "language": "MIPS:LE:32:default",
+        "representation": "unpacked executable/analysis image",
+        "discovered_functions": 1526,
+        "exported_functions": 1526,
+        "decompilation_failures": 0,
+        "all_discovered_functions_exported": true,
+        "source_unchanged": true,
+        "target_executed": false
+      },
+      {
+        "image": "image-001006c0",
+        "input_sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+        "language": "MIPS:LE:32:default",
+        "representation": "unpacked executable/analysis image",
+        "discovered_functions": 16,
+        "exported_functions": 16,
+        "decompilation_failures": 0,
+        "all_discovered_functions_exported": true,
+        "source_unchanged": true,
+        "target_executed": false
+      },
+      {
+        "image": "image-001026c0",
+        "input_sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+        "language": "MIPS:LE:32:default",
+        "representation": "unpacked executable/analysis image",
+        "discovered_functions": 2168,
+        "exported_functions": 2168,
+        "decompilation_failures": 0,
+        "all_discovered_functions_exported": true,
+        "source_unchanged": true,
+        "target_executed": false
+      },
+      {
+        "image": "image-002202c0",
+        "input_sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+        "language": "MIPS:LE:32:default",
+        "representation": "packed carrier ELF; inventory only",
+        "discovered_functions": 0,
+        "exported_functions": 0,
+        "decompilation_failures": 0,
+        "all_discovered_functions_exported": true,
+        "source_unchanged": true,
+        "target_executed": false
+      },
+      {
+        "image": "image-003bd9a8",
+        "input_sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+        "language": "MIPS:LE:32:default",
+        "representation": "packed carrier ELF; inventory only",
+        "discovered_functions": 0,
+        "exported_functions": 0,
+        "decompilation_failures": 0,
+        "all_discovered_functions_exported": true,
+        "source_unchanged": true,
+        "target_executed": false
+      },
+      {
+        "image": "image-005c2b78",
+        "input_sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+        "language": "MIPS:LE:32:default",
+        "representation": "packed carrier ELF; inventory only",
+        "discovered_functions": 0,
+        "exported_functions": 0,
+        "decompilation_failures": 0,
+        "all_discovered_functions_exported": true,
+        "source_unchanged": true,
+        "target_executed": false
+      }
+    ],
+    "target_executed": false,
+    "original_inputs_changed": false,
+    "limits": "Decompiler pseudocode and inferred types are not original C or a proved camera ABI"
+  },
+  "native_index": {
+    "schema_version": 1,
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+    "database_sha256": "c23094f400673d07980f1d26cccb85dbc56457f9aa6bdb30e3b7a155794c677b",
+    "counts": {
+      "functions": 15816,
+      "references_from": 588407,
+      "edges": 55502,
+      "indirect_transfers": 7476
+    },
+    "instructions_byte_checked": 1369833,
+    "instructions_without_original_file_backing": 0,
+    "decompilation_failures": 2,
+    "initial_decompilation_failures": 3,
+    "focused_retry_successes": 1,
+    "target_executed": false,
+    "decompiler_failure_entries": [
+      "8025b860",
+      "8063bae8"
+    ],
+    "evidence_class": "direct Ghidra analysis indexed after independent byte comparison",
+    "limitations": [
+      "Auto-discovered functions/types may be wrong; counts are not semantic completeness.",
+      "Byte equality verifies import, not inferred signatures, indirect targets or runtime behavior."
+    ]
+  },
+  "matrix_application_evidence": {
+    "schema_version": 1,
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+    "method": "Independent authenticated Capstone checks plus separately labelled direct Ghidra corroboration",
+    "rea_evidence": false,
+    "camera_commands_issued": false,
+    "target_executed": false,
+    "reviewed_windows": [
+      {
+        "label": "scheduler_apply_gate",
+        "address": 2150534644,
+        "bytes": 112,
+        "sha256": "531243addff0389bc55758050f475b0630b9fb782a447662fe554b655ad7336a",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "scheduler_commands",
+        "address": 2150525372,
+        "bytes": 768,
+        "sha256": "7c28a12cfda3c7def23400622e95ea334f83bc783d0edff3c9e06aeb047b16a0",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "filter_group_dispatch",
+        "address": 2150453388,
+        "bytes": 820,
+        "sha256": "96cf1550569c16134b15e9facca7472cf91c9324ffb2075e7ed30b8ed6580b7b",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "filter_command_decode_dispatch",
+        "address": 2150449924,
+        "bytes": 304,
+        "sha256": "1cb883f62533e4e676fdfac7350732b635ddf93334984398a39f0ed3fd78e4df",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "factory_forward",
+        "address": 2150572492,
+        "bytes": 20,
+        "sha256": "843e8723841ce84b5ac4c7d1e50459de8c3c2960eef4262a133bd7567357d501",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "matrix_constructor",
+        "address": 2150443720,
+        "bytes": 108,
+        "sha256": "bcf43389bcac1e7a138cd1d7d8790b8b2d6234d09cced5e66614c2e332a0fb03",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "matrix_command_decode",
+        "address": 2150456692,
+        "bytes": 376,
+        "sha256": "a0e1f2af3c900332b272df285bf2bf3df63225e613492a5105677437f0668807",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "matrix_subtype15_decode",
+        "address": 2150456524,
+        "bytes": 68,
+        "sha256": "33c4ccf62cfd343565879d87340acd1f28fb927078d3419d1d49fcf27aeb137b",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "matrix_direct_upload",
+        "address": 2150444168,
+        "bytes": 376,
+        "sha256": "b98876aae4f4da3e71643496d1331cbc1e030293043e07c7504b44842dcdf724",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      },
+      {
+        "label": "matrix_write_list",
+        "address": 2150444544,
+        "bytes": 756,
+        "sha256": "e814a3a40d953eed24e838273e479aa4f77452199371653a0fb3fe8fc1519a57",
+        "boundary": "bounded analyst window; no complete-function assertion"
+      }
+    ],
+    "instruction_assertions": 13,
+    "checked_tables": {
+      "matrix_vtable": [
+        2150443828,
+        2150443868,
+        2150444168,
+        2150454668,
+        2150444544,
+        2150625800,
+        2150625792,
+        2150625776,
+        2150625784,
+        2150456692,
+        2150625768,
+        2150625760
+      ],
+      "group11_dispatch": [
+        2150453836
+      ],
+      "factory11_dispatch": [
+        2150588036
+      ]
+    },
+    "native_corroboration": {
+      "evidence_class": "direct Ghidra static analysis; not REA Evidence",
+      "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+      "records": [
+        {
+          "address": 2147520384,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\80008f80.json",
+          "dossier_sha256": "baa1cc65446c636929991fd2cf6a7d003b3e381815aa40c8ddde703116c51bba",
+          "instruction_count_bytes_verified": 49,
+          "pseudocode_sha256": "a06b80117d59533e74cd3c80d7eb851bf3c1ca665a2bbcc0b59b23f5ef0d12df",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2147522116,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\80009644.json",
+          "dossier_sha256": "e09cce526bb49839c72e0cbdbcfe34b001a2f8f2710154ada815df335016ebde",
+          "instruction_count_bytes_verified": 194,
+          "pseudocode_sha256": "f780ba9f213c0a25e6dc7abe2d976bc599e96840a927e51202cef06c6dc29b75",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2149563532,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\801fbc8c.json",
+          "dossier_sha256": "0dd436f8dcfa486ddfd3bbec4d91b4f7fb27701c0f1434d499e654da90f45ad0",
+          "instruction_count_bytes_verified": 822,
+          "pseudocode_sha256": "60513eaeb9558cc9c590b0acce9e8a4eeb989bdc376e7fd914d318f33cbbdf60",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2149563196,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\801fbb3c.json",
+          "dossier_sha256": "e0c5103b133821b9ff92ccb123dec882cc2dc20928c20c48a25d77a234b4c5d5",
+          "instruction_count_bytes_verified": 42,
+          "pseudocode_sha256": "96cad171b18de10399883658c006a6d86fa61d4209aaf727527a62334d6b872d",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2149133828,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\80192e04.json",
+          "dossier_sha256": "6711b7fa790116e8edfc6ceb0d14b2d9a293f82eccf35c73117a85f59256440d",
+          "instruction_count_bytes_verified": 169,
+          "pseudocode_sha256": "4516f9549677660602a184a80b841d808f18ca0098ab9ba8b12cb9ac6ecbc0b8",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2150520744,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\802e57a8.json",
+          "dossier_sha256": "34e01276e4dbccc5e01fac2f0b1bf737e0fca3a4e9a2f3200cce482652f84c0d",
+          "instruction_count_bytes_verified": 123,
+          "pseudocode_sha256": "cbdae433c9bff565eaec2d569dbd28074a24efcb0602a7c1e22a5ea0e5fc1cd1",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2150525372,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\802e69bc.json",
+          "dossier_sha256": "f7b09854f2be232559889cc073e5586c7a2d5c067cfce5cc77a4916e04ffd20e",
+          "instruction_count_bytes_verified": 172,
+          "pseudocode_sha256": "8a2cafd8d804ec410a6178de1e70b3a3db44596452b05e8889f8115cd1a748ad",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2150443720,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\802d2ac8.json",
+          "dossier_sha256": "3bb667de4e33f8d1423281140eac70b48a2d015f1313548e9c7efd8723b662b1",
+          "instruction_count_bytes_verified": 27,
+          "pseudocode_sha256": "17e7ce35cf5d0f15bd315553ea3b796f9162a0825dba06ad96285c0d27e015dc",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2150456692,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\802d5d74.json",
+          "dossier_sha256": "d917aa7201849afb37b58964dae512d36bfe72472ca3602f891ba770c73b935e",
+          "instruction_count_bytes_verified": 76,
+          "pseudocode_sha256": "4b87640fdda38b152ed67a7e919fa616bfb3b48f0da2c26f7451e24f9ce847c1",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2150456524,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\802d5ccc.json",
+          "dossier_sha256": "45a2736d7c0f733ccd84259e8ba209c7ea47c856b1de8639069d4c474f4b8b94",
+          "instruction_count_bytes_verified": 17,
+          "pseudocode_sha256": "7f65ed090bb37dc0b5f8f4b80059052e1e18a76f30ec34c83bb585b478d99e0d",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2150444168,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\802d2c88.json",
+          "dossier_sha256": "4a13b2bf01ebf4ea5e1f26140463ed7f3134b9750e28792f7e32360d215efb60",
+          "instruction_count_bytes_verified": 59,
+          "pseudocode_sha256": "f7818c5eb51ddd067aa82819309796cea53f86e09c009ceea323e5ecdc86cdbd",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2150444544,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\802d2e00.json",
+          "dossier_sha256": "623b66d0962c05c73bd5a46c77652f5f91753ce181673b55a337246df62e92a3",
+          "instruction_count_bytes_verified": 131,
+          "pseudocode_sha256": "a2d22a350e761753f37806366c6ba92011b1941f0a05423dc69a4dd02a2a30d7",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        },
+        {
+          "address": 2154492980,
+          "dossier": "derived\\native-analysis-complete\\application\\functions\\806af434.json",
+          "dossier_sha256": "98b078afb452b0b06672816dde46b273829b733bfdcf7ec3d01174c83b9c008c",
+          "instruction_count_bytes_verified": 67,
+          "pseudocode_sha256": "ab480708bd407fa02d4e4a9163774b3b6b319b60a3a3a8f74542f9e08517df79",
+          "signature_status": "decompiler inference; not a verified public ABI"
+        }
+      ]
+    },
+    "contracts": [
+      {
+        "id": "image.matrix_scheduler",
+        "status": "static-route-verified",
+        "entry": 2150525372,
+        "gate": 2150534744,
+        "gate_bit": "driver+0x324 bit1",
+        "group_count": 30,
+        "group": 11,
+        "dispatcher": 2150453388,
+        "command_slot": 15,
+        "factory_id": 11,
+        "slot_rule": "driver+0x48+12*command_id",
+        "decode_dispatch": 2150449924,
+        "factory_ctor": 2150443720,
+        "argument_warning": "dispatcher stack arg5 is factory/group ID; arg6 is command slot ID; these differ",
+        "lifecycle": "first/shared pass then per-output pass according to bitmap; group object retained through 802dde1c; slot+9 bit0 cleared after scheduling",
+        "unknowns": [
+          "active numeric context ordinary saved-still identity",
+          "asynchronous ownership/cache/DMA completion"
+        ]
+      },
+      {
+        "id": "image.matrix_decode",
+        "status": "static-contract-verified",
+        "address": 2150456692,
+        "arguments": {
+          "a0": "filter object",
+          "a1": "retained command pointer"
+        },
+        "accepted_id": 15,
+        "accepted_subtypes": [
+          0,
+          6,
+          12,
+          13,
+          15
+        ],
+        "return": {
+          "success": 0,
+          "unsupported_subtype": 6,
+          "unsupported_command": 7
+        },
+        "side_effects": "decode fields, mark object+0x30 dirty, update generation via802df29c",
+        "subtype15_decoder": 2150456524,
+        "subtype15_layout": {
+          "coefficients": "9 halfwords command+0x14 -> object+0x34",
+          "offsets": "halfwords command+0x26/+0x28 -> object+0x46/+0x48",
+          "auxiliary_word": "command+0x2c -> object+0x4c",
+          "ignored_alignment": "command+0x2a/+0x2b not read by this decoder"
+        },
+        "subtype6_difference": "coefficients <<2; offsets*8+0x800; auxiliary word0; do not apply this scaling to subtype15"
+      },
+      {
+        "id": "image.matrix_register_application",
+        "status": "static-contract-verified",
+        "direct_entry": 2150444168,
+        "queued_list_entry": 2150444544,
+        "vtable": 2150620344,
+        "dirty_field": 48,
+        "registers": [
+          "0xb60000c0",
+          "0xb60000c4",
+          "0xb60000c8",
+          "0xb60000cc",
+          "0xb60000d0",
+          "0xb60000d4",
+          "0xb60000d8",
+          "0xb60000dc",
+          "0xb60000e0",
+          "0xb60000e4",
+          "0xb60000e8",
+          "0xb60000fc"
+        ],
+        "encoding": "eleven signed halfwords sign-extended to32-bit; auxiliary word unchanged",
+        "bypass_register": 3053453548,
+        "bypass_entry": 2150494976,
+        "bypass_rule": "object+0x28 zero selects value+0x10=1; nonzero selects+0x14=0",
+        "ownership": "object-owned decoded fields; direct entry writes MMIO, queued entry appends address/value records to caller-owned list",
+        "limits": "static upload behavior verified; trigger timing, register hardware units, DMA synchronization, list submission completion not a public adapter"
+      },
+      {
+        "id": "recovery.reachability",
+        "status": "blocked",
+        "ordinary_rollback": "requires running application and menu update path",
+        "unbootable_recovery": "boot downloader and monitor implementations do not establish an externally accessible recovery route",
+        "backup": "Nanddn fixed65536-sector loop is incomplete on read errors; physical geometry/calibration/ECC/writeback remain unresolved",
+        "code_trial_allowed": false,
+        "unknowns": [
+          "actual updater physical erase/write ranges",
+          "installed boot entry and activation controls",
+          "complete calibration and settings backup scope",
+          "verified restoration without executing damaged application"
+        ]
+      }
+    ],
+    "development_gates": {
+      "static_matrix_application_route_verified": true,
+      "saved_photo_buffer_abi_verified": false,
+      "software_unbootable_recovery_verified": false,
+      "code_trial_allowed": false
+    },
+    "evidence_limits": [
+      "Native inferred parameter lists are not authoritative ABIs; independent stack/instruction tracing establishes the group/slot distinction.",
+      "No runtime sample or installed-image identity is asserted by this static artifact.",
+      "Factory15/b6000484 handles command32 and is a different filter; do not conflate it with command15.",
+      "The three indirect-dispatch entry windows were not recognized functions in the initial Ghidra inventory; their bounds remain analyst-selected."
+    ]
+  },
+  "research_followups": {
+    "label-path-verification": {
+      "evidence": "evidence/label-path-verification.json",
+      "sha256": "e9d75da55cfdb059c1d57a07c462e8494f13e05ecc3474b586358116a5ae91ad",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "capture-buffers": {
+      "evidence": "evidence/capture-buffers.json",
+      "sha256": "e7be1ca72aeb93d63db23ee451866b2659bc228312a0120f40dad54fc0642f74",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "executable-contracts": {
+      "evidence": "evidence/executable-contracts.json",
+      "sha256": "d5b2100a5c16987e4c5c103cf2f88e325c553cf5042de914e72437dfe893f32d",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "recovery-transport": {
+      "evidence": "evidence/recovery-transport.json",
+      "sha256": "3fb2b6e923f9bdfd43282e21e6ca981cf81cd2ae9dcffbaedfedf1c97e41bb78",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "usb-mode-contracts": {
+      "evidence": "evidence/usb-mode-contracts.json",
+      "sha256": "86349c3f59781234409d7151f9992e827eeaf2d4de76c47e8c8bf8e7a3ea423e",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "camera-usb-verification-2026-10-25": {
+      "evidence": "evidence/camera-usb-verification-2026-10-25.json",
+      "sha256": "8841dfaa88400d4bbbe285962f03247c7bb5d9d0a9feb5ae181550f35c754125",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "amber-auto-verification-2026-10-25": {
+      "evidence": "evidence/amber-auto-verification-2026-10-25.json",
+      "sha256": "16415aeb93f9ec6cf46c458a0974c206666f5abcafc5244f4e18763e5dd7a524",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "saved-jpeg-path": {
+      "evidence": "evidence/saved-jpeg-path.json",
+      "sha256": "662663d8b2c52b855286e4ae02bfe84f3befcd6b6f95ed1e87197ea5f145a05f",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "cache-dma-contracts": {
+      "evidence": "evidence/cache-dma-contracts.json",
+      "sha256": "ad8e4fe7237d9191dca23cb0e1007f13f83d2e8478f5366ee0791bd463f5460b",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "reset-recovery": {
+      "evidence": "evidence/reset-recovery.json",
+      "sha256": "29f3222fa5ad2a976c5bc7e315514a8915c9c72ffa0deb923b728693857f9e53",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "ptp-vendor-contracts": {
+      "evidence": "evidence/ptp-vendor-contracts.json",
+      "sha256": "6bd082f6aac2c5cf739990b8abea379674af2e381c1edc73d9747567a31dc927",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "usb-entry-contracts": {
+      "evidence": "evidence/usb-entry-contracts.json",
+      "sha256": "392504975e3cce0ee5486e51a4aeb903e21e17b1f3c261a51da710d61b0d8746",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "shutter-route": {
+      "evidence": "evidence/shutter-route.json",
+      "sha256": "342748bf2c08bc82d572b995e969bc085928dacf44c3330888318233b985b5c1",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "shutter-input": {
+      "evidence": "evidence/shutter-input.json",
+      "sha256": "fabec0e3ab3cc77d0454d974677a140748a033a44b1b518c3f853625eb89b7dd",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "pixel-layout": {
+      "evidence": "evidence/pixel-layout.json",
+      "sha256": "32ad2ce62a8ea2e97575de2f94e8fb2aaf533b746029a2da9d023f1ebb0672e7",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "menu-lifecycle": {
+      "evidence": "evidence/menu-lifecycle.json",
+      "sha256": "84a1c85c0be5785d2224eb3d812372d1da5a15ae8a0ff2e493a8454008e9667e",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "update-write-scope": {
+      "evidence": "evidence/update-write-scope.json",
+      "sha256": "88d427a8a055a607b3d91cb1747c53290b7b3934da15e75fef8e01a2e584db8c",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "backup-scope": {
+      "evidence": "evidence/backup-scope.json",
+      "sha256": "1cf5cc7f44f43cf66932d1f2fe06e2819a7e46e66d1d5c2b244b87810641acf4",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "backup-usb-contracts": {
+      "evidence": "evidence/backup-usb-contracts.json",
+      "sha256": "57044b3be39daa6bbe7c636e51e3e9a74a33ab20aecc1d79f9c221ef0a861bb7",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "updater-handoff": {
+      "evidence": "evidence/updater-handoff.json",
+      "sha256": "a54e577ffb5c3a91d47423a26892dbe9d7d5452ed166628c8fc1a68efe86b706",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "application-write-scope": {
+      "evidence": "evidence/application-write-scope.json",
+      "sha256": "a817a6b72780018b85491f33a055ea475fd0710816dcb2ed8fb80ffe90953f3f",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    },
+    "camera-file-backup-2026-10-25": {
+      "evidence": "evidence/camera-file-backup-2026-10-25.json",
+      "sha256": "13b275ea5d5f4f4f5c85df9d76c68e4992b54883397e3c1b8b4dba845157c10e",
+      "matches_source_identity": true,
+      "scope": "Source-bound analysis or explicitly identified camera observations; each report states its evidence type and limits"
+    }
+  },
+  "feature_dependencies": {
+    "available": true,
+    "path": "firmware/sdk/dependencies.json",
+    "sha256": "8283780291996c90313a845a6e98c28086c735a24ff61432dc023387515438bb",
+    "features": [
+      {
+        "id": "resource.amber-reviewed",
+        "description": "Reproduce the existing reviewed Amber parameter/label experiment and its recorded resource acceptance.",
+        "requires": [
+          "original_source_authenticated",
+          "saved_photo_feature"
+        ],
+        "constraint": "Applies to this closed-registry experiment; no blanket approval for arbitrary resource changes.",
+        "ready_within_stated_scope": true,
+        "blocked_by": []
+      },
+      {
+        "id": "sdk.looks-standalone",
+        "description": "Compile and emulate our pure integer look module at a synthetic address.",
+        "requires": [
+          "standalone_sdk_verified"
+        ],
+        "constraint": "No firmware insertion, Nikon API calls or camera performance claim.",
+        "ready_within_stated_scope": true,
+        "blocked_by": []
+      },
+      {
+        "id": "code.saved-photo-look",
+        "description": "Run a custom selectable saved-photo look on the camera with an Original bypass.",
+        "requires": [
+          "original_source_authenticated",
+          "standalone_sdk_verified",
+          "capture_buffer_abi",
+          "executable_hook_placement",
+          "selectable_control_lifecycle",
+          "complete_backup",
+          "unbootable_software_recovery"
+        ],
+        "constraint": "Source-level function addresses and synthetic emulation cannot satisfy live ownership or recovery.",
+        "ready_within_stated_scope": false,
+        "blocked_by": [
+          "capture_buffer_abi",
+          "executable_hook_placement",
+          "selectable_control_lifecycle",
+          "complete_backup",
+          "unbootable_software_recovery"
+        ]
+      },
+      {
+        "id": "code.measured-optimization",
+        "description": "Demonstrate a reliable speed improvement against a matched camera baseline.",
+        "requires": [
+          "original_source_authenticated",
+          "capture_buffer_abi",
+          "executable_hook_placement",
+          "matched_camera_performance",
+          "complete_backup",
+          "unbootable_software_recovery"
+        ],
+        "constraint": "Requires repeated measurements beyond uncertainty and preserved photo integrity.",
+        "ready_within_stated_scope": false,
+        "blocked_by": [
+          "capture_buffer_abi",
+          "executable_hook_placement",
+          "matched_camera_performance",
+          "complete_backup",
+          "unbootable_software_recovery"
+        ]
+      }
+    ]
+  },
+  "normal_rollback_observed": false,
+  "executable_trials_allowed": false,
+  "software_only": true,
+  "note": "Recovery gate cannot be promoted by an ordinary rollback, host test, artifact count or user result entry"
+}

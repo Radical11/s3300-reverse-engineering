@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "method": "Read-only WPD identity/storage, allowlisted standard PTP object metadata, and Windows hub standard GET_DESCRIPTOR",
+  "identity": {
+    "firmware": "COOLPIX S3300 V1.1",
+    "protocol": "MTP: 1.00",
+    "manufacturer": "Nikon Corporation",
+    "model": "S3300"
+  },
+  "exact_installed_firmware_sha256": null,
+  "storage": [
+    {
+      "capacity_bytes": 2002452480,
+      "free_bytes": 1822294016
+    }
+  ],
+  "object_inventory": {
+    "objects": 48,
+    "format_counts": {
+      "0x3001": 2,
+      "0x3801": 46
+    },
+    "firmware_file_exposed": false,
+    "interpretation": "No firmware object was exposed by this PTP inventory; this does not prove filesystem absence or identify installed flash bytes."
+  },
+  "explicit_ptp_passthrough_opcodes": {
+    "0x1004": 1,
+    "0x1007": 1,
+    "0x1008": 48
+  },
+  "usb": {
+    "current_configuration": 1,
+    "speed_raw": 2,
+    "connection_status": 1,
+    "device_descriptor_hex": "1201000200000040b0042a03100101020301",
+    "usb_bcd": "0x0200",
+    "advertised_configuration_count": 1,
+    "device_bcd": "0x0110",
+    "configuration_descriptor_hex": "09022700010100c0fa090400000306010100070501020002000705810200020007058203080010",
+    "configuration": {
+      "total_bytes": 39,
+      "declared_interfaces": 1,
+      "configuration_value": 1,
+      "attributes": 192,
+      "maximum_power_2ma_units": 250,
+      "interfaces": [
+        {
+          "number": 0,
+          "alternate": 0,
+          "declared_endpoints": 3,
+          "class": 6,
+          "subclass": 1,
+          "protocol": 1,
+          "endpoints": [
+            {
+              "address": 1,
+              "address_hex": "0x01",
+              "direction": "out",
+              "number": 1,
+              "transfer_type": "bulk",
+              "max_packet_bytes": 512,
+              "interval_raw": 0
+            },
+            {
+              "address": 129,
+              "address_hex": "0x81",
+              "direction": "in",
+              "number": 1,
+              "transfer_type": "bulk",
+              "max_packet_bytes": 512,
+              "interval_raw": 0
+            },
+            {
+              "address": 130,
+              "address_hex": "0x82",
+              "direction": "in",
+              "number": 2,
+              "transfer_type": "interrupt",
+              "max_packet_bytes": 8,
+              "interval_raw": 16
+            }
+          ]
+        }
+      ],
+      "descriptor_sha256": "0c077b28d5571774251fde0b262ebe9cc6e8a5ae5833b2116b8b7e28ded570e9"
+    }
+  },
+  "descriptor_repeated_read_matches": true,
+  "descriptor_reader": {
+    "path": "tools/read_usb_descriptors.py",
+    "sha256": "544916a8991ae7051db30f4158776b43e181722a7e391070b949bd01fd018081",
+    "allowed_ioctl_codes": [
+      "0x00220408",
+      "0x00220410",
+      "0x00220448"
+    ],
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/usbioctl/ns-usbioctl-_usb_descriptor_request",
+      "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/usbioctl/ni-usbioctl-ioctl_usb_get_node_connection_information_ex"
+    ]
+  },
+  "findings": [
+    "One advertised configuration; configuration1 has interface0 alternate0 class6/subclass1/protocol1.",
+    "Bulk OUT0x01 and IN0x81 have512-byte maximum packets; interrupt IN0x82 has8-byte maximum packets.",
+    "No additional interface or alternate setting is present in the returned39-byte configuration.",
+    "Descriptors do not themselves prove any vendor/debug request acceptance or boot-independent recovery."
+  ],
+  "private_identifiers_included": false,
+  "raw_device_requests_sent_beyond_standard_reads": false,
+  "device_writes": false,
+  "driver_changes": false,
+  "camera_updates": false,
+  "normal_rollback_tested": false,
+  "software_unbootable_recovery_verified": false
+}

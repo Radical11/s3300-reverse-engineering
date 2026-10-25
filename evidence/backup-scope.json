@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "image_namespace": "application",
+  "method": "Authenticated application instructions, independent Capstone, direct Ghidra dossiers; not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "instruction_assertions": 43,
+  "instruction_checks": [
+    {
+      "address": 2147521920,
+      "instruction_sha256": "6d2db5c43d0450ce4d68929af76f61393e7101d3714a957c12a6b45584210445"
+    },
+    {
+      "address": 2147521940,
+      "instruction_sha256": "7608ebfcea9f000f1dd26f6c9b84d595a765607562255e149fa906d8cda1dd3d"
+    },
+    {
+      "address": 2147521976,
+      "instruction_sha256": "ddbe9e8c848a3a7434b1b3ecbbf8ebd5079d5de8861999cd40ff757f21bfcca3"
+    },
+    {
+      "address": 2147522008,
+      "instruction_sha256": "7608ebfcea9f000f1dd26f6c9b84d595a765607562255e149fa906d8cda1dd3d"
+    },
+    {
+      "address": 2147524612,
+      "instruction_sha256": "1e144cabc7e7a5768a4f767953cce868c94e4d9f08ba388becdcf13425d6215d"
+    },
+    {
+      "address": 2147524620,
+      "instruction_sha256": "efe4b7c46044ca19a831bbd7a29525b5b45787903541323eb174739fe1c3482d"
+    },
+    {
+      "address": 2147524832,
+      "instruction_sha256": "ecf87bb0f386511caa19a5a449f9ac5501807ac74107faa7a7e4fbdfafa7d480"
+    },
+    {
+      "address": 2147523996,
+      "instruction_sha256": "f21ce9a8548968d13220643d5a3a4c9a64e02c46817d3dd9850fc0a75d90a974"
+    },
+    {
+      "address": 2147524008,
+      "instruction_sha256": "7608ebfcea9f000f1dd26f6c9b84d595a765607562255e149fa906d8cda1dd3d"
+    },
+    {
+      "address": 2147524088,
+      "instruction_sha256": "f21ce9a8548968d13220643d5a3a4c9a64e02c46817d3dd9850fc0a75d90a974"
+    },
+    {
+      "address": 2147524108,
+      "instruction_sha256": "7608ebfcea9f000f1dd26f6c9b84d595a765607562255e149fa906d8cda1dd3d"
+    },
+    {
+      "address": 2147524060,
+      "instruction_sha256": "6b194e75690547273a08553d7fc085b63a1313296bde8870b8a8364305644302"
+    },
+    {
+      "address": 2147524064,
+      "instruction_sha256": "e9385b8bd6ae842eba39436202707e2e2d711ef5fb54810225e540b5a7650c51"
+    },
+    {
+      "address": 2147524076,
+      "instruction_sha256": "b30782810a89fdd70bc9b87fc91dc9fb9cfe99bff3f5b9ebea7be5dd267e254f"
+    },
+    {
+      "address": 2147524348,
+      "instruction_sha256": "e056875e073f2a1263f18f7921eeaee312d790a694b2e2ebb348aa706dd81a70"
+    },
+    {
+      "address": 2147524352,
+      "instruction_sha256": "d4dfcdab3e5746a4204e5204707a78262399585e8e5b583121d22003bf5a6a5c"
+    },
+    {
+      "address": 2147524356,
+      "instruction_sha256": "9811311e4bb3c1ec41e53d560b1678291f2325d9bc61707b41287c8ecbc428bc"
+    },
+    {
+      "address": 2147523124,
+      "instruction_sha256": "d4dfcdab3e5746a4204e5204707a78262399585e8e5b583121d22003bf5a6a5c"
+    },
+    {
+      "address": 2147523132,
+      "instruction_sha256": "e056875e073f2a1263f18f7921eeaee312d790a694b2e2ebb348aa706dd81a70"
+    },
+    {
+      "address": 2147523140,
+      "instruction_sha256": "7ccca8d77d4d949d108fb7647a4036dc88418de79026940908f8706220a6fb5c"
+    },
+    {
+      "address": 2148412992,
+      "instruction_sha256": "53e496a9a9f12c3786088925491beb1e073662f9cd8599f1ad407b9454909b35"
+    },
+    {
+      "address": 2148412996,
+      "instruction_sha256": "b7b34e8d999aef32557f983a629fb1d58ff5b3a76a186dbed84409207954b6b8"
+    },
+    {
+      "address": 2148413000,
+      "instruction_sha256": "01bb57d48e887cf1eee0518aeffc8ea9573a8d9af1ffef26e9ad57f9b22ea97b"
+    },
+    {
+      "address": 2148413004,
+      "instruction_sha256": "81dae0ab092b893ab8b018b53d3a8c528eee7b0c904762f028b863453138ca85"
+    },
+    {
+      "address": 2148413012,
+      "instruction_sha256": "b84673cab30a776827bbace874a08d774c1ab50417a360d99949b3219ad6c11f"
+    },
+    {
+      "address": 2148413016,
+      "instruction_sha256": "4710bdd3ee62fb3ad57c58604bb6c3b03e9fcf6235bbab42aa56566c17588779"
+    },
+    {
+      "address": 2148413020,
+      "instruction_sha256": "e0ae4f74a11e93a197a55bb9b94a3369698ca49b77dbe6d40928833ff94bc42e"
+    },
+    {
+      "address": 2148413024,
+      "instruction_sha256": "4948363cc97db386ade5122d4e711631d1f89ae49b2ced2f4c0428106122db3e"
+    },
+    {
+      "address": 2148413028,
+      "instruction_sha256": "9cc43becda8c1987845021d7e5f36162bc87ea90938f3cc77ad4fb84fc430180"
+    },
+    {
+      "address": 2147521476,
+      "instruction_sha256": "c93c0f349f6b7af2362407888ac75bad68740a89edb3ea1ba8a22c38dc473446"
+    },
+    {
+      "address": 2155051196,
+      "instruction_sha256": "75a60525e57734710f0cc36de4e9389af922a86041f623ed6bdca2e639f0a2bd"
+    },
+    {
+      "address": 2155051204,
+      "instruction_sha256": "bdb4602f5d26261e2eb46cedef882e344ced3bf8992b352194905864e9f6624f"
+    },
+    {
+      "address": 2155051320,
+      "instruction_sha256": "7888b305f7ef7cea283336719eeebecb87042e61db5522b6c497054e74608e6b"
+    },
+    {
+      "address": 2155051324,
+      "instruction_sha256": "e95dacc40be4d72ac9eb9e69f894db694cc077c36313d4a7230093f61ab57138"
+    },
+    {
+      "address": 2155051328,
+      "instruction_sha256": "6de61540e358f590e6d7327d5190c120d5870c099df55dcb103dd3cb425d81f5"
+    },
+    {
+      "address": 2155051416,
+      "instruction_sha256": "6a87ff37a8d3de0376d7602ec7c9f230e41578bf85c185b945e58ff431e1e285"
+    },
+    {
+      "address": 2155051424,
+      "instruction_sha256": "d04d314a56b929aaf9a8a2f2aeafb9eec5f255c3f71f9cac868018292c3fd6b8"
+    },
+    {
+      "address": 2155051512,
+      "instruction_sha256": "2ffd5b673296b1aa45152b3007bdffe9d16b44cebb187a93e9b7ed2050c51552"
+    },
+    {
+      "address": 2155051516,
+      "instruction_sha256": "7ab1541df06991c0db475db8b12a53d66a432d271cfb7c2ba4533e94aa0b0d32"
+    },
+    {
+      "address": 2155051520,
+      "instruction_sha256": "0c024898c1c94f532cbb572f9fd63761995611c6d53edd4e910dee2c0437554f"
+    },
+    {
+      "address": 2155051620,
+      "instruction_sha256": "d3cba85f3fb07d5f35b59b2023f09d3a43586b71bc20afd12c65033d6a3015c2"
+    },
+    {
+      "address": 2155051624,
+      "instruction_sha256": "8b27107d4dcfca721b1517c76b2a53ef1705572373e46c6315cfa8a9be1e1a1c"
+    },
+    {
+      "address": 2155051628,
+      "instruction_sha256": "5af1ab8929024f342718b60136b353f9fcb11defe8105036e488f0ed76215fbf"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2147520384,
+        "dossier_sha256": "baa1cc65446c636929991fd2cf6a7d003b3e381815aa40c8ddde703116c51bba",
+        "instructions_checked": 49,
+        "name": "sub_80008f80"
+      },
+      {
+        "address": 2147521468,
+        "dossier_sha256": "c4742f4e51b90667b7cd46f18c7a6d41dd3a2a23ddcf5343d99c0e90fa36b262",
+        "instructions_checked": 3,
+        "name": "sub_800093bc"
+      },
+      {
+        "address": 2147521808,
+        "dossier_sha256": "7bde45c1f1ff7c575c67f4d6149283a69f6857e0f2ddb2c78ba19ccbcfa55c29",
+        "instructions_checked": 77,
+        "name": "sub_80009510"
+      },
+      {
+        "address": 2147522892,
+        "dossier_sha256": "e25cb6933236edc3571f5688ef797046cabf4708a263316dd8d498d96a55f709",
+        "instructions_checked": 218,
+        "name": "sub_8000994c"
+      },
+      {
+        "address": 2147523764,
+        "dossier_sha256": "4e4f65b10fc2d5286f3d12c22817e86759adabbf97a0976bd22b0a6833b637a0",
+        "instructions_checked": 175,
+        "name": "sub_80009cb4"
+      },
+      {
+        "address": 2147524464,
+        "dossier_sha256": "f9628b3b306fbdcedf68713a1ce6299f973b8e6d502ba90ac1e7bc1287f58ad0",
+        "instructions_checked": 130,
+        "name": "sub_80009f70"
+      },
+      {
+        "address": 2148412940,
+        "dossier_sha256": "1af41e09244ee6149b941c4937cd66ac83f444e7a59dfbdaad421a466187b4a1",
+        "instructions_checked": 30,
+        "name": "FUN_800e2e0c"
+      },
+      {
+        "address": 2148417496,
+        "dossier_sha256": "dcf30836eaf626ce6c56c48b1c73972109f7461d03d2fcecd947a11f62dae32b",
+        "instructions_checked": 45,
+        "name": "FUN_800e3fd8"
+      },
+      {
+        "address": 2147900496,
+        "dossier_sha256": "7099cd5016d0b4cfd928374aa48d7f9bd599628103d44052b550aee220d23353",
+        "instructions_checked": 46,
+        "name": "FUN_80065c50"
+      },
+      {
+        "address": 2155051172,
+        "dossier_sha256": "ad83c0024c09c5965275d3d9fa4ca5bf8ee319d5d2a457288aca0779003e9435",
+        "instructions_checked": 140,
+        "name": "sub_807378a4"
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "id": "backup.ui_and_calibration_stores",
+      "status": "static-read-layout-verified",
+      "reader": 2147523764,
+      "ui_store": {
+        "ram": 2147496660,
+        "bytes": 416,
+        "magic_hex": "9cb6",
+        "checksum_offset": 415,
+        "checksum_covered": [
+          0,
+          413
+        ],
+        "calibration_block_index_le16": 412
+      },
+      "calibration_store": {
+        "ram": 2147497076,
+        "bytes": 586,
+        "magic_hex": "5478",
+        "checksum_offset": 584,
+        "checksum_covered": [
+          0,
+          583
+        ],
+        "excluded_tail_offset": 585
+      },
+      "read_route": "The reader uses media selector0, count2 at each candidate user block and then calibration_index*erase_sectors. Lower mapping selector0->backend4 is retained in development-contracts.json.",
+      "ownership_and_side_effects": "Copies into global RAM stores; invalid loads zero them, print diagnostics and return6. This is not an external host transport.",
+      "limits": "Checksum/header validity is not proof of provenance, full calibration coverage, physical bounds or safe restoration."
+    },
+    {
+      "id": "backup.calibration_serialized_subset",
+      "status": "static-copy-layout-verified",
+      "copier": 2155051172,
+      "destination": 2147497076,
+      "slices": [
+        {
+          "source_offset": 0,
+          "destination_offset": 4,
+          "bytes": 72
+        },
+        {
+          "source_offset": 72,
+          "destination_offset": 76,
+          "bytes": 64
+        },
+        {
+          "source_offset": 136,
+          "destination_offset": 140,
+          "bytes": 128
+        },
+        {
+          "source_offset": 576,
+          "destination_offset": 268,
+          "bytes": 180
+        },
+        {
+          "source_offset": 756,
+          "destination_offset": 448,
+          "bytes": 128
+        }
+      ],
+      "limits": "Only selected bytes of the caller-provided calibration object are serialized. The 0x24a store cannot substitute for every installed ColdData/defocus/calibration resource or their original physical representations."
+    },
+    {
+      "id": "backup.user_partition_geometry",
+      "status": "static-RAM-query-verified",
+      "query_router": 2148417496,
+      "query": 2148412940,
+      "registry_lookup": 2147900496,
+      "fields": "registry+123c->object+310/+314 provide caller start/count; handle u16+11c4 yields1<<(shift&31); registry+1238 copied to output+0xc",
+      "effects": "Registry lookup takes/releases a runtime synchronization object. Query copies geometry into caller RAM; no flash program/erase call exists in this reviewed getter.",
+      "limits": "No host-callable entry, live values, total flash capacity or raw bad-block/ECC interpretation is established."
+    },
+    {
+      "id": "backup.user_partition_initialization_mutates",
+      "status": "erase-route-verified",
+      "entry": 2147524464,
+      "fallback_block_scan": 2147521808,
+      "trigger": "Nonzero return from read/validate helper80009cb4 branches to fallback scan.",
+      "mutation": "Each candidate block first receives media selector2,count1, which existing router maps to backend8/erase; only afterward does selector3/backend6 check spare/status and collect up to4 block indices.",
+      "limits": "GoodBlock_Num diagnostics and geometry-looking names do not establish passive inventory. Calling this initializer to recover settings can erase data."
+    },
+    {
+      "id": "backup.calibration_writer",
+      "status": "erase-program-readback-verified",
+      "entry": 2147522892,
+      "behavior": "Allocates0x400 bytes; uses calibration sector token8000324c; selector2 erase then checksum/copy0x24a, selector1 program count2, selector0 read count2; failures may invoke erase again.",
+      "limits": "Readback comparison does not make this a passive validator or complete restore procedure. No standalone adapter is exposed."
+    }
+  ],
+  "required_backup_components": [
+    {
+      "id": "boot-rom-reset-chain",
+      "status": "missing-installed-acquisition",
+      "evidence": "reset-recovery.json",
+      "scope": "Reset vector/ROM fingerprint and activation path are absent from supplied carrier mappings."
+    },
+    {
+      "id": "installed-boot-header-and-sections",
+      "status": "missing-installed-acquisition",
+      "evidence": "update-write-scope.json",
+      "scope": "Current boot records, section map and recovery flags; supplied update header is not an installed snapshot."
+    },
+    {
+      "id": "installed-code-and-resource-volumes",
+      "status": "baseline-only",
+      "evidence": "firmware-atlas.json",
+      "scope": "Original update preserved; exact installed modified code/resource bytes have not been read back."
+    },
+    {
+      "id": "persistent-ui-store",
+      "status": "layout-known-not-acquired",
+      "evidence": "backup.ui_and_calibration_stores",
+      "scope": "0x1a0 serialized UI store and source/location metadata."
+    },
+    {
+      "id": "persistent-calibration-and-calibration-resources",
+      "status": "partial-layout-not-acquired",
+      "evidence": "backup.calibration_serialized_subset",
+      "scope": "Separate0x24a serialized subset plus other installed calibration resources and provenance; completeness unresolved."
+    },
+    {
+      "id": "physical-geometry-bad-block-spare-ecc",
+      "status": "missing-installed-acquisition",
+      "evidence": "update-write-scope.json",
+      "scope": "Installed geometry, mappings, bad blocks, spare/ECC representation and read failures; normalized data alone may omit restoration metadata."
+    },
+    {
+      "id": "independent-recovery-content",
+      "status": "missing-installed-acquisition",
+      "evidence": "reset-recovery.json",
+      "scope": "Installed recovery content and reset-independent entry/transport must be demonstrated."
+    },
+    {
+      "id": "user-files",
+      "status": "ordinary-object-copy-only",
+      "evidence": "ptp-vendor-contracts.json",
+      "scope": "Copied ordinary PTP/WPD files can preserve exposed media; they do not prove backup of hidden flash, settings, calibration or boot sectors."
+    }
+  ],
+  "gates": {
+    "complete_host_backup_verified": false,
+    "passive_host_storage_access_verified": false,
+    "unbootable_software_recovery_verified": false,
+    "executable_trial_allowed": false
+  },
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_backup_scope.py": "b152641a108108ba9d5f79db304a5651899e2cb362ff8272d223de2dbf6f3d12",
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

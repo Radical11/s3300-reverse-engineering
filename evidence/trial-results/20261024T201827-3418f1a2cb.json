@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "trial": "amber-mono",
+  "check": "saved-photo-effect",
+  "outcome": "pass",
+  "intended_candidate_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "installed_image_sha256": null,
+  "observation_source": "user-reported camera observation",
+  "notes": "Fresh 25 October pair requested explicitly in Auto mode Color options after Amber label confirmation. Both DSCN1186 and DSCN1187 have unclipped Cb110/Cr150, corroborating Amber tint. Intended Standard first-shot bypass failed separately; image statistics and hashes in evidence/auto-amber-chroma-2026-10-25.json.",
+  "recorded_at_utc": "2026-10-24T20:18:27.507214+00:00",
+  "target_firmware_execution_observed_by_tool": false,
+  "scope": "An observation does not establish the exact installed bytes or unbootable recovery",
+  "sample": {
+    "relative_path": "samples/auto-amber-verification-2026-10-25/DSCN1187.JPG",
+    "sha256": "e4e6ddd6e7fe8ba402d94e11c3456408e5eb6dbc7162e2148b0127a1f1254dfe"
+  }
+}

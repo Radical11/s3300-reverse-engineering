@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Calcutta",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "artifact_relative_path": "derived/sdk-verified-v2/sdk-analysis-only.elf",
+  "artifact_sha256": "cd959a7874f698e4e357832bc5fe6e8075316e5afd8385444369e3dfe678ac57",
+  "source_hashes": {
+    "firmware/looks/looks.c": "a280d823bcc1341c19d76cdce7e41c018600c19c8b14109ac613fa2442579547",
+    "firmware/looks/looks.h": "dfe50bebcbf86f4dae0b28d900e93a06ab37f212c0fa4f44486915a082375527",
+    "firmware/looks/look_tables.h": "d6947b821d9ea101f3cb3b94edca96a0ddbd2160e788837aa414b1b83ec0a4d0",
+    "firmware/looks/profiles.json": "ca5e23405ee07a03cdec77a752fd1542c783ceee6970acb7d09c3a97401ef28e",
+    "firmware/sdk/contracts.c": "dd3a7edf6077213326c8999d82406fa30f79212bbba6e7d1feb1958bb931ad30",
+    "firmware/sdk/contracts.h": "e92077e11d1cb1ba2387ee0763c50ad3b4420933425a4ad003980e7cdf2780ed",
+    "firmware/sdk/analysis-only.ld": "f079fec17a906af5d58f16d60e84f8d08db53744b1cecaf62d2a7548c0877414"
+  },
+  "target": {
+    "elf_type": "ET_EXEC",
+    "flags_hex": "0x70001005",
+    "byte_order": "little",
+    "isa": "MIPS32r2",
+    "abi": "o32",
+    "fp_abi": "soft-float (generated SDK declaration only)",
+    "symbols": {
+      "s3300_look_row": {
+        "address": 65536,
+        "bytes": 328
+      },
+      "s3300_counter_decode": {
+        "address": 65872,
+        "bytes": 112
+      },
+      "s3300_command_context_index": {
+        "address": 65984,
+        "bytes": 48
+      },
+      "s3300_command_id_parts": {
+        "address": 66032,
+        "bytes": 132
+      },
+      "s3300_settings_checksum": {
+        "address": 66164,
+        "bytes": 76
+      }
+    },
+    "undefined_imports": [],
+    "relocations": [],
+    "executable_sections": [
+      {
+        "name": ".text",
+        "address": 65536,
+        "bytes": 704,
+        "instructions": 176,
+        "sha256": "e60d1801a8cce135397046956fcb491f3d4a28802b2932f269a5d225973c0b3b"
+      }
+    ],
+    "full_linear_decode": true,
+    "coprocessor_instructions": false,
+    "runtime_gp_dependency": false
+  },
+  "vendor_architecture_declaration": {
+    "verified": true,
+    "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+    "application_carrier_offset": 1058496,
+    "flags_hex": "0x70001001",
+    "elf_class": 32,
+    "byte_order": "little",
+    "isa_declaration": "MIPS32r2",
+    "abi_declaration": "o32",
+    "floating_point_abi": "unknown; original does not contain .MIPS.abiflags",
+    "vendor_headers_modified": false,
+    "runtime_calling_convention_fully_verified": false
+  },
+  "two_builds_byte_identical": true,
+  "objects": [
+    {
+      "name": "looks.o",
+      "sha256": "188617ee298393bb69c01d0cf1a129976429fc23779bb1f14571ba3e8aae44b2",
+      "relocations": [
+        {
+          "section": ".rel.text",
+          "count": 5
+        },
+        {
+          "section": ".rel.pdr",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "contracts.o",
+      "sha256": "55564483ad9a26d64cc79aaee53ddec2dc38b782f1783c95e42be92d81b5b504",
+      "relocations": [
+        {
+          "section": ".rel.text",
+          "count": 4
+        },
+        {
+          "section": ".rel.pdr",
+          "count": 4
+        }
+      ]
+    }
+  ],
+  "toolchain_provenance": {
+    "package": "ziglang",
+    "version": "0.13.0",
+    "host": "win32",
+    "url": "https://files.pythonhosted.org/packages/e0/0c/66f4710aedf5544e15779ff9c6e770322986e15daf9299b1a4df0be19e09/ziglang-0.13.0-py3-none-win_amd64.whl",
+    "wheel_sha256": "b64b2aa936ebbfeecfbb2611df331a5474edebe1246b98c2f56d6ae4d58b71fc",
+    "executable_sha256": "2e44af5bbf7a72ef8cbdae370284687c95d65a19affa469d2ad0364d905b8e84",
+    "all_wheel_members_verified": true,
+    "global_settings_changed": false
+  },
+  "emulator_provenance": {
+    "package": "unicorn",
+    "version": "2.1.4",
+    "host": "win32",
+    "url": "https://files.pythonhosted.org/packages/70/3d/de7be9bd1addabe6d8a1369381f8a080400c349850e978689c5e18287957/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+    "wheel_sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5",
+    "all_wheel_members_verified": true,
+    "global_settings_changed": false
+  },
+  "emulation": {
+    "performed": true,
+    "engine": "Unicorn",
+    "version": "2.1.4",
+    "reference_cases_passed": 58,
+    "callee_saved_registers_preserved": true,
+    "stack_pointer_preserved": true,
+    "writes_bounded_to_outputs_and_stack": true,
+    "original_bypass_verified": true,
+    "camera_executed": false,
+    "scope": "Our compiled SDK on synthetic memory only; no camera peripherals/cache/DMA/real-time model"
+  },
+  "sdk_tests_passed": 7,
+  "synthetic_link_address": "0x10000; no camera placement implied",
+  "camera_integrated": false,
+  "camera_executed": false,
+  "software_recovery_verified": false,
+  "ready_for_executable_trial": false,
+  "blocked_by": [
+    "Verified camera placement/hook and cache maintenance",
+    "Complete saved-photo buffer ABI/ownership",
+    "Demonstrated software recovery"
+  ],
+  "limitations": [
+    "Generated soft-float declaration is a choice for integer-only SDK code, not recovery of vendor floating-point ABI.",
+    "A compiler/host emulator does not model camera MMIO, caches, DMA, interrupts or real performance.",
+    "This ELF is never an update, trial registration or automatic executable patch."
+  ],
+  "previous_build_artifact_relative_path": "derived/sdk-verified-v1/sdk-analysis-only.elf",
+  "build_tools_hashes": {
+    "tools/build_sdk.py": "bc1f0358545780c90a12ed8bcc65e949368d3cd9748c60dbb504e8a7ee318f12",
+    "tools/setup_sdk_toolchain.py": "51bb89f40c1bd00c3bd81751ef00f275ede9d16b0f4e4809e18220b29d0124b5",
+    "tools/verify_sdk_emulation.py": "32811bd97ff608e5600d49a80b4e32d05e5cb839577debd97607ef8d19bae360"
+  },
+  "separate_build_runs_byte_identical": true
+}

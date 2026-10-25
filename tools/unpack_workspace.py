@@ -262,15 +262,17 @@ def main():
     output.mkdir(parents=True, exist_ok=False)
     print("Preserving complete carrier and original ELF files", flush=True)
     parts, elfs = partition_carrier(raw, output)
+    run_tool(output, "map-source", "map_firmware.py", args.source.resolve(), output/"mapped")
     print("Fresh allocated-resource extraction", flush=True)
     run_tool(output, "extract-resources", "extract_resources.py", args.source.resolve(), "--offset", "0x6fe2c0",
              "--output", output/"resources", "--evidence", output/"resource-extraction.json")
     print("Fresh application decode and independent prefix/zlib check", flush=True)
     run_tool(output, "decode", "decode_firmware.py", "--source", args.source.resolve(),
              "--output", output/"decoded", "--evidence", output/"decoded-evidence.json")
-    run_tool(output, "independent", "validate_decoded_firmware.py", output/"independent")
+    run_tool(output, "independent", "validate_decoded_firmware.py", output/"independent", "--source", args.source.resolve())
     run_tool(output, "analysis", "build_analysis_image.py", output/"analysis", "--production", output/"decoded/manifest.json",
-             "--independent", output/"independent/validation.json")
+             "--independent", output/"independent/validation.json", "--mapping", output/"mapped/map.json",
+             "--source", args.source.resolve())
     analysis = json.loads((output/"analysis/manifest.json").read_text())
     db, index_counts = make_search_index(output, raw, elfs, analysis)
     try:

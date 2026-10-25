@@ -1,7 +1,9 @@
 # Camera timing evidence
 
-The camera remains on stock v1.0. The CSV in `benchmarks/measurements.csv` is
-deliberately empty. No speed or battery improvement has been measured.
+The camera originally ran stock v1.0 and now reports v1.1 after the recorded
+experimental updates. The CSV in `benchmarks/measurements.csv` is deliberately
+empty. No speed or battery improvement has been measured. Capture a matched
+baseline on the identified current build before an optimization comparison.
 
 Record separate observations for startup-ready, autofocus, shutter response,
 processing, card writing, next-shot readiness and button feedback. A phone

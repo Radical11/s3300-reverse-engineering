@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "image_namespace": "application",
+  "method": "Authenticated Capstone/raw windows and direct Ghidra; not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "rea_evidence": false,
+  "instruction_assertions": 47,
+  "instruction_checks": [
+    {
+      "address": 2151221192,
+      "bytes": "acd48625",
+      "instruction": "addiu $a2, $t4, -0x2b54"
+    },
+    {
+      "address": 2151221200,
+      "bytes": "f4380e0c",
+      "instruction": "jal 0x8038e3d0"
+    },
+    {
+      "address": 2151221204,
+      "bytes": "21280000",
+      "instruction": "move $a1, $zero"
+    },
+    {
+      "address": 2151221464,
+      "bytes": "bd2d0e0c",
+      "instruction": "jal 0x8038b6f4"
+    },
+    {
+      "address": 2151221468,
+      "bytes": "1800048e",
+      "instruction": "lw $a0, 0x18($s0)"
+    },
+    {
+      "address": 2151201096,
+      "bytes": "40005eae",
+      "instruction": "sw $fp, 0x40($s2)"
+    },
+    {
+      "address": 2151205048,
+      "bytes": "2400068e",
+      "instruction": "lw $a2, 0x24($s0)"
+    },
+    {
+      "address": 2151205076,
+      "bytes": "2800e28c",
+      "instruction": "lw $v0, 0x28($a3)"
+    },
+    {
+      "address": 2151205080,
+      "bytes": "0000c2ac",
+      "instruction": "sw $v0, ($a2)"
+    },
+    {
+      "address": 2151205084,
+      "bytes": "2c00ff8c",
+      "instruction": "lw $ra, 0x2c($a3)"
+    },
+    {
+      "address": 2151205088,
+      "bytes": "0400dfac",
+      "instruction": "sw $ra, 4($a2)"
+    },
+    {
+      "address": 2151205172,
+      "bytes": "4001e38e",
+      "instruction": "lw $v1, 0x140($s7)"
+    },
+    {
+      "address": 2151205196,
+      "bytes": "09f86000",
+      "instruction": "jalr $v1"
+    },
+    {
+      "address": 2151208152,
+      "bytes": "4009517c",
+      "instruction": "ext $s1, $v0, 5, 2"
+    },
+    {
+      "address": 2151208160,
+      "bytes": "11280e0c",
+      "instruction": "jal 0x8038a044"
+    },
+    {
+      "address": 2151208168,
+      "bytes": "13000016",
+      "instruction": "bnez $s0, 0x8038d538"
+    },
+    {
+      "address": 2151208180,
+      "bytes": "17004410",
+      "instruction": "beq $v0, $a0, 0x8038d554"
+    },
+    {
+      "address": 2151208204,
+      "bytes": "00020524",
+      "instruction": "addiu $a1, $zero, 0x200"
+    },
+    {
+      "address": 2151208236,
+      "bytes": "00040524",
+      "instruction": "addiu $a1, $zero, 0x400"
+    },
+    {
+      "address": 2151208296,
+      "bytes": "00021424",
+      "instruction": "addiu $s4, $zero, 0x200"
+    },
+    {
+      "address": 2151208352,
+      "bytes": "00041424",
+      "instruction": "addiu $s4, $zero, 0x400"
+    },
+    {
+      "address": 2151208380,
+      "bytes": "203c0e0c",
+      "instruction": "jal 0x8038f080"
+    },
+    {
+      "address": 2151208396,
+      "bytes": "00011424",
+      "instruction": "addiu $s4, $zero, 0x100"
+    },
+    {
+      "address": 2155347660,
+      "bytes": "6082000c",
+      "instruction": "jal 0x80020980"
+    },
+    {
+      "address": 2155347672,
+      "bytes": "32fc1d0c",
+      "instruction": "jal 0x8077f0c8"
+    },
+    {
+      "address": 2155347696,
+      "bytes": "09f8a000",
+      "instruction": "jalr $a1"
+    },
+    {
+      "address": 2155347708,
+      "bytes": "1ded1d0c",
+      "instruction": "jal 0x8077b474"
+    },
+    {
+      "address": 2155347920,
+      "bytes": "01200224",
+      "instruction": "addiu $v0, $zero, 0x2001"
+    },
+    {
+      "address": 2155344516,
+      "bytes": "68fe5f24",
+      "instruction": "addiu $ra, $v0, -0x198"
+    },
+    {
+      "address": 2155344532,
+      "bytes": "01100324",
+      "instruction": "addiu $v1, $zero, 0x1001"
+    },
+    {
+      "address": 2155344536,
+      "bytes": "0800ffac",
+      "instruction": "sw $ra, 8($a3)"
+    },
+    {
+      "address": 2155344592,
+      "bytes": "2021f927",
+      "instruction": "addiu $t9, $ra, 0x2120"
+    },
+    {
+      "address": 2155344608,
+      "bytes": "05100224",
+      "instruction": "addiu $v0, $zero, 0x1005"
+    },
+    {
+      "address": 2155344660,
+      "bytes": "3000e2a4",
+      "instruction": "sh $v0, 0x30($a3)"
+    },
+    {
+      "address": 2155344664,
+      "bytes": "3800f9ac",
+      "instruction": "sw $t9, 0x38($a3)"
+    },
+    {
+      "address": 2155438932,
+      "bytes": "06000724",
+      "instruction": "addiu $a3, $zero, 6"
+    },
+    {
+      "address": 2155438972,
+      "bytes": "0100a330",
+      "instruction": "andi $v1, $a1, 1"
+    },
+    {
+      "address": 2155438976,
+      "bytes": "22006014",
+      "instruction": "bnez $v1, 0x8079640c"
+    },
+    {
+      "address": 2155439008,
+      "bytes": "03002b92",
+      "instruction": "lbu $t3, 3($s1)"
+    },
+    {
+      "address": 2155439016,
+      "bytes": "02002a92",
+      "instruction": "lbu $t2, 2($s1)"
+    },
+    {
+      "address": 2155328340,
+      "bytes": "ff004230",
+      "instruction": "andi $v0, $v0, 0xff"
+    },
+    {
+      "address": 2155328356,
+      "bytes": "01005024",
+      "instruction": "addiu $s0, $v0, 1"
+    },
+    {
+      "address": 2155328360,
+      "bytes": "000030a2",
+      "instruction": "sb $s0, ($s1)"
+    },
+    {
+      "address": 2155328364,
+      "bytes": "0200c624",
+      "instruction": "addiu $a2, $a2, 2"
+    },
+    {
+      "address": 2155328400,
+      "bytes": "0000c490",
+      "instruction": "lbu $a0, ($a2)"
+    },
+    {
+      "address": 2155328408,
+      "bytes": "ff00e928",
+      "instruction": "slti $t1, $a3, 0xff"
+    },
+    {
+      "address": 2155328416,
+      "bytes": "0100a4a0",
+      "instruction": "sb $a0, 1($a1)"
+    }
+  ],
+  "reviewed_windows": [
+    {
+      "label": "controller0_setup_callback_registration",
+      "address": 2151221188,
+      "bytes": 20,
+      "sha256": "766ec9d71ceaa370789a1123ec2a32bdb61436d73bd4be616667ea39841b7309",
+      "instructions": 5,
+      "boundary": "Bounded analyst window, not an authenticated function boundary"
+    },
+    {
+      "label": "controller0_attach_setup_buffer",
+      "address": 2151221428,
+      "bytes": 64,
+      "sha256": "d4925fd1df77d6103bbdd9caa371d2900e980902bd000c3d10a22c3aeb036e6f",
+      "instructions": 16,
+      "boundary": "Bounded analyst window, not an authenticated function boundary"
+    },
+    {
+      "label": "driver_setup_buffer_alias",
+      "address": 2151201084,
+      "bytes": 20,
+      "sha256": "379f4ff05c402fb899b74bd9e08f67cad7bf32af3dfab298d6b86051c2052608",
+      "instructions": 5,
+      "boundary": "Bounded analyst window, not an authenticated function boundary"
+    },
+    {
+      "label": "setup_interrupt_copy_and_callback",
+      "address": 2151205036,
+      "bytes": 172,
+      "sha256": "fd8147f03fd334239b2b311ed7e3eb8ea9d54cafc47df215363c288203a3da04",
+      "instructions": 43,
+      "boundary": "Bounded analyst window, not an authenticated function boundary"
+    },
+    {
+      "label": "setup_classification_callback",
+      "address": 2151208108,
+      "bytes": 300,
+      "sha256": "3ba9b3f3a569cbd656407ad2b6083f8ef875b74da85fa9d9e305d0018dff9cdb",
+      "instructions": 75,
+      "boundary": "Bounded analyst window, not an authenticated function boundary"
+    },
+    {
+      "label": "standard_device_info_handler",
+      "address": 2155347560,
+      "bytes": 412,
+      "sha256": "925b4b8d0b823851c92e7a6184df3e92e33e5245b0228d774fec184b10c3f344",
+      "instructions": 103,
+      "boundary": "Bounded analyst window, not an authenticated function boundary"
+    },
+    {
+      "label": "ptp_ascii_to_string_serializer",
+      "address": 2155328288,
+      "bytes": 216,
+      "sha256": "39912fc11b837fe000734ad651f4a78b5b7de3b55e3bb515d85e7c87e712396d",
+      "instructions": 54,
+      "boundary": "Bounded analyst window, not an authenticated function boundary"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2151192712,
+        "dossier_sha256": "56de69eaf2d5858c25f32ade6fe9904eea464e23a299b915fa0a43132dcb01d6",
+        "instructions_checked": 188,
+        "name": "FUN_80389888"
+      },
+      {
+        "address": 2151200500,
+        "dossier_sha256": "614f3c13b49ccbb3c1977b880de0b64f522c6259c8a1af91eb27305fc7b6a1f0",
+        "instructions_checked": 185,
+        "name": "FUN_8038b6f4"
+      },
+      {
+        "address": 2151221428,
+        "dossier_sha256": "ae2b12bbac305d075a8092cf523256a2f0a5d7946435e7c77db3ae568081c721",
+        "instructions_checked": 63,
+        "name": "FUN_803908b4"
+      },
+      {
+        "address": 2151207820,
+        "dossier_sha256": "6341322f377609c7336ee85ad3797f4336ad40d07df25d3d9708246755ec667c",
+        "instructions_checked": 37,
+        "name": "FUN_8038d38c"
+      },
+      {
+        "address": 2151207968,
+        "dossier_sha256": "e8093b122d6fc59a68b3a21b7622be13b86eff935354e3f8a966c03d41df0ce9",
+        "instructions_checked": 35,
+        "name": "FUN_8038d420"
+      },
+      {
+        "address": 2151209228,
+        "dossier_sha256": "01da7b2e329e88daf97f7aaf0dfab16d90c9c776c623a72a4b8acd6436261ea3",
+        "instructions_checked": 62,
+        "name": "FUN_8038d90c"
+      },
+      {
+        "address": 2151211948,
+        "dossier_sha256": "900e4ff97ea1d29de35f2e584ac2c555113dd07e080794b9c079f771ce743237",
+        "instructions_checked": 9,
+        "name": "FUN_8038e3ac"
+      },
+      {
+        "address": 2151211984,
+        "dossier_sha256": "8cc5d048aa9984dbeebe99ae3605112d1bdec9b1b3599cd38dc447371aad740b",
+        "instructions_checked": 29,
+        "name": "FUN_8038e3d0"
+      },
+      {
+        "address": 2155438864,
+        "dossier_sha256": "bfe9ca3b1e11b29aeaa2549a274142c0296bffa325fd51cfa24a0d45278dc428",
+        "instructions_checked": 69,
+        "name": "FUN_80796310"
+      },
+      {
+        "address": 2155439140,
+        "dossier_sha256": "eaf840e01b8194d5da738892559f90808c6240a5095f5c79154022c9e2ad54ee",
+        "instructions_checked": 62,
+        "name": "FUN_80796424"
+      },
+      {
+        "address": 2155439388,
+        "dossier_sha256": "5663f42ad0a57ce790b5a26b51d513102a87d5bd42aa39ce4461da50d84204cb",
+        "instructions_checked": 89,
+        "name": "FUN_8079651c"
+      },
+      {
+        "address": 2155309492,
+        "dossier_sha256": "309e40c4eb614c898ca9a0963e34bbec6d0fc8bbf04f65b25d7263588451d1fa",
+        "instructions_checked": 132,
+        "name": "FUN_807769b4"
+      },
+      {
+        "address": 2155438344,
+        "dossier_sha256": "6c13b69ecd92303a78d8ba13b3306741b37d650043716d66fa77260c8f67d9b8",
+        "instructions_checked": 130,
+        "name": "FUN_80796108"
+      },
+      {
+        "address": 2155344388,
+        "dossier_sha256": "a417862278f02bf0cd432f271a60d71b8a56285d7ff5909333a64a8be5ccd0e7",
+        "instructions_checked": 162,
+        "name": "FUN_8077f204"
+      },
+      {
+        "address": 2155356448,
+        "dossier_sha256": "c3d381d6333985338fe569216ffba1881c08b707e487f1d423c0b11757de75fe",
+        "instructions_checked": 225,
+        "name": "FUN_80782120"
+      },
+      {
+        "address": 2155344012,
+        "dossier_sha256": "7b5c98710758cdff32e20d5b800644db4e7474f5abc6ada2c5c30798bda5b397",
+        "instructions_checked": 15,
+        "name": "FUN_8077f08c"
+      },
+      {
+        "address": 2155344072,
+        "dossier_sha256": "bb6bd38ebb0a36dee746a5020369987ca0e534c7e98c8024164937e1abbae029",
+        "instructions_checked": 16,
+        "name": "FUN_8077f0c8"
+      },
+      {
+        "address": 2155328628,
+        "dossier_sha256": "2402dd239e2d5307ab87815d6b498087e7a1dd6ae2771efb9c9d3f6c06d24aa9",
+        "instructions_checked": 168,
+        "name": "FUN_8077b474"
+      },
+      {
+        "address": 2155330004,
+        "dossier_sha256": "6a856419cf49d7b5426548ced67e049b3d3181068fd1c282e6bd405e7edca29f",
+        "instructions_checked": 84,
+        "name": "FUN_8077b9d4"
+      },
+      {
+        "address": 2155328288,
+        "dossier_sha256": "be24eb0b2bb941458becaea48ff53e2d266a42611c5a2a97badcc040ae9c458c",
+        "instructions_checked": 54,
+        "name": "FUN_8077b320"
+      }
+    ]
+  },
+  "retained_warnings": [
+    {
+      "address": 2151192712,
+      "dossier_sha256": "56de69eaf2d5858c25f32ade6fe9904eea464e23a299b915fa0a43132dcb01d6",
+      "warning_present": true,
+      "scope": "Retained decompiler warning; byte-level assertions take precedence over inferred C"
+    },
+    {
+      "address": 2151200500,
+      "dossier_sha256": "614f3c13b49ccbb3c1977b880de0b64f522c6259c8a1af91eb27305fc7b6a1f0",
+      "warning_present": true,
+      "scope": "Retained decompiler warning; byte-level assertions take precedence over inferred C"
+    },
+    {
+      "address": 2155438864,
+      "dossier_sha256": "bfe9ca3b1e11b29aeaa2549a274142c0296bffa325fd51cfa24a0d45278dc428",
+      "warning_present": true,
+      "scope": "Retained decompiler warning; byte-level assertions take precedence over inferred C"
+    },
+    {
+      "address": 2155439140,
+      "dossier_sha256": "eaf840e01b8194d5da738892559f90808c6240a5095f5c79154022c9e2ad54ee",
+      "warning_present": true,
+      "scope": "Retained decompiler warning; byte-level assertions take precedence over inferred C"
+    },
+    {
+      "address": 2155439388,
+      "dossier_sha256": "5663f42ad0a57ce790b5a26b51d513102a87d5bd42aa39ce4461da50d84204cb",
+      "warning_present": true,
+      "scope": "Retained decompiler warning; byte-level assertions take precedence over inferred C"
+    },
+    {
+      "address": 2155356448,
+      "dossier_sha256": "c3d381d6333985338fe569216ffba1881c08b707e487f1d423c0b11757de75fe",
+      "warning_present": true,
+      "scope": "Retained decompiler warning; byte-level assertions take precedence over inferred C"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "backup.usb_original_setup_provenance",
+      "status": "static-route-verified",
+      "arguments": "Controller0 attach803908b4 loads state+18 setup-buffer pointer into driver8038b6f4",
+      "ownership": "State allocated by80389888; driver stores the same pointer at state+40; hardware ISR writes the buffer",
+      "route": "8038b948 state+40 alias;8038c8d4..e0 copies two original controller words from queue+28/+2c;8038c94c calls state+140 callback",
+      "registration": "803907c8..d4 installs callback8038d4ac through8038e3d0(controller0,kind0);8038d90c copies eight bytes from state+18",
+      "side_effects": "Interrupt acknowledgement and setup-state transitions; not host-passive execution",
+      "constraints": "Original eight-byte layout is preserved, not a normalized request header. Installed driver/mode not observed; concurrent setup ownership unresolved.",
+      "failed_analysis": "Ghidra8038b6f4 marks post-MMIO-loop blocks unreachable; raw original instructions retain the conditional exits and state+40 store separately"
+    },
+    {
+      "id": "backup.usb_setup_classification",
+      "status": "static-contract-verified",
+      "entry": 2151208108,
+      "arguments": "a0 handle,a1 logical endpoint,a2 original setup pointer; logical0 is reviewed",
+      "classification": "bmRequestType bits5..6: standard0,class1,vendor2,reserved3",
+      "events": {
+        "standard_unhandled": 256,
+        "vendor": 512,
+        "class": 1024,
+        "nonready_endpoint0_wakeup": 1536
+      },
+      "return_behavior": "Other logical endpoints return; standard handlers may consume a request; event signaling also depends on enabled handle mask at+2c",
+      "constraints": "This callback has no bRequest/wIndex allowlist for class/vendor. That bounded absence is not proof that every request reaches installed application debug mode."
+    },
+    {
+      "id": "backup.usb_debug_request_gate",
+      "status": "partial",
+      "entry": 2155438864,
+      "wait_flags": 6,
+      "wait_mask": 1536,
+      "route": "After wait and disconnect check, bmRequestType bit0==0 forwards byte3/index and byte2/subcommand; bit0==1 calls mass-storage807769b4 and loops",
+      "constraints": "Recipient parity is the actual checked expression; do not replace it by a complete USB recipient allowlist. bRequest and wIndex are not inspected by this reader.",
+      "side_effects": "Zero-length forwarded requests issue control status before dispatch; receive/send helpers use setup direction/length and may complete status phases",
+      "bounds": "Dispatcher80796108 allocates2000bytes. Host-to-device control receive8079651c takes the unsigned16-bit setup length without a demonstrated2000-byte cap; legal command/address/length sequence remains unverified.",
+      "ownership": "One shared808c8568 setup record; queueing and setup lifetime require an end-to-end sequencing contract",
+      "callers": "Application mode0/6 debug control loop; current PTP descriptor match does not establish this registration"
+    },
+    {
+      "id": "backup.standard_ptp_metadata_handlers",
+      "status": "static-contract-partial",
+      "registry": 2155344388,
+      "route": 0,
+      "data_phase": 1,
+      "device_info": {
+        "opcode": 4097,
+        "handler": 2155347560,
+        "behavior": "Allocates temporary supported-opcode list;callback80748f68 fills metadata;serializer8077b474;frees temporaries;response2001"
+      },
+      "storage_info": {
+        "opcode": 4101,
+        "handler": 2155356448,
+        "behavior": "Validates10001/20001 storage selection;queries device/media metadata and capacity;serializer8077b9d4;invalid storage2008/no media2013"
+      },
+      "side_effects": "Allocation, runtime metadata queries and response construction. No explicit NAND-program/erase call in these reviewed direct handler windows.",
+      "constraints": "Not raw memory/flash backup. Full transitive media-driver side effects and installed correspondence are not proved; StorageInfo has retained unreachable-code decompiler warnings."
+    }
+  ],
+  "ptp_string_contract": {
+    "entry": 2155328288,
+    "storage_info_serializer": 2155330004,
+    "behavior": "ASCII strlen low8; nonempty length+1 stored as count byte; zero2*(low8 length+1)bytes; copy successive ASCII low bytes into UTF16LE low-byte positions, includingNUL for ordinary length<=254",
+    "storage_info_layout": "Fixed26numeric bytes;description begins at1a;volume label follows at1b+2*description_count",
+    "example": "Ordinary ASCII S3300 has length5, stored count6 and a terminating UTF16NUL under this baseline helper",
+    "bounds": "At strlen low8==255 count256 truncates to0 and copy loop is capped255; low8==0 serializes an empty string. Not a general Unicode or arbitrary-length API.",
+    "reconciliation": "An observed count5 followed by unterminated S3300 is not explained by this baseline helper. Preserve strict-decoder failure and numeric prefix separately; installed bytes, input provenance and transport transformation remain unresolved."
+  },
+  "search_boundary": "20 native dossiers plus7 bounded original windows and47 selected instruction assertions; application namespace only; no full-program proof of reachability or passivity",
+  "gates": {
+    "safe_installed_memory_read_bridge": false,
+    "complete_backup": false,
+    "reset_independent_software_recovery": false,
+    "executable_trial_allowed": false
+  },
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_backup_usb_contracts.py": "830d516804511c1c67350947343d32b19812d11e7c9dca99b5637d201809f175",
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

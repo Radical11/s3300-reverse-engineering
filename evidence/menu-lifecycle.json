@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated original instruction words and direct Ghidra dossiers, not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "instruction_assertions": 38,
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2153447936,
+        "dossier_sha256": "4cac6874988f589bc7e23266bf733a37fd984c01adde19179044a715a4581a2b",
+        "instructions_checked": 210,
+        "name": "sub_805b0200"
+      },
+      {
+        "address": 2153441720,
+        "dossier_sha256": "3c0f5efc704b7ee17dfd3f4ced5d5317bf1ff8fb9734dc8a3231fece490a3ecc",
+        "instructions_checked": 682,
+        "name": "sub_805ae9b8"
+      },
+      {
+        "address": 2153444448,
+        "dossier_sha256": "f63d2097bd1f1affafd2ac9b57655e17f105d2fa2fbf494692505bf225a1bc19",
+        "instructions_checked": 872,
+        "name": "sub_805af460"
+      },
+      {
+        "address": 2153452888,
+        "dossier_sha256": "001c6d75fe1c17d64fd415195f16cca6cfafbbce1c10efbe0b43e7fcbabfbeb5",
+        "instructions_checked": 241,
+        "name": "sub_805b1558"
+      },
+      {
+        "address": 2153426324,
+        "dossier_sha256": "c27cd6e5ca718201ab7d893deec132c1cc9be634f1565e79d53ff0aba4c5292a",
+        "instructions_checked": 257,
+        "name": "sub_805aad94"
+      },
+      {
+        "address": 2153433180,
+        "dossier_sha256": "d1816a3f9e588f44ea71177b0ab0ffaacc7488b9eeed08e1aa8da5b08d457573",
+        "instructions_checked": 122,
+        "name": "sub_805ac85c"
+      },
+      {
+        "address": 2153427352,
+        "dossier_sha256": "a8a1def99e5d355b3bbf66580abdfe11431126efb4202357917ff9b595995f38",
+        "instructions_checked": 194,
+        "name": "sub_805ab198"
+      },
+      {
+        "address": 2153417716,
+        "dossier_sha256": "dfc487f21efe91725ad1a4a95b51f1300cf08812b830911df45f01157d18c909",
+        "instructions_checked": 141,
+        "name": "sub_805a8bf4"
+      },
+      {
+        "address": 2153410672,
+        "dossier_sha256": "71a73a8bcc3ebc2f8fd867f06beee3941c0c481558d12f61b7bf987a50ec0116",
+        "instructions_checked": 58,
+        "name": "sub_805a7070"
+      },
+      {
+        "address": 2154806272,
+        "dossier_sha256": "e36e5a9638fe5cb84d5a01aa29b5e40b047e57b4e0e526175ba77fb2891d39f3",
+        "instructions_checked": 58,
+        "name": "sub_806fbc00"
+      },
+      {
+        "address": 2154807424,
+        "dossier_sha256": "546625542abf2ccf87293b4309b4a3e8474d7b2f2e704cfe08f4e04112b8c0c4",
+        "instructions_checked": 137,
+        "name": "sub_806fc080"
+      },
+      {
+        "address": 2154805936,
+        "dossier_sha256": "556692dd58db5ca1b8282408cacefcfd488439e043affbcbe565976c8491cd9b",
+        "instructions_checked": 54,
+        "name": "sub_806fbab0"
+      },
+      {
+        "address": 2154805852,
+        "dossier_sha256": "7cc939dcfe2e1aa42786127e345779bac3c9d7b029e7eb54460fa91f158adf26",
+        "instructions_checked": 21,
+        "name": "sub_806fba5c"
+      },
+      {
+        "address": 2154807972,
+        "dossier_sha256": "0c6215f35d1225722f06d33cd1e992d92a7f6c5c439fb6eba3ffd23bcb27a65c",
+        "instructions_checked": 80,
+        "name": "sub_806fc2a4"
+      },
+      {
+        "address": 2154808292,
+        "dossier_sha256": "a775808bb9ec0575b08f8b69e94399996713a6571615ba5f729d11a23b4f4c1f",
+        "instructions_checked": 67,
+        "name": "sub_806fc3e4"
+      },
+      {
+        "address": 2154808560,
+        "dossier_sha256": "faa40faadc589224ccdf4fcbe4c2822ec87a6fb36c6aad661fa1bc5cddf2f326",
+        "instructions_checked": 77,
+        "name": "sub_806fc4f0"
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "id": "menu.view_creation",
+      "status": "static-route-verified",
+      "entry": 2153447936,
+      "builders": [
+        2153441720,
+        2153444448
+      ],
+      "effects": "Sets mode2100, resets root globals809f05b8..05e0, builds root/submenu objects, opens through806fbc00 or806fc624 depending state.",
+      "auto_root_handler": 2153452888,
+      "auto_root_enter": "Events106/108 call805af460(6), then806fc080(ffff), subject to mode guards.",
+      "constraints": [
+        "Creation mutates shared UI globals and display/capture lifecycle; not a standalone registrar.",
+        "Builder cases6/7 and runtime mode state expose different menu sets."
+      ]
+    },
+    {
+      "id": "menu.color_object_registration",
+      "status": "static-contract-verified",
+      "builder": 2153444448,
+      "object": 2157905232,
+      "root_child_index": 4,
+      "creation_condition": "Builder argument6 and runtime mode80891ea8 neither2 nor3; other branches expose different submenus.",
+      "count": 5,
+      "selection_source": "Active view byte+1a",
+      "parent": 2157905336,
+      "related_self": 2157905232,
+      "render_callbacks": [
+        2153515420,
+        2153515420
+      ],
+      "event_handler": 2153433180,
+      "entry_array": 2157905952,
+      "entry_stride": 3,
+      "entry_array_bytes": 15,
+      "dynamic_flag28": 0,
+      "text_ids": [
+        560,
+        561,
+        562,
+        563,
+        564
+      ],
+      "ownership": "Static shared RAM object and entry array initialized by existing builder; no private heap ownership is granted.",
+      "constraints": [
+        "Valid existing selection indices0..4; generic helpers do not prove bounds before first entry access.",
+        "Parent low-five-bit status encoding and u16 loop counters constrain any generalized use."
+      ]
+    },
+    {
+      "id": "menu.open_and_child_selection",
+      "status": "static-contract-verified",
+      "open": 2154806272,
+      "enter_child": 2154807424,
+      "open_behavior": "Sets global current pointer80107188, truncates initial selection to16bits, skips flag2 disabled entries with wrap, invokes render callback+18.",
+      "child_behavior": "Static parent chooses child through pointer-array+0c at4*current; dynamic parent uses first pointer.ffff searches backward from child count-1 for entry flag1, stopping at0.",
+      "disabled_boundary": "All-disabled open cycle returns to original disabled entry; no universal no-selection result is returned.",
+      "constraints": [
+        "Nonnull callbacks, valid parent/child arrays, count and selection are caller assumptions.",
+        "ffff restores a marked choice, not a universal cancel token."
+      ]
+    },
+    {
+      "id": "menu.dynamic_entry_ownership",
+      "status": "static-contract-partial",
+      "allocate": 2154805936,
+      "free": 2154805852,
+      "global_buffer": 2156468220,
+      "sequence": "Free previous global list if nonzero; clear it; allocate low32(count*3); zero list; update current object+24 only if dynamic flag+28 is nonzero.",
+      "failure": "Allocation failure logs and returns before replacing current object entry pointer; no rollback to freed previous list is established.",
+      "transition_cleanup": "Parent-return helpers free this shared list when current dynamic flag28 is nonzero before switching current object.",
+      "constraints": [
+        "Single shared allocation slot; cannot retain entry-array pointers across replacement/close.",
+        "This allocation helper does not allocate/own a complete menu object."
+      ]
+    },
+    {
+      "id": "menu.color_commit_and_cancel",
+      "status": "static-route-verified",
+      "handler": 2153433180,
+      "preview": "Events103/104 change temporary current selection, apply it through807132d0, wait100ticks; active-view+1a is not committed there.",
+      "commit": "Events106/108 store selection to active-view+1a, update parent flags, apply colour, call805a7070 then806fc2a4.",
+      "parent_return": "Event105 calls806fc2a4 without the active-view+1a commit store, then reapplies saved active-view colour.",
+      "close": "Events102/107/10e/124 call805ab198 cleanup/exit, then reapply saved active-view colour.",
+      "persistence_boundary": "806fc2a4 stages mode-selected state and calls80009644 whenever parent pointer+10 is nonzero, even on the105 parent-return route; no blanket no-write-on-cancel rule.",
+      "constraints": [
+        "80009644 return is ignored by the transition; successful UI return does not prove persistence success.",
+        "Physical key mappings and all mode/error/cancellation races remain unverified."
+      ]
+    },
+    {
+      "id": "menu.event_dispatch_contract",
+      "status": "static-contract-verified",
+      "dispatcher": 2153426324,
+      "handler_offset": 32,
+      "behavior": "Invokes current menu handler first; nonzero result consumes event. Zero result continues outer system/card/capture handling.",
+      "constraints": [
+        "Custom handler return conventions and event lifecycle cannot be omitted.",
+        "No supported dynamic menu-registration ABI or verified custom persistent control is exposed."
+      ]
+    }
+  ],
+  "remaining_gates": [
+    "Complete physical event-to-current-menu routing for a chosen control.",
+    "Verify safe object/list lifetime, callback registration and bounds across all modes.",
+    "Verify custom Original bypass, persistence error handling and cancellation.",
+    "Establish backup, reset-independent software recovery and executable hook ABI."
+  ],
+  "existing_menu_lifecycle_statically_traced": true,
+  "custom_control_adapter_verified": false,
+  "ready_for_executable_trial": false,
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_menu_lifecycle.py": "b062efe17593c2cdf9fc1d208e5c779348c7ac06f1688b3c18c65a24572810eb",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

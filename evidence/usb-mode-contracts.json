@@ -1,0 +1,488 @@
+{
+  "schema_version": 2,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "authenticated Capstone plus direct Ghidra static analysis, not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "instruction_checks": [
+    {
+      "address": 2155396544,
+      "bytes_sha256": "89f86190cd677c313a1d0815fdb91cdacdd7933b2b9c5fec47f095b05224e061"
+    },
+    {
+      "address": 2155396548,
+      "bytes_sha256": "7020d579c74f51905c98c7d6d9e9d9907a90e3aecf4d6153c90cde7aa326b4a1"
+    },
+    {
+      "address": 2155396556,
+      "bytes_sha256": "afafaae381f2da7e52daac3d11d88d0fdb875779c1c8af23ba8079460c3e23b5"
+    },
+    {
+      "address": 2155396668,
+      "bytes_sha256": "ad9659fd2f8e76dc40a2ac288f619bd71dc615916dcfd4676d3fbfba0cfcde46"
+    },
+    {
+      "address": 2151196864,
+      "bytes_sha256": "9eff78338c56c4281ed4b564b0123480b0ad3198d8f670f9951e1bda9a87d522"
+    },
+    {
+      "address": 2151196876,
+      "bytes_sha256": "00e3c356962c35f7efdbd5ed7f4a43a981c495f994a3acbfc72efa459758214a"
+    },
+    {
+      "address": 2151196880,
+      "bytes_sha256": "008456f826f2c5bec367bd42b65fe160309d8193672f872161f6a105d123aa5d"
+    },
+    {
+      "address": 2151196892,
+      "bytes_sha256": "8a5003faaea8b7d142acb64f56f290d4cc169e882c9acfef60e1291cbe7b4183"
+    },
+    {
+      "address": 2151196904,
+      "bytes_sha256": "cb3fac1ca23f23714191e8229a78be46b49e0eb67f0d9089c426a827c7082c76"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2155396524,
+        "dossier_sha256": "cde8dd29233ca653789337854a0c40b978130aca714848a3af7b86bb119794ae",
+        "instructions_checked": 13,
+        "name": "FUN_8078bdac"
+      },
+      {
+        "address": 2155396576,
+        "dossier_sha256": "9e9173ce1896c678378faa7b99c24543d62d38d83f89a32b438fff516d8a4673",
+        "instructions_checked": 13,
+        "name": "FUN_8078bde0"
+      },
+      {
+        "address": 2155396628,
+        "dossier_sha256": "928943cddaebaebe0af8f51244713b62c145392cd964b6f6371a55ac01a9fb04",
+        "instructions_checked": 16,
+        "name": "FUN_8078be14"
+      },
+      {
+        "address": 2155342908,
+        "dossier_sha256": "fe937d9e4f4ae885d792c1581ed2c1c8fd94dda2c2e81b1daef4a6c03f1ad86d",
+        "instructions_checked": 231,
+        "name": "FUN_8077ec3c"
+      },
+      {
+        "address": 2155291128,
+        "dossier_sha256": "a9c933f90c3d17a2177b497fe33947e5eb92ae3f77778b87895405a09053382f",
+        "instructions_checked": 130,
+        "name": "FUN_807721f8"
+      },
+      {
+        "address": 2155293692,
+        "dossier_sha256": "fa312ac78ce5c98583cc29d5fd601721b4e4ef5b41a6d4ac2f0340b5a103607a",
+        "instructions_checked": 78,
+        "name": "FUN_80772bfc"
+      },
+      {
+        "address": 2155294004,
+        "dossier_sha256": "8c10d099d440ddf5897ab45876421f2e39db435cbbc3fee8ac5d118d18fde29e",
+        "instructions_checked": 260,
+        "name": "FUN_80772d34"
+      },
+      {
+        "address": 2155295044,
+        "dossier_sha256": "f2c7be32ca7b72eb94b792f69bf834b17342e5fddc212dd0826145bcc63629bb",
+        "instructions_checked": 151,
+        "name": "FUN_80773144"
+      },
+      {
+        "address": 2155315972,
+        "dossier_sha256": "25fa0ad50413a2f1f6207a66f97097595d36a95f96a6f84c3c99a98ceb27c6b2",
+        "instructions_checked": 63,
+        "name": "FUN_80778304"
+      },
+      {
+        "address": 2151196712,
+        "dossier_sha256": "ccb0e0f66989b2a715daff5e994e2e80595f3cbf6b3672c7face4d9218e868c7",
+        "instructions_checked": 88,
+        "name": "FUN_8038a828"
+      },
+      {
+        "address": 2151196228,
+        "dossier_sha256": "7a2ff396c704ed6ae1668a1d60ac1d48a2e9f76830fee33d0ecded637eb476b5",
+        "instructions_checked": 72,
+        "name": "FUN_8038a644"
+      },
+      {
+        "address": 2155316676,
+        "dossier_sha256": "fe8cf98838662aeb7903b07c2d008f43450cbede2431abcde79c0b18e7f3e16a",
+        "instructions_checked": 52,
+        "name": "FUN_807785c4"
+      },
+      {
+        "address": 2155317152,
+        "dossier_sha256": "6bb26a61d5bc4a73225e4606adb33cf4beb05a7afcadc85228a000c68b449615",
+        "instructions_checked": 101,
+        "name": "FUN_807787a0"
+      },
+      {
+        "address": 2155320088,
+        "dossier_sha256": "ac1f9d42dee9a81b01ac9d7f561619c5be79209722af169532b3391ca0631da7",
+        "instructions_checked": 108,
+        "name": "FUN_80779318"
+      },
+      {
+        "address": 2155412924,
+        "dossier_sha256": "621ea8b337e747acda4c5a6a26f23a4949ab82d37ad4f7d3e844ef79d348b318",
+        "instructions_checked": 19,
+        "name": "FUN_8078fdbc"
+      },
+      {
+        "address": 2155412028,
+        "dossier_sha256": "66b542ae1ef36d62cd862b5ac3aba8bce98e96692dbd1285dfe8e47e360c8204",
+        "instructions_checked": 224,
+        "name": "FUN_8078fa3c"
+      },
+      {
+        "address": 2155404428,
+        "dossier_sha256": "fa9a6a46a221fac607fc4e3f408a441155c1a42baa025fcb24e9a37e0dd7d5a1",
+        "instructions_checked": 90,
+        "name": "FUN_8078dc8c"
+      },
+      {
+        "address": 2155312200,
+        "dossier_sha256": "d60bb2a8c4df4642f1641c233cb908a240366860c406380d6accd9d21143cf72",
+        "instructions_checked": 54,
+        "name": "FUN_80777448"
+      },
+      {
+        "address": 2155396424,
+        "dossier_sha256": "0fc4fcdc64419ccc85b5394171fd500935796b97ab0571d93511d3bd6ca4136a",
+        "instructions_checked": 12,
+        "name": "FUN_8078bd48"
+      },
+      {
+        "address": 2155289704,
+        "dossier_sha256": "d8e69e4f803609bc6517196e42bb1ff8d87677a7137d78c5918013938696432c",
+        "instructions_checked": 8,
+        "name": "FUN_80771c68"
+      },
+      {
+        "address": 2155464080,
+        "dossier_sha256": "8703b80c7d789f0affb390f3be8e2eb8bb5162c1bb2027fcba196de7e043b4cd",
+        "instructions_checked": 8,
+        "name": "FUN_8079c590"
+      },
+      {
+        "address": 2155295756,
+        "dossier_sha256": "c67e5ccc5dbfe80086a6538a74ef5b65974db3aa6e2eba3ed77f9e499cba4b01",
+        "instructions_checked": 101,
+        "name": "FUN_8077340c"
+      },
+      {
+        "address": 2154010840,
+        "dossier_sha256": "6923659a6c76acc9e77d9f96db28b89f6710ff24fe9a8ffe1a8b1e1f61381940",
+        "instructions_checked": 122,
+        "name": "sub_806398d8"
+      },
+      {
+        "address": 2154429688,
+        "dossier_sha256": "12d38f44f1a531b1f06f235efe237b9d4f9b9488a57842cd8a0983029d53ead2",
+        "instructions_checked": 2,
+        "name": "sub_8069fcf8"
+      }
+    ]
+  },
+  "modes": [
+    {
+      "mode": 4,
+      "handle_slots": [
+        4,
+        7
+      ],
+      "interface_classes": [
+        6
+      ],
+      "startup": "PTP",
+      "logical_endpoints": [
+        2,
+        3,
+        5
+      ],
+      "endpoint_addresses": [
+        1,
+        129,
+        130
+      ]
+    },
+    {
+      "mode": 7,
+      "handle_slots": [
+        4,
+        7
+      ],
+      "interface_classes": [
+        6
+      ],
+      "startup": "PTP",
+      "logical_endpoints": [
+        2,
+        3,
+        5
+      ],
+      "endpoint_addresses": [
+        1,
+        129,
+        130
+      ]
+    },
+    {
+      "mode": 6,
+      "handle_slots": [
+        6,
+        5,
+        0
+      ],
+      "interface_classes": [
+        0,
+        8
+      ],
+      "startup": "USB debug plus mass storage",
+      "logical_endpoints": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "endpoint_addresses": [
+        1,
+        129,
+        2,
+        130
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "id": "usb.descriptor_resource_defaults",
+      "status": "source-and-FAT-chain-verified",
+      "metadata_sha256": "ecb2efef485d22490f8975dad1ca1c5a89f912a8d6ea1155e4821fbf0afa7346",
+      "files": [
+        {
+          "path": "UsbDevDesc.bin",
+          "sha256": "2a2c0a0de685e5753bec7d70afb13f4f1efbf8389337be1f2f12c30be245c1af",
+          "size": 6,
+          "directory_entry_offset": 7363968,
+          "start_cluster": 11175,
+          "chunks": [
+            {
+              "cluster": 11175,
+              "carrier_offset": 18818752,
+              "allocated_bytes": 1024,
+              "file_bytes": 6
+            }
+          ]
+        },
+        {
+          "path": "UsbModeDesc.bin",
+          "sha256": "3fc2b1df755428776bed09fcae5cc4b259847d980632067b3adfae12c7b6a3ed",
+          "size": 48,
+          "directory_entry_offset": 7364064,
+          "start_cluster": 11176,
+          "chunks": [
+            {
+              "cluster": 11176,
+              "carrier_offset": 18819776,
+              "allocated_bytes": 1024,
+              "file_bytes": 48
+            }
+          ]
+        }
+      ],
+      "parsed_consumed_fields": {
+        "device": {
+          "vendor_id_default": 1200,
+          "config_attributes_default": 192,
+          "power_byte_default": 250,
+          "manufacturer_string_selector": 1
+        },
+        "mode_rows": [
+          {
+            "mode": 0,
+            "product_id_default": 48059,
+            "product_string_selector": 2,
+            "serial_string_selector": 3
+          },
+          {
+            "mode": 1,
+            "product_id_default": 4369,
+            "product_string_selector": 0,
+            "serial_string_selector": 0
+          },
+          {
+            "mode": 2,
+            "product_id_default": 8738,
+            "product_string_selector": 0,
+            "serial_string_selector": 0
+          },
+          {
+            "mode": 3,
+            "product_id_default": 13107,
+            "product_string_selector": 0,
+            "serial_string_selector": 0
+          },
+          {
+            "mode": 4,
+            "product_id_default": 810,
+            "product_string_selector": 3,
+            "serial_string_selector": 4
+          },
+          {
+            "mode": 5,
+            "product_id_default": 776,
+            "product_string_selector": 2,
+            "serial_string_selector": 5
+          },
+          {
+            "mode": 6,
+            "product_id_default": 8214,
+            "product_string_selector": 2,
+            "serial_string_selector": 4
+          },
+          {
+            "mode": 7,
+            "product_id_default": 810,
+            "product_string_selector": 3,
+            "serial_string_selector": 4
+          }
+        ]
+      },
+      "consumer": 2155294004,
+      "row_rule": "mode*6, read6bytes",
+      "overrides": "caps10 nonzero overrides VID; caps11 nonzero overrides PID; caps12 supplies bcdDevice; caps35<251 overrides a power-related local byte; string fields can use capability text",
+      "limits": "defaults are not guaranteed live VID/PID or complete USB descriptors; supplied rows cover modes0..7 only"
+    },
+    {
+      "id": "usb.handle_registry",
+      "status": "static-contract-verified",
+      "getter": 2155396524,
+      "caps_getter": 2155342908,
+      "caps_type": 26,
+      "caps_base_pointer": 2156498284,
+      "array_offset": 860,
+      "rule": "read32(*(u32*)80898d6c+35c+4*slot)",
+      "setter": 2155396628,
+      "setter_role": "write supplied handle into same slot array",
+      "controller_getter": 2155396576,
+      "controller_getter_role": "slot handle then80389b94 dereferences its first word",
+      "limits": "slots are registration identifiers, not USB endpoints; aliases are assigned per mode"
+    },
+    {
+      "id": "usb.ptp_mode_registration",
+      "status": "static-contract-verified",
+      "registration": 2155291128,
+      "modes": [
+        4,
+        7
+      ],
+      "aliased_slots": [
+        4,
+        7
+      ],
+      "descriptor_switch": 2155293692,
+      "interface_builder": 2155315972,
+      "interface": [
+        6,
+        1,
+        1
+      ],
+      "endpoints": [
+        {
+          "logical": 2,
+          "address": 1
+        },
+        {
+          "logical": 3,
+          "address": 129
+        },
+        {
+          "logical": 5,
+          "address": 130
+        }
+      ],
+      "packet_sizes": "bulk512 if speed argument1, otherwise64; interrupt8 interval16",
+      "receive_entry": 2155316676,
+      "send_entry": 2155317152,
+      "data_send": 2155320088,
+      "transport_handle_slot": 4,
+      "response_logical_selector": 3,
+      "runtime_comparison": "observed class6/sub1/proto1 and01/81/82 match this branch; cannot distinguish mode4 versus7"
+    },
+    {
+      "id": "usb.debug_mode_registration",
+      "status": "static-contract-verified",
+      "registration": 2155291128,
+      "mode": 6,
+      "aliased_slots": [
+        6,
+        5,
+        0
+      ],
+      "startup": 2155412924,
+      "thread": 2155412028,
+      "startup_handle_slot": 6,
+      "debug_transport_handle_slot": 0,
+      "mass_storage_handle_slot": 5,
+      "descriptor_switch": 2155293692,
+      "descriptor_builders": [
+        2155404428,
+        2155312200
+      ],
+      "interfaces": "class0 interface0 with logical2/3 plus class8 mass-storage interface1 logical4/5",
+      "comparison": "different mode registration and descriptor composition from PTP; common low-level USB transfer functions do not prove debug handler active under PTP"
+    },
+    {
+      "id": "usb.endpoint_descriptor_encoding",
+      "status": "static-contract-verified",
+      "address": 2151196712,
+      "rule": "((logical&1)<<7)|(logical>>1)",
+      "scope": "descriptor byte encoding verified; this does not establish handler reachability on the live camera"
+    },
+    {
+      "id": "usb.mode_selection",
+      "status": "partial",
+      "request_wrapper": 2155289704,
+      "message_sender": 2155396424,
+      "message": "queue2 code100000 with mode byte",
+      "message_consumer": 2155295756,
+      "mode_switch": 2155295044,
+      "ptp_ui_caller": 2154010840,
+      "ptp_ui_mode": 7,
+      "ptp_ui_evidence": "PtpMode_CardReIn diagnostic and calls80771c68(7)",
+      "diagnostic_caller": 2155464080,
+      "diagnostic_role": "passes subcommand to same mode wrapper; debug activation prerequisite not resolved",
+      "initial_default": {
+        "routine": 2154429688,
+        "value": 0
+      },
+      "unknowns": [
+        "active RAM mode4 versus7",
+        "verified physical/UI entry to mode6",
+        "complete mode-switch ownership and disconnect lifecycle",
+        "whether vendor setup handling coexists with PTP elsewhere"
+      ]
+    }
+  ],
+  "runtime_reference": "evidence/camera-usb-verification-2026-10-25.json",
+  "runtime_evidence_policy": "parent-maintained read-only observations; no local device query performed by this mapper",
+  "gates": {
+    "debug_reachable_in_observed_ptp_configuration": false,
+    "software_unbootable_recovery_verified": false,
+    "code_trial_allowed": false
+  },
+  "limitations": [
+    "Descriptors establish advertised configuration, not absence of all vendor requests on endpoint0.",
+    "No generic packet switch, mode request, alternate configuration or driver change is attempted.",
+    "No exact installed image identity is inferred from V1.1 or matching descriptors alone."
+  ]
+}

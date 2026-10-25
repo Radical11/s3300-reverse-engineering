@@ -1,0 +1,679 @@
+{
+  "schema_version": 1,
+  "model": "Nikon COOLPIX S3300",
+  "checked_date": "2026-10-25",
+  "baseline_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "scope": "Known capabilities and limits, with unresolved items explicit. Stock specifications are not proven silicon ceilings. No new device measurements.",
+  "sources": {
+    "nikon-jp": {
+      "url": "https://nij.nikon.com/products/lineup/compact/s3300/spec.html",
+      "title": "Nikon Japan S3300 specifications",
+      "accessed": "2026-10-24"
+    },
+    "nikon-ca": {
+      "url": "https://en.nikon.ca/p/coolpix-s3300/26311/overview",
+      "title": "Nikon Canada S3300 technical specifications",
+      "accessed": "2026-10-24"
+    },
+    "findings": {
+      "path": "notes/findings.md"
+    },
+    "workspace": {
+      "path": "notes/unpacked-workspace.md"
+    },
+    "interfaces": {
+      "path": "notes/development-interfaces.md"
+    },
+    "gamma": {
+      "path": "notes/gamma-pipeline.md"
+    },
+    "restore": {
+      "path": "notes/restore-path.md"
+    },
+    "looks": {
+      "path": "firmware/looks/README.md"
+    },
+    "patches": {
+      "path": "notes/patch-plans.md"
+    },
+    "startup": {
+      "path": "notes/startup-assets.md"
+    },
+    "runtime-artwork": {
+      "path": "evidence/pocket-studio-runtime-observation-2026-10-24.json"
+    },
+    "color-options": {
+      "path": "notes/color-options-map.md"
+    },
+    "runtime-label": {
+      "path": "evidence/embedded-label-runtime-observation-2026-10-24.json"
+    },
+    "usb-inventory": {
+      "path": "evidence/wpd-post-label-working-2026-10-24.json"
+    },
+    "timing": {
+      "path": "notes/performance-protocol.md"
+    },
+    "branding": {
+      "path": "notes/branding-customization.md"
+    },
+    "hardware-contracts": {
+      "path": "notes/hardware-contracts.md"
+    },
+    "capture-contracts": {
+      "path": "notes/capture-contracts.md"
+    },
+    "state-contracts": {
+      "path": "notes/state-contracts.md"
+    },
+    "atlas": {
+      "path": "notes/firmware-atlas.md"
+    },
+    "native-analysis": {
+      "path": "evidence/native-analysis.json"
+    },
+    "matrix-application": {
+      "path": "notes/matrix-application.md"
+    },
+    "sdk": {
+      "path": "firmware/sdk/README.md"
+    },
+    "amber-runtime": {
+      "path": "evidence/amber-runtime-verification-2026-10-24.json"
+    },
+    "capture-buffers-note": {
+      "path": "notes/capture-buffers.md"
+    },
+    "capture-buffers-evidence": {
+      "path": "evidence/capture-buffers.json"
+    },
+    "recovery-transport-note": {
+      "path": "notes/recovery-transport.md"
+    },
+    "recovery-transport-evidence": {
+      "path": "evidence/recovery-transport.json"
+    },
+    "label-contracts-note": {
+      "path": "notes/label-contracts.md"
+    },
+    "label-path-verification-evidence": {
+      "path": "evidence/label-path-verification.json"
+    },
+    "usb-live": {
+      "path": "evidence/camera-usb-verification-2026-10-25.json"
+    },
+    "usb-modes": {
+      "path": "notes/usb-mode-contracts.md"
+    },
+    "amber-auto": {
+      "path": "evidence/amber-auto-verification-2026-10-25.json"
+    },
+    "development-contracts": {
+      "path": "notes/development-contracts.md"
+    },
+    "shutter-route": {
+      "path": "notes/shutter-route.md"
+    },
+    "shutter-input": {
+      "path": "notes/shutter-input.md"
+    },
+    "pixel-layout": {
+      "path": "notes/pixel-layout.md"
+    },
+    "menu-lifecycle": {
+      "path": "notes/menu-lifecycle.md"
+    },
+    "update-write-scope": {
+      "path": "notes/update-write-scope.md"
+    },
+    "artifact-index": {
+      "path": "docs/development/02-setup.md"
+    },
+    "backup-scope": {
+      "path": "notes/backup-scope.md"
+    },
+    "backup-usb-contracts": {
+      "path": "notes/backup-usb-contracts.md"
+    },
+    "updater-handoff": {
+      "path": "notes/updater-handoff.md"
+    },
+    "file-backup": {
+      "path": "evidence/camera-file-backup-2026-10-25.json"
+    }
+  },
+  "entries": [
+    {
+      "id": "sensor",
+      "kind": "hardware_spec",
+      "evidence_level": "manufacturer_spec",
+      "value": "1/2.3-inch CCD; approximately 16 million effective pixels",
+      "constraint": "Exact sensor part, readout modes and register contract remain unknown.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "still-resolution",
+      "kind": "stock_limit",
+      "evidence_level": "manufacturer_spec",
+      "value": "4608 x 3456 JPEG",
+      "constraint": "Largest documented still mode; RAW capture is not exposed in the documented stock file formats.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "lens",
+      "kind": "hardware_spec",
+      "evidence_level": "manufacturer_spec",
+      "value": "6x optical zoom; 4.6-27.6 mm; lens-shift VR",
+      "constraint": "Optical reach is physical. Focus and lens motion interfaces are not recovered as callable development APIs.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "maximum-aperture",
+      "kind": "unresolved_spec",
+      "evidence_level": "conflicting_sources",
+      "value": null,
+      "constraint": "Official Japan page lists f/3.5-6.5; Canada lists f/3.3-6.5. Resolve against the unit/manual before treating either as authoritative.",
+      "sources": [
+        "nikon-jp",
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "aperture-control",
+      "kind": "hardware_spec",
+      "evidence_level": "manufacturer_spec",
+      "value": "ND filter insertion, -3.3 AV",
+      "constraint": "Do not assume a continuously variable iris from an aperture menu label.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "still-burst",
+      "kind": "stock_limit",
+      "evidence_level": "manufacturer_spec",
+      "value": "About 1.3 fps, up to 6 full-resolution shots",
+      "constraint": "Documented mode performance; not a measured baseline for this unit or proof of maximum sensor/ISP throughput.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "video",
+      "kind": "stock_limit",
+      "evidence_level": "manufacturer_spec",
+      "value": "1280 x 720, 640 x 480 or 320 x 240 at 30 fps; AVI Motion-JPEG",
+      "constraint": "Neither higher resolution nor a new codec is established as feasible.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "movie-clip",
+      "kind": "stock_limit",
+      "evidence_level": "manufacturer_spec",
+      "value": "2 GB or 29 minutes per clip",
+      "constraint": "Stock recording/file policy, not an established immutable hardware ceiling.",
+      "sources": [
+        "nikon-jp"
+      ]
+    },
+    {
+      "id": "iso",
+      "kind": "stock_limit",
+      "evidence_level": "manufacturer_spec",
+      "value": "ISO 80-3200; ISO 3200 limited to 4M, 2M or VGA",
+      "constraint": "Raising a numeric limit does not establish usable sensor output or acceptable noise.",
+      "sources": [
+        "nikon-jp"
+      ]
+    },
+    {
+      "id": "shutter",
+      "kind": "stock_limit",
+      "evidence_level": "manufacturer_spec",
+      "value": "1/2000-1 s; 4 s in Fireworks mode",
+      "constraint": "Mechanical plus electronic shutter; longer or faster operation requires timing and calibration evidence.",
+      "sources": [
+        "nikon-jp"
+      ]
+    },
+    {
+      "id": "display",
+      "kind": "hardware_spec",
+      "evidence_level": "manufacturer_spec",
+      "value": "2.7-inch TFT; about 230,000 dots",
+      "constraint": "Dots are not an established framebuffer pixel geometry, stride or format.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "storage",
+      "kind": "hardware_spec",
+      "evidence_level": "manufacturer_spec",
+      "value": "About 42 MB internal image storage; SD/SDHC/SDXC",
+      "constraint": "Image storage is not RAM or total flash capacity. Vendor-tested card sizes are not a proven addressing maximum.",
+      "sources": [
+        "nikon-jp"
+      ]
+    },
+    {
+      "id": "usb",
+      "kind": "hardware_spec",
+      "evidence_level": "manufacturer_spec",
+      "value": "Hi-Speed USB; MTP/PTP",
+      "constraint": "Protocol support does not establish sustained transfer speed, live view or a debug API.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "battery",
+      "kind": "stock_limit",
+      "evidence_level": "manufacturer_spec",
+      "value": "EN-EL19; approximately 210 shots under CIPA conditions",
+      "constraint": "Rating does not measure this aged battery, energy per algorithm or current runtime.",
+      "sources": [
+        "nikon-ca"
+      ]
+    },
+    {
+      "id": "operating-temperature",
+      "kind": "hardware_spec",
+      "evidence_level": "manufacturer_spec",
+      "value": "0-40 degrees C",
+      "constraint": "Documented operating environment; no thermal headroom measured for custom workloads.",
+      "sources": [
+        "nikon-jp"
+      ]
+    },
+    {
+      "id": "executable-architecture",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "ELF32 little-endian MIPS; primary application indexed with MIPS32 listings",
+      "constraint": "Tiny loader has differing ISA flags. Library names do not establish actual CPU silicon or a complete target ABI.",
+      "sources": [
+        "findings",
+        "workspace"
+      ]
+    },
+    {
+      "id": "platform",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "ThreadX, FileX and Zoran COACH identifiers",
+      "constraint": "Identifiers are firmware evidence; exact COACH generation, core count and hardware revision remain unconfirmed.",
+      "sources": [
+        "findings"
+      ]
+    },
+    {
+      "id": "cpu-clock-and-model",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "Getter0x80025198 reads56 runtime u32 values at0x808a5b8c; table contents are absent from the supplied file. Exact clock state, CPU/SoC model and active core count remain unconfirmed.",
+      "sources": [
+        "findings",
+        "hardware-contracts"
+      ]
+    },
+    {
+      "id": "ram-capacity-and-headroom",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "DRAM API0x8003c3ac reads register0xb8002010; selectors1..6 map to8..256MiB. The live selector and allocator headroom are unread, so installed RAM remains unknown.",
+      "sources": [
+        "findings",
+        "workspace",
+        "hardware-contracts"
+      ]
+    },
+    {
+      "id": "flash-geometry-and-calibration",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "Supplied update is not a whole-device dump. NAND monitor loop arithmetic does not establish capacity, ECC, bad-block handling or calibration coverage.",
+      "sources": [
+        "restore"
+      ]
+    },
+    {
+      "id": "capture-buffer-abi",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "Shared seven-u32 descriptor geometry is recovered, with temporary scale allocation/wait/free. Packing, pitch, colour/address domains, complete lifetime/cache rules and active saved-JPEG integration remain unresolved.",
+      "sources": [
+        "gamma",
+        "looks",
+        "capture-contracts",
+        "capture-buffers-note",
+        "capture-buffers-evidence"
+      ]
+    },
+    {
+      "id": "raw-and-accelerator-access",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "Need sensor bit depth/readout contract, ISP command ownership and active capture path. Static gamma MMIO references alone do not establish a usable hardware API.",
+      "sources": [
+        "gamma",
+        "findings"
+      ]
+    },
+    {
+      "id": "runtime-performance",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "No measured startup, shot-to-shot latency, preview fps, CPU headroom or energy-per-shot baseline for this unit. Host timings are separate.",
+      "sources": [
+        "timing",
+        "looks"
+      ]
+    },
+    {
+      "id": "telemetry",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Six u32 CPU-counter fields in a 24-byte buffer; nine profiling command records",
+      "constraint": "External transport and safe invocation are unverified. Do not expose arbitrary monitor strings or touch MMIO from the host.",
+      "sources": [
+        "interfaces"
+      ]
+    },
+    {
+      "id": "debug-and-recovery",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "Live descriptors match PTP mode 4 or 7; recovered debug path uses a different mode/registration. Independent debug entry, safe read bounds, full backup/write geometry and reset recovery remain unverified.",
+      "sources": [
+        "restore",
+        "interfaces",
+        "findings",
+        "state-contracts",
+        "hardware-contracts",
+        "recovery-transport-note",
+        "recovery-transport-evidence",
+        "usb-live",
+        "usb-modes"
+      ]
+    },
+    {
+      "id": "persistent-settings",
+      "kind": "unknown",
+      "evidence_level": "unknown",
+      "value": null,
+      "constraint": "Setup/view blocks stage into store0x800032d4 and reach media transaction0x80009644. Physical write extents, checksum boundaries, atomicity, wear and complete runtime persistence remain unverified.",
+      "sources": [
+        "branding",
+        "state-contracts"
+      ]
+    },
+    {
+      "id": "update-byte-coverage",
+      "kind": "development_capability",
+      "evidence_level": "offline_verified",
+      "value": "19,005,632 supplied bytes; 463 packed blocks; 7,950,592 decoded bytes",
+      "constraint": "All supplied bytes preserved. This does not include absent full-device flash, calibration or original source code.",
+      "sources": [
+        "workspace"
+      ]
+    },
+    {
+      "id": "resources-and-search",
+      "kind": "development_capability",
+      "evidence_level": "offline_verified",
+      "value": "368 files; 33 reversible string tables; 73 reversible indexed bitmaps; 5,798 function ranges",
+      "constraint": "Some fonts, palettes and resource consumers remain opaque. Function ranges do not recover names or complete semantics.",
+      "sources": [
+        "workspace"
+      ]
+    },
+    {
+      "id": "missing-volume-tail",
+      "kind": "format_limit",
+      "evidence_level": "static_analysis",
+      "value": "2,611,712 logical resource-volume bytes absent from supplied update",
+      "constraint": "All parsed live allocated files fit in the source. Missing logical tail is preserved as an absence, not fabricated.",
+      "sources": [
+        "workspace"
+      ]
+    },
+    {
+      "id": "patch-builder",
+      "kind": "development_capability",
+      "evidence_level": "offline_verified",
+      "value": "Hash-bound fixed-size FAT-resource and decoded virtual-span patches",
+      "constraint": "No relocation or growth. Missing entropy codes and packed-payload overflow can prevent an edit. Byte validation does not prove runtime correctness.",
+      "sources": [
+        "patches"
+      ]
+    },
+    {
+      "id": "custom-label",
+      "kind": "development_capability",
+      "evidence_level": "user_observed",
+      "value": "Welcome studio label observed; subsequent USB inventory reports V1.1",
+      "constraint": "Observation applies to the prior label candidate. Restart, capture/playback and settings-persistence checks were not individually recorded.",
+      "sources": [
+        "runtime-label",
+        "usb-inventory"
+      ]
+    },
+    {
+      "id": "creative-look-module",
+      "kind": "development_capability",
+      "evidence_level": "host_verified",
+      "value": "Original plus four RGB8 looks; 2,560 table bytes; row processing without heap allocation",
+      "constraint": "Real MIPS32r2/o32 build and 58 synthetic emulation cases now pass. It is not inserted into camera firmware; hook placement, buffer ownership and recovery remain unresolved.",
+      "sources": [
+        "looks",
+        "sdk"
+      ]
+    },
+    {
+      "id": "gamma-stage",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "960-byte legacy packed gamma format; GammaDDE associated with display path",
+      "constraint": "Not three ordinary RGB curves. Active saved-still selection and full converter behavior remain unresolved.",
+      "sources": [
+        "gamma"
+      ]
+    },
+    {
+      "id": "selectable-color-effects",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Existing Color Options dispatch plus matrix/offset command 15 mapped",
+      "constraint": "Command 15 is now traced through cache, group 11, slot 15, factory 11 and matrix register upload. Complete buffer ownership and safe arbitrary integration remain unresolved.",
+      "sources": [
+        "color-options",
+        "capture-contracts",
+        "matrix-application"
+      ]
+    },
+    {
+      "id": "startup-artwork",
+      "kind": "development_capability",
+      "evidence_level": "user_observed",
+      "value": "24,210-byte 640 x 480 baseline JPEG replacement; user reports update completion and changed artwork",
+      "constraint": "Observation applies to the recorded Pocket Studio identity build. Repeated restart/capture/playback checks remain pending; resource dimensions do not establish framebuffer geometry.",
+      "sources": [
+        "startup",
+        "runtime-artwork"
+      ]
+    },
+    {
+      "id": "frame-memory-budget",
+      "kind": "calculated_requirement",
+      "evidence_level": "calculated",
+      "value": "4608 x 3456: RGB8 47,775,744 bytes; unpacked 16-bit 31,850,496 bytes; packed 12-bit 23,887,872 bytes",
+      "constraint": "Pure arithmetic excluding stride, alignment and scratch; not proof that any of these are the camera's buffer formats or available RAM.",
+      "sources": [
+        "findings",
+        "looks"
+      ]
+    },
+    {
+      "id": "dram-size-query",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "0x8003c3ac: supported DRAM-size selector table; successful cases1..6 report8,16,32,64,128,256MiB",
+      "constraint": "Configuration support is not installed capacity. No live register access was performed.",
+      "sources": [
+        "hardware-contracts"
+      ]
+    },
+    {
+      "id": "gpio-access",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Group table0x800a2264, stride0x54; per-pin access at table register base+0xc+4*pin",
+      "constraint": "Board wiring and limits are unknown. Even the monitor getter configures state; it is not a passive measurement interface.",
+      "sources": [
+        "hardware-contracts"
+      ]
+    },
+    {
+      "id": "settings-staging",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Store0x800032d4: setup+0x28/0x4a bytes, four view banks+0x76/0xe0 bytes; media transaction0x80009644",
+      "constraint": "Checksum is sum of bytes0..0x19d modulo256 at+0x19f, excluding+0x19e. Physical storage bounds, failure handling and power-loss behavior remain unresolved.",
+      "sources": [
+        "state-contracts",
+        "development-contracts"
+      ]
+    },
+    {
+      "id": "static-atlas",
+      "kind": "development_capability",
+      "evidence_level": "offline_verified",
+      "value": "5798 known function listings;48303 direct-call instruction candidates;17 subsystem inventories",
+      "constraint": "Static byte coverage is bounded and is not complete semantic recovery. Direct Ghidra now supplements REA workflow/inventory; the REA adapter remains unsupported for this target.",
+      "sources": [
+        "atlas"
+      ]
+    },
+    {
+      "id": "amber-photo-tint",
+      "kind": "development_capability",
+      "evidence_level": "saved_photo_and_user_observed",
+      "value": "Amber label confirmed in Auto Color options; saved JPEG tint Cb110/Cr150; explicit Standard repeat retains normal colour; restart/persistence/playback reported working",
+      "constraint": "Earlier Nostalgic sepia observation came from Special effects. First intended-Standard pair was tinted; explicit OK repeat passes. Exact installed image hash and recovery remain unverified; no measured speed gain.",
+      "sources": [
+        "amber-runtime",
+        "label-contracts-note",
+        "label-path-verification-evidence",
+        "amber-auto"
+      ]
+    },
+    {
+      "id": "usb-live-configuration",
+      "kind": "observed_runtime",
+      "value": "USB 2.0 descriptor; one Still Image interface; bulk OUT01/IN81 with512-byte packets; interrupt IN82 with8-byte packets",
+      "evidence_level": "runtime_observation",
+      "constraint": "Packet limits are not measured throughput. Current mode4/7 descriptor match does not establish access to mode6 debug functions.",
+      "sources": [
+        "usb-live",
+        "usb-modes"
+      ]
+    },
+    {
+      "id": "retained-native-workbench",
+      "kind": "development_capability",
+      "evidence_level": "offline_verified",
+      "value": "19,527 functions across application, updater, tiny loader and primary namespaces, including one caller-seeded focused writer; three packed carriers inventory-only",
+      "constraint": "Inferred function coverage is not complete semantics. Focused writer retains its boundary/type warning. Local read-only search reuses authenticated databases; no camera adapter is exposed.",
+      "sources": [
+        "artifact-index"
+      ]
+    },
+    {
+      "id": "shutter-to-jpeg-route",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Scanner/debounce, mode dispatch, StillCaptMain and pipe events traced to FileCompressor/JPEG",
+      "constraint": "Static routing does not establish live timing, physical switch wiring, current masks or permission to inject events.",
+      "sources": [
+        "shutter-input",
+        "shutter-route"
+      ]
+    },
+    {
+      "id": "jpeg-input-layout",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Input kind at argument+4 and address-layout selector at+8 are distinct; conditional parent-width DMA pitch recovered",
+      "constraint": "Component order, range, live extent, cache and buffer ownership remain unresolved. Layout selector1 does not imply 420 input kind.",
+      "sources": [
+        "pixel-layout"
+      ]
+    },
+    {
+      "id": "menu-lifecycle",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Static five-entry Color Options registration and shared dynamic-entry allocation recovered",
+      "constraint": "Cancel/return may persist other state; write failure is ignored by the existing UI. No callable general menu adapter.",
+      "sources": [
+        "menu-lifecycle"
+      ]
+    },
+    {
+      "id": "updater-write-scope",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Seven-section policy, runtime erase geometry, protected-section predicates and bad-block paths mapped",
+      "constraint": "User-area backup relocates data by erasing/programming flash. Installed physical ranges and a passive host backup/recovery route remain unknown.",
+      "sources": [
+        "update-write-scope"
+      ]
+    },
+    {
+      "id": "exposed-file-backup",
+      "kind": "development_capability",
+      "evidence_level": "runtime_verified",
+      "value": "49 visible files /170787084bytes copied; two device reads and local hashes agree",
+      "constraint": "Only current PTP-exposed objects; no installed flash, ROM, calibration/settings or raw SD-sector acquisition. Strict StorageInfo string parsing failed and is preserved.",
+      "sources": [
+        "file-backup"
+      ]
+    },
+    {
+      "id": "persistent-calibration-scope",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "UI store0x1a0 and calibration subset0x24a have distinct headers/checksums; location depends on runtime geometry",
+      "constraint": "Neither installed store was acquired. Initialization fallback can erase blocks; valid subset checksum cannot establish complete calibration backup.",
+      "sources": [
+        "backup-scope"
+      ]
+    },
+    {
+      "id": "normal-update-handoff",
+      "kind": "firmware_contract",
+      "evidence_level": "static_analysis",
+      "value": "Running application seeks update package to0x100000 and invokes its own burn writer",
+      "constraint": "Successful normal updating does not demonstrate the separate updater or independent ROM recovery. Boot handoff entry bfc00664 is absent from supplied mappings.",
+      "sources": [
+        "updater-handoff"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "address_namespace": "application; original executable carriers checked separately for absent ROM coverage",
+  "method": "Authenticated original carrier, independent Capstone checks and direct Ghidra dossiers; not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "instruction_checks": [
+    {
+      "address": 2153905552,
+      "instruction_sha256": "bd6f968f7bd8d01ce14753ca46371f7928a3f84f941242d92cd2734dc5a655ef"
+    },
+    {
+      "address": 2153905568,
+      "instruction_sha256": "bd6f968f7bd8d01ce14753ca46371f7928a3f84f941242d92cd2734dc5a655ef"
+    },
+    {
+      "address": 2153905648,
+      "instruction_sha256": "5526ba7e893208bceff2f24f4972d5c3b9f333883d793fce170e8f5651181454"
+    },
+    {
+      "address": 2153905652,
+      "instruction_sha256": "06681e9c105b7593e3f35f3cc7c27060d82fa5620392aa4000438dee918bb973"
+    },
+    {
+      "address": 2153905700,
+      "instruction_sha256": "68d659eea0e2e6055d367aca0a04003995661eb97949c8082a19efc3040997f2"
+    },
+    {
+      "address": 2149544200,
+      "instruction_sha256": "300e05ca9dd3420b96bb064f7bca5eb2304c461e18756d8ab768aad0bd9c495d"
+    },
+    {
+      "address": 2149544204,
+      "instruction_sha256": "243cdd3f45f60ce849f485ee91656357f5a0e97b8f08c5435dd0e95620c9dd08"
+    },
+    {
+      "address": 2149496592,
+      "instruction_sha256": "af675e555e4162d220020d64e7bec76b41c38a3034033761262ca2a83be7360a"
+    },
+    {
+      "address": 2151507196,
+      "instruction_sha256": "f6fd6fa427d92cca70ea1d948803c5a4b9d6b3ccae7597704e1d564e3215eac9"
+    },
+    {
+      "address": 2151507204,
+      "instruction_sha256": "c2a0cf0197e70f0bd3f79ac2df64ca690de9efd03e5b16680d93e08d0f3ce539"
+    },
+    {
+      "address": 2151507208,
+      "instruction_sha256": "734486b9894b6d6895dab167f4384766f2dc9e7e92dd139874e8300184a3e092"
+    },
+    {
+      "address": 2151530412,
+      "instruction_sha256": "22fd571fa27357dac4d65ed0ec4b33499f11adca312cfb744c26c275e149f3b5"
+    },
+    {
+      "address": 2151530420,
+      "instruction_sha256": "f5b8abed294439cafbc92755a4aa1c300afafefc6f9c3adfc3e7f7dea951fb33"
+    },
+    {
+      "address": 2151530424,
+      "instruction_sha256": "6148a3e45487d0dc46e1386531501789859984692bad28b9d3c572374db78b56"
+    },
+    {
+      "address": 2151530464,
+      "instruction_sha256": "dfeaddf87c7acc42689563f2cba2e0041fa9764372f3530205cdffe0cc72c382"
+    },
+    {
+      "address": 2151530468,
+      "instruction_sha256": "d9e7b971d6ee967461affbf2dd3fd6003d905608170ed6e810ee2ee5e01ab072"
+    },
+    {
+      "address": 2151531044,
+      "instruction_sha256": "294012232d955dee8391ee2de157bca9d16e1b286f48d80ae129b262147a7dd8"
+    },
+    {
+      "address": 2151531064,
+      "instruction_sha256": "460c5f24610ac9c9b36aae3c133ccac7b69baa4ffe03b6eec958bb6d56365e1c"
+    },
+    {
+      "address": 2151556804,
+      "instruction_sha256": "49c5702cfb0dd718854f38296abc01879f35ace81b4b9e987c7e2b42cbcda6ad"
+    },
+    {
+      "address": 2151557336,
+      "instruction_sha256": "11449aba36a335a2b58a268cfbe255f82582ed89e04a30f7ba66773515402728"
+    },
+    {
+      "address": 2151557356,
+      "instruction_sha256": "6b12275e57b6be13339158217446faabff8c4c82749c0ebcb76399f68ef17b29"
+    },
+    {
+      "address": 2151558144,
+      "instruction_sha256": "8f2baa2dec1a4b3db641e8ca9fc895b57997ee040f1de63ee59aeeeb1359b232"
+    },
+    {
+      "address": 2151558152,
+      "instruction_sha256": "6fdb34e82facea84ffdbbdc4be265e192a8965c1118e61bdf39f89ed81c07ba7"
+    },
+    {
+      "address": 2151558156,
+      "instruction_sha256": "26619103c0340fbc3f792f251912406a0e46d916e50f4082502d0f0f346f5586"
+    },
+    {
+      "address": 2148150708,
+      "instruction_sha256": "a0caca099c55311bdcaf48c65033cce498b43764380c8fdc58656c6d27fa3e58"
+    },
+    {
+      "address": 2148150748,
+      "instruction_sha256": "2c1ac10338cfcfe713b2369589dc097a0dd2ef0b2f99bf007ac5a52cc0734599"
+    },
+    {
+      "address": 2148150756,
+      "instruction_sha256": "625bd1b9c31c4edc6d51c853ab1591b1f05962af70839e9996ef3780231b9c9e"
+    },
+    {
+      "address": 2148150772,
+      "instruction_sha256": "1a9863bcef7f2de0a99d6881064e6fe3bf7456e3554e42324fc3c2acc08c6226"
+    },
+    {
+      "address": 2148150976,
+      "instruction_sha256": "2d353b10272857872411953af408f3a20d9ed2247e1f1dc24c758be1861b72d9"
+    },
+    {
+      "address": 2148150980,
+      "instruction_sha256": "20711230d97e54c3911e4bb0acea21ef8efd3b17d709c3ecc86eb56e4e2bd273"
+    },
+    {
+      "address": 2148227240,
+      "instruction_sha256": "1840c98b76a2c0763baae43883b9c2d8bc5e95c622d143eb37062eb96cbefc04"
+    },
+    {
+      "address": 2148227252,
+      "instruction_sha256": "e627703037a252c60858cee3d455bbdbf233e27f44a3a417b873e3abc0b786e6"
+    },
+    {
+      "address": 2148227256,
+      "instruction_sha256": "802e606eddd13887e1acf726af70a6b5ae7c437dcd58b942d9fc0119a4affcb5"
+    },
+    {
+      "address": 2148227276,
+      "instruction_sha256": "0d9b7b0af58af7c1a784b993c0aa41f5bcb9f1962db594f386360973dadbcf19"
+    },
+    {
+      "address": 2147871464,
+      "instruction_sha256": "99b2b7f59dfab7f260378e993cd7214bb9a4545c29bfbc7dc478651f96a8803b"
+    },
+    {
+      "address": 2147871468,
+      "instruction_sha256": "d3ebeda91b8da63c4199771ceee9fcab03f0c450fba0b9895cd2e60dbf3cc000"
+    }
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2153905256,
+        "dossier_sha256": "ee95e87d650fde74db13cc07441364af154863f6d5968aad2ed529644db120cb",
+        "instructions_checked": 340,
+        "name": "sub_8061fc68"
+      },
+      {
+        "address": 2155046612,
+        "dossier_sha256": "0e6343c485351538822c1b4aa5abdaa5464b9bbe8f2f705b655ee73aa6c1ad48",
+        "instructions_checked": 155,
+        "name": "sub_807366d4"
+      },
+      {
+        "address": 2149544192,
+        "dossier_sha256": "33e1231e680b3246273575778b838f61d04485cc335101661e487f272c532c17",
+        "instructions_checked": 10,
+        "name": "FUN_801f7100"
+      },
+      {
+        "address": 2149496584,
+        "dossier_sha256": "417921ffc356b36dfa93b87c43368a681c087b038081bd41c1dd05ebc0fd47ad",
+        "instructions_checked": 7,
+        "name": "FUN_801eb708"
+      },
+      {
+        "address": 2151507184,
+        "dossier_sha256": "ad3ed10d12a7306d2bdd18b40c87748744d3b5f43578729ca2594c2d4710e33b",
+        "instructions_checked": 10,
+        "name": "FUN_803d64f0"
+      },
+      {
+        "address": 2151529472,
+        "dossier_sha256": "25fb82625285c793ba74a412f73360cc307b085365bb9f43ebec3b7d8091e999",
+        "instructions_checked": 511,
+        "name": "FUN_803dbc00"
+      },
+      {
+        "address": 2151556784,
+        "dossier_sha256": "151309753b51c1ce278666f62afd09a1eb916a07c8d6118632bedd5a79eae64f",
+        "instructions_checked": 214,
+        "name": "FUN_803e26b0"
+      },
+      {
+        "address": 2151557696,
+        "dossier_sha256": "1a33ecaddc08d0cc6971e9fd3333f8ebd40bc030c8fca0340275d7260d549308",
+        "instructions_checked": 227,
+        "name": "FUN_803e2a40"
+      },
+      {
+        "address": 2151505440,
+        "dossier_sha256": "0d044456d6a0c66a827466c3b303c397e5526895e75edcd779e99d5cfeb619c7",
+        "instructions_checked": 128,
+        "name": "FUN_803d5e20"
+      },
+      {
+        "address": 2148150508,
+        "dossier_sha256": "a6e00482cfecce989d2d8fc90193a334b13fb95b85804031b5d09c9a35b963ba",
+        "instructions_checked": 156,
+        "name": "FUN_800a2cec"
+      },
+      {
+        "address": 2148227216,
+        "dossier_sha256": "0de14c0276372b8d6988f0d66840a9e98ebc8d20f231ec10d5f4ca49559e899c",
+        "instructions_checked": 17,
+        "name": "FUN_800b5890"
+      },
+      {
+        "address": 2147871392,
+        "dossier_sha256": "b644358c234a68b9e57315a94e107099df5b84217cd275a6c5d1e19197c9d81f",
+        "instructions_checked": 27,
+        "name": "FUN_8005eaa0"
+      },
+      {
+        "address": 2148060508,
+        "dossier_sha256": "3fea7c806d87258d36f5076a08481dd83cad3610e3ebfc3d55d71fda070fa2cb",
+        "instructions_checked": 316,
+        "name": "FUN_8008cd5c"
+      }
+    ]
+  },
+  "burn_header": {
+    "carrier_offset": 1048576,
+    "sha256": "23f81f3c383c9c1409b06d9efb82aea80fef8ec426a128c1eed77372c2f46798",
+    "advertised_data_bytes": 17956864,
+    "chunk_bytes": 131072,
+    "media_kind": 3,
+    "finish_action": 0,
+    "keep_user_area_flag": 1,
+    "hash_enabled": false,
+    "extended_header_marker": 21930,
+    "camera_geometry_established": false,
+    "scope": "Package metadata, not installed flash geometry or a safe operation"
+  },
+  "original_elf_coverage": [
+    {
+      "image": "image-00000200",
+      "sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "rom_handoff_bfc00664": false,
+      "boot_flags_bfc095fc": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-001006c0",
+      "sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+      "rom_handoff_bfc00664": false,
+      "boot_flags_bfc095fc": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-001026c0",
+      "sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+      "rom_handoff_bfc00664": false,
+      "boot_flags_bfc095fc": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-002202c0",
+      "sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+      "rom_handoff_bfc00664": false,
+      "boot_flags_bfc095fc": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-003bd9a8",
+      "sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+      "rom_handoff_bfc00664": false,
+      "boot_flags_bfc095fc": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-005c2b78",
+      "sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+      "rom_handoff_bfc00664": false,
+      "boot_flags_bfc095fc": false,
+      "boot_header_bfc09600": false
+    }
+  ],
+  "contracts": [
+    {
+      "id": "handoff.normal_update_is_application_burn",
+      "status": "static-route-verified",
+      "chain": [
+        "8061fc68 handles106/108 UI events and checks807366d4",
+        "8061fdf0 calls801f7100 witha0=1; wrapper calls801eb708\u2192803d64f0\u2192803dbc00",
+        "803dbc00 seeks to carrier offset100000 and reads40-byte burn header, optionally80 extension",
+        "803e26b0 installs media-dependent writer at handle125c",
+        "803e2a40 loads callback125c and calls it with handle and input callbacks"
+      ],
+      "known_package": "Header media_kind3 selects application NAND-NSR writer address803d73dc; keep-user-area flag1; finish action0 does not select the reboot branches in803d5e20",
+      "returns": "801f7100 maps downloader result1 to0 success and all others tofe; UI retries at most3 times",
+      "side_effects": "Flash programming path, allocations, media initialization, UI state and error/retry state; not passive inspection",
+      "limit": "Reviewed pre-burn code seeks past the separate updater ELF and directly calls an application writer. No launch of that separate ELF is established in this traced route. Static flow is not a recorded installed-camera trace; complete writer body/geometry remain separately bounded research."
+    },
+    {
+      "id": "handoff.reboot_rom_boundary",
+      "status": "static-route-partial",
+      "caller": 2148150508,
+      "entry": 2148227216,
+      "rom_target": 3217032804,
+      "argument": "a0=old&~(mask|3000)|requested&(mask|3000); requested bit800 replaces requested with old",
+      "behavior": "Application quiesces drivers, clocks/GPIO/interrupt state and cache;800b5890 calls800b3a90, writes zero to b0802010 and jumps through t1 to bfc00664",
+      "limit": "ROM instructions at bfc00664 and reset-vector-to-ROM routing are absent. This is an application-dependent handoff, not a verified independent recovery entry or host invocation."
+    },
+    {
+      "id": "handoff.boot_flags_producer",
+      "status": "unresolved",
+      "reader": 2147871392,
+      "runtime_address": 3217069564,
+      "cache": 2147872340,
+      "behavior": "Reads/caches runtime word while controlling interrupt state; cached value reused when notffffffff",
+      "gap": "Reviewed code passes merged flags in a0 to absent ROM; it does not establish where ROM writes bfc095fc or populates bfc09600",
+      "limit": "No instruction or request is emitted to set flags, jump to ROM, change boot source or invoke updater."
+    },
+    {
+      "id": "handoff.recovery_independence",
+      "status": "blocked",
+      "known": "Normal card update uses application code. A separate original updater and tiny loader exist, but their reset-independent activation remains unverified.",
+      "required": [
+        "Installed ROM/reset routing and safe software-only activation",
+        "Bounded transport and full installed boot/firmware/calibration/settings/ECC backup",
+        "Verified restore procedure available when application startup fails"
+      ],
+      "limit": "Neither existing user-reported normal update success nor recovered ROM handoff argument supplies these missing contracts"
+    }
+  ],
+  "gates": {
+    "normal_update_route_static": true,
+    "boot_flags_producer_verified": false,
+    "reset_to_recovery_independent": false,
+    "complete_backup_verified": false,
+    "software_unbootable_recovery_verified": false,
+    "executable_trial_allowed": false
+  },
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "map_updater_handoff.py": "2e24fb3755ffe63015fdf066f03d84f43c5de95455e42f4777cf59b587042ec0",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "evidence_class": "direct Ghidra static observations; not native REA Evidence",
+  "output": "derived/native-analysis-complete",
+  "images": [
+    {
+      "image": "application",
+      "input_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+      "language": "MIPS:LE:32:default",
+      "representation": "unpacked executable/analysis image",
+      "discovered_functions": 15816,
+      "exported_functions": 15816,
+      "decompilation_failures": 3,
+      "all_discovered_functions_exported": true,
+      "source_unchanged": true,
+      "target_executed": false
+    },
+    {
+      "image": "image-00000200",
+      "input_sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "language": "MIPS:LE:32:default",
+      "representation": "unpacked executable/analysis image",
+      "discovered_functions": 1526,
+      "exported_functions": 1526,
+      "decompilation_failures": 0,
+      "all_discovered_functions_exported": true,
+      "source_unchanged": true,
+      "target_executed": false
+    },
+    {
+      "image": "image-001006c0",
+      "input_sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+      "language": "MIPS:LE:32:default",
+      "representation": "unpacked executable/analysis image",
+      "discovered_functions": 16,
+      "exported_functions": 16,
+      "decompilation_failures": 0,
+      "all_discovered_functions_exported": true,
+      "source_unchanged": true,
+      "target_executed": false
+    },
+    {
+      "image": "image-001026c0",
+      "input_sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+      "language": "MIPS:LE:32:default",
+      "representation": "unpacked executable/analysis image",
+      "discovered_functions": 2168,
+      "exported_functions": 2168,
+      "decompilation_failures": 0,
+      "all_discovered_functions_exported": true,
+      "source_unchanged": true,
+      "target_executed": false
+    },
+    {
+      "image": "image-002202c0",
+      "input_sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+      "language": "MIPS:LE:32:default",
+      "representation": "packed carrier ELF; inventory only",
+      "discovered_functions": 0,
+      "exported_functions": 0,
+      "decompilation_failures": 0,
+      "all_discovered_functions_exported": true,
+      "source_unchanged": true,
+      "target_executed": false
+    },
+    {
+      "image": "image-003bd9a8",
+      "input_sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+      "language": "MIPS:LE:32:default",
+      "representation": "packed carrier ELF; inventory only",
+      "discovered_functions": 0,
+      "exported_functions": 0,
+      "decompilation_failures": 0,
+      "all_discovered_functions_exported": true,
+      "source_unchanged": true,
+      "target_executed": false
+    },
+    {
+      "image": "image-005c2b78",
+      "input_sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+      "language": "MIPS:LE:32:default",
+      "representation": "packed carrier ELF; inventory only",
+      "discovered_functions": 0,
+      "exported_functions": 0,
+      "decompilation_failures": 0,
+      "all_discovered_functions_exported": true,
+      "source_unchanged": true,
+      "target_executed": false
+    }
+  ],
+  "target_executed": false,
+  "original_inputs_changed": false,
+  "limits": "Decompiler pseudocode and inferred types are not original C or a proved camera ABI"
+}

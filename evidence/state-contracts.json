@@ -1,0 +1,2324 @@
+{
+  "method": "Authenticated source, ELF/program-header/region hashes, compiler-unwind function ranges, exact reviewed MIPS32 instructions and bounded tables",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_elf_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "rea_evidence": false,
+  "evidence_class": "local source-bound static evidence",
+  "target_executed": false,
+  "device_commands_issued": false,
+  "reviewed_instruction_assertions": 55,
+  "listings": [
+    {
+      "label": "function-80008f80",
+      "address": 2147520384,
+      "bytes": 196,
+      "sha256": "aa928683632beb2d1f6657fbeb9a212bbc2590e5f05672ce90adbc53a379ef77",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155724188,
+      "path": "derived\\state-contracts-check\\function-80008f80.asm"
+    },
+    {
+      "label": "function-800093b0",
+      "address": 2147521456,
+      "bytes": 12,
+      "sha256": "28f7518449c6d401c5018296d75e3c6e0319115567a753efc456eb1495207468",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155724284,
+      "path": "derived\\state-contracts-check\\function-800093b0.asm"
+    },
+    {
+      "label": "function-80009644",
+      "address": 2147522116,
+      "bytes": 776,
+      "sha256": "ffa0751d3dd01e53306c5bae36281232bd34b5901b4654e5467d4570ed68ffa7",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155724396,
+      "path": "derived\\state-contracts-check\\function-80009644.asm"
+    },
+    {
+      "label": "function-805ac85c",
+      "address": 2153433180,
+      "bytes": 488,
+      "sha256": "5592eb1c14918c72c95b3614390601a7b6840b3375734fc5d812f5847c71587b",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155811344,
+      "path": "derived\\state-contracts-check\\function-805ac85c.asm"
+    },
+    {
+      "label": "function-805a7070",
+      "address": 2153410672,
+      "bytes": 232,
+      "sha256": "479bdfd5fa5a6c119945020e716912aae4738684d460068fb4c472e5f47cab18",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155810256,
+      "path": "derived\\state-contracts-check\\function-805a7070.asm"
+    },
+    {
+      "label": "function-8061c18c",
+      "address": 2153890188,
+      "bytes": 320,
+      "sha256": "0f5ddf2da834462e421158fccb2e6737062c7789719d634df7f0cbcf33764c97",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155837624,
+      "path": "derived\\state-contracts-check\\function-8061c18c.asm"
+    },
+    {
+      "label": "function-806fbfa8",
+      "address": 2154807208,
+      "bytes": 216,
+      "sha256": "439bf183c9867d520aa9dbf746e00927f74a715534368b035061be26c4e3c95d",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155780064,
+      "path": "derived\\state-contracts-check\\function-806fbfa8.asm"
+    },
+    {
+      "label": "function-806fc2a4",
+      "address": 2154807972,
+      "bytes": 320,
+      "sha256": "f6d985856e8aa6072d610b21bc9afcb6155018bc268cf3c00e1c4d41fef4b770",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155780112,
+      "path": "derived\\state-contracts-check\\function-806fc2a4.asm"
+    },
+    {
+      "label": "function-806fc4f0",
+      "address": 2154808560,
+      "bytes": 308,
+      "sha256": "66237897b6ce021f7e79676bbf6a17f1cafe46ea639371ce585538a60cbecbe5",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155780176,
+      "path": "derived\\state-contracts-check\\function-806fc4f0.asm"
+    },
+    {
+      "label": "function-806fc98c",
+      "address": 2154809740,
+      "bytes": 696,
+      "sha256": "9d02a4c3c3ffad5bdbe091f165a379fb46edaebc9593c42cd2f693512fc6d397",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155780304,
+      "path": "derived\\state-contracts-check\\function-806fc98c.asm"
+    },
+    {
+      "label": "function-8071c7ac",
+      "address": 2154940332,
+      "bytes": 260,
+      "sha256": "02d2b9326d5953dee8711cbb0f165a813800129cc671dcd6656628e35eccec5f",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155787032,
+      "path": "derived\\state-contracts-check\\function-8071c7ac.asm"
+    },
+    {
+      "label": "function-8071d58c",
+      "address": 2154943884,
+      "bytes": 572,
+      "sha256": "9dcfe70837e4012a6f2495881818d3a83dd48cb8ab472b57c5e09ff2bc2473b0",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155787296,
+      "path": "derived\\state-contracts-check\\function-8071d58c.asm"
+    },
+    {
+      "label": "function-807372f8",
+      "address": 2155049720,
+      "bytes": 172,
+      "sha256": "ade07972e4c7353d27031dc92ebb648266bdf419c7d49ca0b72f40d171413c91",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155794580,
+      "path": "derived\\state-contracts-check\\function-807372f8.asm"
+    },
+    {
+      "label": "function-807373a4",
+      "address": 2155049892,
+      "bytes": 172,
+      "sha256": "64d6ded4874cb2bc52441505db59ce26ed7db0d1c3745331a1f50584ec8e622b",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155794608,
+      "path": "derived\\state-contracts-check\\function-807373a4.asm"
+    },
+    {
+      "label": "function-807375e8",
+      "address": 2155050472,
+      "bytes": 124,
+      "sha256": "b70c24231413d967bd4b023db8eda608357a1e1952076b30d663a0598c129659",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155794748,
+      "path": "derived\\state-contracts-check\\function-807375e8.asm"
+    },
+    {
+      "label": "function-80737664",
+      "address": 2155050596,
+      "bytes": 124,
+      "sha256": "1785c9341060264fef306574f7c1484d6e1d6aaaad9eb623330e96962899f445",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155794776,
+      "path": "derived\\state-contracts-check\\function-80737664.asm"
+    },
+    {
+      "label": "function-8073782c",
+      "address": 2155051052,
+      "bytes": 120,
+      "sha256": "7d5b4a9ca3671ceb697b95dc9dd5472216623bb84ad69857cf80fa54347c149c",
+      "complete_linear_decode": true,
+      "boundary": "compiler-unwind FDE",
+      "fde_address": 2155794880,
+      "path": "derived\\state-contracts-check\\function-8073782c.asm"
+    },
+    {
+      "label": "debug_dispatcher",
+      "address": 2155438344,
+      "bytes": 520,
+      "sha256": "c6c70761bb277258982eb5787f3dfa84a72eec663c274232189ff681b58910a2",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\debug_dispatcher.asm"
+    },
+    {
+      "label": "debug_control_receiver",
+      "address": 2155438864,
+      "bytes": 276,
+      "sha256": "d9ef263f7c5db1dbaf41d023614a7033e9aef9bc2b5323cd6faaf351e18268b3",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\debug_control_receiver.asm"
+    },
+    {
+      "label": "debug_control_loop",
+      "address": 2155403188,
+      "bytes": 172,
+      "sha256": "cd2a7102e8e8cd1a9fd71933b84d69f4efd28d779f275e43c6a21e56958209a5",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\debug_control_loop.asm"
+    },
+    {
+      "label": "debug_queue_loop",
+      "address": 2155403360,
+      "bytes": 44,
+      "sha256": "817e1189ae566be0fa7a25c99b3fcbcf0505c2207974fabe41d2c3a96844a3b3",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\debug_queue_loop.asm"
+    },
+    {
+      "label": "debug_serial_loop",
+      "address": 2155420944,
+      "bytes": 272,
+      "sha256": "2b3c395a25f287b3e85e7875e2aaaed483674787b5ed889f9f4a3599de7d4ff0",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\debug_serial_loop.asm"
+    },
+    {
+      "label": "debug_serial_header",
+      "address": 2155436944,
+      "bytes": 336,
+      "sha256": "79dd68c9829df7deb3a1e00f6d56b0d4945e9111a3ab383f25843dc3447a982f",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\debug_serial_header.asm"
+    },
+    {
+      "label": "getmem",
+      "address": 2155470388,
+      "bytes": 472,
+      "sha256": "c5a9cd877bfb4ded4b09b6fa04475e1960031e681ebbb3b8442c3c511adeeeaf",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\getmem.asm"
+    },
+    {
+      "label": "command_state_setter",
+      "address": 2149596756,
+      "bytes": 80,
+      "sha256": "d91395986f75ec3ce3c58ce6bb6347e40d760c8ce817e2cfed14d658a9aaa7e2",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\command_state_setter.asm"
+    },
+    {
+      "label": "media_operation_router",
+      "address": 2148417676,
+      "bytes": 264,
+      "sha256": "beb67e9d97b60b9c35735a7118d93681970b23c3690f14f049c56fd25dc3dcd7",
+      "complete_linear_decode": true,
+      "boundary": "analyst-bounded window",
+      "fde_address": null,
+      "path": "derived\\state-contracts-check\\media_operation_router.asm"
+    }
+  ],
+  "diagnostic_and_filename_bindings": {
+    "0x8037e720": "B:\\UiGeneral.bin",
+    "0x803813e4": "B:\\UiView.bin",
+    "0x803813f4": "B:\\UiView.bin",
+    "0x80686dd8": "GetMem (Usb) time: %d uSec, bw: %d MB/s\n"
+  },
+  "ui_events": {
+    "handler": 2153433180,
+    "dispatch_table": 2154224556,
+    "first_event": 258,
+    "last_event": 292,
+    "entries": [
+      {
+        "event": 258,
+        "target": 2153433440
+      },
+      {
+        "event": 259,
+        "target": 2153433496
+      },
+      {
+        "event": 260,
+        "target": 2153433580
+      },
+      {
+        "event": 261,
+        "target": 2153433592
+      },
+      {
+        "event": 262,
+        "target": 2153433252
+      },
+      {
+        "event": 263,
+        "target": 2153433452
+      },
+      {
+        "event": 264,
+        "target": 2153433252
+      },
+      {
+        "event": 265,
+        "target": 2153433420
+      },
+      {
+        "event": 266,
+        "target": 2153433420
+      },
+      {
+        "event": 267,
+        "target": 2153433232
+      },
+      {
+        "event": 268,
+        "target": 2153433420
+      },
+      {
+        "event": 269,
+        "target": 2153433232
+      },
+      {
+        "event": 270,
+        "target": 2153433452
+      },
+      {
+        "event": 271,
+        "target": 2153433232
+      },
+      {
+        "event": 272,
+        "target": 2153433232
+      },
+      {
+        "event": 273,
+        "target": 2153433232
+      },
+      {
+        "event": 274,
+        "target": 2153433232
+      },
+      {
+        "event": 275,
+        "target": 2153433232
+      },
+      {
+        "event": 276,
+        "target": 2153433232
+      },
+      {
+        "event": 277,
+        "target": 2153433232
+      },
+      {
+        "event": 278,
+        "target": 2153433232
+      },
+      {
+        "event": 279,
+        "target": 2153433232
+      },
+      {
+        "event": 280,
+        "target": 2153433232
+      },
+      {
+        "event": 281,
+        "target": 2153433232
+      },
+      {
+        "event": 282,
+        "target": 2153433232
+      },
+      {
+        "event": 283,
+        "target": 2153433232
+      },
+      {
+        "event": 284,
+        "target": 2153433232
+      },
+      {
+        "event": 285,
+        "target": 2153433232
+      },
+      {
+        "event": 286,
+        "target": 2153433232
+      },
+      {
+        "event": 287,
+        "target": 2153433232
+      },
+      {
+        "event": 288,
+        "target": 2153433232
+      },
+      {
+        "event": 289,
+        "target": 2153433232
+      },
+      {
+        "event": 290,
+        "target": 2153433232
+      },
+      {
+        "event": 291,
+        "target": 2153433232
+      },
+      {
+        "event": 292,
+        "target": 2153433452
+      }
+    ],
+    "commit_selection_events": [
+      262,
+      264
+    ],
+    "physical_button_meanings": null,
+    "color_ram_byte_offset": 26,
+    "current_view_pointer_global": 2156468396,
+    "menu_state_pointer_global": 2148561288,
+    "menu_descriptor": {
+      "entry_count_u32_offset": 0,
+      "selected_u32_offset": 4,
+      "parent_pointer_offset": 16,
+      "next_pointer_offset": 20,
+      "creator_callback_offset": 24,
+      "entries_pointer_offset": 36,
+      "entry_stride": 3,
+      "selected_flag_offset": 2,
+      "selected_flag_mask": 1
+    },
+    "finding": "Color commit stores selection, applies pipeline, then reaches generic menu transition; selection helper modifies RAM flags rather than directly serializing settings."
+  },
+  "settings": {
+    "store_getter": 2147521456,
+    "store_ram_base": 2147496660,
+    "setup_ram_pointer_global": 2156469948,
+    "welcome_byte_offset": 25,
+    "view_ram_base": 2156469952,
+    "view_bank_stride": 56,
+    "view_banks_copied": 4,
+    "current_bank_selector": 2154940332,
+    "bank_selector_limit": "Selector also uses banks8,9,10 and special fixed pointers; four copied banks do not cover every active mode.",
+    "serialization": [
+      {
+        "label": "setup",
+        "store_offset": 40,
+        "bytes": 74,
+        "stage_api": 2155049720,
+        "load_api": 2155049892,
+        "menu_mode": 12288,
+        "field_welcome_store_offset": 65
+      },
+      {
+        "label": "view_banks",
+        "store_offset": 118,
+        "bytes": 224,
+        "stage_api": 2155050596,
+        "load_api": 2155050472,
+        "menu_mode": 8448,
+        "color_field_store_offsets_for_four_banks": [
+          144,
+          200,
+          256,
+          312
+        ]
+      },
+      {
+        "label": "shared_view_fields",
+        "store_offset": 342,
+        "bytes": 36,
+        "stage_api": 2155051052,
+        "source_ram_base": 2156469896
+      }
+    ],
+    "menu_transition": 2154807972,
+    "media_transaction_candidate": 2147522116,
+    "transaction": {
+      "store_copy_bytes": 416,
+      "allocation_bytes": 1024,
+      "checksum_helper": 2147520384,
+      "checksum_argument": 415,
+      "checksum_complete_coverage_established": false,
+      "checksum_trailer_byte_offset": 415,
+      "media_position_global": 2147496536,
+      "media_router": 2148417676,
+      "operation_selectors_observed": [
+        2,
+        1,
+        0
+      ],
+      "success_return": 0,
+      "failure_return": 1,
+      "media_operations_semantics": "Prepare/write/read interpretation is an inference from call order, buffer use and checksum readback; exact physical flash operation boundaries remain unproven."
+    },
+    "finding": "Mode-selected menu transitions stage RAM fields into the shared store before calling a media transaction that writes, reads back and compares a trailer byte. Filename arguments to the view copy helpers are ignored in the reviewed helpers; UiView.bin is not evidence of file-based persistence.",
+    "safe_standalone_settings_api": false,
+    "power_cycle_persistence_observed": false
+  },
+  "debug_dispatch": {
+    "dispatcher": 2155438344,
+    "table_base": 2156498632,
+    "record_bytes": 8,
+    "bounded_prefix_records": 244,
+    "records": [
+      {
+        "index": 0,
+        "record_address": 2156498632,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 1,
+        "record_address": 2156498640,
+        "handler": 2155471540,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 2,
+        "record_address": 2156498648,
+        "handler": 2155471548,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 3,
+        "record_address": 2156498656,
+        "handler": 2155442624,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 4,
+        "record_address": 2156498664,
+        "handler": 2155441076,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 5,
+        "record_address": 2156498672,
+        "handler": 2155441196,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 6,
+        "record_address": 2156498680,
+        "handler": 2155441212,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 7,
+        "record_address": 2156498688,
+        "handler": 2155441244,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 8,
+        "record_address": 2156498696,
+        "handler": 2155441288,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 9,
+        "record_address": 2156498704,
+        "handler": 2155441332,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 10,
+        "record_address": 2156498712,
+        "handler": 2155442092,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 11,
+        "record_address": 2156498720,
+        "handler": 2155442272,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 12,
+        "record_address": 2156498728,
+        "handler": 2155442452,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 13,
+        "record_address": 2156498736,
+        "handler": 2155442492,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 14,
+        "record_address": 2156498744,
+        "handler": 2155439876,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 15,
+        "record_address": 2156498752,
+        "handler": 2155440872,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 16,
+        "record_address": 2156498760,
+        "handler": 2155477828,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 17,
+        "record_address": 2156498768,
+        "handler": 2155442672,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 18,
+        "record_address": 2156498776,
+        "handler": 2155442540,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 19,
+        "record_address": 2156498784,
+        "handler": 2155441856,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 20,
+        "record_address": 2156498792,
+        "handler": 2155441364,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 21,
+        "record_address": 2156498800,
+        "handler": 2155441536,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 22,
+        "record_address": 2156498808,
+        "handler": 2155441704,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 23,
+        "record_address": 2156498816,
+        "handler": 2155443204,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 24,
+        "record_address": 2156498824,
+        "handler": 2155465820,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 25,
+        "record_address": 2156498832,
+        "handler": 2155465860,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 26,
+        "record_address": 2156498840,
+        "handler": 2155465896,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 27,
+        "record_address": 2156498848,
+        "handler": 2155465944,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 28,
+        "record_address": 2156498856,
+        "handler": 2155465984,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 29,
+        "record_address": 2156498864,
+        "handler": 2155441448,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 30,
+        "record_address": 2156498872,
+        "handler": 2155443236,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 31,
+        "record_address": 2156498880,
+        "handler": 2155442888,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 32,
+        "record_address": 2156498888,
+        "handler": 2155442984,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 33,
+        "record_address": 2156498896,
+        "handler": 2155443056,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 34,
+        "record_address": 2156498904,
+        "handler": 2155443092,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 35,
+        "record_address": 2156498912,
+        "handler": 2155452360,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 36,
+        "record_address": 2156498920,
+        "handler": 2155474424,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 37,
+        "record_address": 2156498928,
+        "handler": 2155443132,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 38,
+        "record_address": 2156498936,
+        "handler": 2155443284,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 39,
+        "record_address": 2156498944,
+        "handler": 2155443316,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 40,
+        "record_address": 2156498952,
+        "handler": 2155443356,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 41,
+        "record_address": 2156498960,
+        "handler": 2155443780,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 42,
+        "record_address": 2156498968,
+        "handler": 2155443696,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 43,
+        "record_address": 2156498976,
+        "handler": 2155474460,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 44,
+        "record_address": 2156498984,
+        "handler": 2155443956,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 45,
+        "record_address": 2156498992,
+        "handler": 2155443992,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 46,
+        "record_address": 2156499000,
+        "handler": 2155444036,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 47,
+        "record_address": 2156499008,
+        "handler": 2155444080,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 48,
+        "record_address": 2156499016,
+        "handler": 2155444832,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 49,
+        "record_address": 2156499024,
+        "handler": 2155473548,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 50,
+        "record_address": 2156499032,
+        "handler": 2155477860,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 51,
+        "record_address": 2156499040,
+        "handler": 2155474360,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 52,
+        "record_address": 2156499048,
+        "handler": 2155445556,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 53,
+        "record_address": 2156499056,
+        "handler": 2155473580,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 54,
+        "record_address": 2156499064,
+        "handler": 2155473772,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 55,
+        "record_address": 2156499072,
+        "handler": 2155465608,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 56,
+        "record_address": 2156499080,
+        "handler": 2155465652,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 57,
+        "record_address": 2156499088,
+        "handler": 2155465696,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 58,
+        "record_address": 2156499096,
+        "handler": 2155465736,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 59,
+        "record_address": 2156499104,
+        "handler": 2155445736,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 60,
+        "record_address": 2156499112,
+        "handler": 2155445908,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 61,
+        "record_address": 2156499120,
+        "handler": 2155445680,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 62,
+        "record_address": 2156499128,
+        "handler": 2155445624,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 63,
+        "record_address": 2156499136,
+        "handler": 2155446112,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 64,
+        "record_address": 2156499144,
+        "handler": 2155452724,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 65,
+        "record_address": 2156499152,
+        "handler": 2155450456,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 66,
+        "record_address": 2156499160,
+        "handler": 2155450388,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 67,
+        "record_address": 2156499168,
+        "handler": 2155450420,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 68,
+        "record_address": 2156499176,
+        "handler": 2155450532,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 69,
+        "record_address": 2156499184,
+        "handler": 2155453992,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 70,
+        "record_address": 2156499192,
+        "handler": 2155452836,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 71,
+        "record_address": 2156499200,
+        "handler": 2155466456,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 72,
+        "record_address": 2156499208,
+        "handler": 2155443440,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 73,
+        "record_address": 2156499216,
+        "handler": 2155443520,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 74,
+        "record_address": 2156499224,
+        "handler": 2155466272,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 75,
+        "record_address": 2156499232,
+        "handler": 2155466348,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 76,
+        "record_address": 2156499240,
+        "handler": 2155466224,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 77,
+        "record_address": 2156499248,
+        "handler": 2155458520,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 78,
+        "record_address": 2156499256,
+        "handler": 2155467084,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 79,
+        "record_address": 2156499264,
+        "handler": 2155467208,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 80,
+        "record_address": 2156499272,
+        "handler": 2155450576,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 81,
+        "record_address": 2156499280,
+        "handler": 2155450608,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 82,
+        "record_address": 2156499288,
+        "handler": 2155450660,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 83,
+        "record_address": 2156499296,
+        "handler": 2155450708,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 84,
+        "record_address": 2156499304,
+        "handler": 2155450740,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 85,
+        "record_address": 2156499312,
+        "handler": 2155478108,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 86,
+        "record_address": 2156499320,
+        "handler": 2155451340,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 87,
+        "record_address": 2156499328,
+        "handler": 2155474748,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 88,
+        "record_address": 2156499336,
+        "handler": 2155474800,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 89,
+        "record_address": 2156499344,
+        "handler": 2155475076,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 90,
+        "record_address": 2156499352,
+        "handler": 2155475112,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 91,
+        "record_address": 2156499360,
+        "handler": 2155475144,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 92,
+        "record_address": 2156499368,
+        "handler": 2155475180,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 93,
+        "record_address": 2156499376,
+        "handler": 2155475228,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 94,
+        "record_address": 2156499384,
+        "handler": 2155475272,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 95,
+        "record_address": 2156499392,
+        "handler": 2155474820,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 96,
+        "record_address": 2156499400,
+        "handler": 2155451588,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 97,
+        "record_address": 2156499408,
+        "handler": 2155451648,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 98,
+        "record_address": 2156499416,
+        "handler": 2155451708,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 99,
+        "record_address": 2156499424,
+        "handler": 2155477936,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 100,
+        "record_address": 2156499432,
+        "handler": 2155451812,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 101,
+        "record_address": 2156499440,
+        "handler": 2155451876,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 102,
+        "record_address": 2156499448,
+        "handler": 2155451940,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 103,
+        "record_address": 2156499456,
+        "handler": 2155452056,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 104,
+        "record_address": 2156499464,
+        "handler": 2155457596,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 105,
+        "record_address": 2156499472,
+        "handler": 2155477780,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 106,
+        "record_address": 2156499480,
+        "handler": 2155452196,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 107,
+        "record_address": 2156499488,
+        "handler": 2155452272,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 108,
+        "record_address": 2156499496,
+        "handler": 2155457064,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 109,
+        "record_address": 2156499504,
+        "handler": 2155457216,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 110,
+        "record_address": 2156499512,
+        "handler": 2155457312,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 111,
+        "record_address": 2156499520,
+        "handler": 2155457428,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 112,
+        "record_address": 2156499528,
+        "handler": 2155452616,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 113,
+        "record_address": 2156499536,
+        "handler": 2155453504,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 114,
+        "record_address": 2156499544,
+        "handler": 2155453700,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 115,
+        "record_address": 2156499552,
+        "handler": 2155453856,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 116,
+        "record_address": 2156499560,
+        "handler": 2155453628,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 117,
+        "record_address": 2156499568,
+        "handler": 2155453668,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 118,
+        "record_address": 2156499576,
+        "handler": 2155444112,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 119,
+        "record_address": 2156499584,
+        "handler": 2155453936,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 120,
+        "record_address": 2156499592,
+        "handler": 2155454104,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 121,
+        "record_address": 2156499600,
+        "handler": 2155454048,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 122,
+        "record_address": 2156499608,
+        "handler": 2155454496,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 123,
+        "record_address": 2156499616,
+        "handler": 2155454320,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 124,
+        "record_address": 2156499624,
+        "handler": 2155454752,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 125,
+        "record_address": 2156499632,
+        "handler": 2155454544,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 126,
+        "record_address": 2156499640,
+        "handler": 2155475292,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 127,
+        "record_address": 2156499648,
+        "handler": 2155475340,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 128,
+        "record_address": 2156499656,
+        "handler": 2155475404,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 129,
+        "record_address": 2156499664,
+        "handler": 2155475448,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 130,
+        "record_address": 2156499672,
+        "handler": 2155475468,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 131,
+        "record_address": 2156499680,
+        "handler": 2155475532,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 132,
+        "record_address": 2156499688,
+        "handler": 2155475588,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 133,
+        "record_address": 2156499696,
+        "handler": 2155475608,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 134,
+        "record_address": 2156499704,
+        "handler": 2155475664,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 135,
+        "record_address": 2156499712,
+        "handler": 2155475728,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 136,
+        "record_address": 2156499720,
+        "handler": 2155475748,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 137,
+        "record_address": 2156499728,
+        "handler": 2155475788,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 138,
+        "record_address": 2156499736,
+        "handler": 2155475836,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 139,
+        "record_address": 2156499744,
+        "handler": 2155475904,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 140,
+        "record_address": 2156499752,
+        "handler": 2155475960,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 141,
+        "record_address": 2156499760,
+        "handler": 2155476004,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 142,
+        "record_address": 2156499768,
+        "handler": 2155476024,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 143,
+        "record_address": 2156499776,
+        "handler": 2155476068,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 144,
+        "record_address": 2156499784,
+        "handler": 2155476088,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 145,
+        "record_address": 2156499792,
+        "handler": 2155476132,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 146,
+        "record_address": 2156499800,
+        "handler": 2155466216,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 147,
+        "record_address": 2156499808,
+        "handler": 2155471648,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 148,
+        "record_address": 2156499816,
+        "handler": 2155474920,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 149,
+        "record_address": 2156499824,
+        "handler": 2155472224,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 150,
+        "record_address": 2156499832,
+        "handler": 2155476152,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 151,
+        "record_address": 2156499840,
+        "handler": 2155476212,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 152,
+        "record_address": 2156499848,
+        "handler": 2155472784,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 153,
+        "record_address": 2156499856,
+        "handler": 2155470860,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 154,
+        "record_address": 2156499864,
+        "handler": 2155473812,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 155,
+        "record_address": 2156499872,
+        "handler": 2155476272,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 156,
+        "record_address": 2156499880,
+        "handler": 2155476404,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 157,
+        "record_address": 2156499888,
+        "handler": 2155478148,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 158,
+        "record_address": 2156499896,
+        "handler": 2155475036,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 159,
+        "record_address": 2156499904,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 160,
+        "record_address": 2156499912,
+        "handler": 2155462452,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 161,
+        "record_address": 2156499920,
+        "handler": 2155462420,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 162,
+        "record_address": 2156499928,
+        "handler": 2155462720,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 163,
+        "record_address": 2156499936,
+        "handler": 2155463532,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 164,
+        "record_address": 2156499944,
+        "handler": 2155463564,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 165,
+        "record_address": 2156499952,
+        "handler": 2155463604,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 166,
+        "record_address": 2156499960,
+        "handler": 2155463708,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 167,
+        "record_address": 2156499968,
+        "handler": 2155463748,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 168,
+        "record_address": 2156499976,
+        "handler": 2155463824,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 169,
+        "record_address": 2156499984,
+        "handler": 2155463880,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 170,
+        "record_address": 2156499992,
+        "handler": 2155462188,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 171,
+        "record_address": 2156500000,
+        "handler": 2155457712,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 172,
+        "record_address": 2156500008,
+        "handler": 2155457808,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 173,
+        "record_address": 2156500016,
+        "handler": 2155457908,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 174,
+        "record_address": 2156500024,
+        "handler": 2155458484,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 175,
+        "record_address": 2156500032,
+        "handler": 2155462384,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 176,
+        "record_address": 2156500040,
+        "handler": 2155474060,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 177,
+        "record_address": 2156500048,
+        "handler": 2155458616,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 178,
+        "record_address": 2156500056,
+        "handler": 2155458712,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 179,
+        "record_address": 2156500064,
+        "handler": 2155458748,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 180,
+        "record_address": 2156500072,
+        "handler": 2155478344,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 181,
+        "record_address": 2156500080,
+        "handler": 2155458792,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 182,
+        "record_address": 2156500088,
+        "handler": 2155458900,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 183,
+        "record_address": 2156500096,
+        "handler": 2155459160,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 184,
+        "record_address": 2156500104,
+        "handler": 2155459284,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 185,
+        "record_address": 2156500112,
+        "handler": 2155459316,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 186,
+        "record_address": 2156500120,
+        "handler": 2155459572,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 187,
+        "record_address": 2156500128,
+        "handler": 2155478388,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 188,
+        "record_address": 2156500136,
+        "handler": 2155459676,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 189,
+        "record_address": 2156500144,
+        "handler": 2155459968,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 190,
+        "record_address": 2156500152,
+        "handler": 2155478460,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 191,
+        "record_address": 2156500160,
+        "handler": 2155460260,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 192,
+        "record_address": 2156500168,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 193,
+        "record_address": 2156500176,
+        "handler": 2155478228,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 194,
+        "record_address": 2156500184,
+        "handler": 2155478300,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 195,
+        "record_address": 2156500192,
+        "handler": 2155465520,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 196,
+        "record_address": 2156500200,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 197,
+        "record_address": 2156500208,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 198,
+        "record_address": 2156500216,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 199,
+        "record_address": 2156500224,
+        "handler": 2155465052,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 200,
+        "record_address": 2156500232,
+        "handler": 2155478156,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 201,
+        "record_address": 2156500240,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 202,
+        "record_address": 2156500248,
+        "handler": 0,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 203,
+        "record_address": 2156500256,
+        "handler": 2155474100,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 204,
+        "record_address": 2156500264,
+        "handler": 2155474288,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 205,
+        "record_address": 2156500272,
+        "handler": 0,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 206,
+        "record_address": 2156500280,
+        "handler": 0,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 207,
+        "record_address": 2156500288,
+        "handler": 2155465996,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 208,
+        "record_address": 2156500296,
+        "handler": 2155463988,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 209,
+        "record_address": 2156500304,
+        "handler": 2155464540,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 210,
+        "record_address": 2156500312,
+        "handler": 2155464048,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 211,
+        "record_address": 2156500320,
+        "handler": 2155464080,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 212,
+        "record_address": 2156500328,
+        "handler": 2155492660,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 213,
+        "record_address": 2156500336,
+        "handler": 2155491212,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 214,
+        "record_address": 2156500344,
+        "handler": 2155491320,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 215,
+        "record_address": 2156500352,
+        "handler": 2155491652,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 216,
+        "record_address": 2156500360,
+        "handler": 2155491500,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 217,
+        "record_address": 2156500368,
+        "handler": 2155491832,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 218,
+        "record_address": 2156500376,
+        "handler": 2155492032,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 219,
+        "record_address": 2156500384,
+        "handler": 2155492068,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 220,
+        "record_address": 2156500392,
+        "handler": 2155492100,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 221,
+        "record_address": 2156500400,
+        "handler": 2155492312,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 222,
+        "record_address": 2156500408,
+        "handler": 2155492528,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 223,
+        "record_address": 2156500416,
+        "handler": 2155492700,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 224,
+        "record_address": 2156500424,
+        "handler": 2155440960,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 225,
+        "record_address": 2156500432,
+        "handler": 2155464580,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 226,
+        "record_address": 2156500440,
+        "handler": 2155464612,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 227,
+        "record_address": 2156500448,
+        "handler": 2155464648,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 228,
+        "record_address": 2156500456,
+        "handler": 2155464692,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 229,
+        "record_address": 2156500464,
+        "handler": 2155473344,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 230,
+        "record_address": 2156500472,
+        "handler": 2155465020,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 231,
+        "record_address": 2156500480,
+        "handler": 2155465212,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 232,
+        "record_address": 2156500488,
+        "handler": 2155473528,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 233,
+        "record_address": 2156500496,
+        "handler": 2155465140,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 234,
+        "record_address": 2156500504,
+        "handler": 2155465248,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 235,
+        "record_address": 2156500512,
+        "handler": 2155465172,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 236,
+        "record_address": 2156500520,
+        "handler": 2155466416,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 237,
+        "record_address": 2156500528,
+        "handler": 2155465280,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 238,
+        "record_address": 2156500536,
+        "handler": 2155465312,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 239,
+        "record_address": 2156500544,
+        "handler": 2155440756,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 240,
+        "record_address": 2156500552,
+        "handler": 2155473880,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 241,
+        "record_address": 2156500560,
+        "handler": 2155466056,
+        "raw_flags": 1,
+        "receive_before_handler_bit0": true
+      },
+      {
+        "index": 242,
+        "record_address": 2156500568,
+        "handler": 2155468620,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      },
+      {
+        "index": 243,
+        "record_address": 2156500576,
+        "handler": 2155470388,
+        "raw_flags": 0,
+        "receive_before_handler_bit0": false
+      }
+    ],
+    "getmem_table_index": 243,
+    "setmem_table_index": 242,
+    "table_end_established": false,
+    "handler_abi": {
+      "a0": "low8 subcommand",
+      "a1": "allocated payload buffer",
+      "a2": "transport selector"
+    },
+    "flag_bit0": "Receive payload before handler through 0x80795fe0; not an authorization bit",
+    "selector1_opcode0_header": {
+      "opcode_le16_offset": 0,
+      "subcommand_u8_offset": 2,
+      "payload_offset": 4
+    },
+    "callers": [
+      {
+        "address": 2155403344,
+        "selector": 1,
+        "entry": 2155403188
+      },
+      {
+        "address": 2155403388,
+        "selector": 1,
+        "entry": 2155403360
+      },
+      {
+        "address": 2155421092,
+        "selector": 0,
+        "entry": 2155420944
+      }
+    ],
+    "getmem": {
+      "handler": 2155470388,
+      "command_state": 2148405564,
+      "mode_byte_offset": 0,
+      "address_u32_offset": 4,
+      "length_u32_offset": 16,
+      "memory_mode": 1,
+      "address_or_mask": 536870912,
+      "mode_dispatch_table": 2154327988,
+      "mode_dispatch_entries": [
+        2155470480,
+        2155470520,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470460,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470480,
+        2155470712
+      ],
+      "transfer": 2155438192,
+      "command_state_setter": 2149596756,
+      "side_effects": "Calls cache/memory preparation 0x800b52e4, timestamps and status helper 0x8020108c; not established as a purely passive interface."
+    },
+    "safe_external_transport_established": false,
+    "installed_version_reachability_observed": false
+  },
+  "coverage": [
+    {
+      "question": "UI selection and state layout",
+      "status": "partially_answered",
+      "remaining": "Physical buttons, all creators and complete event ownership"
+    },
+    {
+      "question": "Persistent-settings route",
+      "status": "partially_answered",
+      "remaining": "Physical media geometry, checksum coverage, transaction recovery/atomicity, power-cycle observation"
+    },
+    {
+      "question": "GetMem registration and dispatch",
+      "status": "partially_answered",
+      "remaining": "External activation/mode/endpoints, command-state population from that transport, installed firmware correspondence"
+    },
+    {
+      "question": "Full backup and recovery",
+      "status": "unresolved",
+      "remaining": "Complete flash/calibration capture and demonstrated restore; fixed Nanddn loop is insufficient"
+    }
+  ],
+  "limitations": [
+    "Bounded static v1.1 findings; no original C source, runtime execution, device observation or supported API is recovered.",
+    "Full function linear decoding and direct calls do not establish entrypoint reachability or whole-program coverage.",
+    "Index0xf3 is a proven internal table index; it is not a PTP operation code or a validated host request recipe.",
+    "GetMem command state may be populated separately; dispatcher payload alone does not establish its memory-read framing.",
+    "User-store stage/load sizes are inferred from reviewed copy loops, independently asserted loop constants and delay slots.",
+    "No firmware patch, media access, marker creation, USB request, update or recovery operation is performed."
+  ],
+  "source_unchanged": true
+}

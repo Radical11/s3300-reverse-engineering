@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "date_local": "2026-10-25",
+  "timezone": "Asia/Calcutta",
+  "source_package": {
+    "path": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\s3300-backup-recovery-2026-10-25-source.zip",
+    "files": 375,
+    "sha256": "17898e6e4bdce621602abfef137dfb37d5bb918ad57d88aac42554c4c0a78b04",
+    "vendor_inputs_included": false,
+    "remote_publication": false
+  },
+  "repeat_package": {
+    "path": "C:\\Users\\notak\\OneDrive\\Documents\\ChatGPT\\camera reverse engineering\\derived\\s3300-backup-recovery-2026-10-25-source-repeat.zip",
+    "files": 375,
+    "sha256": "17898e6e4bdce621602abfef137dfb37d5bb918ad57d88aac42554c4c0a78b04",
+    "vendor_inputs_included": false,
+    "remote_publication": false
+  },
+  "deterministic_archive": true,
+  "manifest_files_verified": 374,
+  "fresh_source_tree": "derived\\backup-recovery-fresh-source-2026-10-25",
+  "checks": [
+    {
+      "command": [
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "passed": true,
+      "seconds": 2.58
+    },
+    {
+      "command": [
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "-r",
+        "requirements-analysis.txt"
+      ],
+      "passed": true,
+      "seconds": 2.2
+    },
+    {
+      "command": [
+        "s3300.py",
+        "init"
+      ],
+      "passed": true,
+      "seconds": 31.77
+    },
+    {
+      "command": [
+        "s3300.py",
+        "doctor"
+      ],
+      "passed": true,
+      "seconds": 1.08
+    },
+    {
+      "command": [
+        "tools/build_identity_trial.py",
+        "derived/identity-asset/Startup1.jpg",
+        "derived/pocket-studio-identity-candidate-01"
+      ],
+      "passed": true,
+      "seconds": 10.43
+    },
+    {
+      "command": [
+        "tools/build_amber_trial.py",
+        "derived/amber-reproduction"
+      ],
+      "passed": true,
+      "seconds": 12.33
+    },
+    {
+      "command": [
+        "s3300.py",
+        "validate-candidate",
+        "amber-mono",
+        "--candidate",
+        "derived/amber-reproduction/NOT-INSTALLABLE-patch-plan.research.bin"
+      ],
+      "passed": true,
+      "seconds": 6.43
+    },
+    {
+      "command": [
+        "s3300.py",
+        "sdk-build",
+        "derived/sdk-reproduction"
+      ],
+      "passed": true,
+      "seconds": 1.74
+    },
+    {
+      "command": [
+        "s3300.py",
+        "guide",
+        "derived/guide-reproduction"
+      ],
+      "passed": true,
+      "seconds": 0.24
+    },
+    {
+      "command": [
+        "s3300.py",
+        "browse",
+        "--check"
+      ],
+      "passed": true,
+      "seconds": 0.2
+    },
+    {
+      "command": [
+        "-c",
+        "import json,unittest; r=unittest.TextTestRunner(verbosity=1).run(unittest.defaultTestLoader.discover(\"tests\")); print(json.dumps({\"run\":r.testsRun,\"failures\":len(r.failures),\"errors\":len(r.errors),\"skipped\":[{\"test\":str(t),\"reason\":s} for t,s in r.skipped]})); raise SystemExit(not r.wasSuccessful())"
+      ],
+      "passed": true,
+      "seconds": 5.84
+    }
+  ],
+  "fresh_source_tests": {
+    "run": 459,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "test_real_lookup_in_emulator_selects_changed_span_and_rejects_bad_ids (test_label_contracts.RetainedLabelContractTests.test_real_lookup_in_emulator_selects_changed_span_and_rejects_bad_ids)",
+        "reason": "Private native analysis absent"
+      },
+      {
+        "test": "test_static_path_stays_separate_from_camera_activation (test_label_contracts.RetainedLabelContractTests.test_static_path_stays_separate_from_camera_activation)",
+        "reason": "Private native analysis absent"
+      }
+    ]
+  },
+  "amber_sha256": "d801708b06abbaece3974b2ae0cb9c55ce4154fffc0c132e00b35564ec86ce28",
+  "sdk_sha256": "cd959a7874f698e4e357832bc5fe6e8075316e5afd8385444369e3dfe678ac57",
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "scope": "New isolated Windows Python environment; supplied original firmware and existing compiler/emulator cache; retained vendor Ghidra data deliberately absent",
+  "native_analysis_rebuilt": false,
+  "linux_executed": false,
+  "global_dependencies_changed": false,
+  "vendor_derived_listings_packaged": false,
+  "camera_accessed": false,
+  "camera_flashed": false,
+  "code_ready": false,
+  "complete": false
+}

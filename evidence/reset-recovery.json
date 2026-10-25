@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "method": "Authenticated separate carrier bytes and direct Ghidra dossiers, not REA Evidence",
+  "camera_commands_issued": false,
+  "target_executed": false,
+  "image_namespaces": {
+    "updater": {
+      "carrier_offset": 512,
+      "elf_sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "entry": 2147549184,
+      "flags": 1879052289,
+      "file_backed_ranges": [
+        {
+          "start": 2147484032,
+          "size": 416
+        },
+        {
+          "start": 2147549184,
+          "size": 579352
+        },
+        {
+          "start": 2148128544,
+          "size": 32
+        },
+        {
+          "start": 2148128576,
+          "size": 84724
+        },
+        {
+          "start": 3217063936,
+          "size": 1704
+        }
+      ],
+      "native": {
+        "class": "direct Ghidra static analysis; not REA Evidence",
+        "image_metadata_sha256": "e0ba840c3f28e1cf762e8f4da27796a17885f6726360972bfb229498f93fe33b",
+        "records": [
+          {
+            "address": 2147549184,
+            "dossier_sha256": "f9c142f07aef494cef2f206cf7f118cccf990de8f676684ad70f5d8c629a01ad",
+            "instructions_checked": 8,
+            "name": "entry"
+          },
+          {
+            "address": 2147551688,
+            "dossier_sha256": "fab3833704ba11f4b60e365c31c69ce6a5bc387c39eff15a183685680d4897dc",
+            "instructions_checked": 94,
+            "name": "BurnMain"
+          },
+          {
+            "address": 2147591400,
+            "dossier_sha256": "befea9feaedc2b0987f097ab82baa17ce544adfe2fbf66e8da63988cce5dc3b1",
+            "instructions_checked": 674,
+            "name": "BurnGetSectionsMap"
+          }
+        ]
+      }
+    },
+    "tiny-loader": {
+      "carrier_offset": 1050304,
+      "elf_sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+      "entry": 2164261889,
+      "flags": 268439552,
+      "file_backed_ranges": [
+        {
+          "start": 2164261888,
+          "size": 5548
+        },
+        {
+          "start": 2164267440,
+          "size": 892
+        }
+      ],
+      "native": {
+        "class": "direct Ghidra static analysis; not REA Evidence",
+        "image_metadata_sha256": "e93bf1830c7c98e497aef26123be456bacd24804b58e2a2b8485d590d4b494b1",
+        "records": [
+          {
+            "address": 2164261888,
+            "dossier_sha256": "3c34b64331b7054884b241bcbf9ba1678ffe71bbb2c628b7dc283a20461de70d",
+            "instructions_checked": 16,
+            "name": "entry"
+          },
+          {
+            "address": 2164262468,
+            "dossier_sha256": "431aa0ada471a2e4fb7bd18391c867b2f8f01a569ad11b0f82af7289ea811aa6",
+            "instructions_checked": 47,
+            "name": "FUN_81000644"
+          },
+          {
+            "address": 2164263240,
+            "dossier_sha256": "e41b1fd16b073df0557426296706ba2f29242376ce31b8a7c78b5ab8b185f44d",
+            "instructions_checked": 141,
+            "name": "FUN_81000948"
+          },
+          {
+            "address": 2164263632,
+            "dossier_sha256": "8b58bec6b1517ff8f31e53a967a17e8078928cdfdd5bdffab161823f1f68031f",
+            "instructions_checked": 222,
+            "name": "FUN_81000ad0"
+          },
+          {
+            "address": 2164264128,
+            "dossier_sha256": "09d9ebd96209ad09efd5145037be66cf3ab6a3e98fc0cb0bc9ea927bd34fe89d",
+            "instructions_checked": 187,
+            "name": "FUN_81000cc0"
+          },
+          {
+            "address": 2164264848,
+            "dossier_sha256": "8472239d44f5e08638ddcff3708cc1fd0c8677247ffabc1e0c16310b334a79a2",
+            "instructions_checked": 246,
+            "name": "FUN_81000f90"
+          }
+        ]
+      }
+    },
+    "primary": {
+      "carrier_offset": 1058496,
+      "elf_sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+      "entry": 2147485184,
+      "flags": 1879052289,
+      "file_backed_ranges": [
+        {
+          "start": 2147484032,
+          "size": 416
+        },
+        {
+          "start": 2147485184,
+          "size": 340
+        },
+        {
+          "start": 2147485568,
+          "size": 1075312
+        },
+        {
+          "start": 2680193024,
+          "size": 4844
+        }
+      ],
+      "native": {
+        "class": "direct Ghidra static analysis; not REA Evidence",
+        "image_metadata_sha256": "07f7b90d95534a1cb09faf4ba320a36e12442e1c95297ab6ec7588080c9dcecd",
+        "records": [
+          {
+            "address": 2147485184,
+            "dossier_sha256": "4578040eecb0cd159ceb4c7ba6db81658185f3526cb1b6faf50ffd69ebb14315",
+            "instructions_checked": 17,
+            "name": "entry"
+          },
+          {
+            "address": 2680193024,
+            "dossier_sha256": "d815588796fae9826da94a86ba9618fcd45767da550cfa34ef69b10de885919c",
+            "instructions_checked": 229,
+            "name": "FUN_9fc08000"
+          },
+          {
+            "address": 2680195168,
+            "dossier_sha256": "9543162eb0a87f0b116daba7162bdd88cd40036deeaa0b28af486c0a0396c12d",
+            "instructions_checked": 157,
+            "name": "FUN_9fc08860"
+          }
+        ]
+      }
+    }
+  },
+  "tiny_checks": {
+    "carrier_words": 14,
+    "literal_words": 13,
+    "independent_mips16_disassembly": false,
+    "limit": "Exact original bytes plus retained Ghidra decode; no MIPS16 CPU execution or second decoder"
+  },
+  "original_elf_coverage": [
+    {
+      "image": "image-00000200",
+      "elf_sha256": "2eb90bb3c3dd1055da8122dace774e01e11ed2b18de987020c0323eb6e643b53",
+      "carrier_offset": 512,
+      "representation": "executable carrier",
+      "rom_fingerprint_9fc00900": false,
+      "reset_vector_bfc00000": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-001006c0",
+      "elf_sha256": "039fed03cc9cc89428e5f82660317b93a4ac129543f11bfd98ee75a7d9ce76f8",
+      "carrier_offset": 1050304,
+      "representation": "executable carrier",
+      "rom_fingerprint_9fc00900": false,
+      "reset_vector_bfc00000": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-001026c0",
+      "elf_sha256": "544272e3be3bea81e3b2aed5a2e1a0fc7d9e72cef368ab671679e6cb717d710a",
+      "carrier_offset": 1058496,
+      "representation": "executable carrier",
+      "rom_fingerprint_9fc00900": false,
+      "reset_vector_bfc00000": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-002202c0",
+      "elf_sha256": "713c04ccdb464673d54bef20cc454f46da40b93ebb4fbc3ffe8b7a3839cf9bce",
+      "carrier_offset": 2228928,
+      "representation": "packed carrier; mapped bytes only",
+      "rom_fingerprint_9fc00900": false,
+      "reset_vector_bfc00000": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-003bd9a8",
+      "elf_sha256": "a9ec12967447a66bbb51a6ab14879a001f30e83e898ade423192d90ff618f35a",
+      "carrier_offset": 3922344,
+      "representation": "packed carrier; mapped bytes only",
+      "rom_fingerprint_9fc00900": false,
+      "reset_vector_bfc00000": false,
+      "boot_header_bfc09600": false
+    },
+    {
+      "image": "image-005c2b78",
+      "elf_sha256": "9c6e0d02c57fd65578aa4dd587420d3250292a6147685188e4c3feaec04b7748",
+      "carrier_offset": 6040440,
+      "representation": "packed carrier; mapped bytes only",
+      "rom_fingerprint_9fc00900": false,
+      "reset_vector_bfc00000": false,
+      "boot_header_bfc09600": false
+    }
+  ],
+  "contracts": [
+    {
+      "id": "reset.tiny_loader_entry",
+      "status": "static-route-partial",
+      "chain": [
+        "ELF odd entry81000401, decoded at81000400",
+        "literal81000420 supplies stack81002f28",
+        "literal81000424\u219281000949(MIPS16)",
+        "81000948 reads runtime headerbfc09600+0xc/+0x10/+0x20",
+        "81000ad1 reads ELF header/program headers and copies PT_LOAD data; returns ELF entry+0x18",
+        "81000948 calls returned entry; falls into loop if it returns"
+      ],
+      "constraints": [
+        "No recovered reset-vector-to-loader caller",
+        "Headerbfc09600 is runtime state, not authenticated installed backup",
+        "Calling loaded entry gives no rollback route if load or application fails",
+        "Loader uses p_filesz; no complete BSS, bounds, integrity or placement contract established"
+      ]
+    },
+    {
+      "id": "reset.rom_dependency",
+      "status": "unresolved",
+      "reader": 2164262468,
+      "address": 2680162560,
+      "bytes": 64,
+      "rule": "sum modulo256: f7\u219213a0;29\u219213a1;otherwise returns sum; caller loops forever for other values",
+      "gap": "Neither reset vector atbfc00000 nor these ROM fingerprint bytes are file-backed in any original ELF",
+      "interpretation": "Constants distinguish two low-level paths; no claim of actual CPU/chip model or installed ROM version"
+    },
+    {
+      "id": "reset.primary_rom_address_region",
+      "status": "static-contract-partial",
+      "address": 2680193024,
+      "caller": 2680195168,
+      "role": "Caller quiesces application hardware/cache, changes clock state, calls GPIO/status wait routine, then restores state and returns",
+      "limit": "9fc/bfc-shaped address does not make packaged code immutable ROM or independently reachable recovery"
+    },
+    {
+      "id": "reset.recovery_independence",
+      "status": "blocked",
+      "known": "Separate updater entry80010000 and recovery-section code exist; package RecoverArea flagbit31 is clear",
+      "required": [
+        "Authenticated installed boot/ROM routing independent of application",
+        "Accessible software-only activation and matching safe transport",
+        "Full installed flash geometry and calibration/settings/ECC/bad-block backup coverage",
+        "Verified restoration procedure without deliberately damaging camera"
+      ],
+      "limit": "Package ELF layout is not installed physical flash layout; normal firmware update is not unbootable recovery"
+    }
+  ],
+  "gates": {
+    "reset_to_recovery_independent": false,
+    "complete_backup_verified": false,
+    "software_unbootable_recovery_verified": false,
+    "executable_trial_allowed": false
+  },
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "map_reset_recovery.py": "813be8f591f81004e387495b4cd5a5c92672d048325ca402f397e9198c3008e0",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

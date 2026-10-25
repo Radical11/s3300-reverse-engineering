@@ -210,10 +210,11 @@ def transcode(payload, table_a, table_b, expected_size, dictionary):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path, help="New directory for independent outputs and evidence")
+    parser.add_argument("--source", type=Path, help="Local copy of the hash-bound original v1.1 source")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     framing = json.loads((root/"evidence/packed-segments.json").read_text())
-    source = Path(framing["input_path"])
+    source = args.source or root/"sources/extracted-v1.1/S3300Update/firmware/firmware.bin"
     data = source.read_bytes()
     if sha(data) != BASELINE or framing["input_sha256"] != BASELINE:
         raise ValueError("Unsupported source identity")

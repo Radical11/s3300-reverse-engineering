@@ -1,0 +1,538 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "method": "Authenticated Capstone instructions and direct Ghidra dossiers; not REA Evidence",
+  "target_executed": false,
+  "camera_commands_issued": false,
+  "instruction_assertions": [
+    {
+      "address": 2154857812,
+      "sha256": "12db7abf52bc00b950d21135fa2187d8f3bced2ba47f5d3071c2964ee44d6347"
+    },
+    {
+      "address": 2154857816,
+      "sha256": "016559e0e3772403783ed7ae47e4806435395520dadbfe85af27f151ff8127cb"
+    },
+    {
+      "address": 2154852648,
+      "sha256": "f09445fa3733b4be065fcd4dfd1da942a2442c5fab6d8013f1de5085f088542f"
+    },
+    {
+      "address": 2154852660,
+      "sha256": "32426f79a570b2ffd57444000d12fb8f11d879a520ec5b7c5373c6e9a6b2686b"
+    },
+    {
+      "address": 2154852872,
+      "sha256": "a1bf68089f275eef3085713c9384dc74283dd79855d624ec88ddd7c69893249d"
+    },
+    {
+      "address": 2154852888,
+      "sha256": "8bc759a0030a197b342e3653d5404c2e2498c0bb031b2f90b9a2359c6dc1c045"
+    },
+    {
+      "address": 2149772724,
+      "sha256": "5462e33522496baf33e0ff7666e134961175442f594bfa5f603e027f563fce5d"
+    },
+    {
+      "address": 2149599984,
+      "sha256": "3d14484f0a98d321488579c5995fe8fd33c79f939911d8045b8fbcbc200e3a97"
+    },
+    {
+      "address": 2149599988,
+      "sha256": "83876cac764dbea9ff87eb2bcf4508780a9082ad6c58f19cbe98153fcf0cc694"
+    },
+    {
+      "address": 2149600016,
+      "sha256": "bac270bb1560fc0631ccc0a0dca59d3dfcdb7458f901ccc2e47e5d6114b91167"
+    },
+    {
+      "address": 2149600552,
+      "sha256": "b711081f1cecb5561e140ccc554f8a12e2473cddbfea09ba3e7b47822ebbcbb1"
+    },
+    {
+      "address": 2149600668,
+      "sha256": "ccf1c67e113354314212072cebb06a8651a0f356eade90cf03a0500566a42e60"
+    },
+    {
+      "address": 2149600748,
+      "sha256": "8cc59a48c33cabc7ce8ae31358b4cbdedf9a85acabe9c9b834c46d1b64fc2343"
+    },
+    {
+      "address": 2149600676,
+      "sha256": "00e3b7280c6410b5d5660c1136610e8475ea6cd68781f5edad640ff54897d7aa"
+    },
+    {
+      "address": 2149600684,
+      "sha256": "e47351bcf1991a4de114f02f46317511f24e2065451ed9fc27a43ed0180c2925"
+    },
+    {
+      "address": 2149600692,
+      "sha256": "2f9498e2ae1a5277147df0c3bdfb7be65e61122b91a23bd3a54daf178877737d"
+    },
+    {
+      "address": 2149600700,
+      "sha256": "b22e30d96e708910dfb776240c886a4d6ad5fd1cb4c5ef23c33c137c29d6c26a"
+    },
+    {
+      "address": 2149600580,
+      "sha256": "d287013f8ace0a92a5b47ce5fb3ab177df22376a1933b5be5d4400d512c97ecd"
+    },
+    {
+      "address": 2149600592,
+      "sha256": "d6332477160a27f2574e2af2b7de574dada61d57124738cb57947f7fbea14bf4"
+    },
+    {
+      "address": 2149600596,
+      "sha256": "016559e0e3772403783ed7ae47e4806435395520dadbfe85af27f151ff8127cb"
+    },
+    {
+      "address": 2149600600,
+      "sha256": "fd0b63e57edaa5d3870f6594fcde50e356ee13a6c5af63e6f716da88363817e4"
+    },
+    {
+      "address": 2149600608,
+      "sha256": "0613f3516abdc4f962d3db08819240bbff471466424e166d3477e68b7ba58181"
+    },
+    {
+      "address": 2149600612,
+      "sha256": "c987274dd76e457215e9d61b17b272e51fc021704d766d4d29f8cfb436fbe396"
+    },
+    {
+      "address": 2149841964,
+      "sha256": "992fe8b0a613275ca53e069e9d8fef92d783655b2ec9966fc4bc9ad4a2716de6"
+    },
+    {
+      "address": 2149816340,
+      "sha256": "1ed77a59be80fb1a6125aff6d9b4935c62157aeac5ab0780c217f1d296e92c1c"
+    },
+    {
+      "address": 2149815644,
+      "sha256": "f9bb07a05d1f8a2f323908afe7f89065e7dbcf91a64d5bbea785efd8fe333bf8"
+    },
+    {
+      "address": 2150824804,
+      "sha256": "3b73243abe37a49bc451cbb371d953a1f1b42984fa67564b47e328c180d5c26f"
+    },
+    {
+      "address": 2150839700,
+      "sha256": "1ab76efd828340741d7f178f43b10b0387104432728657dc244cd600836d70cc"
+    },
+    {
+      "address": 2150830736,
+      "sha256": "ed7352f1b2bb0244e85accdc7c66749d75bd65dec2422c425997d275d79c00e8"
+    },
+    {
+      "address": 2150830740,
+      "sha256": "ae78c0d72b97e90d1532e23d223582b78d7c9070d7cecd7a3512204e883e879c"
+    },
+    {
+      "address": 2150830744,
+      "sha256": "b47de3591f72097f9a62d383c23dd6440c6c5086f7cdffaf29d4eff3b8d403a3"
+    },
+    {
+      "address": 2149842932,
+      "sha256": "ecbe993bceb46cb31f29c66e8eefd6dc5118fcea30d4ce39199d37bd5386f203"
+    },
+    {
+      "address": 2149818336,
+      "sha256": "d8f61bb0eb5aa6516399d67281d7eb5f9d6efa3588149f6a5a7637425f7baa97"
+    },
+    {
+      "address": 2149818344,
+      "sha256": "b47de3591f72097f9a62d383c23dd6440c6c5086f7cdffaf29d4eff3b8d403a3"
+    },
+    {
+      "address": 2149818348,
+      "sha256": "e24c9c78ee9648b94208f6b3052025cad502772e4feee01d2ab86209a9c9d2c8"
+    },
+    {
+      "address": 2150668344,
+      "sha256": "d8f61bb0eb5aa6516399d67281d7eb5f9d6efa3588149f6a5a7637425f7baa97"
+    },
+    {
+      "address": 2150668360,
+      "sha256": "17e1be30fe43a9f4e4bbf3f33d80ea9b275d05061285815b218f6ce6713b8bcb"
+    },
+    {
+      "address": 2150668372,
+      "sha256": "64dd816f2e446bd3afa8115f5934b8e21ff2747db0582402063fcbe7d84527d6"
+    },
+    {
+      "address": 2150668380,
+      "sha256": "1ca7082e4ef1f07aae7b31e63b87fce80f08109ff34888702d339fcd78bd8948"
+    },
+    {
+      "address": 2150668384,
+      "sha256": "5b8cff1b70451e91a99f5bb7707a62406530192333e71638a3916f62c5c00a08"
+    },
+    {
+      "address": 2150666192,
+      "sha256": "fc483a9f41cceec1f4395d975605a1bb61e296482c6f6ba65696a62f73cfcb76"
+    },
+    {
+      "address": 2150666204,
+      "sha256": "9c98373bc3c1146f164c87d553b228abb855145ea139ad77d4f7bc071c7e9c8c"
+    },
+    {
+      "address": 2150666208,
+      "sha256": "b47de3591f72097f9a62d383c23dd6440c6c5086f7cdffaf29d4eff3b8d403a3"
+    },
+    {
+      "address": 2149842880,
+      "sha256": "2f403bc533175ca3c78acaec249d344ee9fb67bc9e57435b7f269ded5dfc3aa6"
+    },
+    {
+      "address": 2149818428,
+      "sha256": "68c852aa9fa4c0478a1472ce90dd6f55d14fd6b9f1e38933359567856ffe1989"
+    },
+    {
+      "address": 2149818440,
+      "sha256": "5aaf4ed625467018b7eb68d099817ffc1e546f510f796ef4ccc8bf0fa45d5936"
+    },
+    {
+      "address": 2149537672,
+      "sha256": "fe5550dc96af51d580c09688aed095c7adbcbe232d9a0a2970e34c6d2becd530"
+    },
+    {
+      "address": 2149537692,
+      "sha256": "4b2086a36442e00cd088d203583d8843abcb204fddc2a37f79ec40f696196174"
+    },
+    {
+      "address": 2149537696,
+      "sha256": "0d9499df6d2bc67d1bedd37056c1a03a65cb3cabdb790b2e4f57d9ce65697547"
+    },
+    {
+      "address": 2149537700,
+      "sha256": "dc6f7f73173f0546414610a1f8279b2f77a01d3e634081da308e19e32439b607"
+    },
+    {
+      "address": 2149537704,
+      "sha256": "4f8dbc483c39876eea9a05ab89c2342caab9e049c5b72f70a3e3ac9cdad11f90"
+    },
+    {
+      "address": 2149537708,
+      "sha256": "a734c3b1e8a84c7d41b7bf2d2270330cf75e3e0a86bf7410b64447b0d4e8ada9"
+    },
+    {
+      "address": 2149537720,
+      "sha256": "333776a0485cdd87f2ce4110eab2f4a7f759346206b89f4f02dc744ea7e4bbd7"
+    }
+  ],
+  "bounded_windows": [
+    {
+      "name": "StillCaptMain_entry",
+      "address": 2150839384,
+      "bytes": 576,
+      "sha256": "1d619bb123098d7fdfbd49b38c412497711f70d667b773cf19b11003a2f86185",
+      "instructions": 144,
+      "scope": "analyst-selected original-byte window; no authenticated function boundary claimed"
+    },
+    {
+      "name": "FileCreator_receive_loop",
+      "address": 2150668300,
+      "bytes": 144,
+      "sha256": "1bec5c9b8cbd91ce5cee86dfbd74ef54326431647a726cf33b33472e0d82119e",
+      "instructions": 36,
+      "scope": "analyst-selected original-byte window; no authenticated function boundary claimed"
+    }
+  ],
+  "mode_switch_table": [
+    2149600624,
+    2149600512,
+    2149600680,
+    2149600512,
+    2149600512,
+    2149600672,
+    2149600512,
+    2149600512,
+    2149600512,
+    2149600512,
+    2149600512,
+    2149600512,
+    2149600512,
+    2149600704,
+    2149600696,
+    2149600688
+  ],
+  "native_corroboration": {
+    "class": "direct Ghidra static analysis; not REA Evidence",
+    "image_metadata_sha256": "ab2e71a2a2017316c24c00acefb9fefed5fcb85c2c7761bac09e138483a72965",
+    "records": [
+      {
+        "address": 2154853776,
+        "dossier_sha256": "58c6aa0e78469d5ff831dacc35c849b574777198ba099ba7eb2acaad9759e8f6",
+        "instructions_checked": 1494,
+        "name": "sub_80707590"
+      },
+      {
+        "address": 2154851496,
+        "dossier_sha256": "bbb0f713f3caa6672f1069b8377c02cab6b3afa8345cfd4e4a1d03344bed5506",
+        "instructions_checked": 355,
+        "name": "sub_80706ca8"
+      },
+      {
+        "address": 2149772716,
+        "dossier_sha256": "a3b007a5dbef1b5416139644cd05f5cd8fee758227df5153646e7bf7752437a4",
+        "instructions_checked": 8,
+        "name": "FUN_8022edac"
+      },
+      {
+        "address": 2149598304,
+        "dossier_sha256": "60e49242cafb1df4de88aef9c7306c4ebb7ee14df92762d68a194180845062a1",
+        "instructions_checked": 1025,
+        "name": "FUN_80204460"
+      },
+      {
+        "address": 2149537584,
+        "dossier_sha256": "1575f3a58df5a2ce58a3da30e6bf131cc1fe8ce43f358597f568c17b17cd120f",
+        "instructions_checked": 56,
+        "name": "FUN_801f5730"
+      },
+      {
+        "address": 2149815828,
+        "dossier_sha256": "20da7a9b4862e13ee4a081d17ba47981ee9fbbe49bc5f556e9b0d9d5784994c1",
+        "instructions_checked": 145,
+        "name": "FUN_80239614"
+      },
+      {
+        "address": 2149816408,
+        "dossier_sha256": "e7bafbfb38e5f7e00382fae7f67447fa0236e6efd89d0d2d8e7921042d57e0d2",
+        "instructions_checked": 251,
+        "name": "FUN_80239858"
+      },
+      {
+        "address": 2149815444,
+        "dossier_sha256": "626b974271b5a69fc0a41ab8299c455ace6830dc0cdd6ea22f911d7777d6d06c",
+        "instructions_checked": 96,
+        "name": "FUN_80239494"
+      },
+      {
+        "address": 2150824660,
+        "dossier_sha256": "0c8befd155f1c9a414c3908cac2e21e7dff53e08ac009d09fbad4a2a2714efc1",
+        "instructions_checked": 107,
+        "name": "FUN_8032fad4"
+      },
+      {
+        "address": 2150829464,
+        "dossier_sha256": "210a09ccc1ed1134146ae26e04b1452fe4943da055b3e1621acea4085a259948",
+        "instructions_checked": 1802,
+        "name": "FUN_80330d98"
+      },
+      {
+        "address": 2149818324,
+        "dossier_sha256": "90e061b8d109d222832f77ce2d13990c7a1daa483bf5e8a5e96b9d7170377df3",
+        "instructions_checked": 11,
+        "name": "FUN_80239fd4"
+      },
+      {
+        "address": 2150663292,
+        "dossier_sha256": "d3a706e13b16d34c90e60e886d2e1965dcfce7acf99949db4a8acaab8e1486b3",
+        "instructions_checked": 1252,
+        "name": "FUN_8030847c"
+      },
+      {
+        "address": 2149839960,
+        "dossier_sha256": "56aa8caee9454210aa8a254530940526dfb2361711adbe1d2ea70c5f57b16d7c",
+        "instructions_checked": 1036,
+        "name": "FUN_8023f458"
+      },
+      {
+        "address": 2149818416,
+        "dossier_sha256": "5e8e4008e8cf3d3f241b8f5f00f1f2ede498420945706240949a527f60e6d4b5",
+        "instructions_checked": 11,
+        "name": "FUN_8023a030"
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "id": "capture.ui_mode_arm",
+      "status": "static-route-verified",
+      "ui_handler": 2154853776,
+      "capture_call_site": 2154857812,
+      "capture_setup": 2154851496,
+      "mode_wrapper": 2149772716,
+      "app_set_mode": 2149598304,
+      "normal_arm": "Within selected bVar3==0 setup branch, runtime UI/capture-state object(PTR808918a0) flag+3e chooses53; otherwise80891810 chooses58 or50. Other setup branches choose60 or50. This object is distinct from38-byte viewbank(PTR808918ac).",
+      "side_effects": "UI state, capture/preview setup, timers and flags change before mode dispatch;80891810 is cleared after58.",
+      "limits": [
+        "Physical shutter/key source and all event/state predicates into80707590 are not established.",
+        "Do not equate mode50 with a measured active Auto-mode call solely from this source trace."
+      ]
+    },
+    {
+      "id": "capture.mode_to_thread",
+      "status": "static-contract-verified",
+      "app_set_mode": 2149598304,
+      "selector_map": {
+        "50": 0,
+        "53": 1,
+        "55": 3,
+        "58": 6,
+        "60": 2,
+        "61": 5,
+        "62": 7
+      },
+      "condition": "For50/60-family arm,8020b1c0 return must be0 before pipe0/eventfffffff8(action1,selector) is posted.",
+      "consumer": 2149839960,
+      "mode_request": 2149815828,
+      "action_dispatch": 2149815444,
+      "thread_dispatch": 2150824660,
+      "thread_rows": [
+        {
+          "entry": 2150839384,
+          "name": "StillCaptMain",
+          "argument": 0,
+          "stack_bytes": 12000
+        },
+        {
+          "entry": 2150839384,
+          "name": "StillCaptMain",
+          "argument": 1,
+          "stack_bytes": 12000
+        },
+        {
+          "entry": 2150836672,
+          "name": "Capture_Sequence",
+          "argument": 0,
+          "stack_bytes": 10000
+        },
+        {
+          "entry": 2150839384,
+          "name": "StillCaptMain",
+          "argument": 3,
+          "stack_bytes": 12000
+        },
+        {
+          "entry": 2150877464,
+          "name": "Capture_DRAM",
+          "argument": 0,
+          "stack_bytes": 8000
+        },
+        {
+          "entry": 2150836672,
+          "name": "Capture_Sequence",
+          "argument": 1,
+          "stack_bytes": null
+        },
+        {
+          "entry": 2150839384,
+          "name": "StillCaptMain",
+          "argument": 6,
+          "stack_bytes": 12000
+        },
+        {
+          "entry": 2150836672,
+          "name": "Capture_Sequence_HDR",
+          "argument": 2,
+          "stack_bytes": 8000
+        }
+      ],
+      "ownership": "Thread argument is a selector, not an external frame pointer; mode transitions depend on shared808c1bd4/1bd8/1be4 state.",
+      "limits": [
+        "Mode request can defer/reconfigure existing states; not every request immediately creates a capture thread.",
+        "No safe host or camera SDK mode-set adapter exposed."
+      ]
+    },
+    {
+      "id": "capture.still_to_creator",
+      "status": "static-route-verified",
+      "thread_window": 2150839384,
+      "capture_entry": 2150829464,
+      "route": [
+        {
+          "pipe": 0,
+          "event": 4102,
+          "producer_site": 2150830744,
+          "object_argument": "capture pointer in a2"
+        },
+        {
+          "pipe": 4,
+          "event": 4116,
+          "forwarder": 2149818324,
+          "object_argument": "retains prior argument0"
+        }
+      ],
+      "creator_receive_window": 2150668300,
+      "creator": 2150663292,
+      "limits": [
+        "Capture entry has cyclic/alternate branches using10000038 and other completion paths;1006 is a reviewed branch, not universal.",
+        "Actual sensor completion, active object addresses and lifecycle ownership are not observed on camera."
+      ]
+    },
+    {
+      "id": "capture.creator_to_compressor",
+      "status": "static-route-verified",
+      "creator": 2150663292,
+      "posted_marker_offset": 734,
+      "producer_site": 2150666208,
+      "producer_message": {
+        "pipe": 0,
+        "event": 4164,
+        "argument0": "capture pointer",
+        "argument1": 0
+      },
+      "server": 2149839960,
+      "forwarder": 2149818416,
+      "forwarded_message": {
+        "pipe": 7,
+        "event": 4162
+      },
+      "downstream": "saved-jpeg-path report follows FileCompressor receive to8031d0b4/8031aa5c and asynchronous saving.",
+      "limits": [
+        "Creator sets+2de before queueing and skips an already marked object; post failure/error cleanup ownership remains incomplete.",
+        "Queued pointer lifetime does not become caller-owned merely because queue words are copied."
+      ]
+    },
+    {
+      "id": "capture.pipe_message_ownership",
+      "status": "static-contract-partial",
+      "entry": 2149537584,
+      "arguments": "a0=pipe index,a1=event,a2/a3=two payload words",
+      "stack_record": "event,arg0,arg1,ffffffff as four LE32 words",
+      "send": 2148321384,
+      "wait_argument": 4294967295,
+      "queue_offset_rule": "eventfffffffe uses pipe+40; ordinary events pipe+8",
+      "return": "true when queue-send status0; missing/disabled pipe reports diagnostic and returnsfalse",
+      "ownership": "Record contains words/pointer tokens only; no deep copy or transfer of referenced capture buffers is established.",
+      "limits": [
+        "Pipe state, capacity, receiver completion and all error/timeout handling remain path dependent.",
+        "Internal pipe messages are not PTP operations or a supported command-construction interface."
+      ]
+    }
+  ],
+  "remaining_gates": [
+    "Physical key/event producer and active Auto-mode state observation",
+    "Chosen saved-photo hook pixel packing/stride/capacity and live allocation/cache ownership",
+    "Complete control lifecycle, hook ABI/placement and general executable publication",
+    "Complete installed backup and independent unbootable software recovery"
+  ],
+  "safe_capture_adapter_established": false,
+  "ready_for_executable_trial": false,
+  "research_provenance": {
+    "native_tool_versions": {
+      "ghidra": "12.1.4",
+      "jdk": "21.0.9+10"
+    },
+    "native_host_tool_hashes": {
+      "java": "5f6248f9c0f32b38ffaba813819bf3331536a48c7ddc45b18e73acd15a6cf7ef",
+      "headless": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "decompiler": "ea42e06df2a64f95188a12422a35a36cd48fd4a6f621e62b001e82f1bbbe923b"
+    },
+    "native_exporter_hashes": {
+      "S3300Export.java": "79157b203cfb06d000ddb4b295998595a6c3ea1b76b3f93294cc45f53974a2ad",
+      "S3300Seed.java": "43511cda6e6f4d25ae4709170a4b09dae673bb772a42f8a5fa5b5578da1d4690"
+    },
+    "workflow_version": 2,
+    "verifier_hashes": {
+      "map_capture_buffers.py": "d7859ff3c975312a34e006b03aa78cfde3c09236bca25338dd1c46801ac7c713",
+      "map_development_contracts.py": "3d03c909fc5c87c53eee35983e5315d6805a083664fc1ac4c712deaa1f2b54d0",
+      "map_development_interfaces.py": "61ffa19b660bf77cda4929f119b72bbc7d92294cf1ef5671dbfb5340ed18f068",
+      "map_recovery_transport.py": "caeb2fc3b5cf3648af72e30992cca3ecf923e9db50903ae320f9bd02ee4acfc5",
+      "map_shutter_route.py": "551de4b3376e5cd5f8a6c6bb4e9f4039e87c5eb01a0a5c0df90948449d1686f3",
+      "research_contracts.py": "c60e0f866c6eb240122a5c6e9bdbd7f3b4ca4d8e1986d62076d8d6c777f73796",
+      "workspace_functions.py": "a97d2b477ad55113eefeb810c7443fcf4286b8a5a98246ff6a6ef4b02a87eacf"
+    }
+  }
+}

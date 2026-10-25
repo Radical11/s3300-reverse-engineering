@@ -11,3 +11,4 @@
 /evidence/wpd-device-info*.json
 /evidence/ptp-reflash-all-objects*.json
 __pycache__/
+/.venv/

@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "database_sha256": "d82cf89e4d52f8c5e4c5ea7d41e6f0af77861f63725763f201ffcd56a10b3694",
+  "counts": {
+    "regions": 8,
+    "functions": 5798,
+    "strings": 26976,
+    "transfers": 51022,
+    "address_refs": 19247,
+    "pointer_words": 8729,
+    "associations": 1226,
+    "artifacts": 6,
+    "symbols": 1924,
+    "fully_decoded_function_listings": 5798,
+    "function_bytes": 2267704,
+    "direct_calls": 48303,
+    "unresolved_register_calls": 300
+  },
+  "subsystems": {
+    "sensor": {
+      "string_candidates": 192,
+      "associated_function_ranges": 17
+    },
+    "capture": {
+      "string_candidates": 277,
+      "associated_function_ranges": 48
+    },
+    "image_processing": {
+      "string_candidates": 119,
+      "associated_function_ranges": 4
+    },
+    "jpeg_video": {
+      "string_candidates": 574,
+      "associated_function_ranges": 160
+    },
+    "display_preview": {
+      "string_candidates": 305,
+      "associated_function_ranges": 31
+    },
+    "ui_controls": {
+      "string_candidates": 108,
+      "associated_function_ranges": 124
+    },
+    "settings": {
+      "string_candidates": 110,
+      "associated_function_ranges": 12
+    },
+    "memory": {
+      "string_candidates": 42,
+      "associated_function_ranges": 1
+    },
+    "rtos": {
+      "string_candidates": 138,
+      "associated_function_ranges": 13
+    },
+    "storage": {
+      "string_candidates": 174,
+      "associated_function_ranges": 34
+    },
+    "usb": {
+      "string_candidates": 178,
+      "associated_function_ranges": 53
+    },
+    "power_clock": {
+      "string_candidates": 76,
+      "associated_function_ranges": 30
+    },
+    "lens_flash": {
+      "string_candidates": 210,
+      "associated_function_ranges": 70
+    },
+    "update_recovery": {
+      "string_candidates": 42,
+      "associated_function_ranges": 7
+    },
+    "debug_profiling": {
+      "string_candidates": 407,
+      "associated_function_ranges": 14
+    },
+    "peripherals": {
+      "string_candidates": 114,
+      "associated_function_ranges": 25
+    },
+    "resources_audio": {
+      "string_candidates": 419,
+      "associated_function_ranges": 48
+    }
+  },
+  "evidence_type": "Independent source-bound Python/Capstone static analysis following REA skill",
+  "limitations": [
+    "Known function boundaries come from compiler unwind records, not complete function discovery.",
+    "Linear disassembly is not CFG or runtime reachability; incomplete decode is explicitly counted.",
+    "Raw transfer encodings inside ranges are static candidates; register calls remain unresolved.",
+    "String associations derive from bounded LUI/ADDIU/ORI candidates with partial clobber checks, not semantic proof.",
+    "Mixed-region pointer words and printable byte sequences may be incidental data; no automatic API names assigned.",
+    "Original symbols retain artifact scope; updater names are not assigned to overlapping application addresses.",
+    "No original C source, full hardware specification, target execution or recovery demonstration is supplied."
+  ],
+  "date_local": "2026-10-24",
+  "timezone": "Asia/Calcutta",
+  "atlas_relative_path": "derived/firmware-atlas-v1.1/atlas.sqlite",
+  "atlas_repeat_byte_identical": true,
+  "subsystem_mapper_repeat_agreement": true,
+  "offline_tests": 186,
+  "native_rea_evidence_file": "evidence/rea-mapping-analysis-artifact-2026-10-24.json",
+  "native_rea_scope": "Artifact identity/inventory only; no native decompiler result",
+  "native_function_attempt": "evidence/rea-mapping-native-function-2026-10-24.json",
+  "target_executed": false,
+  "camera_commands_issued": false
+}

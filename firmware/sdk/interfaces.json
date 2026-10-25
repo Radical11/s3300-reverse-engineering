@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2c44b1fd2849cff633bd71f64ffb272d1f2f76c85961f47c947f6cd42d7a498b",
+  "analysis_sha256": "15b39f407ca9ba322af07e64ea07562b2234848c030a26ca2be2e48c42966040",
+  "scope": "Recovered static contracts. Addresses are camera addresses, never host pointers. No camera-callable ABI or safe hooks are implied.",
+  "interfaces": [
+    {
+      "id": "memory.dram_query",
+      "name": "DRAM size query",
+      "address": "0x8003c3ac",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "a0/a1 optional output pointers; returns one for a valid selector.",
+      "ownership_and_side_effects": "Reads register 0xb8002010; selectors 1..6 map to 8..256 MiB.",
+      "constraints": "No live register was read; installed capacity remains unknown.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/hardware-contracts.md"
+        },
+        {
+          "path": "evidence/hardware-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "clock.query",
+      "name": "Clock runtime table getter",
+      "address": "0x80025198",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "a0 = index below 56; returns a u32 value, or zero for a larger index.",
+      "ownership_and_side_effects": "Reads the runtime table at 0x808a5b8c; no allocation.",
+      "constraints": "The table is absent from the supplied image. Caller diagnostics identify frequency units as Hz.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/hardware-contracts.md"
+        },
+        {
+          "path": "evidence/hardware-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "gpio.read",
+      "name": "GPIO pin leaf",
+      "address": "0x800a1728",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "a0 = group; a1 = pin; returns a u32 register value.",
+      "ownership_and_side_effects": "Reads table-derived register base + 0xc + 4*pin.",
+      "constraints": "Caller bounds, pad meaning and concurrency are unknown; the monitor getter also changes configuration.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/hardware-contracts.md"
+        },
+        {
+          "path": "evidence/hardware-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "gpio.write",
+      "name": "GPIO pin writer",
+      "address": "0x800a16f8",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "a0 = group; a1 = pin; a2 = value; returns one.",
+      "ownership_and_side_effects": "Writes a hardware register; ownership is unresolved.",
+      "constraints": "Not exposed as an SDK call. Electrical and board semantics are unknown.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/hardware-contracts.md"
+        },
+        {
+          "path": "evidence/hardware-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "memory.allocate",
+      "name": "Pool allocator dispatch",
+      "address": "0x80020980",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "A nonzero pool path calls a function pointer through pool + 8.",
+      "ownership_and_side_effects": "Allocation, failure and lifetime contracts are only partially traced.",
+      "constraints": "Startup/default-pool ranges now traced in executable-contracts; live geometry, failure, free and executable-publication contracts remain incomplete.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/hardware-contracts.md"
+        },
+        {
+          "path": "evidence/hardware-contracts.json"
+        },
+        {
+          "path": "notes/executable-contracts.md"
+        },
+        {
+          "path": "evidence/executable-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "capture.raw_to_yuv",
+      "name": "RAW-to-YUV descriptor conversion",
+      "address": "0x80205918",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "a0/a1 reference shared seven-u32 frame descriptors: address, parent width/height, ROI left/top/width/height; a2 references options.",
+      "ownership_and_side_effects": "Copying a descriptor does not establish ownership of the pixel buffers it references.",
+      "constraints": "Packing, byte pitch, colour domain, cache maintenance and active saved-photo use remain unresolved. No aligned J/JAL or pointer references found across eight mapped regions. 0x80205924 is interior.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/capture-contracts.md"
+        },
+        {
+          "path": "evidence/capture-contracts.json"
+        },
+        {
+          "path": "notes/capture-buffers.md"
+        },
+        {
+          "path": "evidence/capture-buffers.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "isp.command_router",
+      "name": "Image command routing",
+      "address": "0x801fd324",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Takes a command structure pointer; context is at offset +0xc.",
+      "ownership_and_side_effects": "Ordinary contexts retain a copied payload; context 0x90 allocates and queues a full command as message 0x1046.",
+      "constraints": "Final ownership of queued commands and hardware timing remain incomplete.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/capture-contracts.md"
+        },
+        {
+          "path": "evidence/capture-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "isp.matrix_builder",
+      "name": "Colour matrix command15 builder",
+      "address": "0x806af434",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Builds a 0x34-byte external command: nine 16-bit matrix coefficients and offsets.",
+      "ownership_and_side_effects": "The ordinary route retains a copy and marks dirty bit 0x00100000.",
+      "constraints": "Follow-up now traces hardware application, but numeric contexts 0x40/0xb0 are not proven still/live names.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/capture-contracts.md"
+        },
+        {
+          "path": "evidence/capture-contracts.json"
+        },
+        {
+          "path": "notes/matrix-application.md"
+        },
+        {
+          "path": "evidence/matrix-application.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "isp.dirty_consumer",
+      "name": "Dirty-mask application",
+      "address": "0x801fbc8c",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Reads the caller-supplied dirty mask and checks bit 0x00100000.",
+      "ownership_and_side_effects": "Selects cached subindex 15 and forwards the driver command.",
+      "constraints": "The matrix application follow-up traces final register writes. Complete saved-photo buffer ownership remains unresolved.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/development-contracts.md"
+        },
+        {
+          "path": "evidence/development-contracts.json"
+        },
+        {
+          "path": "notes/matrix-application.md"
+        },
+        {
+          "path": "evidence/matrix-application.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "settings.checksum",
+      "name": "User-store checksum/copy helper",
+      "address": "0x80008f80",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Mode zero sums source[0:N-1]. Nonzero mode also copies source[0:N+1].",
+      "ownership_and_side_effects": "The SDK supplies a pure checksum model; the original memory-copy helper is not a settings-write API.",
+      "constraints": "For N = 0x19f, sum offsets 0..0x19d modulo 256 and store at +0x19f. Byte +0x19e is excluded.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/development-contracts.md"
+        },
+        {
+          "path": "evidence/development-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "settings.store_pointer",
+      "name": "Shared user-store getter",
+      "address": "0x800093b0",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Returns the shared store pointer 0x800032d4.",
+      "ownership_and_side_effects": "Shared global memory; concurrent ownership is unresolved.",
+      "constraints": "A pointer is not proof of a safe writable or calibration-free allocation.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/state-contracts.md"
+        },
+        {
+          "path": "evidence/state-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "settings.stage_views",
+      "name": "Stage four view banks",
+      "address": "0x80737664",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Copies 0xe0 bytes into shared store +0x76.",
+      "ownership_and_side_effects": "RAM copy only; the filename argument is ignored.",
+      "constraints": "Preserve view-bank ownership. This routine is not itself a persistent file write.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/state-contracts.md"
+        },
+        {
+          "path": "evidence/state-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "settings.transaction",
+      "name": "Settings media transaction",
+      "address": "0x80009644",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Allocates 0x400 bytes; copies 0x1a0 store bytes and uses media selectors 2, 1 and 0.",
+      "ownership_and_side_effects": "Writes through a geometry-dependent media backend.",
+      "constraints": "Checksum behavior is modeled; physical erase bounds, wear and power-loss behavior remain unverified.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/development-contracts.md"
+        },
+        {
+          "path": "evidence/development-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "debug.dispatch",
+      "name": "Internal diagnostic dispatcher",
+      "address": "0x80796108",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Eight-byte records at 0x80898ec8; low-byte subcommand, payload pointer and transport selector.",
+      "ownership_and_side_effects": "Flag bit zero requests payload reception; handlers can change state.",
+      "constraints": "No verified external host protocol. This is not a standard PTP opcode table.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/state-contracts.md"
+        },
+        {
+          "path": "evidence/state-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "debug.getmem",
+      "name": "GetMem internal handler",
+      "address": "0x8079de34",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Internal table index 0xf3; separate address/length state at 0x800e113c.",
+      "ownership_and_side_effects": "Cache and shared-state preparation occur; pure passivity is not established.",
+      "constraints": "ConfigMem index 0xf1 produces shared state. Installed USB acceptance/endpoints, safe address/length and boot independence remain unresolved.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/state-contracts.md"
+        },
+        {
+          "path": "evidence/state-contracts.json"
+        },
+        {
+          "path": "notes/recovery-transport.md"
+        },
+        {
+          "path": "evidence/recovery-transport.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "storage.nand_dump",
+      "name": "NAND-to-card monitor handler",
+      "address": "0x805810c0",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Fixed 0x10000-sector loop; writes 512 data bytes plus 16 extra bytes per successful sector.",
+      "ownership_and_side_effects": "Writes the card; failed sectors are skipped without placeholders.",
+      "constraints": "Not a complete backup or a measured geometry. No restore route is demonstrated.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/restore-path.md"
+        },
+        {
+          "path": "evidence/restore-path.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "resources.zst",
+      "name": "String resource codec",
+      "address": null,
+      "evidence_level": "host_verified",
+      "parameters_and_return": "Host decode/encode codec; code_units is authoritative.",
+      "ownership_and_side_effects": "Owns output buffers; baseline exports remain immutable.",
+      "constraints": "Serialized ordinals are not universally verified UI IDs; glyph mappings may differ.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/unpacked-workspace.md"
+        },
+        {
+          "path": "evidence/unpacked-workspace.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "resources.zbm",
+      "name": "Indexed bitmap codec",
+      "address": null,
+      "evidence_level": "host_verified",
+      "parameters_and_return": "Host codec for one-bit/four-bit bitmap indices.",
+      "ownership_and_side_effects": "Byte-exact roundtrip; palette mapping is not universally recovered.",
+      "constraints": "An index preview does not establish final colour or orientation.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/unpacked-workspace.md"
+        },
+        {
+          "path": "evidence/unpacked-workspace.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "isp.matrix_upload",
+      "name": "Recovered IPU matrix register application",
+      "address": "0x802d2c88",
+      "evidence_level": "static_analysis_with_native_corroboration",
+      "parameters_and_return": "Internal factory 11 object; decoder accepts external command 15 subtypes including 15.",
+      "ownership_and_side_effects": "Writes eleven sign-extended halfwords to 0xb60000c0..0xb60000e8 and a word to 0xb60000fc.",
+      "constraints": "A separate write-list route exists. This is not a public SDK call; ownership, active mode and synchronization remain internal contracts.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/matrix-application.md"
+        },
+        {
+          "path": "evidence/matrix-application.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "capture.jpeg_frame_guards",
+      "name": "JPEG frame geometry guards",
+      "address": "0x801a4490",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "JPEG options+8 and optional+0x24 contain seven-u32 frame descriptors; nonzero ROI and reviewed horizontal/chroma420 alignment guards.",
+      "ownership_and_side_effects": "Copies address tokens, not pixel storage; does not establish caller buffer lifetime.",
+      "constraints": "Unsigned addition wraps; complete vertical/allocation bounds, packing and safe capture adapter remain unresolved.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/capture-buffers.md"
+        },
+        {
+          "path": "evidence/capture-buffers.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "capture.temporary_scale_lifecycle",
+      "name": "Temporary scale allocation and completion lifecycle",
+      "address": "0x8018f6e4",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Prepare 0x8018f200 -> start 0x801978f0 -> completion 0x80197ac8 -> cleanup 0x8018f184; allocation uses low32(width*height*numeric_multiplier).",
+      "ownership_and_side_effects": "Temporary path owns its intermediate allocation and frees it during cleanup; descriptors retain shallow address tokens.",
+      "constraints": "Multipliers 2/3 do not establish universal bytes per pixel; event semantics, DMA/cache synchronization and active saved-photo domain remain unresolved.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/capture-buffers.md"
+        },
+        {
+          "path": "evidence/capture-buffers.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "ui.english_string_lookup",
+      "name": "English Color Options string lookup",
+      "address": "0x802c73fc",
+      "evidence_level": "static_analysis_and_bounded_host_emulation",
+      "parameters_and_return": "Checks requested ID against header first ID/count; chooses pointer[(ID-first ID)]. Color Options IDs 560..564 select Standard/Vivid/Mono/Sepia/Cyanotype.",
+      "ownership_and_side_effects": "Embedded records borrow source-table storage; loader allocates header and pointer index separately. Host emulation checks all 3313 pointers.",
+      "constraints": "User confirms Amber in Auto mode Color options. Earlier Nostalgic sepia report came from separate Special effects menu. Installed image hash remains unknown; firmware calls are not exposed.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/label-contracts.md"
+        },
+        {
+          "path": "evidence/label-path-verification.json"
+        },
+        {
+          "path": "evidence/amber-auto-verification-2026-10-25.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "debug.config_memory",
+      "name": "ConfigMem shared-state producer",
+      "address": "0x8079cd48",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Internal dispatcher index 0xf1; reads payload LE32 address +0, length +4; passes subcommand low8 as mode to 0x80203e54.",
+      "ownership_and_side_effects": "Changes shared memory-access state; modes have additional side effects. GetMem 0xf3 consumes this state.",
+      "constraints": "Not a PTP operation or supported camera request. Accepted USB setup fields, active endpoints and safe address/length are unknown.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/recovery-transport.md"
+        },
+        {
+          "path": "evidence/recovery-transport.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "memory.startup_pool",
+      "name": "Startup pool ownership",
+      "address": "0x80020804",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Input start is masked with0xdfffffff; pool length is runtime DRAM bytes minus(start&0x0fffffff)-4 with u32 arithmetic.",
+      "ownership_and_side_effects": "Creates allocator-owned memory after RTOS stack reservations; startup also clears two explicit BSS ranges.",
+      "constraints": "Unbacked gaps/zero runs are not approved placement. Live capacity, execution permission and complete cache publication remain unknown.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/executable-contracts.md"
+        },
+        {
+          "path": "evidence/executable-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "usb.mode_registry",
+      "name": "USB mode and handle registration",
+      "address": "0x807721f8",
+      "evidence_level": "static_analysis_correlated_with_runtime_descriptors",
+      "parameters_and_return": "Modes 4/7 register PTP handle slots 4/7; mode 6 aliases debug/storage handle slots 6/5/0. Logical endpoint encoding maps 2/3/5 to 01/81/82.",
+      "ownership_and_side_effects": "Mode-switch path rebuilds descriptors and registers different agents; no host wrapper exposes it.",
+      "constraints": "Current descriptors match mode 4 or 7. Exact mode, independent debug entry and safe requests remain unresolved; debug handler existence does not prove PTP reachability.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/usb-mode-contracts.md"
+        },
+        {
+          "path": "evidence/usb-mode-contracts.json"
+        },
+        {
+          "path": "evidence/camera-usb-verification-2026-10-25.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "capture.saved_jpeg",
+      "name": "Saved-JPEG compressor path",
+      "address": "0x8031aa5c",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Input capture object owns seven-u32 descriptor at+0x54; JPEG argument structure points to it at+0x0c; output data/capacity at+a8/+b0.",
+      "ownership_and_side_effects": "FileCompressor pipe7 event0x1042 ->8031d0b4 ->8031aa5c; JPEG start returns before finish waits.",
+      "constraints": "Active shutter producer/branch, exact packing, stride, numeric domain and live ownership remain unresolved.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/saved-jpeg-path.md"
+        },
+        {
+          "path": "evidence/saved-jpeg-path.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "storage.encoded_segments",
+      "name": "Encoded segment transfer and consumption",
+      "address": "0x8030e7d4",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Callback writes file object, segment+8 address and segment+0x0c length through80097418.",
+      "ownership_and_side_effects": "Segments retain data pointers. Successful writer flag4 unlinks and frees both segment data and list node. Pipe3 events105a/105b/105d consume segments.",
+      "constraints": "Asynchronous ownership transfer required; arbitrary caller-owned or borrowed buffers must not be appended. Complete error/race and physical durability contracts incomplete.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/saved-jpeg-path.md"
+        },
+        {
+          "path": "evidence/saved-jpeg-path.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "capture.jpeg_lifecycle",
+      "name": "JPEG create, wait and destroy",
+      "address": "0x8032b20c",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Create/go returns path or0;8032b0fc waits and gets count;8032b1a8 finishes, deletes path and returns count.",
+      "ownership_and_side_effects": "Runs existing801975c8/801978f0/80197ac8 lifecycle; error/count overflow uses801a40e4.",
+      "constraints": "No plain in-place RGB API; selector0/1 address arithmetic does not define universal pixel packing or bounds.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/saved-jpeg-path.md"
+        },
+        {
+          "path": "evidence/saved-jpeg-path.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "cache.small_range",
+      "name": "Runtime cache-line maintenance",
+      "address": "0x800b52e4",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "a0=address token,a1=byte length; D-WBINV CACHE15. Other leaves I10,D-invalidate11,D-writeback19.",
+      "ownership_and_side_effects": "Normalizes address&dfffffff; rounds start down; uses low32 end and pre-tested unsigned loop. Null or zero D-WBINV selects whole-cache path.",
+      "constraints": "Callers must own rounded cache lines. Runtime geometry, barriers, cross-core/DMA ordering and general code publication unresolved.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/cache-dma-contracts.md"
+        },
+        {
+          "path": "evidence/cache-dma-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "dma.fast_copy",
+      "name": "Existing FastCopy handoff",
+      "address": "0x8005df30",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Destination/source/length and scratchpad selectors; actual internal helper8005dc78 submits descriptors and waits.",
+      "ownership_and_side_effects": "Cached destination invalidated before copy; cached source written back/invalidated; uncached aliases; event40000000 wait before scratchpad release.",
+      "constraints": "Wait result unchecked; not a public DMA SDK. Overlap, error/cancel, selectors and hardware ordering incomplete.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/cache-dma-contracts.md"
+        },
+        {
+          "path": "evidence/cache-dma-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "reset.tiny_loader",
+      "name": "Separate MIPS16 ELF loader",
+      "address": "0x81000ad1",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Tiny-loader namespace only, carrier1006c0; odd entry preserves MIPS16 mode. Reads ELF header/program headers and returns loaded entry.",
+      "ownership_and_side_effects": "Runtime header atbfc09600; low-level path requires selector derived from64 ROM bytes at9fc00900.",
+      "constraints": "Reset vector and required ROM bytes absent from six supplied ELF mappings; installed routing/coverage and independent recovery not established.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/reset-recovery.md"
+        },
+        {
+          "path": "evidence/reset-recovery.json"
+        }
+      ],
+      "image_namespace": "image-001006c0"
+    },
+    {
+      "id": "ptp.vendor_registry",
+      "name": "PTP handler registry",
+      "address": "0x8077f050",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Unsigned opcode lookup in256 records of12 bytes; fields opcode+0,route+2,disabled+3,phase+4,handler+8.",
+      "ownership_and_side_effects": "Application registers9002 to8057db04, which can change capture/display state.9003 uses queued HCE route.9005/9006 share object-upload handler addresses.",
+      "constraints": "Vendor advertisement does not imply read-only memory access. No reviewed PTP backup bridge or new allowlisted camera command.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/ptp-vendor-contracts.md"
+        },
+        {
+          "path": "evidence/ptp-vendor-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "usb.debug_entry",
+      "name": "Internal USB test-mode dependency",
+      "address": "0x80741cd8",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Reads calibration word8000ff8a and returns whether low nibble differs from8; boot state stores inverse predicate before guarded mode0 path.",
+      "ownership_and_side_effects": "All direct mode-wrapper calls request0/5/7. Separate UIDebugMsg writer reads/changes/writes ColdData.bin and persistent settings; debug d3 mode request requires existing debug dispatcher.",
+      "constraints": "Internal events are not verified PTP operations or physical controls. Calibration integrity, live flags, safe activation and reset independence unresolved.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/usb-entry-contracts.md"
+        },
+        {
+          "path": "evidence/usb-entry-contracts.json"
+        }
+      ],
+      "image_namespace": "application"
+    },
+    {
+      "id": "capture.key_scan",
+      "name": "Two-stage shutter input scan",
+      "address": "0x806a02bc",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Supplied register snapshots b0020448/b002044c equal zero normalize into bits2/1; scanner is stateful for other keys.",
+      "ownership_and_side_effects": "Two-scan candidate debounce and configurable rising/falling edge masks precede logical SNAP events and host queue delivery.",
+      "constraints": "Live pad identity, scanner phase and enabled SNAP edges vary with runtime state; no MMIO host API or physical polarity measurement.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/shutter-input.md"
+        },
+        {
+          "path": "evidence/shutter-input.json"
+        }
+      ]
+    },
+    {
+      "id": "capture.mode_dispatch",
+      "name": "UI mode to StillServer capture routing",
+      "address": "0x80204460",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Mode0x50 selects0;53 selects1;55 selects3;58 selects6;60 selects2;61 selects5;62 selects7 in the reviewed switch.",
+      "ownership_and_side_effects": "Queues action1/selector through StillServer, capture, file-creation and compressor stages. Runtime UI/capture state808918a0 differs from38-byte view-bank808918ac.",
+      "constraints": "Physical input-to-mode path is statically traced, but live Auto state, selected sensor branch and object ownership still require verification.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/shutter-route.md"
+        },
+        {
+          "path": "evidence/shutter-route.json"
+        }
+      ]
+    },
+    {
+      "id": "jpeg.input_kind",
+      "name": "Distinct JPEG input-kind and layout selectors",
+      "address": "0x801a4490",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "ApsJpeg+4 maps to options+2/context+da input kind; ApsJpeg+8 maps to options+4/context+dc secondary/layout selector.",
+      "ownership_and_side_effects": "Both reviewed StillImage calls pass input-kind0; kind1 diagnostic requires ICA420-to422 conversion flag40 and even chroma ROI origins.",
+      "constraints": "Layout selector1 does not prove kind1. Component order, numeric range and writable RGB8 domain remain unknown.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/pixel-layout.md"
+        },
+        {
+          "path": "evidence/pixel-layout.json"
+        }
+      ]
+    },
+    {
+      "id": "jpeg.dma_pitch",
+      "name": "JPEG DMA geometry arithmetic",
+      "address": "0x801a5c40",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Parent pitch uses parent width for kind1, otherwise low32 of twice parent width; word pitch uses low32(pitch+3)>>2.",
+      "ownership_and_side_effects": "Rounds ROI width to8/16 block depending on flags/secondary option; later orientation-dependent DMA fields remain outside the model.",
+      "constraints": "Arithmetic is not allocation bounds, buffer capacity, complete DMA descriptor ABI or proof of CPU ownership.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/pixel-layout.md"
+        },
+        {
+          "path": "evidence/pixel-layout.json"
+        }
+      ]
+    },
+    {
+      "id": "menu.color_options_registration",
+      "name": "Existing five-entry Color Options registration",
+      "address": "0x805af460",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Initializes static object809f0550,count5,entries809f0820/15bytes,parent809f05b8,render805c099c,event805ac85c,dynamicflag0.",
+      "ownership_and_side_effects": "Open/child selection installs current menu and follows parent/child ownership. Existing menu fields and callbacks have distinct roles.",
+      "constraints": "No arbitrary extra-option or dynamic menu-registration SDK; handler-specific return and mode ownership required.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/menu-lifecycle.md"
+        },
+        {
+          "path": "evidence/menu-lifecycle.json"
+        }
+      ]
+    },
+    {
+      "id": "menu.dynamic_entry_ownership",
+      "name": "Global dynamic menu-entry allocation",
+      "address": "0x806fbab0",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Uses one global allocation slot808917fc; entry stride3 and requested allocation count*3.",
+      "ownership_and_side_effects": "Frees the previous dynamic list before replacing it. Close frees dynamic entry lists when flagged, not arbitrary complete menu objects.",
+      "constraints": "Concurrent menus cannot assume independent list ownership; count bounds, callback lifetime and custom allocation failure handling incomplete.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/menu-lifecycle.md"
+        },
+        {
+          "path": "evidence/menu-lifecycle.json"
+        }
+      ]
+    },
+    {
+      "id": "menu.return_and_persistence",
+      "name": "Color Options return and persistence",
+      "address": "0x806fc2a4",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Commit events106/108 store view+1a and apply; event105 skips that commit but still enters parent-return staging.",
+      "ownership_and_side_effects": "Parent return can stage and persist settings even on cancellation, then restore saved preview. The UI path does not propagate settings write failure.",
+      "constraints": "No universal no-write-on-cancel or safe custom persistence API. Preserve existing bank and shared-preview lifecycle.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/menu-lifecycle.md"
+        },
+        {
+          "path": "evidence/menu-lifecycle.json"
+        }
+      ]
+    },
+    {
+      "id": "updater.section_protection",
+      "name": "Updater software section protection",
+      "address": "0x8001a07c",
+      "image_namespace": "image-00000200",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Seven36-byte logical section records; protection predicate depends on section index, upgrade flag, reserved/burn count and runtime handle flags.",
+      "ownership_and_side_effects": "BurnNand also has separate full-erase, boot-header, bad-block and user-area relocation paths.",
+      "constraints": "Updater namespace only. Protected predicates are not hardware protection or a guarantee of preserved calibration/boot data; physical write ranges depend on installed geometry.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/update-write-scope.md"
+        },
+        {
+          "path": "evidence/update-write-scope.json"
+        }
+      ]
+    },
+    {
+      "id": "updater.user_area_relocation",
+      "name": "On-device user-area backup and restore",
+      "address": "0x80012730",
+      "image_namespace": "image-00000200",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Backs selected blocks into RAM and tail NAND reservation; restore80012ba8 copies them back.",
+      "ownership_and_side_effects": "Both paths erase/program flash; BlockIsBad80012370 can call BlockMarkBad80012258. Neither is an approved read-only host backup.",
+      "constraints": "No complete raw flash/calibration/ECC coverage or reset-independent recovery. Do not invoke these routines based on their names.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/update-write-scope.md"
+        },
+        {
+          "path": "evidence/update-write-scope.json"
+        }
+      ]
+    },
+    {
+      "id": "backup.store_reader",
+      "name": "Serialized UI and calibration reader",
+      "address": "0x80009cb4",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Reads distinct0x1a0 UI and0x24a calibration stores using selector0/count2; UI LE16+19c selects calibration block via runtime erase sectors.",
+      "ownership_and_side_effects": "Copies into global RAM; invalid data can zero stores and return6. Initialization caller has destructive fallback.",
+      "constraints": "No host-callable read adapter, physical bounds, complete calibration coverage or safe restoration established.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/backup-scope.md"
+        },
+        {
+          "path": "evidence/backup-scope.json"
+        }
+      ]
+    },
+    {
+      "id": "backup.calibration_store",
+      "name": "Persistent calibration subset getter",
+      "address": "0x800093bc",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Returns RAM pointer80003474 to0x24a serialized store; checksum+248 covers0..247, tail+249 excluded.",
+      "ownership_and_side_effects": "Getter exposes existing global data; selected source slices are serialized by807378a4.",
+      "constraints": "RAM pointer and valid checksum cannot establish all installed calibration resources or acquired provenance.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/backup-scope.md"
+        },
+        {
+          "path": "evidence/backup-scope.json"
+        }
+      ]
+    },
+    {
+      "id": "backup.partition_geometry",
+      "name": "Runtime user-partition geometry getter",
+      "address": "0x800e2e0c",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Copies runtime partition start/count and1<<(shift&31), plus unresolved registry word.",
+      "ownership_and_side_effects": "Registry lookup takes/releases synchronization; reviewed getter has no flash-program/erase call.",
+      "constraints": "No verified external invocation, installed values, total flash capacity or bad-block/ECC representation.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/backup-scope.md"
+        },
+        {
+          "path": "evidence/backup-scope.json"
+        }
+      ]
+    },
+    {
+      "id": "backup.initialization_fallback",
+      "name": "Destructive fallback during user-partition initialization",
+      "address": "0x80009f70",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Failed store load calls80009510; each candidate block reaches selector2 erase before spare/status collection.",
+      "ownership_and_side_effects": "Can erase candidate user-partition blocks. A GoodBlock_Num diagnostic does not make this passive.",
+      "constraints": "Excluded from read-only backup access; not an approved probe or repair interface.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/backup-scope.md"
+        },
+        {
+          "path": "evidence/backup-scope.json"
+        }
+      ]
+    },
+    {
+      "id": "usb.raw_setup_callback",
+      "name": "Raw setup request classification",
+      "address": "0x8038d4ac",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Classifies request-type bits5..6; endpoint0/status1 selects standard/class/vendor handling and event masks.",
+      "ownership_and_side_effects": "Nonready endpoint0 attempts both class/vendor wakeups; reader later checks disconnect and recipient parity.",
+      "constraints": "Debug registration/entry differs from normal PTP; no safe arbitrary USB setup request or complete length/state bounds.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/backup-usb-contracts.md"
+        },
+        {
+          "path": "evidence/backup-usb-contracts.json"
+        }
+      ]
+    },
+    {
+      "id": "ptp.device_info",
+      "name": "Standard PTP DeviceInfo handler",
+      "address": "0x8077fe68",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Registered local phase1 for1001; assembles supported operations/metadata, serializes and responds2001.",
+      "ownership_and_side_effects": "Allocates/frees temporary descriptors and uses metadata callback. Host adapter invokes standard1001 only.",
+      "constraints": "Advertised opcodes are not approved debug operations or a memory-read bridge; direct handler remains a research entry.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/backup-usb-contracts.md"
+        },
+        {
+          "path": "evidence/backup-usb-contracts.json"
+        }
+      ]
+    },
+    {
+      "id": "ptp.storage_info",
+      "name": "Standard PTP StorageInfo handler",
+      "address": "0x80782120",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Registered local phase1 for1005; accepts10001/20001, queries media metadata/capacity and serializes.",
+      "ownership_and_side_effects": "Runtime queries and temporary response construction. Live fixed numeric prefix is decoded separately from a failed variable string.",
+      "constraints": "Exposed storage capacity is not installed flash geometry. Baseline string helper does not explain observed missing terminator.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/backup-usb-contracts.md"
+        },
+        {
+          "path": "evidence/backup-usb-contracts.json"
+        }
+      ]
+    },
+    {
+      "id": "update.normal_card_downloader",
+      "name": "Application-resident normal card updater",
+      "address": "0x803dbc00",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Normal menu path seeks card file to100000 and reads burn header; kind3 selects application NAND-NSR writer803d73dc.",
+      "ownership_and_side_effects": "Mutates flash through application burn machinery; depends on filesystem, allocation and running UI.",
+      "constraints": "Separate updater ELF policies cannot be assumed identical. Normal update success does not prove reset-independent recovery.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/updater-handoff.md"
+        },
+        {
+          "path": "evidence/updater-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "recovery.rom_handoff",
+      "name": "Application reboot boundary into absent ROM",
+      "address": "0x800b5890",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Quiesced helper jumps to bfc00664 with merged boot flags in a0; cached old flags read from bfc095fc.",
+      "ownership_and_side_effects": "Changes hardware/cache/interrupt state before leaving application.",
+      "constraints": "ROM body and flag producer absent; no host invocation, activation sequence or independently usable recovery demonstrated.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/updater-handoff.md"
+        },
+        {
+          "path": "evidence/updater-handoff.json"
+        }
+      ]
+    },
+    {
+      "id": "application_update.writer",
+      "name": "Application NAND-NSR writer",
+      "address": "0x803d73dc",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Caller-seeded burn callback takes handle/input callbacks; runtime geometry and buffers control writes.",
+      "ownership_and_side_effects": "Protected units may relocate before erase; bad-block paths and metadata finalization can program flash.",
+      "constraints": "Separate focused Ghidra project retains type-propagation warning; no complete physical bounds, calibration preservation or recovery.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/application-write-scope.md"
+        },
+        {
+          "path": "evidence/application-write-scope.json"
+        }
+      ]
+    },
+    {
+      "id": "application_update.block_protection",
+      "name": "Application block-protection predicate",
+      "address": "0x803d65d0",
+      "image_namespace": "application",
+      "evidence_level": "static_analysis",
+      "parameters_and_return": "Combines old user extent and decoded logical-unit protected-section policy.",
+      "ownership_and_side_effects": "Predicate participates in mutating writer; protection flag does not establish zero physical writes.",
+      "constraints": "No passive backup invocation or installed physical map established.",
+      "camera_callable": false,
+      "sources": [
+        {
+          "path": "notes/application-write-scope.md"
+        },
+        {
+          "path": "evidence/application-write-scope.json"
+        }
+      ]
+    }
+  ]
+}
