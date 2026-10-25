@@ -46,7 +46,7 @@ class LifecycleTests(unittest.TestCase):
     def test_inventory_paths_cannot_escape_workspace(self):
         with tempfile.TemporaryDirectory() as directory:
             workspace = Path(directory) / "baseline"
-            self.assertEqual(cli.local_file(workspace, "resources/example.bin"), workspace / "resources/example.bin")
+            self.assertEqual(cli.local_file(workspace, "resources/example.bin"), (workspace / "resources/example.bin").resolve())
             for value in ("../secret.bin", str(Path(directory) / "secret.bin")):
                 with self.subTest(value=value), self.assertRaisesRegex(ValueError, "escapes"):
                     cli.local_file(workspace, value)

@@ -120,7 +120,7 @@ class WorkbenchTests(unittest.TestCase):
             (database.parent/'manifest.json').write_text(json.dumps({'index_kind': INDEX_KIND, 'source_sha256': SOURCE,
                 'analysis_sha256': ANALYSIS, 'database_sha256': hashlib.sha256(database.read_bytes()).hexdigest()}))
             app = Workbench(root)
-            self.assertEqual(app.database, database)
+            self.assertEqual(app.database, database.resolve())
             self.assertEqual(app.function(0x80001000)['function']['name'], 'application-entry')
             with self.server(app) as port:
                 status, _, body = self.request(port, '/api/function?address=80001000&image=image-00000200')
